@@ -18,7 +18,7 @@ const Header = () => {
 
     return (
         <header>
-            <HiBars3
+            {/* <HiBars3
                 color={colors.blue}
                 onClick={() => {
                     setNavIsOpenedirst((prev) => !prev);
@@ -28,7 +28,7 @@ const Header = () => {
             <Image
                 src="/header/header-logo.jpg"
                 alt="header logo"
-            />
+            /> */}
             <Navbar
                 navIsOpened={navIsOpened}
                 setNavIsOpenedirst={setNavIsOpenedirst}
