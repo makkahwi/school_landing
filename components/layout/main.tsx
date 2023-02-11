@@ -1,15 +1,17 @@
-import colors from "@/styles/colors";
+import Footer from "./footer";
+import { MainContainer } from "@/components/layout/styles";
 
 /**
- * the main section in the layout 
- * 
+ * the main section in the layout
+ *
  */
-const Main = ({children}: { children: React.ReactNode }) => {
+const Main = ({ children }: { children: React.ReactNode }) => {
     return (
-        <main>
+        <MainContainer>
             {children}
-        </main>
+            <Footer />
+        </MainContainer>
     );
-}
+};
 
 export default Main;

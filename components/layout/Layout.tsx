@@ -1,7 +1,7 @@
-import Footer from "./footer";
 import Header from "./header";
 import Main from "./main";
 import HeadElement from "./headElement";
+import { LayoutBox } from "@/components/layout/styles";
 
 /**
  * layout of the website
@@ -9,12 +9,14 @@ import HeadElement from "./headElement";
  */
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div>
+        <LayoutBox
+            justifyContent="space-between"
+            direction={{ xs: "column", md: "row" }}
+        >
             <HeadElement />
             <Header />
             <Main>{children}</Main>
-            <Footer />
-        </div>
+        </LayoutBox>
     );
 };
 

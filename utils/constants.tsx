@@ -61,49 +61,103 @@ export const landingPage = {
 /**
  *  navbar constants
  */
+
+interface navbarItemsProps {
+    color: string;
+    size: string;
+}
+
+const navIconStyles = {
+    transition: "0.7s ease",
+};
+
 export const navbarPage = {
-    navbarItems: (color: string, size: string) => {
+    navbarItems: ({
+        color,
+        size,
+    }: navbarItemsProps): {
+        data: string;
+        href: string;
+        icon: JSX.Element;
+    }[] => {
         return [
             {
-                text: "Home",
+                data: "Home",
                 href: "/",
-                icon: <AiFillHome color={color} size={size} />,
+                icon: (
+                    <AiFillHome
+                        color={color}
+                        size={size}
+                        style={navIconStyles}
+                    />
+                ),
             },
             {
-                text: "AIS Academic",
+                data: "AIS Academic",
                 href: "/curriculum",
-                icon: <RiLayoutMasonryFill color={color} size={size} />,
+                icon: (
+                    <RiLayoutMasonryFill
+                        color={color}
+                        size={size}
+                        style={navIconStyles}
+                    />
+                ),
             },
             {
-                text: "Engage with AIS",
+                data: "Engage with AIS",
                 href: "/levels",
-                icon: <RiFileSearchFill color={color} size={size} />,
+                icon: (
+                    <RiFileSearchFill
+                        color={color}
+                        size={size}
+                        style={navIconStyles}
+                    />
+                ),
             },
             {
-                text: "About AIS",
+                data: "About AIS",
                 href: "/about",
                 icon: (
                     <BsFillExclamationCircleFill
                         color={color}
                         size={size}
+                        style={navIconStyles}
                     />
                 ),
             },
             {
-                text: "Contact AIS",
+                data: "Contact AIS",
                 href: "/latest",
-                icon: <MdContactPhone color={color} size={size} />,
+                icon: (
+                    <MdContactPhone
+                        color={color}
+                        size={size}
+                        style={navIconStyles}
+                    />
+                ),
             },
             {
-                text: "Unlock",
+                data: "Unlock",
                 href: "/registration",
-                icon: <FaUnlockAlt color={color} size={size} />,
+                icon: (
+                    <FaUnlockAlt
+                        color={color}
+                        size={size}
+                        style={navIconStyles}
+                    />
+                ),
             },
             {
-                text: "Jobs",
+                data: "Jobs",
                 href: "/jobs",
-                icon: <BiPaperPlane color={color} size={size} />,
-            }
+                icon: (
+                    <BiPaperPlane
+                        color={color}
+                        size={size}
+                        style={navIconStyles}
+                    />
+                ),
+            },
         ];
     },
 };
