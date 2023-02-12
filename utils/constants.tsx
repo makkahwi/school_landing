@@ -1,14 +1,18 @@
-import { AiFillHome } from "react-icons/ai";
-import { RiLayoutMasonryFill, RiFileSearchFill } from "react-icons/ri";
-import { BsFillExclamationCircleFill } from "react-icons/bs";
-import { MdContactPhone } from "react-icons/md";
-import { FaUnlockAlt } from "react-icons/fa";
 import { IoIosBook, IoIosBrush } from "react-icons/io";
 import { TbLanguage } from "react-icons/tb";
 import { MdFastfood } from "react-icons/md";
 import { CgMathDivide } from "react-icons/cg";
 import { FaChess, FaLanguage, FaSchool } from "react-icons/fa";
-import { BiJoystick, BiBasketball, BiPaperPlane } from "react-icons/bi";
+import { BiJoystick, BiBasketball } from "react-icons/bi";
+import { ReactNode } from "react";
+
+import HomeIcon from "@mui/icons-material/Home";
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PlagiarismIcon from '@mui/icons-material/Plagiarism';
+import ErrorIcon from '@mui/icons-material/Error';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import SendIcon from '@mui/icons-material/Send';
 
 /**
  *  landing page constants
@@ -67,10 +71,6 @@ interface navbarItemsProps {
     size: string;
 }
 
-const navIconStyles = {
-    transition: "0.7s ease",
-};
-
 export const navbarPage = {
     navbarItems: ({
         color,
@@ -78,17 +78,20 @@ export const navbarPage = {
     }: navbarItemsProps): {
         data: string;
         href: string;
-        icon: JSX.Element;
+        icon: ReactNode;
     }[] => {
         return [
             {
                 data: "Home",
                 href: "/",
                 icon: (
-                    <AiFillHome
-                        color={color}
-                        size={size}
-                        style={navIconStyles}
+                    <HomeIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
                     />
                 ),
             },
@@ -96,10 +99,13 @@ export const navbarPage = {
                 data: "AIS Academic",
                 href: "/curriculum",
                 icon: (
-                    <RiLayoutMasonryFill
-                        color={color}
-                        size={size}
-                        style={navIconStyles}
+                    <DashboardIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
                     />
                 ),
             },
@@ -107,10 +113,13 @@ export const navbarPage = {
                 data: "Engage with AIS",
                 href: "/levels",
                 icon: (
-                    <RiFileSearchFill
-                        color={color}
-                        size={size}
-                        style={navIconStyles}
+                    <PlagiarismIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
                     />
                 ),
             },
@@ -118,10 +127,13 @@ export const navbarPage = {
                 data: "About AIS",
                 href: "/about",
                 icon: (
-                    <BsFillExclamationCircleFill
-                        color={color}
-                        size={size}
-                        style={navIconStyles}
+                    <ErrorIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
                     />
                 ),
             },
@@ -129,10 +141,13 @@ export const navbarPage = {
                 data: "Contact AIS",
                 href: "/latest",
                 icon: (
-                    <MdContactPhone
-                        color={color}
-                        size={size}
-                        style={navIconStyles}
+                    <ContactPhoneIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
                     />
                 ),
             },
@@ -140,10 +155,13 @@ export const navbarPage = {
                 data: "Unlock",
                 href: "/registration",
                 icon: (
-                    <FaUnlockAlt
-                        color={color}
-                        size={size}
-                        style={navIconStyles}
+                    <LockOpenIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
                     />
                 ),
             },
@@ -151,10 +169,13 @@ export const navbarPage = {
                 data: "Jobs",
                 href: "/jobs",
                 icon: (
-                    <BiPaperPlane
-                        color={color}
-                        size={size}
-                        style={navIconStyles}
+                    <SendIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
                     />
                 ),
             },
