@@ -1,12 +1,10 @@
-import { Box, Container, Stack, AppBar, SvgIconTypeMap } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import { keyframes, styled } from "@mui/material/styles";
 import CSS from "csstype";
 import Avatar from "@mui/material/Avatar";
-import { ElementType, ReactNode } from "react";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { ReactNode } from "react";
 
 // Interfaces ------------------------------------------
-
 export interface LinkElementProps {
     data: string | JSX.Element;
     icon: ReactNode;
@@ -94,6 +92,12 @@ export const MainLogo = styled(Avatar)(() => ({
 export const NavItemHoverEffect = {
     "&:hover": {
         opacity: 0.7,
-        transform: "translate(5%)"
+        transform: "translate(5%)",
     },
 };
+
+// Footer components ------------------------------------------
+
+export const FooterContainer = styled("footer")(() => ({
+    width: "100%",
+}));

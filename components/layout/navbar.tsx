@@ -168,7 +168,7 @@ const Navbar = ({
                 {
                     data: (
                         <MainLogo
-                            src="/header/header-logo.jpg"
+                            src="/header/header-logo.png"
                             alt="header logo"
                             variant="square"
                         />

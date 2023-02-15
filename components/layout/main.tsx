@@ -1,4 +1,4 @@
-import Footer from "./footer";
+import Footer from "@/components/layout/Footer";
 import { MainContainer } from "@/components/layout/styles";
 
 /**

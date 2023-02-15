@@ -1,6 +1,6 @@
-import Header from "./header";
-import Main from "./main";
-import HeadElement from "./headElement";
+import Header from "@/components/layout/Header";
+import Main from "@/components/layout/Main";
+import HeadElement from "@/components/layout/HeadElement";
 import { LayoutBox } from "@/components/layout/styles";
 
 /**

@@ -7,42 +7,81 @@ import { BiJoystick, BiBasketball } from "react-icons/bi";
 import { ReactNode } from "react";
 
 import HomeIcon from "@mui/icons-material/Home";
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import PlagiarismIcon from '@mui/icons-material/Plagiarism';
-import ErrorIcon from '@mui/icons-material/Error';
-import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
-import SendIcon from '@mui/icons-material/Send';
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import PlagiarismIcon from "@mui/icons-material/Plagiarism";
+import ErrorIcon from "@mui/icons-material/Error";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
+import SendIcon from "@mui/icons-material/Send";
+import theme from "@/styles/theme";
 
 /**
  *  landing page constants
  */
 export const landingPage = {
-    welcomeIntro:
-        "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018.The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment MORE…",
+    welcomeSquares: [
+        {
+            radiusMobile: ["1.5vw", "1.1.1.0"],
+            radiusDesktop: ["0.5vw", "1.1.1.0"],
+            bgcolor: theme.palette.orange.main,
+            rows: "5 / 7",
+            cols: "15 / 17",
+        },
+        {
+            radiusMobile: ["3vw", "1.1.1.0"],
+            radiusDesktop: ["1.5vw", "1.1.1.0"],
+            bgcolor: theme.palette.brown.main,
+            rows: "7 / 11",
+            cols: "15 / 19",
+        },
+        {
+            radiusMobile: ["2.5vw", "1.1.0.1"],
+            radiusDesktop: ["1.2vw", "1.1.0.1"],
+            bgcolor: theme.palette.basic.light,
+            rows: "11 / 14",
+            cols: "4 / 7",
+        },
+        {
+            radiusMobile: ["6vw", "1.0.1.1"],
+            radiusDesktop: ["3vw", "1.0.1.1"],
+            bgcolor: theme.palette.orange.main,
+            rows: "11 / 19",
+            cols: "7 / 15",
+        },
+        {
+            radiusMobile: ["5vw", "0.1.1.1"],
+            radiusDesktop: ["2.2vw", "0.1.1.1"],
+            bgcolor: theme.palette.blue.dark,
+            rows: "11 / 17",
+            cols: "15 / 21",
+        },
+        {
+            radiusMobile: ["1.5vw", "0.1.1.1"],
+            radiusDesktop: ["0.5vw", "0.1.1.1"],
+            bgcolor: theme.palette.brown.main,
+            rows: "17 / 19",
+            cols: "15 / 17",
+        },
+    ],
+
     whyAIS_icons: [
         {
             src: "/landingPage/islamic-icon.jpg",
             alt: "islamic-icon",
-            width: "60%",
-            height: "60%",
             text: "High-Level Islamic & Arabic Education",
         },
         {
             src: "/landingPage/cambridge-icon.jpg",
             alt: "cambridge-icon",
-            width: "60%",
-            height: "60%",
             text: "Cambridge Sciences' Curriculum",
         },
         {
             src: "/landingPage/cheap-zone-icon.jpg",
             alt: "cheap-zone-icon",
-            width: "60%",
-            height: "60%",
             text: "Reasonable & Affordable Charges",
         },
     ],
+
     newsFeatures: [
         "Job oppurtnity",
         "Student Portal",
