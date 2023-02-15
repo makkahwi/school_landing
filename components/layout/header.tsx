@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "./navbar";
 import { HeaderAnimation } from "@/components/layout/styles";
-import { AppBar, Container, Stack } from "@mui/material";
+import { AppBar } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useRouter } from "next/router";
 
