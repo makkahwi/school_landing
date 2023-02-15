@@ -1,7 +1,7 @@
 import HeadElement from "./headElement";
 import Header from "./header";
 import Main from "./main";
-import { LayoutBox } from "@/components/layout/styles";
+import { LayoutBox } from "./styles";
 
 /**
  * layout of the website
