@@ -263,37 +263,16 @@ export const curriculumPage = {
     contentSquares: [
         {
             text: "Languages",
-            edges: {
-                borderRadius: "3vw",
-                topLeft: true,
-                topRight: false,
-                bottomRight: true,
-                bottomLeft: true,
-            },
         },
         {
             text: "Islamic",
-            edges: {
-                borderRadius: "3vw",
-                topLeft: false,
-                topRight: false,
-                bottomRight: true,
-                bottomLeft: true,
-            },
         },
         {
             text: "Modern",
-            edges: {
-                borderRadius: "3vw",
-                topLeft: false,
-                topRight: true,
-                bottomRight: true,
-                bottomLeft: true,
-            },
         },
     ],
 
-    languagesPage: [
+    languages: [
         {
             title: "Arabic",
             content:

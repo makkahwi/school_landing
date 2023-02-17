@@ -38,6 +38,8 @@ const ar = {
             data: "--",
         }
     },
+    curriculumPage: {
+    },
     footer: {
         copyRights: "void",
     },

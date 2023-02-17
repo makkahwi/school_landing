@@ -39,6 +39,9 @@ const en = {
             data: "Data protection",
         }
     },
+    curriculumPage: {
+        
+    },
     footer: {
         copyRights:
             "All Rights Reserved for Al-Aqsa Integrated School Malaysia (Aqsa Integrated Enterprise 002879423-W) © 2018 - 2022 | Built & Hosted By Arromi Creatives",
