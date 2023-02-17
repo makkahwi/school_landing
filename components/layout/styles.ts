@@ -1,13 +1,14 @@
-import { Box, Container, Stack, AppBar } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import { keyframes, styled } from "@mui/material/styles";
 import CSS from "csstype";
 import Avatar from "@mui/material/Avatar";
+import { ReactNode } from "react";
+import theme from "@/styles/theme";
 
 // Interfaces ------------------------------------------
-
 export interface LinkElementProps {
     data: string | JSX.Element;
-    icon: JSX.Element;
+    icon: ReactNode;
     href?: string;
     itemLocale?: string;
     onClick?(): void;
@@ -33,39 +34,38 @@ export const MainContainer = styled("main")(() => ({
 
 export const HeaderAnimation = {
     HeaderOpenningDesktop: keyframes`
-        0% {width: 4rem;}
-        100% {width: max(15%, 20rem);}
+        0% {width: 5.5rem;}
+        100% {width: max(15%, 18rem);}
     `,
     HeaderClosingDesktop: keyframes`
-        0% {width: max(15%, 20rem);}
-        100% {width: 4rem;}
+        0% {width: max(15%, 18rem);}
+        100% {width: 5.5rem;}
     `,
     HeaderOpenningMobile: keyframes`
-        0% {height: 3rem;}
-        100% {height: 50vh;}
+        0% {height: 5rem;}
+        100% {height: 30rem;}
     `,
     HeaderClosingMobile: keyframes`
-        0% {height: 50vh;}
-        100% {height: 3rem;}
+        0% {height: 30rem;}
+        100% {height: 5rem;}
     `,
 };
 
-export const HeaderButton = styled(Box)(() => ({
+export const HeaderButton = styled(Container)(() => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "2rem",
-    height: "2rem",
+    width: "4rem",
+    height: "4rem",
     cursor: "pointer",
-    minWidth: "2rem",
-    minHeight: "2rem",
+    minWidth: "4rem",
+    minHeight: "4rem",
 }));
 
 // Navbar components ------------------------------------------
 
 export const NavLinkStyles: CSS.Properties = {
     display: "flex",
-    justifyContent: "flex-start",
     alignItems: "center",
     textDecoration: "none",
     width: "100%",
@@ -74,24 +74,23 @@ export const NavLinkStyles: CSS.Properties = {
 };
 
 export const NavStackStyles = {
-    display: "flex",
-    flexDirection: "column",
     justifyContent: "space-between",
-    alignItems: "flex-start",
-    background: "transparent",
     width: "100%",
     height: "100%",
 };
 
 export const MainLogo = styled(Avatar)(() => ({
     maxHeight: "2rem",
-    width: "100%",
     overflow: "hidden",
 }));
 
-export const NavItemHoverEffect = {
-    "&:hover": {
-        opacity: 0.7,
-        transform: "translate(5%)"
-    },
-};
+// Footer components ------------------------------------------
+
+export const FooterContainer = styled("footer")(() => ({
+    width: "100%",
+    height: "auto",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: theme.palette.basic.main
+}));

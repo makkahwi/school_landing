@@ -1,25 +1,25 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { AiOutlineGlobal } from "react-icons/ai";
 import { navbarPage } from "@/utils/constants";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Dispatch, SetStateAction } from "react";
 import React from "react";
-import { v4 as uuidv4 } from "uuid";
 import {
     HeaderButton,
     NavLinkStyles,
     NavStackStyles,
     LinkElementProps,
     MainLogo,
-    NavItemHoverEffect,
 } from "@/components/layout/styles";
 import { Container, Stack } from "@mui/system";
 import Typography from "@mui/material/Typography";
-import { HiBars3 } from "react-icons/hi2";
 import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import MenuIcon from "@mui/icons-material/Menu";
+import LanguageIcon from "@mui/icons-material/Language";
+import useTranslation from "@/hooks/useTranslation";
 
 /**
  * the navbar section in the layout
@@ -34,19 +34,25 @@ const Navbar = ({
     setNavIsOpened: Dispatch<SetStateAction<boolean>>;
     setBackground: Dispatch<SetStateAction<string>>;
 }) => {
+    const isDesktop = useMediaQuery("(min-width:900px)");
+    const theme = useTheme();
     const [iconTransform, setIconTransform] = useState("none");
-    const [color, setColor] = useState("transparent");
+    const [color, setColor] = useState(theme.palette.basic.light);
     const router = useRouter();
     const { locale } = router;
-    const theme = useTheme();
+    const { t } = useTranslation(router);
 
     useEffect(() => {
-        setIconTransform(navIsOpened ? "rotate(-90deg)" : "none");
-    }, [navIsOpened]);
-
-    useEffect(() => {
-        setNavIsOpened(false);
-    }, [locale]);
+        setIconTransform(
+            isDesktop
+                ? navIsOpened
+                    ? "none"
+                    : "rotate(-90deg)"
+                : navIsOpened
+                ? "rotate(-90deg)"
+                : "none"
+        );
+    }, [navIsOpened, isDesktop]);
 
     useEffect(() => {
         switch (router.pathname) {
@@ -89,7 +95,7 @@ const Navbar = ({
                 break;
         }
 
-        setNavIsOpened(false);
+        setNavIsOpened(isDesktop);
     }, [router.pathname, setNavIsOpened, setBackground, setColor]);
 
     const LinkElement = ({
@@ -101,31 +107,66 @@ const Navbar = ({
     }: LinkElementProps) => {
         return onClick ? (
             <Stack
-                direction="row"
-                justifyContent="flex-start"
+                direction={locale === "en" ? "row" : "row-reverse"}
+                justifyContent={{ xs: "space-between", md: "flex-start" }}
                 alignItems="center"
-                sx={{ width: "auto" }}
+                sx={{ width: "100%" }}
             >
-                <HeaderButton onClick={onClick}>{icon}</HeaderButton>
-                <Container>{data}</Container>
+                <HeaderButton
+                    disableGutters={true}
+                    sx={{ padding: { xs: 1, md: 2 }, margin: 0, width: "auto" }}
+                    onClick={onClick}
+                >
+                    {icon}
+                </HeaderButton>
+                <Container
+                    disableGutters={true}
+                    sx={{
+                        width: "auto",
+                        margin: { xs: 2, md: 0 },
+                        padding: { xs: 0, md: 2 },
+                        minHeight: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    {data}
+                </Container>
             </Stack>
         ) : (
             <Link href={href} locale={itemLocale} style={NavLinkStyles}>
                 <Stack
-                    direction="row"
+                    direction={locale === "en" ? "row" : "row-reverse"}
                     justifyContent="flex-start"
                     alignItems="center"
                     sx={{
-                        width: "auto",
+                        width: "100%",
                         transition: "0.2s ease",
-                        ...NavItemHoverEffect,
+                        "&:hover": {
+                            boxShadow: "0px 0px 0px 5px darkgray",
+                            transform:
+                                locale === "en"
+                                    ? "translate(5%)"
+                                    : "translate(-5%)",
+                        },
                     }}
                 >
-                    <HeaderButton>{icon}</HeaderButton>
+                    <HeaderButton
+                        disableGutters={true}
+                        sx={{ padding: { xs: 2.3, md: 2 } }}
+                    >
+                        {icon}
+                    </HeaderButton>
 
-                    <Container>
-                        <Typography variant="h5" color={color}>
-                            {data}
+                    <Container disableGutters={true} sx={{ padding: 2 }}>
+                        <Typography
+                            variant="h5"
+                            color={color}
+                            sx={{
+                                direction: locale === "en" ? "ltr" : "rtl",
+                            }}
+                        >
+                            {t(data)}
                         </Typography>
                     </Container>
                 </Stack>
@@ -133,24 +174,31 @@ const Navbar = ({
         );
     };
 
-    const MainLogoElement = () => (
-        <MainLogo
-            src="/header/header-logo.jpg"
-            alt="header logo"
-            variant="square"
-        />
-    );
-
     return (
-        <Stack sx={NavStackStyles}>
+        <Stack
+            sx={{
+                ...NavStackStyles,
+                alignItems: locale === "en" ? "flex-start" : "flex-end",
+            }}
+        >
             {[
                 {
-                    data: <MainLogoElement />,
+                    data: (
+                        <MainLogo
+                            src="/header/header-logo.png"
+                            alt="header logo"
+                            variant="square"
+                            sx={{
+                                width: { xs: "auto", md: "100%" },
+                            }}
+                        />
+                    ),
                     icon: (
-                        <HiBars3
-                            color={color}
-                            size={"100%"}
-                            style={{
+                        <MenuIcon
+                            sx={{
+                                width: "100%",
+                                height: "100%",
+                                color: color,
                                 transform: iconTransform,
                                 transition: "0.7s ease",
                             }}
@@ -163,8 +211,19 @@ const Navbar = ({
                 },
                 ...navbarPage.navbarItems({ color: color, size: "100%" }),
                 {
-                    data: locale == "en" ? "English" : "Arabic",
-                    icon: <AiOutlineGlobal color={color} size={"100%"} />,
+                    data:
+                        locale == "en"
+                            ? "navbar.navItems.languagAR"
+                            : "navbar.navItems.languagEN",
+                    icon: (
+                        <LanguageIcon
+                            sx={{
+                                width: "100%",
+                                height: "100%",
+                                color: color,
+                            }}
+                        />
+                    ),
                     href: router.asPath,
                     itemLocale: locale == "en" ? "ar" : "en",
                 },
