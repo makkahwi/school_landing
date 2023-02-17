@@ -12,7 +12,6 @@ import {
     NavStackStyles,
     LinkElementProps,
     MainLogo,
-    NavItemHoverEffect,
 } from "@/components/layout/styles";
 import { Container, Stack } from "@mui/system";
 import Typography from "@mui/material/Typography";
@@ -20,6 +19,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageIcon from "@mui/icons-material/Language";
+import useTranslation from "@/hooks/useTranslation";
 
 /**
  * the navbar section in the layout
@@ -40,6 +40,7 @@ const Navbar = ({
     const [color, setColor] = useState(theme.palette.basic.light);
     const router = useRouter();
     const { locale } = router;
+    const { t } = useTranslation(router);
 
     useEffect(() => {
         setIconTransform(
@@ -106,14 +107,14 @@ const Navbar = ({
     }: LinkElementProps) => {
         return onClick ? (
             <Stack
-                direction="row"
-                justifyContent="flex-start"
+                direction={locale === "en" ? "row" : "row-reverse"}
+                justifyContent={{ xs: "space-between", md: "flex-start" }}
                 alignItems="center"
-                sx={{ width: "auto" }}
+                sx={{ width: "100%" }}
             >
                 <HeaderButton
                     disableGutters={true}
-                    sx={{ padding: { xs: 1, md: 2 } }}
+                    sx={{ padding: { xs: 1, md: 2 }, margin: 0, width: "auto" }}
                     onClick={onClick}
                 >
                     {icon}
@@ -121,6 +122,8 @@ const Navbar = ({
                 <Container
                     disableGutters={true}
                     sx={{
+                        width: "auto",
+                        margin: { xs: 2, md: 0 },
                         padding: { xs: 0, md: 2 },
                         minHeight: "100%",
                         display: "flex",
@@ -133,13 +136,19 @@ const Navbar = ({
         ) : (
             <Link href={href} locale={itemLocale} style={NavLinkStyles}>
                 <Stack
-                    direction="row"
+                    direction={locale === "en" ? "row" : "row-reverse"}
                     justifyContent="flex-start"
                     alignItems="center"
                     sx={{
-                        width: "auto",
+                        width: "100%",
                         transition: "0.2s ease",
-                        ...NavItemHoverEffect,
+                        "&:hover": {
+                            boxShadow: "0px 0px 0px 5px darkgray",
+                            transform:
+                                locale === "en"
+                                    ? "translate(5%)"
+                                    : "translate(-5%)",
+                        },
                     }}
                 >
                     <HeaderButton
@@ -149,12 +158,15 @@ const Navbar = ({
                         {icon}
                     </HeaderButton>
 
-                    <Container
-                        disableGutters={true}
-                        sx={{ padding: { xs: 2, md: 1 } }}
-                    >
-                        <Typography variant="h5" color={color}>
-                            {data}
+                    <Container disableGutters={true} sx={{ padding: 2 }}>
+                        <Typography
+                            variant="h5"
+                            color={color}
+                            sx={{
+                                direction: locale === "en" ? "ltr" : "rtl",
+                            }}
+                        >
+                            {t(data)}
                         </Typography>
                     </Container>
                 </Stack>
@@ -163,7 +175,12 @@ const Navbar = ({
     };
 
     return (
-        <Stack sx={NavStackStyles}>
+        <Stack
+            sx={{
+                ...NavStackStyles,
+                alignItems: locale === "en" ? "flex-start" : "flex-end",
+            }}
+        >
             {[
                 {
                     data: (
@@ -171,6 +188,9 @@ const Navbar = ({
                             src="/header/header-logo.png"
                             alt="header logo"
                             variant="square"
+                            sx={{
+                                width: { xs: "auto", md: "100%" },
+                            }}
                         />
                     ),
                     icon: (
@@ -191,7 +211,10 @@ const Navbar = ({
                 },
                 ...navbarPage.navbarItems({ color: color, size: "100%" }),
                 {
-                    data: locale == "en" ? "English" : "Arabic",
+                    data:
+                        locale == "en"
+                            ? "navbar.navItems.languagAR"
+                            : "navbar.navItems.languagEN",
                     icon: (
                         <LanguageIcon
                             sx={{

@@ -17,14 +17,13 @@ const Header = () => {
     const { locale } = router;
 
     useEffect(() => {
-        setNavIsOpened(isDesktop)
-    }, [isDesktop, locale])
-    
+        setNavIsOpened(isDesktop);
+    }, [isDesktop, locale]);
 
     return (
         <AppBar
-            position="static"
             sx={{
+                position: { xs: "fixed", md: "static" },
                 bgcolor: background,
                 transition: "background-color 0.7s ease",
                 padding: 1,

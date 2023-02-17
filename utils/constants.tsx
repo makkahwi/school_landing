@@ -5,7 +5,6 @@ import { CgMathDivide } from "react-icons/cg";
 import { FaChess, FaLanguage, FaSchool } from "react-icons/fa";
 import { BiJoystick, BiBasketball } from "react-icons/bi";
 import { ReactNode } from "react";
-
 import HomeIcon from "@mui/icons-material/Home";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PlagiarismIcon from "@mui/icons-material/Plagiarism";
@@ -14,6 +13,127 @@ import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import SendIcon from "@mui/icons-material/Send";
 import theme from "@/styles/theme";
+
+interface navbarItemsProps {
+    color: string;
+    size: string;
+}
+
+/**
+ *  navbar constants
+ */
+
+export const navbarPage = {
+    navbarItems: ({
+        color,
+        size,
+    }: navbarItemsProps): {
+        data: string;
+        href: string;
+        icon: ReactNode;
+    }[] => {
+        return [
+            {
+                data: "navbar.navItems.home",
+                href: "/",
+                icon: (
+                    <HomeIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+            },
+            {
+                data: "navbar.navItems.academic",
+                href: "/curriculum",
+                icon: (
+                    <DashboardIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+            },
+            {
+                data: "navbar.navItems.engage",
+                href: "/levels",
+                icon: (
+                    <PlagiarismIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+            },
+            {
+                data: "navbar.navItems.about",
+                href: "/about",
+                icon: (
+                    <ErrorIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+            },
+            {
+                data: "navbar.navItems.contact",
+                href: "/latest",
+                icon: (
+                    <ContactPhoneIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+            },
+            {
+                data: "navbar.navItems.unlock",
+                href: "/registration",
+                icon: (
+                    <LockOpenIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+            },
+            {
+                data: "navbar.navItems.jobs",
+                href: "/jobs",
+                icon: (
+                    <SendIcon
+                        sx={{
+                            color: color,
+                            width: size,
+                            height: size,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+            },
+        ];
+    },
+};
 
 /**
  *  landing page constants
@@ -66,160 +186,74 @@ export const landingPage = {
 
     whyAIS_icons: [
         {
-            src: "/landingPage/islamic-icon.jpg",
+            src: "/landingPage/islamic-icon.png",
             alt: "islamic-icon",
-            text: "High-Level Islamic & Arabic Education",
+            text: "landingPage.whyAISSection.items.item1",
         },
         {
-            src: "/landingPage/cambridge-icon.jpg",
+            src: "/landingPage/cambridge-icon.png",
             alt: "cambridge-icon",
-            text: "Cambridge Sciences' Curriculum",
+            text: "landingPage.whyAISSection.items.item2",
         },
         {
-            src: "/landingPage/cheap-zone-icon.jpg",
+            src: "/landingPage/cheap-zone-icon.png",
             alt: "cheap-zone-icon",
-            text: "Reasonable & Affordable Charges",
+            text: "landingPage.whyAISSection.items.item3",
+        },
+    ],
+
+    newsSquares: [
+        {
+            radiusMobile: ["1.5vw", "1.1.0.1"],
+            radiusDesktop: ["0.8vw", "1.1.0.1"],
+            bgcolor: theme.palette.blue.dark,
+            rows: "3 / 5",
+            cols: "8 / 10",
+        },
+        {
+            radiusMobile: ["1.5vw", "1.1.0.1"],
+            radiusDesktop: ["1.5vw", "1.1.0.1"],
+            bgcolor: theme.palette.basic.light,
+            rows: "1 / 5",
+            cols: "10 / 14",
+        },
+        {
+            radiusMobile: ["1.5vw", "1.1.0.1"],
+            radiusDesktop: ["1.2vw", "1.1.1.0"],
+            bgcolor: theme.palette.orange.main,
+            rows: "2 / 5",
+            cols: "14 / 17",
+        },
+        {
+            radiusMobile: ["1.5vw", "1.1.0.1"],
+            radiusDesktop: ["1.2vw", "1.0.1.1"],
+            bgcolor: theme.palette.brown.main,
+            rows: "5 / 8",
+            cols: "11 / 14",
+        },
+    ],
+
+    news: [
+        {
+            title: "AIS Received Rahmaniya School Delegation",
+            src: "/landingPage/news1.jpeg",
+        },
+        {
+            title: "'Ebadur Rahman' institute in AIS",
+            src: "/landingPage/news2.jpeg",
         },
     ],
 
     newsFeatures: [
-        "Job oppurtnity",
-        "Student Portal",
-        "Student Portal",
-        "Registration Fee",
-        "Staff Protal",
-        "Staff Protal",
-        "AIS Curriculum",
-        "Website privacy",
-        "Website privacy",
-        "Levels of Study",
-        "Data protection",
-        "Data protection",
-        "Levels of Study",
-        "Data protection",
-        "Data protection",
+        "landingPage.newsSection.job",
+        "landingPage.newsSection.student",
+        "landingPage.newsSection.registration",
+        "landingPage.newsSection.staff",
+        "landingPage.newsSection.curriculum",
+        "landingPage.newsSection.website",
+        "landingPage.newsSection.levels",
+        "landingPage.newsSection.data",
     ],
-};
-
-/**
- *  navbar constants
- */
-
-interface navbarItemsProps {
-    color: string;
-    size: string;
-}
-
-export const navbarPage = {
-    navbarItems: ({
-        color,
-        size,
-    }: navbarItemsProps): {
-        data: string;
-        href: string;
-        icon: ReactNode;
-    }[] => {
-        return [
-            {
-                data: "Home",
-                href: "/",
-                icon: (
-                    <HomeIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-            {
-                data: "AIS Academic",
-                href: "/curriculum",
-                icon: (
-                    <DashboardIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-            {
-                data: "Engage with AIS",
-                href: "/levels",
-                icon: (
-                    <PlagiarismIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-            {
-                data: "About AIS",
-                href: "/about",
-                icon: (
-                    <ErrorIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-            {
-                data: "Contact AIS",
-                href: "/latest",
-                icon: (
-                    <ContactPhoneIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-            {
-                data: "Unlock",
-                href: "/registration",
-                icon: (
-                    <LockOpenIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-            {
-                data: "Jobs",
-                href: "/jobs",
-                icon: (
-                    <SendIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-        ];
-    },
 };
 
 /**

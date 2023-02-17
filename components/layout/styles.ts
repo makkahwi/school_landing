@@ -3,6 +3,7 @@ import { keyframes, styled } from "@mui/material/styles";
 import CSS from "csstype";
 import Avatar from "@mui/material/Avatar";
 import { ReactNode } from "react";
+import theme from "@/styles/theme";
 
 // Interfaces ------------------------------------------
 export interface LinkElementProps {
@@ -65,7 +66,6 @@ export const HeaderButton = styled(Container)(() => ({
 
 export const NavLinkStyles: CSS.Properties = {
     display: "flex",
-    justifyContent: "flex-start",
     alignItems: "center",
     textDecoration: "none",
     width: "100%",
@@ -74,30 +74,23 @@ export const NavLinkStyles: CSS.Properties = {
 };
 
 export const NavStackStyles = {
-    display: "flex",
-    flexDirection: "column",
     justifyContent: "space-between",
-    alignItems: "flex-start",
-    background: "transparent",
     width: "100%",
     height: "100%",
 };
 
 export const MainLogo = styled(Avatar)(() => ({
     maxHeight: "2rem",
-    width: "100%",
     overflow: "hidden",
 }));
-
-export const NavItemHoverEffect = {
-    "&:hover": {
-        opacity: 0.7,
-        transform: "translate(5%)",
-    },
-};
 
 // Footer components ------------------------------------------
 
 export const FooterContainer = styled("footer")(() => ({
     width: "100%",
+    height: "auto",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: theme.palette.basic.main
 }));

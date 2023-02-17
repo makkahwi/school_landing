@@ -19,7 +19,11 @@ const WelcomeSection = () => {
     const theme = useTheme();
 
     return (
-        <WelcomeSectionBox pb={5} sx={{ height: { xs: "auto", md: "100vh" } }}>
+        <WelcomeSectionBox
+            pt={{ xs: 15, md: 0 }}
+            pb={15}
+            sx={{ height: { xs: "auto", md: "100vh" } }}
+        >
             <Stack
                 direction={{ xs: "column", md: "row" }}
                 sx={{ height: "100%" }}
@@ -53,6 +57,9 @@ const WelcomeSection = () => {
                             color={theme.palette.blue.dark}
                             fontWeight="bold"
                             align="center"
+                            sx={{
+                                textShadow: `0px 0px 15px ${theme.palette.blue.dark}`,
+                            }}
                         >
                             {t("landingPage.welcomeSection.title")}
                         </Typography>
@@ -97,9 +104,11 @@ const WelcomeSection = () => {
                             />
                         </Square>
 
-                        {landingPage.welcomeSquares.map((block) => {
+                        {landingPage.welcomeSquares.map((block, index) => {
                             return (
-                                <React.Fragment key={JSON.stringify(block)}>
+                                <React.Fragment
+                                    key={`welcome square page-1 number: ${index}`}
+                                >
                                     <Square
                                         bgcolor={block.bgcolor}
                                         radius={{

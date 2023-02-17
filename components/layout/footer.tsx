@@ -15,9 +15,11 @@ const Footer = () => {
     const theme = useTheme();
 
     return (
-        <FooterContainer sx={{ bgcolor: theme.palette.blue.light }}>
-            <Container>
-                <Typography>{t("footer.copyRights")}</Typography>
+        <FooterContainer>
+            <Container sx={{padding: 2}}>
+                <Typography textAlign="center" fontSize="1vw">
+                    {t("footer.copyRights")}
+                </Typography>
             </Container>
         </FooterContainer>
     );

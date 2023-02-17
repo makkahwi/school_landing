@@ -1,14 +1,11 @@
 import { keyframes, styled } from "@mui/material/styles";
-import CSS from "csstype";
-import Avatar from "@mui/material/Avatar";
-import { ReactNode } from "react";
 import { Container, Stack, Box } from "@mui/material";
 import theme from "@/styles/theme";
 
 // Welcome Section ------------------------------------------
 
 export const WelcomeSectionBox = styled(Box)(() => ({
-    background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://aqsa.edu.my/wp-content/uploads/2019/05/Why.jpg")`,
+    background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(landingPage/why.jpg)`,
     backgroundSize: "cover",
 }));
 
@@ -19,6 +16,7 @@ export const SquaresShape = styled(Container)(() => ({
 }));
 
 export const GridLayoutStyles = {
+    direction: "ltr",
     display: "grid",
     gridTemplateColumns: {
         xs: "repeat(20, 1.5vw)",
@@ -29,11 +27,82 @@ export const GridLayoutStyles = {
         md: "repeat(18, 0.5vw)",
     },
     gap: { xs: 1, md: 2 },
-}
+};
 
 // Why AIS Section ------------------------------------------
 
 export const WhyAISSectionBox = styled(Box)(() => ({
-    background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://aqsa.edu.my/wp-content/uploads/2019/05/Why.jpg")`,
+    background:
+        "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(landingPage/waves-bg.svg)",
+    backgroundPosition: "center",
     backgroundSize: "cover",
 }));
+
+// Why AIS Section ------------------------------------------
+
+export const NewsSectionBox = styled(Box)(() => ({
+    height: "auto",
+    background: `url(landingPage/wave2-bg.svg)`,
+    backgroundSize: "cover",
+}));
+
+export const NewsGridStyles = {
+    direction: "ltr",
+    display: "grid",
+    justifyContent: "center",
+    margin: 5,
+    gridTemplateColumns: {
+        xs: "repeat(37, 1vw)",
+        md: "repeat(37, 0.5vw)",
+    },
+    gridTemplateRows: {
+        xs: "repeat(22, 1vw)",
+        md: "repeat(22, 0.5vw)",
+    },
+    gap: { xs: 0.7, md: 2 },
+};
+
+export const PageFlipComponent = styled(Box)(() => ({
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    alighnItems: "center",
+}));
+
+export const LowerGridStyles = {
+    direction: "ltr",
+    margin: { xs: "4rem 0rem", md: 8 },
+    display: "grid",
+    justifyContent: "center",
+    gridTemplateColumns: {
+        xs: "repeat(12, 3vw)",
+        md: "repeat(12, 2vw)",
+    },
+    gridTemplateRows: {
+        xs: "repeat(15, 3vw)",
+        md: "repeat(15, 2vw)",
+    },
+    gap: { xs: 2, md: 4 },
+};
+
+export const NewsArrowStyles = {
+    position: "absolute",
+    width: "5vw",
+    height: "5vw",
+    top: "50%",
+    transition: "0.4s ease",
+    transform: "translateY(-50%)",
+    zIndex: "5",
+    opacity: 0.3,
+    color: theme.palette.basic.light,
+    cursor: "pointer",
+
+    "&:hover": {
+        opacity: 1,
+    },
+};
+
+export const NewsAnimation = keyframes`
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+`;

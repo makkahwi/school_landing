@@ -10,7 +10,7 @@ import { Stack } from "@mui/material";
 
 export default function Home() {
     return (
-        <Stack pb={5}>
+        <Stack>
             <WelcomeSection />
             <WhyAISSection />
             <NewsSection />
