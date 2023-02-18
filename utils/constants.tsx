@@ -260,41 +260,26 @@ export const landingPage = {
  *  curreculum page constants
  */
 export const curriculumPage = {
-    contentSquares: [
-        {
-            text: "Languages",
-        },
-        {
-            text: "Islamic",
-        },
-        {
-            text: "Modern",
-        },
+    courseSquares: [
+        "curriculumPage.courseSquares.languages",
+        "curriculumPage.courseSquares.islamic",
+        "curriculumPage.courseSquares.modern",
     ],
 
     languages: [
         {
-            title: "Arabic",
-            content:
-                "Arabic as the mother tongue of Arab students which should not be lost, and basic Islamic knowledge language for Muslims",
+            title: "curriculumPage.languages.arabic",
+            content: "curriculumPage.languages.arabicContent",
         },
         {
-            title: "English",
-            content:
-                "English as the modern sciences language, which enables students to keep update with the latest discoveries, theories and inventions",
+            title: "curriculumPage.languages.english",
+            content: "curriculumPage.languages.englishContent",
         },
         {
-            title: "Malay",
-            content:
-                "The local language of Malays, which enhance students’ capability to interact with the locals of Malaysia",
+            title: "curriculumPage.languages.malay",
+            content: "curriculumPage.languages.malayContent",
         },
     ],
-
-    islamicStudies:
-        "The religious part of the curriculum is divided into three sections: Islamic Fiqh, Quran Memorization & Recitation, and Islamic Culture Education . As for the Islamic Fiqh, AIS depends on the heritage of Imam Shafi’I, and it is keen to teach the Quran and the rules of recitation and memorizing it. In the aspect of Islamic education, the curriculum contains all that develop good Islamic values and manners among students. Curriculum units vary to include Hadith, Prophetic Hadith, Sunnah, and others.",
-
-    modernSciences:
-        "Math, Science, Computer Science, Arts and Sports , These basic materials aim to provide students with basic computers skills, math and the sciences (Chemistry, Physics and Biology), and trying to develop different skills in art and sports and to discover and develop talents. Math, science and English language courses follow the Cambridge curriculum.",
 
     clubsItems: (size: string, color: string) => [
         { text: "Art Club", icon: <IoIosBrush size={size} color={color} /> },
