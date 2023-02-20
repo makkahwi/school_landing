@@ -1,4 +1,9 @@
 const en = {
+    global: {
+        page404: "Ops, Page not found !", 
+        page500: "Server error .. totaly not your fault", 
+    },
+
     navbar: {
         navItems: {
             home: "Home",

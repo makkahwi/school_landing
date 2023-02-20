@@ -92,6 +92,8 @@ const Navbar = ({
                 break;
 
             default:
+                setBackground(theme.palette.basic.main);
+                setColor(theme.palette.blue.dark);
                 break;
         }
 

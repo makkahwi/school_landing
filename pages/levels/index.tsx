@@ -4,6 +4,10 @@ import { Stack } from "@mui/material";
 import React from "react";
 import { levelsPageSections } from "@/utils/constants";
 
+/**
+ *  the levels page
+ *
+ */
 export default function LevelsOfStudy() {
     return (
         <Stack>

@@ -4,10 +4,9 @@ import NewsSection from "@/components/landingPage/newsSection";
 import { Stack } from "@mui/material";
 
 /**
- *  the landing page of teh website
+ *  the landing page of the website
  *
  */
-
 export default function Home() {
     return (
         <Stack>
