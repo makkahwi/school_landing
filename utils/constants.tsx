@@ -13,7 +13,6 @@ import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import SendIcon from "@mui/icons-material/Send";
 import theme from "@/styles/theme";
-
 import BrushIcon from "@mui/icons-material/Brush";
 import MenuBookSharpIcon from "@mui/icons-material/MenuBookSharp";
 import GTranslateIcon from "@mui/icons-material/GTranslate";
@@ -399,3 +398,245 @@ export const curriculumPage = {
         },
     ],
 };
+
+/**
+ *  levels page constants
+ */
+export const levelsPageSections = [
+    {
+        title: "levelsPage.sections.section1.title",
+        subTitle: "levelsPage.sections.section1.subTitle",
+        image: "",
+
+        bgColor: theme.palette.basic.main,
+        titleColor: theme.palette.orange.main,
+        subTitleColor: theme.palette.basic.dark,
+        iconsColor: theme.palette.orange.main,
+
+        listElemnts: (size: string, color: string) => [
+            {
+                text: "levelsPage.sections.section1.listElemnts.txt1",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section1.listElemnts.txt2",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section1.listElemnts.txt3",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section1.listElemnts.txt4",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section1.listElemnts.txt5",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+        ],
+    },
+    {
+        title: "levelsPage.sections.section2.title",
+        subTitle: "levelsPage.sections.section2.subTitle",
+        image: "",
+
+        bgColor: theme.palette.blue.dark,
+        titleColor: theme.palette.orange.main,
+        subTitleColor: theme.palette.basic.light,
+        iconsColor: theme.palette.orange.main,
+
+        listElemnts: (size: string, color: string) => [
+            {
+                text: "levelsPage.sections.section2.listElemnts.txt1",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section2.listElemnts.txt2",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section2.listElemnts.txt3",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section2.listElemnts.txt4",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section2.listElemnts.txt5",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section2.listElemnts.txt6",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+        ],
+    },
+    {
+        title: "levelsPage.sections.section3.title",
+        subTitle: "levelsPage.sections.section3.subTitle",
+        image: "",
+
+        bgColor: theme.palette.orange.main,
+        titleColor: theme.palette.basic.light,
+        subTitleColor: theme.palette.basic.dark,
+        iconsColor: theme.palette.basic.light,
+
+        listElemnts: (size: string, color: string) => [
+            {
+                text: "levelsPage.sections.section3.listElemnts.txt1",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section3.listElemnts.txt2",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section3.listElemnts.txt3",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section3.listElemnts.txt4",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section3.listElemnts.txt5",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section3.listElemnts.txt6",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+        ],
+    },
+    {
+        title: "levelsPage.sections.section4.title",
+        subTitle: "levelsPage.sections.section4.subTitle",
+        image: "",
+
+        bgColor: theme.palette.basic.main,
+        titleColor: theme.palette.blue.dark,
+        subTitleColor: theme.palette.basic.dark,
+        iconsColor: theme.palette.blue.dark,
+
+        listElemnts: (size: string, color: string) => [
+            {
+                text: "levelsPage.sections.section4.listElemnts.txt1",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section4.listElemnts.txt2",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section4.listElemnts.txt3",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section4.listElemnts.txt4",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section4.listElemnts.txt5",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+            {
+                text: "levelsPage.sections.section4.listElemnts.txt6",
+                icon: (
+                    <BrushIcon
+                        sx={{ width: size, height: size, color: color }}
+                    />
+                ),
+            },
+        ],
+    },
+];
