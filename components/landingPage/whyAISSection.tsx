@@ -1,7 +1,6 @@
-import { WhyAISSectionBox } from "./styles";
 import useTranslation from "@/hooks/useTranslation";
 import { useRouter } from "next/router";
-import { Stack, Container, Typography } from "@mui/material";
+import { Stack, Container, Typography, Box } from "@mui/material";
 import theme from "@/styles/theme";
 import { landingPage } from "@/utils/constants";
 import Square from "../shared/Square";
@@ -13,9 +12,10 @@ const WhyAISSection = () => {
     const { t } = useTranslation(router);
 
     return (
-        <WhyAISSectionBox
+        <Box
             pt={5}
             pb={5}
+            bgcolor={theme.palette.basic.light}
             sx={{
                 height: { xs: "auto", md: "100vh" },
             }}
@@ -53,7 +53,7 @@ const WhyAISSection = () => {
                                     desktop: ["2vw", "1.1.1.1"],
                                 }}
                                 sx={{
-                                    width: { xs: "60%", md: "20%" },
+                                    width: { xs: "100%", md: "20%" },
                                     height: "90%",
                                 }}
                             >
@@ -90,7 +90,7 @@ const WhyAISSection = () => {
                     );
                 })}
             </Stack>
-        </WhyAISSectionBox>
+        </Box>
     );
 };
 

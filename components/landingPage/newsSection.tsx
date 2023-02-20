@@ -1,5 +1,4 @@
 import {
-    NewsSectionBox,
     NewsGridStyles,
     PageFlipComponent,
     LowerGridStyles,
@@ -8,7 +7,7 @@ import {
 } from "./styles";
 import useTranslation from "@/hooks/useTranslation";
 import { useRouter } from "next/router";
-import { Stack, Container, Typography, Box } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import theme from "@/styles/theme";
 import { landingPage } from "@/utils/constants";
 import Square from "../shared/Square";
@@ -88,14 +87,14 @@ const NewsSection = () => {
 
     useEffect(() => {
         const interval = setInterval(() => arrowClickHandler("right"), 8000);
-        
+
         return () => {
-          clearInterval(interval);
+            clearInterval(interval);
         };
-      }, []);
-    
+    }, []);
+
     return (
-        <NewsSectionBox p={{ md: 5 }} bgcolor="#002233">
+        <Box p={{ md: 5 }} bgcolor={theme.palette.basic.main}>
             <Stack justifyContent="center">
                 <Box sx={NewsGridStyles}>
                     <Square
@@ -112,7 +111,7 @@ const NewsSection = () => {
                         <Typography
                             color={theme.palette.basic.light}
                             fontWeight="bold"
-                            fontSize={{ xs: "6vw", md: "3vw" }}
+                            fontSize={{ xs: "6vw", sm: "4vw", md: "3vw" }}
                         >
                             {t("landingPage.newsSection.news")}
                         </Typography>
@@ -163,29 +162,28 @@ const NewsSection = () => {
                     >
                         <PageFlip />
                     </Square>
+                </Box>
 
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        alignItems="center"
+                <Box
+                    sx={{
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
+                    <Typography
                         sx={{
-                            width: "100%",
-                            height: "100%",
-                            gridRow: "20 / 23",
-                            gridColumn: "1 / 38",
+                            fontSize: { xs: "8vw", sm: "4vw", md: "2vw" },
+                            width: "80%",
+                            textAlign: "center",
+                            background:
+                            "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))",
                         }}
+                        color={theme.palette.basic.light}
                     >
-                        <Typography
-                            sx={{
-                                width: "fit-content",
-                                animation: `${NewsAnimation} 1.7s both ease`,
-                            }}
-                            variant="h5"
-                            color={theme.palette.basic.light}
-                        >
-                            {landingPage.news[currentPhoto].title}
-                        </Typography>
-                    </Box>
+                        {landingPage.news[currentPhoto].title}
+                    </Typography>
                 </Box>
 
                 <Box sx={LowerGridStyles}>
@@ -193,22 +191,22 @@ const NewsSection = () => {
                         bgcolor={theme.palette.basic.light}
                         radius={{
                             mobile: ["7vw", "1.1.0.1"],
-                            desktop: ["4vw", "1.1.0.1"],
+                            desktop: ["2vw", "1.1.0.1"],
                         }}
                         sx={{
-                            gridRow: "1 / 4",
-                            gridColumn: "4 / 7",
+                            gridRow: "1 / 3",
+                            gridColumn: "5 / 7",
                         }}
                     />
                     <Square
                         bgcolor={theme.palette.orange.main}
                         radius={{
                             mobile: ["7vw", "1.1.1.0"],
-                            desktop: ["4vw", "1.1.1.0"],
+                            desktop: ["2vw", "1.1.1.0"],
                         }}
                         sx={{
-                            gridRow: "1 / 4",
-                            gridColumn: "10 / 13",
+                            gridRow: "1 / 3",
+                            gridColumn: "11 / 13",
                         }}
                     />
                     <Square
@@ -218,7 +216,7 @@ const NewsSection = () => {
                             desktop: ["3vw", "1.0.1.1"],
                         }}
                         sx={{
-                            gridRow: "4 / 16",
+                            gridRow: "3 / 12",
                             gridColumn: "1 / 7",
                         }}
                     >
@@ -252,7 +250,7 @@ const NewsSection = () => {
                             desktop: ["3vw", "0.1.1.1"],
                         }}
                         sx={{
-                            gridRow: "4 / 16",
+                            gridRow: "3 / 12",
                             gridColumn: "7 / 13",
                         }}
                     >
@@ -268,7 +266,7 @@ const NewsSection = () => {
                     </Square>
                 </Box>
             </Stack>
-        </NewsSectionBox>
+        </Box>
     );
 };
 

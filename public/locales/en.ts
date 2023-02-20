@@ -12,6 +12,7 @@ const en = {
             languagAR: "Arabic",
         },
     },
+
     landingPage: {
         welcomeSection: {
             title: "Welcome to AIS",
@@ -39,16 +40,19 @@ const en = {
             data: "Data protection",
         },
     },
+
     curriculumPage: {
         title: "AIS CURRICULUM",
-        
+
+        courses: "AIS Curriculum contains courses from 3 different divisions",
         courseSquares: {
             languages: "Languages",
             islamic: "Islamic",
             modern: "Modern",
         },
 
-        languages: {
+        languages: "Languages",
+        languagesContents: {
             arabic: "Arabic",
             arabicContent:
                 "Arabic as the mother tongue of Arab students which should not be lost, and basic Islamic knowledge language for Muslims",
@@ -67,7 +71,35 @@ const en = {
         modernSciences: "Modern Sciences",
         modernSciencesContent:
             "Math, Science, Computer Science, Arts and Sports , These basic materials aim to provide students with basic computers skills, math and the sciences (Chemistry, Physics and Biology), and trying to develop different skills in art and sports and to discover and develop talents. Math, science and English language courses follow the Cambridge curriculum.",
+
+        coCURRICULUM: "CO-CURRICULUM",
+        coText: "Designed to shape students' skills, thrill and psycho-social satisfaction.",
+
+        clubs: "Clubs",
+        clubsContents: {
+            art: "Art Club",
+            arabic: "Arabic Club",
+            french: "French Club",
+            cooking: "Cooking Club",
+            math: "Math Club",
+            chess: "Chess Club",
+        },
+
+        activities: "Activities",
+        activitiesContents: {
+            leisure: "Leisure Trips",
+            library: "Library Day",
+            sports: "Sports Day",
+            cultural: "Cultural Competitions",
+            math: "Math Competitions",
+            educational: "Educational Trips",
+        },
     },
+
+    levelsPage: {
+        title: "LEVELS OF STUDY",
+    },
+
     footer: {
         copyRights:
             "All Rights Reserved for Al-Aqsa Integrated School Malaysia (Aqsa Integrated Enterprise 002879423-W) © 2018 - 2022 | Built & Hosted By Arromi Creatives",

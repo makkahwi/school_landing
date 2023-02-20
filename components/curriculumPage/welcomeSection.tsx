@@ -56,9 +56,13 @@ const WelcomeSection = () => {
             <Typography
                 mt={3}
                 mb={3}
-                fontWeight="bold"
+                // variant="h3"
                 fontSize={{ xs: "8vw", md: "4vw" }}
                 color={theme.palette.basic.light}
+                fontWeight="bold"
+                sx={{
+                    textShadow: `0px 0px 15px ${theme.palette.basic.light}`,
+                }}
             >
                 {t("curriculumPage.title")}
             </Typography>

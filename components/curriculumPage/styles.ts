@@ -1,5 +1,3 @@
-import { keyframes, styled } from "@mui/material/styles";
-import { Container, Stack, Box } from "@mui/material";
 import theme from "@/styles/theme";
 
 // Welcome Section ------------------------------------------
@@ -44,4 +42,114 @@ export const LowerSquaresGrid = {
         md: "repeat(5, 2vw)",
     },
     gap: { xs: 2, md: 2 },
+};
+
+// Courses Section ------------------------------------------
+
+export const CoursesContainerStyles = {
+    display: "flex",
+    width: "100%",
+    padding: 5,
+    justifyContent: { md: "space-evenly" },
+    alignItems: "center",
+};
+
+// Languages Section ------------------------------------------
+
+export const LanguagesGrid = {
+    direction: "ltr",
+    width: { xs: "100%", md: "50%" },
+    display: "grid",
+    justifyContent: "center",
+    gridTemplateColumns: {
+        xs: "repeat(14, 1vw)",
+        md: "repeat(14, 1.3vw)",
+    },
+    gridTemplateRows: {
+        xs: "repeat(11, 1vw)",
+        md: "repeat(11, 1.3vw)",
+    },
+    gap: { xs: 2, md: 1.5 },
+};
+
+export const TitleStyles = {
+    color: theme.palette.blue.dark,
+    fontWeight: "bold",
+    fontSize: { xs: "6vw", md: "3vw" },
+    gridRow: "1 / 5",
+    gridColumn: "6 / 15",
+    textAlign: "center",
+    alignSelf: "center",
+};
+
+// Islamic Section ------------------------------------------
+
+export const IslamicStudiesGrid = {
+    direction: "ltr",
+    width: { xs: "100%", md: "50%" },
+    display: "grid",
+    justifyContent: "center",
+    gridTemplateColumns: {
+        xs: "repeat(14, 1vw)",
+        md: "repeat(14, 1vw)",
+    },
+    gridTemplateRows: {
+        xs: "repeat(12, 1vw)",
+        md: "repeat(12, 1vw)",
+    },
+    gap: { xs: 2, md: 2 },
+};
+
+// Modern Section ------------------------------------------
+
+export const ModernScienceContainer = {
+    bgcolor: theme.palette.orange.main,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+};
+
+export const ModernScienceGrid = {
+    direction: "ltr",
+    width: { xs: "100%", md: "50%" },
+    display: "grid",
+    justifyContent: "center",
+    gridTemplateColumns: {
+        xs: "repeat(23, 0.1vw)",
+        md: "repeat(23, 0.7vw)",
+    },
+    gridTemplateRows: {
+        xs: "repeat(10, 0.1vw)",
+        md: "repeat(10, 0.7vw)",
+    },
+    gap: { xs: 1.5, md: 2 },
+};
+
+// Co curreculum section
+
+export const CoCurriculumGrid = {
+    direction: "ltr",
+    position: "relative",
+    width: { xs: "100%", md: "50%" },
+    display: "grid",
+    justifyContent: "center",
+    gridTemplateColumns: {
+        xs: "repeat(2, 35vw)",
+        md: "repeat(2, 12vw)",
+    },
+    gridTemplateRows: {
+        xs: "repeat(2, 35vw)",
+        md: "repeat(2, 12vw)",
+    },
+    gap: 2,
+};
+
+export const AvatarStyles = {
+    width: { xs: "100%", md: "80%" },
+    height: "auto",
+    position: "absolute",
+    bottom: "0px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    zIndex: "15",
 };
