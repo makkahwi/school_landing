@@ -4,11 +4,6 @@ import theme from "@/styles/theme";
 
 // Welcome Section ------------------------------------------
 
-export const WelcomeSectionBox = styled(Box)(() => ({
-    background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(landingPage/why.jpg)`,
-    backgroundSize: "cover",
-}));
-
 export const SquaresShape = styled(Container)(() => ({
     display: "flex",
     justifyContent: "center",
@@ -29,22 +24,7 @@ export const GridLayoutStyles = {
     gap: { xs: 1, md: 2 },
 };
 
-// Why AIS Section ------------------------------------------
-
-export const WhyAISSectionBox = styled(Box)(() => ({
-    background:
-        "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(landingPage/waves-bg.svg)",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-}));
-
-// Why AIS Section ------------------------------------------
-
-export const NewsSectionBox = styled(Box)(() => ({
-    height: "auto",
-    background: `url(landingPage/wave2-bg.svg)`,
-    backgroundSize: "cover",
-}));
+// News Section ------------------------------------------
 
 export const NewsGridStyles = {
     direction: "ltr",
@@ -56,8 +36,8 @@ export const NewsGridStyles = {
         md: "repeat(37, 0.5vw)",
     },
     gridTemplateRows: {
-        xs: "repeat(22, 1vw)",
-        md: "repeat(22, 0.5vw)",
+        xs: "repeat(20, 1vw)",
+        md: "repeat(20, 0.5vw)",
     },
     gap: { xs: 0.7, md: 2 },
 };
@@ -79,16 +59,16 @@ export const LowerGridStyles = {
         md: "repeat(12, 2vw)",
     },
     gridTemplateRows: {
-        xs: "repeat(15, 3vw)",
-        md: "repeat(15, 2vw)",
+        xs: "repeat(11, 3vw)",
+        md: "repeat(11, 2vw)",
     },
     gap: { xs: 2, md: 4 },
 };
 
 export const NewsArrowStyles = {
     position: "absolute",
-    width: "5vw",
-    height: "5vw",
+    width: { xs: "15vw", md: "5vw" },
+    height: { xs: "15vw", md: "5vw" },
     top: "50%",
     transition: "0.4s ease",
     transform: "translateY(-50%)",

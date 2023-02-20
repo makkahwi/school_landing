@@ -14,6 +14,17 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import SendIcon from "@mui/icons-material/Send";
 import theme from "@/styles/theme";
 
+import BrushIcon from "@mui/icons-material/Brush";
+import MenuBookSharpIcon from "@mui/icons-material/MenuBookSharp";
+import GTranslateIcon from "@mui/icons-material/GTranslate";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import CalculateIcon from "@mui/icons-material/Calculate";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
+import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
+import TranslateIcon from "@mui/icons-material/Translate";
+import SchoolIcon from "@mui/icons-material/School";
+
 interface navbarItemsProps {
     color: string;
     size: string;
@@ -260,96 +271,131 @@ export const landingPage = {
  *  curreculum page constants
  */
 export const curriculumPage = {
-    contentSquares: [
+    courseSquares: [
         {
-            text: "Languages",
-            edges: {
-                borderRadius: "3vw",
-                topLeft: true,
-                topRight: false,
-                bottomRight: true,
-                bottomLeft: true,
-            },
+            text: "curriculumPage.courseSquares.languages",
+            edges: "1.0.1.1",
         },
         {
-            text: "Islamic",
-            edges: {
-                borderRadius: "3vw",
-                topLeft: false,
-                topRight: false,
-                bottomRight: true,
-                bottomLeft: true,
-            },
+            text: "curriculumPage.courseSquares.islamic",
+            edges: "0.0.1.1",
         },
         {
-            text: "Modern",
-            edges: {
-                borderRadius: "3vw",
-                topLeft: false,
-                topRight: true,
-                bottomRight: true,
-                bottomLeft: true,
-            },
+            text: "curriculumPage.courseSquares.modern",
+            edges: "0.1.1.1",
         },
     ],
 
-    languagesPage: [
+    languages: [
         {
-            title: "Arabic",
-            content:
-                "Arabic as the mother tongue of Arab students which should not be lost, and basic Islamic knowledge language for Muslims",
+            title: "curriculumPage.languagesContents.arabic",
+            content: "curriculumPage.languagesContents.arabicContent",
         },
         {
-            title: "English",
-            content:
-                "English as the modern sciences language, which enables students to keep update with the latest discoveries, theories and inventions",
+            title: "curriculumPage.languagesContents.english",
+            content: "curriculumPage.languagesContents.englishContent",
         },
         {
-            title: "Malay",
-            content:
-                "The local language of Malays, which enhance students’ capability to interact with the locals of Malaysia",
+            title: "curriculumPage.languagesContents.malay",
+            content: "curriculumPage.languagesContents.malayContent",
         },
     ],
-
-    islamicStudies:
-        "The religious part of the curriculum is divided into three sections: Islamic Fiqh, Quran Memorization & Recitation, and Islamic Culture Education . As for the Islamic Fiqh, AIS depends on the heritage of Imam Shafi’I, and it is keen to teach the Quran and the rules of recitation and memorizing it. In the aspect of Islamic education, the curriculum contains all that develop good Islamic values and manners among students. Curriculum units vary to include Hadith, Prophetic Hadith, Sunnah, and others.",
-
-    modernSciences:
-        "Math, Science, Computer Science, Arts and Sports , These basic materials aim to provide students with basic computers skills, math and the sciences (Chemistry, Physics and Biology), and trying to develop different skills in art and sports and to discover and develop talents. Math, science and English language courses follow the Cambridge curriculum.",
 
     clubsItems: (size: string, color: string) => [
-        { text: "Art Club", icon: <IoIosBrush size={size} color={color} /> },
-        { text: "Arabic Club", icon: <IoIosBook size={size} color={color} /> },
-        { text: "French Club", icon: <TbLanguage size={size} color={color} /> },
         {
-            text: "Cooking Club",
-            icon: <MdFastfood size={size} color={color} />,
+            text: "curriculumPage.clubsContents.art",
+            icon: (
+                <BrushIcon sx={{ width: size, height: size, color: color }} />
+            ),
         },
-        { text: "Math Club", icon: <CgMathDivide size={size} color={color} /> },
-        { text: "Chess Club", icon: <FaChess size={size} color={color} /> },
+        {
+            text: "curriculumPage.clubsContents.arabic",
+            icon: (
+                <MenuBookSharpIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
+        {
+            text: "curriculumPage.clubsContents.french",
+            icon: (
+                <GTranslateIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
+        {
+            text: "curriculumPage.clubsContents.cooking",
+            icon: (
+                <FastfoodIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
+        {
+            text: "curriculumPage.clubsContents.math",
+            icon: (
+                <CalculateIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
+        {
+            text: "curriculumPage.clubsContents.chess",
+            icon: (
+                <PsychologyIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
     ],
 
     activitiesItems: (size: string, color: string) => [
         {
-            text: "Leisure Trips",
-            icon: <BiJoystick size={size} color={color} />,
-        },
-        { text: "Library Day", icon: <IoIosBook size={size} color={color} /> },
-        {
-            text: "Sports Day",
-            icon: <BiBasketball size={size} color={color} />,
-        },
-        {
-            text: "Cultural Competitions",
-            icon: <FaLanguage size={size} color={color} />,
+            text: "curriculumPage.activitiesContents.leisure",
+            icon: (
+                <VideogameAssetIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
         },
         {
-            text: "Math Competitions",
-            icon: <CgMathDivide size={size} color={color} />,
+            text: "curriculumPage.activitiesContents.library",
+            icon: (
+                <MenuBookSharpIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
         },
         {
-            text: "Educational Trips",
-            icon: <FaSchool size={size} color={color} />,
+            text: "curriculumPage.activitiesContents.sports",
+            icon: (
+                <SportsVolleyballIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
+        {
+            text: "curriculumPage.activitiesContents.cultural",
+            icon: (
+                <TranslateIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
+        {
+            text: "curriculumPage.activitiesContents.math",
+            icon: (
+                <CalculateIcon
+                    sx={{ width: size, height: size, color: color }}
+                />
+            ),
+        },
+        {
+            text: "curriculumPage.activitiesContents.educational",
+            icon: (
+                <SchoolIcon sx={{ width: size, height: size, color: color }} />
+            ),
         },
     ],
 };

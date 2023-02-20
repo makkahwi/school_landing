@@ -12,6 +12,7 @@ const ar = {
             languagAR: "---",
         },
     },
+
     landingPage: {
         welcomeSection: {
             title: "مرحبا في AIS",
@@ -36,10 +37,11 @@ const ar = {
             website: "--",
             levels: "--",
             data: "--",
-        }
+        },
     },
+
     footer: {
-        copyRights: "void",
+        copyRights: "---",
     },
 };
 
