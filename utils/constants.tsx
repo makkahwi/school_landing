@@ -23,6 +23,9 @@ import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
 import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
 import TranslateIcon from "@mui/icons-material/Translate";
 import SchoolIcon from "@mui/icons-material/School";
+import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
+import ConstructionIcon from '@mui/icons-material/Construction';
+
 
 interface navbarItemsProps {
     color: string;
@@ -417,7 +420,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section1.listElemnts.txt1",
                 icon: (
-                    <BrushIcon
+                    <VideogameAssetIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -425,7 +428,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section1.listElemnts.txt2",
                 icon: (
-                    <BrushIcon
+                    <MenuBookSharpIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -433,7 +436,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section1.listElemnts.txt3",
                 icon: (
-                    <BrushIcon
+                    <GTranslateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -441,7 +444,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section1.listElemnts.txt4",
                 icon: (
-                    <BrushIcon
+                    <ConstructionIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -449,7 +452,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section1.listElemnts.txt5",
                 icon: (
-                    <BrushIcon
+                    <CalculateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -478,7 +481,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section2.listElemnts.txt2",
                 icon: (
-                    <BrushIcon
+                    <MenuBookSharpIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -486,7 +489,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section2.listElemnts.txt3",
                 icon: (
-                    <BrushIcon
+                    <GTranslateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -494,7 +497,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section2.listElemnts.txt4",
                 icon: (
-                    <BrushIcon
+                    <ConstructionIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -502,7 +505,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section2.listElemnts.txt5",
                 icon: (
-                    <BrushIcon
+                    <CalculateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -510,7 +513,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section2.listElemnts.txt6",
                 icon: (
-                    <BrushIcon
+                    <SportsVolleyballIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -531,7 +534,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section3.listElemnts.txt1",
                 icon: (
-                    <BrushIcon
+                    <LaptopChromebookIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -539,7 +542,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section3.listElemnts.txt2",
                 icon: (
-                    <BrushIcon
+                    <MenuBookSharpIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -547,7 +550,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section3.listElemnts.txt3",
                 icon: (
-                    <BrushIcon
+                    <GTranslateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -555,7 +558,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section3.listElemnts.txt4",
                 icon: (
-                    <BrushIcon
+                    <ConstructionIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -563,7 +566,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section3.listElemnts.txt5",
                 icon: (
-                    <BrushIcon
+                    <CalculateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -571,7 +574,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section3.listElemnts.txt6",
                 icon: (
-                    <BrushIcon
+                    <SportsVolleyballIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -592,7 +595,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section4.listElemnts.txt1",
                 icon: (
-                    <BrushIcon
+                    <LaptopChromebookIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -600,7 +603,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section4.listElemnts.txt2",
                 icon: (
-                    <BrushIcon
+                    <MenuBookSharpIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -608,7 +611,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section4.listElemnts.txt3",
                 icon: (
-                    <BrushIcon
+                    <GTranslateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -616,7 +619,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section4.listElemnts.txt4",
                 icon: (
-                    <BrushIcon
+                    <ConstructionIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -624,7 +627,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section4.listElemnts.txt5",
                 icon: (
-                    <BrushIcon
+                    <CalculateIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -632,7 +635,7 @@ export const levelsPageSections = [
             {
                 text: "levelsPage.sections.section4.listElemnts.txt6",
                 icon: (
-                    <BrushIcon
+                    <SportsVolleyballIcon
                         sx={{ width: size, height: size, color: color }}
                     />
                 ),
@@ -640,3 +643,9 @@ export const levelsPageSections = [
         ],
     },
 ];
+
+/**
+ *  registration page constants
+ */
+export const registrationPage = {}
+

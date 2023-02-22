@@ -19,6 +19,7 @@ const WelcomeSection = () => {
 
     return (
         <Stack
+            id="top-container"
             pt={{ xs: 15, md: 7 }}
             pb={15}
             bgcolor={theme.palette.basic.main}

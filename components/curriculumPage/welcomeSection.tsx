@@ -19,6 +19,7 @@ const WelcomeSection = () => {
 
     return (
         <Stack
+            id="top-container"
             p={3}
             pt={{ xs: 15, md: 3 }}
             pb={5}
