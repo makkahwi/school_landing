@@ -19,6 +19,7 @@ const WelcomeSection = () => {
             pt={{ xs: 15, md: 3 }}
             pb={10}
             width="100%"
+            height="100vh"
             direction={{ xs: "column", md: "row" }}
         >
             <Box
@@ -39,7 +40,7 @@ const WelcomeSection = () => {
                         textShadow: `0px 0px 15px ${theme.palette.orange.main}`,
                     }}
                 >
-                    {t("levelsPage.title")}
+                    {t("registrationPage.title")}
                 </Typography>
             </Box>
 
@@ -65,30 +66,6 @@ const WelcomeSection = () => {
                     sx={{
                         gridRow: "1 / 8",
                         gridColumn: "6 / 13",
-                    }}
-                />
-
-                <Square
-                    bgcolor={theme.palette.basic.main}
-                    radius={{
-                        mobile: ["4vw", "1.1.1.1"],
-                        desktop: ["2vw", "1.1.1.1"],
-                    }}
-                    sx={{
-                        gridRow: "8 / 13",
-                        gridColumn: "2 / 7",
-                    }}
-                />
-
-                <Square
-                    bgcolor={theme.palette.brown.main}
-                    radius={{
-                        mobile: ["4vw", "1.1.1.1"],
-                        desktop: ["2vw", "1.1.1.1"],
-                    }}
-                    sx={{
-                        gridRow: "8 / 13",
-                        gridColumn: "7 / 12",
                     }}
                 />
 

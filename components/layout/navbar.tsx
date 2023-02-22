@@ -13,7 +13,7 @@ import {
     LinkElementProps,
     MainLogo,
 } from "@/components/layout/styles";
-import { Container, Stack } from "@mui/system";
+import { Container, Stack, Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -92,11 +92,22 @@ const Navbar = ({
                 break;
 
             default:
+                setBackground(theme.palette.basic.main);
+                setColor(theme.palette.blue.dark);
                 break;
         }
 
+        handleButtonClick();
         setNavIsOpened(isDesktop);
     }, [router.pathname, setNavIsOpened, setBackground, setColor]);
+
+    const handleButtonClick = () => {
+        const topContainer = document.getElementById("top-container");
+
+        if (topContainer) {
+            topContainer.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     const LinkElement = ({
         data,

@@ -27,7 +27,7 @@ export default function NotFoundPage() {
                     textShadow: `0px 0px 15px ${theme.palette.basic.light}`,
                 }}
             >
-                {t("global.page404")}
+                {t("global.page500")}
             </Typography>
         </Box>
     );

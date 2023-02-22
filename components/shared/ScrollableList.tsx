@@ -211,14 +211,13 @@ const ScrollableList = ({
                                     <Box>{item.icon}</Box>
 
                                     <Typography
-                                        sx={{
-                                            fontSize: {
-                                                md: "1.5vw",
-                                                xs: "5vw",
-                                            },
-                                            marginTop: "1vw",
+                                        fontSize={{
+                                            md: "1.5vw",
+                                            xs: "5vw",
                                         }}
+                                        mt="1vw"
                                         textAlign="center"
+                                        fontWeight="bold"
                                         color={textColor}
                                     >
                                         {t(item.text)}

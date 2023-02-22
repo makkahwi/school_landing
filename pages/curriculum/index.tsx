@@ -9,7 +9,7 @@ import ClubsSection from "@/components/curriculumPage/clubsSection";
 import ActivitiesSection from "@/components/curriculumPage/activitiesSection";
 
 /**
- *  the landing page of teh website
+ *  the curriculum page
  *
  */
 export default function Curriculum() {

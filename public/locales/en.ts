@@ -1,4 +1,9 @@
 const en = {
+    global: {
+        page404: "Ops, Page not found !", 
+        page500: "Server error .. totaly not your fault", 
+    },
+
     navbar: {
         navItems: {
             home: "Home",
@@ -98,6 +103,68 @@ const en = {
 
     levelsPage: {
         title: "LEVELS OF STUDY",
+
+        sections: {
+            section1: {
+                title: "Kinder Garten",
+                subTitle:
+                    "Pre-school curriculum, prepare kids aging 5 - 6 years old to primary level.",
+
+                listElemnts: {
+                    txt1: "Educating Games",
+                    txt2: "Arabic",
+                    txt3: "English",
+                    txt4: "Science",
+                    txt5: "Math",
+                },
+            },
+            section2: {
+                title: "Level 1 & 2",
+                subTitle:
+                    "These levels of study are for kids aging 6 - 8 years old, constrain on listed courses.",
+
+                listElemnts: {
+                    txt1: "Arts",
+                    txt2: "Arabic",
+                    txt3: "English",
+                    txt4: "Science",
+                    txt5: "Math",
+                    txt6: "Sports",
+                },
+            },
+            section3: {
+                title: "Level 3 - 6",
+                subTitle:
+                    "These levels of study are for kids aging 8 - 12 years old, constrain on listed courses.",
+
+                listElemnts: {
+                    txt1: "Computer Skills",
+                    txt2: "Arabic",
+                    txt3: "English",
+                    txt4: "Science",
+                    txt5: "Math",
+                    txt6: "Sports",
+                },
+            },
+            section4: {
+                title: "Level 7 - 11",
+                subTitle:
+                    "These levels of study are for kids aging 12 - 16 years old, constrain on listed courses.",
+
+                listElemnts: {
+                    txt1: "Computer Skills",
+                    txt2: "Arabic",
+                    txt3: "English",
+                    txt4: "Science",
+                    txt5: "Math",
+                    txt6: "Sports",
+                },
+            },
+        },
+    },
+
+    registrationPage: {
+        title: "REGISTRATION & FEES",
     },
 
     footer: {

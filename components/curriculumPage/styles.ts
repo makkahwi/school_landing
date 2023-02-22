@@ -145,7 +145,7 @@ export const CoCurriculumGrid = {
 };
 
 export const AvatarStyles = {
-    width: { xs: "100%", md: "80%" },
+    width: { xs: "100%", md: "28vw" },
     height: "auto",
     position: "absolute",
     bottom: "0px",

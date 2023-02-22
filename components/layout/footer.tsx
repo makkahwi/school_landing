@@ -12,12 +12,11 @@ import { useTheme } from "@mui/material/styles";
 const Footer = () => {
     const router = useRouter();
     const { t } = useTranslation(router);
-    const theme = useTheme();
 
     return (
         <FooterContainer>
             <Container sx={{padding: 2}}>
-                <Typography textAlign="center" fontSize="1vw">
+                <Typography textAlign="center" fontSize={{xs: "4vw", md: "1vw"}}>
                     {t("footer.copyRights")}
                 </Typography>
             </Container>
