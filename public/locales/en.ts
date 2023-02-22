@@ -1,7 +1,7 @@
 const en = {
     global: {
-        page404: "Ops, Page not found !", 
-        page500: "Server error .. totaly not your fault", 
+        page404: "Ops, Page not found !",
+        page500: "Server error .. totaly not your fault",
     },
 
     navbar: {
@@ -165,6 +165,26 @@ const en = {
 
     registrationPage: {
         title: "REGISTRATION & FEES",
+        details: {
+            requires: {
+                title: "Required Documents",
+                items: {
+                    txt1: "",
+                    txt2: "",
+                    txt3: "",
+                    txt4: "",
+                },
+            },
+            deadlines: {
+                title: "Deadlines for Registration",
+                items: {
+                    txt1: "",
+                    txt2: "",
+                    txt3: "",
+                    txt4: "",
+                },
+            },
+        },
     },
 
     footer: {
