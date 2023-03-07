@@ -33,7 +33,7 @@ const ModernSection = () => {
                     textAlign: "justify",
                 }}
             >
-                {t("curriculumPage.islamicStudiesContent")}
+                {t("curriculumPage.modernSciencesContent")}
             </Typography>
 
             <Box sx={ModernScienceGrid}>

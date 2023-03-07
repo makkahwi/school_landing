@@ -12,6 +12,7 @@ export interface LinkElementProps {
     href?: string;
     itemLocale?: string;
     onClick?(): void;
+    color: string;
 }
 
 // Layout components ------------------------------------------
@@ -92,5 +93,5 @@ export const FooterContainer = styled("footer")(() => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: theme.palette.basic.main
+    background: theme.palette.basic.main,
 }));

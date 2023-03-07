@@ -7,7 +7,7 @@ interface BoxProps {
 
 interface SquareProps {
     children?: React.ReactNode;
-    sx: Object;
+    sx?: Object;
     radius: {
         mobile: string[];
         desktop: string[];
