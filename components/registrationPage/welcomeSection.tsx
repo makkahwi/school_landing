@@ -15,6 +15,7 @@ const WelcomeSection = () => {
             id="top-container"
             justifyContent="center"
             alignItems="center"
+            bgcolor={theme.palette.basic.main}
             p={3}
             pt={{ xs: 15, md: 3 }}
             pb={10}
@@ -37,7 +38,6 @@ const WelcomeSection = () => {
                     fontSize={{ xs: "10vw", md: "4vw" }}
                     sx={{
                         width: "80%",
-                        textShadow: `0px 0px 15px ${theme.palette.orange.main}`,
                     }}
                 >
                     {t("registrationPage.title")}

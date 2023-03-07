@@ -20,6 +20,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageIcon from "@mui/icons-material/Language";
 import useTranslation from "@/hooks/useTranslation";
+import NavItem from "./navItem";
 
 /**
  * the navbar section in the layout
@@ -66,7 +67,7 @@ const Navbar = ({
                 setColor(theme.palette.blue.dark);
                 break;
 
-            case "/levels":
+            case "/engage":
                 setBackground(theme.palette.orange.main);
                 setColor(theme.palette.basic.light);
                 break;
@@ -76,7 +77,7 @@ const Navbar = ({
                 setColor(theme.palette.basic.light);
                 break;
 
-            case "/registration":
+            case "/unlock":
                 setBackground(theme.palette.blue.dark);
                 setColor(theme.palette.basic.light);
                 break;
@@ -109,82 +110,6 @@ const Navbar = ({
         }
     };
 
-    const LinkElement = ({
-        data,
-        icon,
-        href = router.asPath,
-        itemLocale = locale,
-        onClick,
-    }: LinkElementProps) => {
-        return onClick ? (
-            <Stack
-                direction={locale === "en" ? "row" : "row-reverse"}
-                justifyContent={{ xs: "space-between", md: "flex-start" }}
-                alignItems="center"
-                sx={{ width: "100%" }}
-            >
-                <HeaderButton
-                    disableGutters={true}
-                    sx={{ padding: { xs: 1, md: 2 }, margin: 0, width: "auto" }}
-                    onClick={onClick}
-                >
-                    {icon}
-                </HeaderButton>
-                <Container
-                    disableGutters={true}
-                    sx={{
-                        width: "auto",
-                        margin: { xs: 2, md: 0 },
-                        padding: { xs: 0, md: 2 },
-                        minHeight: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                    }}
-                >
-                    {data}
-                </Container>
-            </Stack>
-        ) : (
-            <Link href={href} locale={itemLocale} style={NavLinkStyles}>
-                <Stack
-                    direction={locale === "en" ? "row" : "row-reverse"}
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    sx={{
-                        width: "100%",
-                        transition: "0.2s ease",
-                        "&:hover": {
-                            boxShadow: "0px 0px 0px 5px darkgray",
-                            transform:
-                                locale === "en"
-                                    ? "translate(5%)"
-                                    : "translate(-5%)",
-                        },
-                    }}
-                >
-                    <HeaderButton
-                        disableGutters={true}
-                        sx={{ padding: { xs: 2.3, md: 2 } }}
-                    >
-                        {icon}
-                    </HeaderButton>
-
-                    <Container disableGutters={true} sx={{ padding: 2 }}>
-                        <Typography
-                            variant="h5"
-                            color={color}
-                            sx={{
-                                direction: locale === "en" ? "ltr" : "rtl",
-                            }}
-                        >
-                            {t(data)}
-                        </Typography>
-                    </Container>
-                </Stack>
-            </Link>
-        );
-    };
-
     return (
         <Stack
             sx={{
@@ -192,58 +117,62 @@ const Navbar = ({
                 alignItems: locale === "en" ? "flex-start" : "flex-end",
             }}
         >
-            {[
-                {
-                    data: (
-                        <MainLogo
-                            src="/header/header-logo.png"
-                            alt="header logo"
-                            variant="square"
-                            sx={{
-                                width: { xs: "auto", md: "100%" },
-                            }}
-                        />
-                    ),
-                    icon: (
-                        <MenuIcon
-                            sx={{
-                                width: "100%",
-                                height: "100%",
-                                color: color,
-                                transform: iconTransform,
-                                transition: "0.7s ease",
-                            }}
-                        />
-                    ),
-                    href: router.asPath,
-                    onClick: () => {
-                        setNavIsOpened((prev) => !prev);
-                    },
+            {NavItem({
+                data: (
+                    <MainLogo
+                        src="/header/header-logo.png"
+                        alt="header logo"
+                        variant="square"
+                        sx={{
+                            width: { xs: "auto", md: "100%" },
+                        }}
+                    />
+                ),
+                icon: (
+                    <MenuIcon
+                        sx={{
+                            width: "100%",
+                            height: "100%",
+                            color: color,
+                            transform: iconTransform,
+                            transition: "0.7s ease",
+                        }}
+                    />
+                ),
+                href: router.asPath,
+                onClick: () => {
+                    setNavIsOpened((prev) => !prev);
                 },
-                ...navbarPage.navbarItems({ color: color, size: "100%" }),
-                {
-                    data:
-                        locale == "en"
-                            ? "navbar.navItems.languagAR"
-                            : "navbar.navItems.languagEN",
-                    icon: (
-                        <LanguageIcon
-                            sx={{
-                                width: "100%",
-                                height: "100%",
-                                color: color,
-                            }}
-                        />
-                    ),
-                    href: router.asPath,
-                    itemLocale: locale == "en" ? "ar" : "en",
-                },
-            ].map((item, index) => {
-                return (
-                    <React.Fragment key={`Link Element number: ${index}`}>
-                        {LinkElement({ ...item })}
-                    </React.Fragment>
-                );
+                color,
+            })}
+
+            {navbarPage
+                .navbarItems({ color: color, size: "100%" })
+                .map((item, index) => {
+                    return (
+                        <React.Fragment key={`Link Element number: ${index}`}>
+                            {NavItem({ ...item, color })}
+                        </React.Fragment>
+                    );
+                })}
+
+            {NavItem({
+                data:
+                    locale == "en"
+                        ? "navbar.navItems.languagAR"
+                        : "navbar.navItems.languagEN",
+                icon: (
+                    <LanguageIcon
+                        sx={{
+                            width: "100%",
+                            height: "100%",
+                            color: color,
+                        }}
+                    />
+                ),
+                href: router.asPath,
+                itemLocale: locale == "en" ? "ar" : "en",
+                color,
             })}
         </Stack>
     );

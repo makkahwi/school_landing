@@ -7,6 +7,10 @@ import ModernSection from "@/components/curriculumPage/modernSection";
 import CoCorriculumSection from "@/components/curriculumPage/coCorriculumSection";
 import ClubsSection from "@/components/curriculumPage/clubsSection";
 import ActivitiesSection from "@/components/curriculumPage/activitiesSection";
+import { curriculumPage } from "@/utils/constants";
+import React from "react";
+import LevelTemplate from "@/components/curriculumPage/levelTemplate";
+import LevelsSection from "@/components/curriculumPage/levelsSection";
 
 /**
  *  the curriculum page
@@ -23,6 +27,13 @@ export default function Curriculum() {
             <CoCorriculumSection />
             <ClubsSection />
             <ActivitiesSection />
+            <LevelsSection />
+
+            {curriculumPage.levelsPageSections.map((section, index) => (
+                <React.Fragment key={`level section number: ${index}`}>
+                    <LevelTemplate section={section} />
+                </React.Fragment>
+            ))}
         </Stack>
     );
 }

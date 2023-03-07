@@ -6,7 +6,7 @@ import Square from "../shared/Square";
 import React from "react";
 import { WelcomeGrid, AvatarStyles } from "./styles";
 
-const WelcomeSection = () => {
+const LevelsSection = () => {
     const router = useRouter();
     const { t } = useTranslation(router);
 
@@ -39,7 +39,7 @@ const WelcomeSection = () => {
                         textShadow: `0px 0px 15px ${theme.palette.orange.main}`,
                     }}
                 >
-                    {t("levelsPage.title")}
+                    {t("curriculumPage.levels.title")}
                 </Typography>
             </Box>
 
@@ -98,4 +98,4 @@ const WelcomeSection = () => {
     );
 };
 
-export default WelcomeSection;
+export default LevelsSection;

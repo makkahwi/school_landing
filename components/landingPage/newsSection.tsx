@@ -138,7 +138,7 @@ const NewsSection = () => {
                     })}
 
                     <Avatar
-                        src="landingPage\quds-icon.png"
+                        src="global\quds-icon.png"
                         variant="square"
                         sx={{
                             padding: 1,

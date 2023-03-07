@@ -1,9 +1,3 @@
-import { IoIosBook, IoIosBrush } from "react-icons/io";
-import { TbLanguage } from "react-icons/tb";
-import { MdFastfood } from "react-icons/md";
-import { CgMathDivide } from "react-icons/cg";
-import { FaChess, FaLanguage, FaSchool } from "react-icons/fa";
-import { BiJoystick, BiBasketball } from "react-icons/bi";
 import { ReactNode } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -23,9 +17,16 @@ import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
 import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
 import TranslateIcon from "@mui/icons-material/Translate";
 import SchoolIcon from "@mui/icons-material/School";
-import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
-import ConstructionIcon from '@mui/icons-material/Construction';
-
+import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import MosqueIcon from "@mui/icons-material/Mosque";
+import Brightness3Icon from "@mui/icons-material/Brightness3";
+import PublicIcon from "@mui/icons-material/Public";
+import BalanceIcon from "@mui/icons-material/Balance";
+import ScienceIcon from "@mui/icons-material/Science";
+import AppleIcon from "@mui/icons-material/Apple";
+import FingerprintIcon from "@mui/icons-material/Fingerprint";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 
 interface navbarItemsProps {
     color: string;
@@ -76,7 +77,7 @@ export const navbarPage = {
             },
             {
                 data: "navbar.navItems.engage",
-                href: "/levels",
+                href: "/engage",
                 icon: (
                     <PlagiarismIcon
                         sx={{
@@ -118,7 +119,7 @@ export const navbarPage = {
             },
             {
                 data: "navbar.navItems.unlock",
-                href: "/registration",
+                href: "/unlock",
                 icon: (
                     <LockOpenIcon
                         sx={{
@@ -400,252 +401,550 @@ export const curriculumPage = {
             ),
         },
     ],
+
+    levelsPageSections: [
+        {
+            title: "curriculumPage.levels.sections.section1.title",
+            subTitle: "curriculumPage.levels.sections.section1.subTitle",
+            image: "",
+
+            bgColor: theme.palette.basic.main,
+            titleColor: theme.palette.orange.main,
+            subTitleColor: theme.palette.basic.dark,
+            iconsColor: theme.palette.orange.main,
+
+            listElemnts: (size: string, color: string) => [
+                {
+                    text: "curriculumPage.levels.sections.section1.listElemnts.txt1",
+                    icon: (
+                        <VideogameAssetIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section1.listElemnts.txt2",
+                    icon: (
+                        <MenuBookSharpIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section1.listElemnts.txt3",
+                    icon: (
+                        <GTranslateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section1.listElemnts.txt4",
+                    icon: (
+                        <ConstructionIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section1.listElemnts.txt5",
+                    icon: (
+                        <CalculateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+            ],
+        },
+        {
+            title: "curriculumPage.levels.sections.section2.title",
+            subTitle: "curriculumPage.levels.sections.section2.subTitle",
+            image: "",
+
+            bgColor: theme.palette.blue.dark,
+            titleColor: theme.palette.orange.main,
+            subTitleColor: theme.palette.basic.light,
+            iconsColor: theme.palette.orange.main,
+
+            listElemnts: (size: string, color: string) => [
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt1",
+                    icon: (
+                        <BrushIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt2",
+                    icon: (
+                        <MenuBookSharpIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt3",
+                    icon: (
+                        <GTranslateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt4",
+                    icon: (
+                        <ConstructionIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt5",
+                    icon: (
+                        <CalculateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt6",
+                    icon: (
+                        <SportsVolleyballIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt7",
+                    icon: (
+                        <MosqueIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section2.listElemnts.txt8",
+                    icon: (
+                        <Brightness3Icon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+            ],
+        },
+        {
+            title: "curriculumPage.levels.sections.section3.title",
+            subTitle: "curriculumPage.levels.sections.section3.subTitle",
+            image: "",
+
+            bgColor: theme.palette.orange.main,
+            titleColor: theme.palette.basic.light,
+            subTitleColor: theme.palette.basic.dark,
+            iconsColor: theme.palette.basic.light,
+
+            listElemnts: (size: string, color: string) => [
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt1",
+                    icon: (
+                        <LaptopChromebookIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt2",
+                    icon: (
+                        <MenuBookSharpIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt3",
+                    icon: (
+                        <GTranslateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt4",
+                    icon: (
+                        <PublicIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt5",
+                    icon: (
+                        <ConstructionIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt6",
+                    icon: (
+                        <CalculateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt7",
+                    icon: (
+                        <SportsVolleyballIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt8",
+                    icon: (
+                        <BrushIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt9",
+                    icon: (
+                        <BalanceIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt10",
+                    icon: (
+                        <Brightness3Icon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt11",
+                    icon: (
+                        <MosqueIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt12",
+                    icon: (
+                        <Brightness3Icon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+            ],
+        },
+        {
+            title: "curriculumPage.levels.sections.section4.title",
+            subTitle: "curriculumPage.levels.sections.section4.subTitle",
+            image: "",
+
+            bgColor: theme.palette.basic.main,
+            titleColor: theme.palette.blue.dark,
+            subTitleColor: theme.palette.basic.dark,
+            iconsColor: theme.palette.blue.dark,
+
+            listElemnts: (size: string, color: string) => [
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt1",
+                    icon: (
+                        <LaptopChromebookIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt2",
+                    icon: (
+                        <MenuBookSharpIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt3",
+                    icon: (
+                        <GTranslateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section3.listElemnts.txt4",
+                    icon: (
+                        <PublicIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt5",
+                    icon: (
+                        <ConstructionIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt6",
+                    icon: (
+                        <CalculateIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt7",
+                    icon: (
+                        <SportsVolleyballIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt8",
+                    icon: (
+                        <BrushIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt9",
+                    icon: (
+                        <ScienceIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt10",
+                    icon: (
+                        <AppleIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt11",
+                    icon: (
+                        <FingerprintIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt12",
+                    icon: (
+                        <MonetizationOnIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt13",
+                    icon: (
+                        <BalanceIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt14",
+                    icon: (
+                        <Brightness3Icon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt15",
+                    icon: (
+                        <MosqueIcon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+                {
+                    text: "curriculumPage.levels.sections.section4.listElemnts.txt16",
+                    icon: (
+                        <Brightness3Icon
+                            sx={{ width: size, height: size, color: color }}
+                        />
+                    ),
+                },
+            ],
+        },
+    ],
 };
-
-/**
- *  levels page constants
- */
-export const levelsPageSections = [
-    {
-        title: "levelsPage.sections.section1.title",
-        subTitle: "levelsPage.sections.section1.subTitle",
-        image: "",
-
-        bgColor: theme.palette.basic.main,
-        titleColor: theme.palette.orange.main,
-        subTitleColor: theme.palette.basic.dark,
-        iconsColor: theme.palette.orange.main,
-
-        listElemnts: (size: string, color: string) => [
-            {
-                text: "levelsPage.sections.section1.listElemnts.txt1",
-                icon: (
-                    <VideogameAssetIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section1.listElemnts.txt2",
-                icon: (
-                    <MenuBookSharpIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section1.listElemnts.txt3",
-                icon: (
-                    <GTranslateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section1.listElemnts.txt4",
-                icon: (
-                    <ConstructionIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section1.listElemnts.txt5",
-                icon: (
-                    <CalculateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-        ],
-    },
-    {
-        title: "levelsPage.sections.section2.title",
-        subTitle: "levelsPage.sections.section2.subTitle",
-        image: "",
-
-        bgColor: theme.palette.blue.dark,
-        titleColor: theme.palette.orange.main,
-        subTitleColor: theme.palette.basic.light,
-        iconsColor: theme.palette.orange.main,
-
-        listElemnts: (size: string, color: string) => [
-            {
-                text: "levelsPage.sections.section2.listElemnts.txt1",
-                icon: (
-                    <BrushIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section2.listElemnts.txt2",
-                icon: (
-                    <MenuBookSharpIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section2.listElemnts.txt3",
-                icon: (
-                    <GTranslateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section2.listElemnts.txt4",
-                icon: (
-                    <ConstructionIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section2.listElemnts.txt5",
-                icon: (
-                    <CalculateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section2.listElemnts.txt6",
-                icon: (
-                    <SportsVolleyballIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-        ],
-    },
-    {
-        title: "levelsPage.sections.section3.title",
-        subTitle: "levelsPage.sections.section3.subTitle",
-        image: "",
-
-        bgColor: theme.palette.orange.main,
-        titleColor: theme.palette.basic.light,
-        subTitleColor: theme.palette.basic.dark,
-        iconsColor: theme.palette.basic.light,
-
-        listElemnts: (size: string, color: string) => [
-            {
-                text: "levelsPage.sections.section3.listElemnts.txt1",
-                icon: (
-                    <LaptopChromebookIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section3.listElemnts.txt2",
-                icon: (
-                    <MenuBookSharpIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section3.listElemnts.txt3",
-                icon: (
-                    <GTranslateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section3.listElemnts.txt4",
-                icon: (
-                    <ConstructionIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section3.listElemnts.txt5",
-                icon: (
-                    <CalculateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section3.listElemnts.txt6",
-                icon: (
-                    <SportsVolleyballIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-        ],
-    },
-    {
-        title: "levelsPage.sections.section4.title",
-        subTitle: "levelsPage.sections.section4.subTitle",
-        image: "",
-
-        bgColor: theme.palette.basic.main,
-        titleColor: theme.palette.blue.dark,
-        subTitleColor: theme.palette.basic.dark,
-        iconsColor: theme.palette.blue.dark,
-
-        listElemnts: (size: string, color: string) => [
-            {
-                text: "levelsPage.sections.section4.listElemnts.txt1",
-                icon: (
-                    <LaptopChromebookIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section4.listElemnts.txt2",
-                icon: (
-                    <MenuBookSharpIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section4.listElemnts.txt3",
-                icon: (
-                    <GTranslateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section4.listElemnts.txt4",
-                icon: (
-                    <ConstructionIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section4.listElemnts.txt5",
-                icon: (
-                    <CalculateIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-            {
-                text: "levelsPage.sections.section4.listElemnts.txt6",
-                icon: (
-                    <SportsVolleyballIcon
-                        sx={{ width: size, height: size, color: color }}
-                    />
-                ),
-            },
-        ],
-    },
-];
 
 /**
  *  registration page constants
  */
-export const registrationPage = {}
+export const registrationPage = {
+    requirementsSection: [
+        {
+            title: "registrationPage.details.requires.title",
+            lists: [
+                {
+                    title: "registrationPage.details.requires.lists.item1.title",
+                    items: [
+                        "registrationPage.details.requires.lists.item1.items.item1",
+                        "registrationPage.details.requires.lists.item1.items.item2",
+                        "registrationPage.details.requires.lists.item1.items.item3",
+                        "registrationPage.details.requires.lists.item1.items.item4",
+                    ],
+                    trigger: "1",
+                },
+                {
+                    title: "registrationPage.details.requires.lists.item2.title",
+                    items: [
+                        "registrationPage.details.requires.lists.item2.items.item1",
+                    ],
+                    trigger: "2",
+                },
+                {
+                    title: "registrationPage.details.requires.lists.item3.title",
+                    items: [
+                        "registrationPage.details.requires.lists.item3.items.item1",
+                        "registrationPage.details.requires.lists.item3.items.item2",
+                    ],
+                    trigger: "3",
+                },
+                {
+                    title: "registrationPage.details.requires.lists.item4.title",
+                    items: [
+                        "registrationPage.details.requires.lists.item4.items.item1",
+                        "registrationPage.details.requires.lists.item4.items.item2",
+                    ],
+                    trigger: "4",
+                },
+            ],
+        },
+        {
+            title: "registrationPage.details.deadlines.title",
+            lists: [
+                {
+                    title: "registrationPage.details.deadlines.lists.item1.title",
+                    items: [
+                        "registrationPage.details.deadlines.lists.item1.items.item1",
+                    ],
+                    trigger: "5",
+                },
+                {
+                    title: "registrationPage.details.deadlines.lists.item2.title",
+                    items: [
+                        "registrationPage.details.deadlines.lists.item2.items.item1",
+                    ],
+                    trigger: "6",
+                },
+                {
+                    title: "registrationPage.details.deadlines.lists.item3.title",
+                    items: [
+                        "registrationPage.details.deadlines.lists.item3.items.item1",
+                    ],
+                    trigger: "7",
+                },
+            ],
+        },
+    ],
 
+    structureSection: [
+        {
+            title: "registrationPage.structure.item1.title",
+            items: Array(4)
+                .fill(1)
+                .map((_, i) => i + 1)
+                .map((index) => {
+                    return {
+                        title: `registrationPage.structure.item1.item${index}.title`,
+                        price: `registrationPage.structure.item1.item${index}.price`,
+                        description: `registrationPage.structure.item1.item${index}.description`,
+                    };
+                }),
+        },
+        {
+            title: "registrationPage.structure.item2.title",
+            items: Array(3)
+                .fill(1)
+                .map((_, i) => i + 1)
+                .map((index) => {
+                    return {
+                        title: `registrationPage.structure.item2.item${index}.title`,
+                        price: `registrationPage.structure.item2.item${index}.price`,
+                        description: `registrationPage.structure.item2.item${index}.description`,
+                    };
+                }),
+        },
+        {
+            title: "registrationPage.structure.item3.title",
+            items: [
+                {
+                    title: "registrationPage.structure.item3.item1.title",
+                    price: "registrationPage.structure.item3.item1.price",
+                    description:
+                        "registrationPage.structure.item3.item1.description",
+                },
+            ],
+        },
+        {
+            title: "registrationPage.structure.item4.title",
+            items: Array(12)
+                .fill(1)
+                .map((_, i) => i + 1)
+                .map((index) => {
+                    return {
+                        title: `registrationPage.structure.item4.item${index}.title`,
+                        price: `registrationPage.structure.item4.item${index}.price`,
+                        description: `registrationPage.structure.item4.item${index}.description`,
+                    };
+                }),
+        },
+    ],
+
+    discountSection: [
+        {
+            title: "registrationPage.discounts.item1.title",
+            items: [
+                {
+                    title: "registrationPage.discounts.item1.item1.title",
+                    price: "registrationPage.discounts.item1.item1.price",
+                    description:
+                        "registrationPage.discounts.item1.item1.description",
+                },
+            ],
+        },
+        {
+            title: "registrationPage.discounts.item2.title",
+            items: Array(3)
+                .fill(1)
+                .map((_, i) => i + 1)
+                .map((index) => {
+                    return {
+                        title: `registrationPage.discounts.item2.item${index}.title`,
+                        price: `registrationPage.discounts.item2.item${index}.price`,
+                        description: `registrationPage.discounts.item2.item${index}.description`,
+                    };
+                }),
+        },
+        {
+            title: "registrationPage.discounts.item3.title",
+            items: [
+                {
+                    title: "registrationPage.discounts.item3.item1.title",
+                    price: "registrationPage.discounts.item3.item1.price",
+                    description:
+                        "registrationPage.discounts.item3.item1.description",
+                },
+            ],
+        },
+    ],
+};
