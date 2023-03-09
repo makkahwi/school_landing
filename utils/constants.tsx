@@ -947,4 +947,88 @@ export const registrationPage = {
             ],
         },
     ],
+
+    jobsSection: [
+        {
+            title: "registrationPage.jobs.item1.title",
+            jobDescription: Array(2)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item1.jobDescription.item${
+                            i + 1
+                        }`
+                ),
+            qualifications: Array(8)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item1.qualifications.item${
+                            i + 1
+                        }`
+                ),
+            documents: Array(5)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item1.documents.item${
+                            i + 1
+                        }`
+                ),
+        },
+        {
+            title: "registrationPage.jobs.item2.title",
+            jobDescription: Array(2)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item2.jobDescription.item${
+                            i + 1
+                        }`
+                ),
+            qualifications: Array(9)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item2.qualifications.item${
+                            i + 1
+                        }`
+                ),
+            documents: Array(5)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item2.documents.item${
+                            i + 1
+                        }`
+                ),
+        },
+        {
+            title: "registrationPage.jobs.item3.title",
+            jobDescription: Array(2)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item3.jobDescription.item${
+                            i + 1
+                        }`
+                ),
+            qualifications: Array(8)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item3.qualifications.item${
+                            i + 1
+                        }`
+                ),
+            documents: Array(5)
+                .fill(1)
+                .map(
+                    (_, i) =>
+                        `registrationPage.jobs.item3.documents.item${
+                            i + 1
+                        }`
+                ),
+        },
+    ],
 };
