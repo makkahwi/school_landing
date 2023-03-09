@@ -260,7 +260,7 @@ const NewsSection = () => {
                                 width: { xs: "70%", md: "auto" },
                             }}
                             variant="square"
-                            src="landingPage\logo2.png"
+                            src="global\logo2.png"
                             alt="logo 2"
                         />
                     </Square>

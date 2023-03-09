@@ -2,6 +2,7 @@ import DiscountSection from "@/components/registrationPage/discountSection";
 import RequirementsSection from "@/components/registrationPage/requirementsSection";
 import StructureSection from "@/components/registrationPage/structureSection";
 import WelcomeSection from "@/components/registrationPage/welcomeSection";
+import JobOpportunitiesSection from "@/components/registrationPage/jobOpportunitiesSection";
 import { Stack } from "@mui/material";
 import React from "react";
 
@@ -16,6 +17,7 @@ export default function RegistrationAndFees() {
             <RequirementsSection />
             <StructureSection />
             <DiscountSection />
+            <JobOpportunitiesSection />
         </Stack>
     );
 }

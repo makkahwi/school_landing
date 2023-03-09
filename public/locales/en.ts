@@ -379,17 +379,20 @@ const en = {
                 item1: {
                     title: "First Sibling",
                     price: "5%",
-                    description: "Discount (applicable for tuition fees only for the lowest-level sibling)",
+                    description:
+                        "Discount (applicable for tuition fees only for the lowest-level sibling)",
                 },
                 item2: {
                     title: "Second Sibling",
                     price: "10%",
-                    description: "Discount (applicable for tuition fees only for the second lowest-level sibling)",
+                    description:
+                        "Discount (applicable for tuition fees only for the second lowest-level sibling)",
                 },
                 item3: {
                     title: "Third & Above Sibling",
                     price: "15%",
-                    description: "Discount (applicable for tuition fees only for the third / forth … lowest-level sibling)",
+                    description:
+                        "Discount (applicable for tuition fees only for the third / forth … lowest-level sibling)",
                 },
             },
             item3: {
@@ -400,7 +403,92 @@ const en = {
                     description: "Discount (applicable for tuition fees only)",
                 },
             },
-        }
+        },
+
+        jobs: {
+            title: "JOB OPPORTUNITIES",
+            subtitle: "Opportunities For Teaching",
+            jobDescription: "Job Describtion",
+            qualifications: "Qualifications",
+            documents: "Documents to Apply",
+            emailText: "Start communicating to apply for job(s) listed through",
+            email: "Email: Principal@aqsa.edu.my",
+            apply: "Apply",
+
+            item1: {
+                title: "English Teacher",
+                jobDescription: {
+                    item1: "Levels of Study: Secondary Levels",
+                    item2: "Hours of Work: 8 Hours / day",
+                },
+                qualifications: {
+                    item1: "Qualified and experienced IGCSE English teacher",
+                    item2: "Ability to teach Secondary (Cambridge) syllabus",
+                    item3: "Prepare and submit lesson plan and assignments in accordance to the Secondary (Cambridge) syllabus",
+                    item4: "Patient, responsible and passionate about teaching",
+                    item5: "Prepare scheme of work and lesson plans of the assigned teaching subjects",
+                    item6: "Assess and evaluate students learning progress and prepare relevant reports for the Principal and parents",
+                    item7: "Excellent classroom management skills",
+                    item8: "Participate in extra curriculum activities with the students and support all school activities and events",
+                },
+                documents: {
+                    item1: "Full CV",
+                    item2: "Passport / ID Photocopy",
+                    item3: "Academic Certificates Required",
+                    item4: "Certificate of Required teaching experience",
+                    item5: "Any necessary documentation for CV content",
+                },
+            },
+            item2: {
+                title: "Islamic Teacher",
+                jobDescription: {
+                    item1: "Levels of Study: Primary & Secondary Levels",
+                    item2: "Hours of Work: 8 Hours / day",
+                },
+                qualifications: {
+                    item1: "Degree in Islamic Studies",
+                    item2: "Must have experience teaching Islamic Studies",
+                    item3: "Ability to teach Primary and/or Secondary syllabus",
+                    item4: "Prepare and submit lesson plan and assignments in accordance to the Primary and/or Secondary syllabus",
+                    item5: "Patient, responsible and passionate about teaching",
+                    item6: "Prepare scheme of work and lesson plans of the assigned teaching subjects",
+                    item7: "Assess and evaluate students learning progress and prepare relevant reports for the Principal and parents",
+                    item8: "Excellent classroom management skills",
+                    item9: "Participate in extra curriculum activities with the students and support all school activities and events",
+                },
+                documents: {
+                    item1: "Full CV",
+                    item2: "Passport / ID Photocopy",
+                    item3: "Academic Certificates Required",
+                    item4: "Certificate of Required teaching experience",
+                    item5: "Any necessary documentation for CV content",
+                },
+            },
+            item3: {
+                title: "Science Teacher",
+                jobDescription: {
+                    item1: "Levels of Study: Secondary Levels",
+                    item2: "Hours of Work: 8 Hours / day",
+                },
+                qualifications: {
+                    item1: "Ability to teach Secondary (Cambridge) syllabus",
+                    item2: "Have an exceptionally good command of the English Language",
+                    item3: "Prepare and submit lesson plan and assignments in accordance to the Secondary (Cambridge) syllabus",
+                    item4: "Patient, responsible and passionate about teaching",
+                    item5: "Prepare scheme of work and lesson plans of the assigned teaching subjects",
+                    item6: "Assess and evaluate students learning progress and prepare relevant reports for the Principal and parents",
+                    item7: "Excellent classroom management skills",
+                    item8: "Participate in extra curriculum activities with the students and support all school activities and events",
+                },
+                documents: {
+                    item1: "Full CV",
+                    item2: "Passport / ID Photocopy",
+                    item3: "Academic Certificates Required",
+                    item4: "Certificate of Required teaching experience",
+                    item5: "Any necessary documentation for CV content",
+                },
+            },
+        },
     },
 
     footer: {
