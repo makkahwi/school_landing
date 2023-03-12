@@ -27,6 +27,10 @@ import ScienceIcon from "@mui/icons-material/Science";
 import AppleIcon from "@mui/icons-material/Apple";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import ExploreIcon from "@mui/icons-material/Explore";
+import PersonIcon from '@mui/icons-material/Person';
+import BarChartIcon from '@mui/icons-material/BarChart';
+
 
 interface navbarItemsProps {
     color: string;
@@ -971,9 +975,7 @@ export const registrationPage = {
                 .fill(1)
                 .map(
                     (_, i) =>
-                        `registrationPage.jobs.item1.documents.item${
-                            i + 1
-                        }`
+                        `registrationPage.jobs.item1.documents.item${i + 1}`
                 ),
         },
         {
@@ -998,9 +1000,7 @@ export const registrationPage = {
                 .fill(1)
                 .map(
                     (_, i) =>
-                        `registrationPage.jobs.item2.documents.item${
-                            i + 1
-                        }`
+                        `registrationPage.jobs.item2.documents.item${i + 1}`
                 ),
         },
         {
@@ -1025,10 +1025,67 @@ export const registrationPage = {
                 .fill(1)
                 .map(
                     (_, i) =>
-                        `registrationPage.jobs.item3.documents.item${
-                            i + 1
-                        }`
+                        `registrationPage.jobs.item3.documents.item${i + 1}`
                 ),
+        },
+    ],
+};
+
+/**
+ *  about page constants
+ */
+export const aboutPage = {
+    whyAIScards: [
+        {
+            src: "/landingPage/islamic-icon.png",
+            alt: "islamic-icon",
+            text: "aboutPage.whyCards.item1.text",
+            longText: "aboutPage.whyCards.item1.longText",
+        },
+        {
+            src: "/landingPage/cambridge-icon.png",
+            alt: "cambridge-icon",
+            text: "aboutPage.whyCards.item2.text",
+            longText: "aboutPage.whyCards.item2.longText",
+        },
+        {
+            src: "/landingPage/cheap-zone-icon.png",
+            alt: "cheap-zone-icon",
+            text: "aboutPage.whyCards.item3.text",
+            longText: "aboutPage.whyCards.item3.longText",
+        },
+    ],
+
+    objectives: [
+        {
+            title: "aboutPage.objectives.items.item1.title",
+            text: "aboutPage.objectives.items.item1.text",
+            icon: <ExploreIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+        },
+        {
+            title: "aboutPage.objectives.items.item2.title",
+            text: "aboutPage.objectives.items.item2.text",
+            icon: <PersonIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+        },
+        {
+            title: "aboutPage.objectives.items.item3.title",
+            text: "aboutPage.objectives.items.item3.text",
+            icon: <PsychologyIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+        },
+        {
+            title: "aboutPage.objectives.items.item4.title",
+            text: "aboutPage.objectives.items.item4.text",
+            icon: <BarChartIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+        },
+        {
+            title: "aboutPage.objectives.items.item5.title",
+            text: "aboutPage.objectives.items.item5.text",
+            icon: <Brightness3Icon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+        },
+        {
+            title: "aboutPage.objectives.items.item6.title",
+            text: "aboutPage.objectives.items.item6.text",
+            icon: <HomeIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
         },
     ],
 };

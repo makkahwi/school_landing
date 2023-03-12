@@ -491,6 +491,87 @@ const en = {
         },
     },
 
+    aboutPage: {
+        title: "About AIS",
+
+        whyAISTitle: "AIS COMPETITIVE ADVANTAGES",
+        whyCards: {
+            item1: {
+                text: "High-Level Islamic & Arabic Education",
+                longText:
+                    "Islamic knowledge is a major part of AIS education process, where students learn and memorize Quranic verses & Hadith and fed the basic Islamic principles & perfect-Muslim behavior. Arabic language is – as well – a pillar of AIS curriculum, where fundamental grammars of the language are taught, beside the practical exercise as Arabic is a one of two instruction languages of AIS. The school cares a lot to raise kids with Islamic teachings, and to reserve the Arabic language by practice.",
+            },
+            item2: {
+                text: "Cambridge Sciences' Curriculum",
+                longText:
+                    "At the same time, AIS do not put away modern sciences’ knowledge. So that, the school administration constructed a special curriculum combines Cambridge’s curriculum for sciences, Islamic and Arabic curriculum. As for Palestinian students, raising them with the love of Palestine planted in their hearts is a top priority, and having Palestinian issue considered in their life goals is raised with Palestine-connected environment.",
+            },
+            item3: {
+                text: "Reasonable & Affordable Charges",
+                longText:
+                    "Yet still our main competitive advantage is to provide a low-cost and good-level education to those who cannot afford the good-level but expensive schools, and those who do not prefer low-cost but low-level education schools. Now, how we do it? It is our job to find sponsors who could cover part of the school costs, and not keep it all to parents to pay.",
+            },
+        },
+
+        beginningAISTitle: "AIS BEGINNINGS",
+        foundingStory: {
+            paragraph1:
+                "In 2017, most international families around Klang Valley did try to register their children to public schools in Malaysia, but more than 90% of them did not manage to. So they headed to private schools, trying to find an affordable school where their children would have good education at appropriate costs, and they failed to find such schools.",
+            paragraph2:
+                "So of that, many of these families did not register their kids to any school since their arrival to Malaysia and kept their kids home. Others, those who did register their kids to schools, were in bad financial situations due to the high charges, beside the fact that most of those parents are university students. In some cases, they were not satisfied with the education level and the culture those schools promoted.",
+            paragraph3:
+                "At that time, a group of those parents gathered to discuss a solutions, and they decided that the only way is to form the solution by their-selves. So they planed, raised some money, find suitable building and established the school to pass all mentioned obstacles, and the school was operating by October 2018. So, there are no commercial purposes behind the school establishment, it solely goal is to provide a solution for a dilemma many international families around Kalng Valley did have.",
+        },
+
+        visionAndMisiion: "Vision & Mission",
+        vision: {
+            title: "Vision",
+            text: "AIS being the leading school in teaching modern sciences, Islamic knowledge and the Palestine-related knowledge in Klang Valley area.",
+        },
+        mission: {
+            title: "Mission",
+            text: "To educate our kids the authentic Islamic heritage, keep them up with the contemporary sciences and enhance the Palestinian-issue value among them. Enable the coming generation to acquire tools of creativity and keys of consciousness, to embark on all fields of life and make their remarkable contribution.",
+        },
+
+        objectives: {
+            title: "OBJECTIVES",
+            items: {
+                item1: {
+                    title: "Moral Compass",
+                    text: "Feeding students’ behavior and values in accordance with the Islamic teachings.",
+                },
+                item2: {
+                    title: "Character Building",
+                    text: "Develop kids’ awareness and build independent personalities.",
+                },
+                item3: {
+                    title: "Creativity",
+                    text: "Discover, embrace and motivate creative thinking.",
+                },
+                item4: {
+                    title: "Applicable Knowledge",
+                    text: "Connect students’ theoretical knowledge to the practical fields of life.",
+                },
+                item5: {
+                    title: "Quran Reservation",
+                    text: "Raise the performance level of students in Islamic knowledge like Quran memorization & recitation and Islamic teachings implementations.",
+                },
+                item6: {
+                    title: "Palestine",
+                    text: "Raise the performance level of students in Islamic knowledge like Quran memorization & recitation and Islamic teachings implementations.",
+                },
+            },
+        },
+
+        campus: {
+            title: "AIS CAMPUS",
+            paragraph1:
+                "A location of which only 5 km away from Petronas Twin Towers and hundreds of meters away from the key roads of Jalan Tun Razak, Jalan Kuching and DUKE lifted highway guarantee short and fast drive to reach the school. The exact address: No 5, Jalan Pahang Kecil, 53200 Kuala Lumpur, could also be found by ‘map-googling’ “Al-Aqsa Integrated School”. School bus service offered in the time-being covers the areas of (Batu Caves, Gombak, Medan Idaman, Setapak and Wangsa Maju).",
+            paragraph2:
+                "The school campus includes a building contains a total of 12 rooms with an additional spaces for a reception and service area. Additionally, there are 3 rooms on a separated building also used for classes and services. Finally, there is an outdoor field for outdoor activities. It is not big or fancy building, but it is good enough to start with, with expanding plans in future.",
+        },
+    },
+
     footer: {
         copyRights:
             "All Rights Reserved for Al-Aqsa Integrated School Malaysia (Aqsa Integrated Enterprise 002879423-W) © 2018 - 2022 | Built & Hosted By Arromi Creatives",
