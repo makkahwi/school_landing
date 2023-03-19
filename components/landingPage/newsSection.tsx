@@ -178,11 +178,11 @@ const NewsSection = () => {
                             width: "80%",
                             textAlign: "center",
                             background:
-                            "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))",
+                                "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))",
                         }}
                         color={theme.palette.basic.light}
                     >
-                        {landingPage.news[currentPhoto].title}
+                        {t(landingPage.news[currentPhoto].title)}
                     </Typography>
                 </Box>
 

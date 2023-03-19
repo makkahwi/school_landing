@@ -1,25 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import { navbarPage } from "@/utils/constants";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Dispatch, SetStateAction } from "react";
 import React from "react";
 import {
-    HeaderButton,
-    NavLinkStyles,
     NavStackStyles,
-    LinkElementProps,
     MainLogo,
 } from "@/components/layout/styles";
-import { Container, Stack, Box } from "@mui/system";
-import Typography from "@mui/material/Typography";
+import { Stack } from "@mui/system";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageIcon from "@mui/icons-material/Language";
-import useTranslation from "@/hooks/useTranslation";
 import NavItem from "./navItem";
 
 /**
@@ -41,7 +35,6 @@ const Navbar = ({
     const [color, setColor] = useState(theme.palette.basic.light);
     const router = useRouter();
     const { locale } = router;
-    const { t } = useTranslation(router);
 
     useEffect(() => {
         setIconTransform(
@@ -77,17 +70,12 @@ const Navbar = ({
                 setColor(theme.palette.basic.light);
                 break;
 
-            case "/unlock":
+            case "/community":
                 setBackground(theme.palette.blue.dark);
                 setColor(theme.palette.basic.light);
                 break;
 
-            case "/jobs":
-                setBackground(theme.palette.blue.dark);
-                setColor(theme.palette.basic.light);
-                break;
-
-            case "/latest":
+            case "/contact":
                 setBackground(theme.palette.blue.dark);
                 setColor(theme.palette.basic.light);
                 break;
