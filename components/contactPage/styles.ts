@@ -1,3 +1,6 @@
+import theme from "@/styles/theme";
+
+
 export const WelcomeGrid = {
     width: { xs: "100%", md: "50%" },
     position: "relative",

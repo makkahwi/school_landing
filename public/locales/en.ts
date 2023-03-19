@@ -602,6 +602,31 @@ const en = {
 
     contactPage: {
         title: "CONTACT AIS",
+        formTitle: "You Could Fill Up this Form",
+        formButton: "Submit now",
+
+        formInput1: "Name",
+        formInput2: "Email",
+        formInput3: "Phone Number",
+        formInput4: "How old is your little child?",
+        formInput5: "How can we help you?",
+
+        contactTitle: "OR Contact us through these",
+        contact1: {
+            title: "Give Us A Call",
+            description1: "+603-40316469",
+            description2: "+6011-2888-4817",
+        },
+        contact2: {
+            title: "Email Questions",
+            description1: "contact@aqsa.edu.my",
+        },
+        contact3: {
+            title: "Meet on Site",
+            description1: "Monday - Friday",
+            description2: "8am - 3pm",
+            description3: "Scroll down to map",
+        },
     },
 
     footer: {
