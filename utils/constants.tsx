@@ -4,8 +4,6 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import PlagiarismIcon from "@mui/icons-material/Plagiarism";
 import ErrorIcon from "@mui/icons-material/Error";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
-import SendIcon from "@mui/icons-material/Send";
 import theme from "@/styles/theme";
 import BrushIcon from "@mui/icons-material/Brush";
 import MenuBookSharpIcon from "@mui/icons-material/MenuBookSharp";
@@ -28,9 +26,9 @@ import AppleIcon from "@mui/icons-material/Apple";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import ExploreIcon from "@mui/icons-material/Explore";
-import PersonIcon from '@mui/icons-material/Person';
-import BarChartIcon from '@mui/icons-material/BarChart';
-
+import PersonIcon from "@mui/icons-material/Person";
+import BarChartIcon from "@mui/icons-material/BarChart";
+import PeopleIcon from "@mui/icons-material/People";
 
 interface navbarItemsProps {
     color: string;
@@ -109,7 +107,7 @@ export const navbarPage = {
             },
             {
                 data: "navbar.navItems.contact",
-                href: "/latest",
+                href: "/contact",
                 icon: (
                     <ContactPhoneIcon
                         sx={{
@@ -122,24 +120,10 @@ export const navbarPage = {
                 ),
             },
             {
-                data: "navbar.navItems.unlock",
-                href: "/unlock",
+                data: "navbar.navItems.community",
+                href: "/community",
                 icon: (
-                    <LockOpenIcon
-                        sx={{
-                            color: color,
-                            width: size,
-                            height: size,
-                            transition: "0.7s ease",
-                        }}
-                    />
-                ),
-            },
-            {
-                data: "navbar.navItems.jobs",
-                href: "/jobs",
-                icon: (
-                    <SendIcon
+                    <PeopleIcon
                         sx={{
                             color: color,
                             width: size,
@@ -253,11 +237,11 @@ export const landingPage = {
 
     news: [
         {
-            title: "AIS Received Rahmaniya School Delegation",
+            title: "communityPage.latestNews.item1.title",
             src: "/landingPage/news1.jpeg",
         },
         {
-            title: "'Ebadur Rahman' institute in AIS",
+            title: "communityPage.latestNews.item2.title",
             src: "/landingPage/news2.jpeg",
         },
     ],
@@ -1060,32 +1044,108 @@ export const aboutPage = {
         {
             title: "aboutPage.objectives.items.item1.title",
             text: "aboutPage.objectives.items.item1.text",
-            icon: <ExploreIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+            icon: (
+                <ExploreIcon
+                    sx={{
+                        color: theme.palette.basic.light,
+                        width: "30%",
+                        height: "auto",
+                    }}
+                />
+            ),
         },
         {
             title: "aboutPage.objectives.items.item2.title",
             text: "aboutPage.objectives.items.item2.text",
-            icon: <PersonIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+            icon: (
+                <PersonIcon
+                    sx={{
+                        color: theme.palette.basic.light,
+                        width: "30%",
+                        height: "auto",
+                    }}
+                />
+            ),
         },
         {
             title: "aboutPage.objectives.items.item3.title",
             text: "aboutPage.objectives.items.item3.text",
-            icon: <PsychologyIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+            icon: (
+                <PsychologyIcon
+                    sx={{
+                        color: theme.palette.basic.light,
+                        width: "30%",
+                        height: "auto",
+                    }}
+                />
+            ),
         },
         {
             title: "aboutPage.objectives.items.item4.title",
             text: "aboutPage.objectives.items.item4.text",
-            icon: <BarChartIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+            icon: (
+                <BarChartIcon
+                    sx={{
+                        color: theme.palette.basic.light,
+                        width: "30%",
+                        height: "auto",
+                    }}
+                />
+            ),
         },
         {
             title: "aboutPage.objectives.items.item5.title",
             text: "aboutPage.objectives.items.item5.text",
-            icon: <Brightness3Icon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+            icon: (
+                <Brightness3Icon
+                    sx={{
+                        color: theme.palette.basic.light,
+                        width: "30%",
+                        height: "auto",
+                    }}
+                />
+            ),
         },
         {
             title: "aboutPage.objectives.items.item6.title",
             text: "aboutPage.objectives.items.item6.text",
-            icon: <HomeIcon sx={{ color: theme.palette.basic.light, width: "30%", height: "auto"}}  />,
+            icon: (
+                <HomeIcon
+                    sx={{
+                        color: theme.palette.basic.light,
+                        width: "30%",
+                        height: "auto",
+                    }}
+                />
+            ),
+        },
+    ],
+};
+
+/**
+ *  about page constants
+ */
+export const communityPage = {
+    latestNews: [
+        {
+            title: "communityPage.latestNews.item1.title",
+            description: [
+                "communityPage.latestNews.item1.description.paragraph1",
+                "communityPage.latestNews.item1.description.paragraph2",
+                "communityPage.latestNews.item1.description.paragraph3",
+            ],
+            src: "/landingPage/news1.jpeg",
+            date: "29/4/2019",
+        },
+        {
+            title: "communityPage.latestNews.item2.title",
+            description: [
+                "communityPage.latestNews.item2.description.paragraph1",
+                "communityPage.latestNews.item2.description.paragraph2",
+                "communityPage.latestNews.item2.description.paragraph3",
+            ],
+            src: "/landingPage/news2.jpeg",
+            date: "29/4/2019",
         },
     ],
 };

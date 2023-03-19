@@ -11,8 +11,7 @@ const en = {
             engage: "Engage with AIS",
             about: "About AIS",
             contact: "Contact AIS",
-            unlock: "Unlock",
-            jobs: "Jobs",
+            community: "AIS Community",
             languagEN: "---",
             languagAR: "Arabic",
         },
@@ -569,6 +568,64 @@ const en = {
                 "A location of which only 5 km away from Petronas Twin Towers and hundreds of meters away from the key roads of Jalan Tun Razak, Jalan Kuching and DUKE lifted highway guarantee short and fast drive to reach the school. The exact address: No 5, Jalan Pahang Kecil, 53200 Kuala Lumpur, could also be found by ‘map-googling’ “Al-Aqsa Integrated School”. School bus service offered in the time-being covers the areas of (Batu Caves, Gombak, Medan Idaman, Setapak and Wangsa Maju).",
             paragraph2:
                 "The school campus includes a building contains a total of 12 rooms with an additional spaces for a reception and service area. Additionally, there are 3 rooms on a separated building also used for classes and services. Finally, there is an outdoor field for outdoor activities. It is not big or fancy building, but it is good enough to start with, with expanding plans in future.",
+        },
+    },
+
+    communityPage: {
+        title: "LATEST NEWS & ACTIVITIES",
+
+        latestNews: {
+            item1: {
+                title: "AIS Received Rahmaniya School Delegation",
+                description: {
+                    paragraph1:
+                        "A delegation represented Rahmaniya School - Indonesia visited Al-Aqsa Integrated School (AIS) on 28th Apr 2019. They were received by the principal of the school, Mr. Mohammed Shobaki, and a group of AIS teachers and students.",
+                    paragraph2:
+                        "Teacher Ismail Al-Farra gave a welcome speech in Arabic language, and Ms. Silvia Farwana gave it in Bahasa Melayu. The visit came as part of the communication between the Islamic schools as the coordinators of the visit said. AIS students played a dramatic presentation of what happened in Palestine after the wars happened, and student “Jana Thabet” expressed her dream of which she is seeking to achieve, to pray in Al-Aqsa Mosque, after the liberation from occupation.",
+                    paragraph3:
+                        "At the end of the visit, the delegation presented a souvenir of which Mr. Mohammed Shobaki did receive as an expression of the spirit of Islamic brotherhood between the two schools in the hope of continuing the relationship between them.",
+                },
+            },
+            item2: {
+                title: "'Ebadur Rahman' institute in AIS",
+                description: {
+                    paragraph1:
+                        "On April 22, 2019, we were honored to host a group of students of the Ebadur Rahman Institute - Indonesia and some of their teachers. Our students gave a welcoming speech by “Malham Al-Jandali” and “Suad Al-Kuwamaleh” from the 7th grade on behalf of the school’s students.",
+                    paragraph2:
+                        "In a lecture delivered by Rizq Al-Gharabli, he spoke about the relationship between Arabic language and the Holy Quran, and the importance of learning Arabic for Muslims. At the end of the lecture, there was a Q&A session where the students interacted greatly. As for the status of Al-Aqsa Mosque, “Alaa Al-Tamimi” an AIS teacher gave a valuable lecture explaining the need to preserve and defend this religious and historical heritage and protect it from any aggression.",
+                    paragraph3:
+                        "To express their thanks and appreciation for this generous visit, our students presented a souvenir represent the strength of the relationship between them and the Institute students.",
+                },
+            },
+        },
+    },
+
+    contactPage: {
+        title: "CONTACT AIS",
+        formTitle: "You Could Fill Up this Form",
+        formButton: "Submit now",
+
+        formInput1: "Name",
+        formInput2: "Email",
+        formInput3: "Phone Number",
+        formInput4: "How old is your little child?",
+        formInput5: "How can we help you?",
+
+        contactTitle: "OR Contact us through these",
+        contact1: {
+            title: "Give Us A Call",
+            description1: "+603-40316469",
+            description2: "+6011-2888-4817",
+        },
+        contact2: {
+            title: "Email Questions",
+            description1: "contact@aqsa.edu.my",
+        },
+        contact3: {
+            title: "Meet on Site",
+            description1: "Monday - Friday",
+            description2: "8am - 3pm",
+            description3: "Scroll down to map",
         },
     },
 
