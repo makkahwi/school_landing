@@ -23,7 +23,6 @@ const WelcomeSection = () => {
       id="top-container"
       pt={{ xs: 15, md: 7 }}
       pb={15}
-      bgcolor={theme.palette.basic.secondary}
       direction={{ xs: "column", md: "row" }}
     >
       <Container
@@ -40,8 +39,8 @@ const WelcomeSection = () => {
           sx={{
             height: { xs: "auto", md: "75vh" },
           }}
-          justifyContent="space-evenly"
           alignItems="center"
+          justifyContent="center"
         >
           <Avatar
             alt="Main Logo"
@@ -57,17 +56,8 @@ const WelcomeSection = () => {
             color={theme.palette.blue.dark}
             fontWeight="bold"
             align="center"
-            sx={{
-              textShadow: `0px 0px 15px ${theme.palette.blue.dark}`,
-            }}
-          >
-            {t("landingPage.welcomeSection.subtitle")}
-          </Typography>
-
-          <Typography
-            fontSize={{ xs: "8vw", md: "2vw" }}
-            color={theme.palette.blue.dark}
-            align="center"
+            pt={3}
+            lineHeight={2}
           >
             {t("landingPage.welcomeSection.title")}
           </Typography>
