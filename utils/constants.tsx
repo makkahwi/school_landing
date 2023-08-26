@@ -1,34 +1,34 @@
-import { ReactNode } from "react";
-import HomeIcon from "@mui/icons-material/Home";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import PlagiarismIcon from "@mui/icons-material/Plagiarism";
-import ErrorIcon from "@mui/icons-material/Error";
-import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import theme from "@/styles/theme";
+import AppleIcon from "@mui/icons-material/Apple";
+import BalanceIcon from "@mui/icons-material/Balance";
+import BarChartIcon from "@mui/icons-material/BarChart";
+import Brightness3Icon from "@mui/icons-material/Brightness3";
 import BrushIcon from "@mui/icons-material/Brush";
-import MenuBookSharpIcon from "@mui/icons-material/MenuBookSharp";
-import GTranslateIcon from "@mui/icons-material/GTranslate";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
 import CalculateIcon from "@mui/icons-material/Calculate";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ErrorIcon from "@mui/icons-material/Error";
+import ExploreIcon from "@mui/icons-material/Explore";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import FingerprintIcon from "@mui/icons-material/Fingerprint";
+import GTranslateIcon from "@mui/icons-material/GTranslate";
+import HomeIcon from "@mui/icons-material/Home";
+import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
+import MenuBookSharpIcon from "@mui/icons-material/MenuBookSharp";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import MosqueIcon from "@mui/icons-material/Mosque";
+import PeopleIcon from "@mui/icons-material/People";
+import PersonIcon from "@mui/icons-material/Person";
+import PlagiarismIcon from "@mui/icons-material/Plagiarism";
 import PsychologyIcon from "@mui/icons-material/Psychology";
-import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
+import PublicIcon from "@mui/icons-material/Public";
+import SchoolIcon from "@mui/icons-material/School";
+import ScienceIcon from "@mui/icons-material/Science";
 import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
 import TranslateIcon from "@mui/icons-material/Translate";
-import SchoolIcon from "@mui/icons-material/School";
-import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
-import ConstructionIcon from "@mui/icons-material/Construction";
-import MosqueIcon from "@mui/icons-material/Mosque";
-import Brightness3Icon from "@mui/icons-material/Brightness3";
-import PublicIcon from "@mui/icons-material/Public";
-import BalanceIcon from "@mui/icons-material/Balance";
-import ScienceIcon from "@mui/icons-material/Science";
-import AppleIcon from "@mui/icons-material/Apple";
-import FingerprintIcon from "@mui/icons-material/Fingerprint";
-import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
-import ExploreIcon from "@mui/icons-material/Explore";
-import PersonIcon from "@mui/icons-material/Person";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import PeopleIcon from "@mui/icons-material/People";
+import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
+import { ReactNode } from "react";
 
 interface navbarItemsProps {
     color: string;
@@ -141,121 +141,121 @@ export const navbarPage = {
  *  landing page constants
  */
 export const landingPage = {
-    welcomeSquares: [
-        {
-            radiusMobile: ["1.5vw", "1.1.1.0"],
-            radiusDesktop: ["0.5vw", "1.1.1.0"],
-            bgcolor: theme.palette.orange.main,
-            rows: "5 / 7",
-            cols: "15 / 17",
-        },
-        {
-            radiusMobile: ["3vw", "1.1.1.0"],
-            radiusDesktop: ["1.5vw", "1.1.1.0"],
-            bgcolor: theme.palette.brown.main,
-            rows: "7 / 11",
-            cols: "15 / 19",
-        },
-        {
-            radiusMobile: ["2.5vw", "1.1.0.1"],
-            radiusDesktop: ["1.2vw", "1.1.0.1"],
-            bgcolor: theme.palette.basic.light,
-            rows: "11 / 14",
-            cols: "4 / 7",
-        },
-        {
-            radiusMobile: ["6vw", "1.0.1.1"],
-            radiusDesktop: ["3vw", "1.0.1.1"],
-            bgcolor: theme.palette.orange.main,
-            rows: "11 / 19",
-            cols: "7 / 15",
-        },
-        {
-            radiusMobile: ["5vw", "0.1.1.1"],
-            radiusDesktop: ["2.2vw", "0.1.1.1"],
-            bgcolor: theme.palette.blue.dark,
-            rows: "11 / 17",
-            cols: "15 / 21",
-        },
-        {
-            radiusMobile: ["1.5vw", "0.1.1.1"],
-            radiusDesktop: ["0.5vw", "0.1.1.1"],
-            bgcolor: theme.palette.brown.main,
-            rows: "17 / 19",
-            cols: "15 / 17",
-        },
-    ],
+  welcomeSquares: [
+    {
+      radiusMobile: ["1.5vw", "1.1.1.0"],
+      radiusDesktop: ["0.5vw", "1.1.1.0"],
+      bgcolor: theme.palette.orange.main,
+      rows: "5 / 7",
+      cols: "15 / 17",
+    },
+    {
+      radiusMobile: ["3vw", "1.1.1.0"],
+      radiusDesktop: ["1.5vw", "1.1.1.0"],
+      bgcolor: theme.palette.brown.main,
+      rows: "7 / 11",
+      cols: "15 / 19",
+    },
+    {
+      radiusMobile: ["2.5vw", "1.1.0.1"],
+      radiusDesktop: ["1.2vw", "1.1.0.1"],
+      bgcolor: theme.palette.basic.main,
+      rows: "11 / 14",
+      cols: "4 / 7",
+    },
+    {
+      radiusMobile: ["6vw", "1.0.1.1"],
+      radiusDesktop: ["3vw", "1.0.1.1"],
+      bgcolor: theme.palette.orange.main,
+      rows: "11 / 19",
+      cols: "7 / 15",
+    },
+    {
+      radiusMobile: ["5vw", "0.1.1.1"],
+      radiusDesktop: ["2.2vw", "0.1.1.1"],
+      bgcolor: theme.palette.blue.dark,
+      rows: "11 / 17",
+      cols: "15 / 21",
+    },
+    {
+      radiusMobile: ["1.5vw", "0.1.1.1"],
+      radiusDesktop: ["0.5vw", "0.1.1.1"],
+      bgcolor: theme.palette.brown.main,
+      rows: "17 / 19",
+      cols: "15 / 17",
+    },
+  ],
 
-    whyAIS_icons: [
-        {
-            src: "/landingPage/islamic-icon.png",
-            alt: "islamic-icon",
-            text: "landingPage.whyAISSection.items.item1",
-        },
-        {
-            src: "/landingPage/cambridge-icon.png",
-            alt: "cambridge-icon",
-            text: "landingPage.whyAISSection.items.item2",
-        },
-        {
-            src: "/landingPage/cheap-zone-icon.png",
-            alt: "cheap-zone-icon",
-            text: "landingPage.whyAISSection.items.item3",
-        },
-    ],
+  whyAIS_icons: [
+    {
+      src: "/landingPage/islamic-icon.png",
+      alt: "islamic-icon",
+      text: "landingPage.whyAISSection.items.item1",
+    },
+    {
+      src: "/landingPage/cambridge-icon.png",
+      alt: "cambridge-icon",
+      text: "landingPage.whyAISSection.items.item2",
+    },
+    {
+      src: "/landingPage/cheap-zone-icon.png",
+      alt: "cheap-zone-icon",
+      text: "landingPage.whyAISSection.items.item3",
+    },
+  ],
 
-    newsSquares: [
-        {
-            radiusMobile: ["1.5vw", "1.1.0.1"],
-            radiusDesktop: ["0.8vw", "1.1.0.1"],
-            bgcolor: theme.palette.blue.dark,
-            rows: "3 / 5",
-            cols: "8 / 10",
-        },
-        {
-            radiusMobile: ["1.5vw", "1.1.0.1"],
-            radiusDesktop: ["1.5vw", "1.1.0.1"],
-            bgcolor: theme.palette.basic.light,
-            rows: "1 / 5",
-            cols: "10 / 14",
-        },
-        {
-            radiusMobile: ["1.5vw", "1.1.0.1"],
-            radiusDesktop: ["1.2vw", "1.1.1.0"],
-            bgcolor: theme.palette.orange.main,
-            rows: "2 / 5",
-            cols: "14 / 17",
-        },
-        {
-            radiusMobile: ["1.5vw", "1.1.0.1"],
-            radiusDesktop: ["1.2vw", "1.0.1.1"],
-            bgcolor: theme.palette.brown.main,
-            rows: "5 / 8",
-            cols: "11 / 14",
-        },
-    ],
+  newsSquares: [
+    {
+      radiusMobile: ["1.5vw", "1.1.0.1"],
+      radiusDesktop: ["0.8vw", "1.1.0.1"],
+      bgcolor: theme.palette.blue.dark,
+      rows: "3 / 5",
+      cols: "8 / 10",
+    },
+    {
+      radiusMobile: ["1.5vw", "1.1.0.1"],
+      radiusDesktop: ["1.5vw", "1.1.0.1"],
+      bgcolor: theme.palette.basic.light,
+      rows: "1 / 5",
+      cols: "10 / 14",
+    },
+    {
+      radiusMobile: ["1.5vw", "1.1.0.1"],
+      radiusDesktop: ["1.2vw", "1.1.1.0"],
+      bgcolor: theme.palette.orange.main,
+      rows: "2 / 5",
+      cols: "14 / 17",
+    },
+    {
+      radiusMobile: ["1.5vw", "1.1.0.1"],
+      radiusDesktop: ["1.2vw", "1.0.1.1"],
+      bgcolor: theme.palette.brown.main,
+      rows: "5 / 8",
+      cols: "11 / 14",
+    },
+  ],
 
-    news: [
-        {
-            title: "communityPage.latestNews.item1.title",
-            src: "/landingPage/news1.jpeg",
-        },
-        {
-            title: "communityPage.latestNews.item2.title",
-            src: "/landingPage/news2.jpeg",
-        },
-    ],
+  news: [
+    {
+      title: "communityPage.latestNews.item1.title",
+      src: "/landingPage/news1.jpeg",
+    },
+    {
+      title: "communityPage.latestNews.item2.title",
+      src: "/landingPage/news2.jpeg",
+    },
+  ],
 
-    newsFeatures: [
-        "landingPage.newsSection.job",
-        "landingPage.newsSection.student",
-        "landingPage.newsSection.registration",
-        "landingPage.newsSection.staff",
-        "landingPage.newsSection.curriculum",
-        "landingPage.newsSection.website",
-        "landingPage.newsSection.levels",
-        "landingPage.newsSection.data",
-    ],
+  newsFeatures: [
+    "landingPage.newsSection.job",
+    "landingPage.newsSection.student",
+    "landingPage.newsSection.registration",
+    "landingPage.newsSection.staff",
+    "landingPage.newsSection.curriculum",
+    "landingPage.newsSection.website",
+    "landingPage.newsSection.levels",
+    "landingPage.newsSection.data",
+  ],
 };
 
 /**
