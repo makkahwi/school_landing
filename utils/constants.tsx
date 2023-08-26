@@ -266,15 +266,15 @@ export const curriculumPage = {
   courseSquares: [
     {
       text: "curriculumPage.courseSquares.languages",
-      edges: "1.0.1.1",
+      edges: "1.0.0.1",
     },
     {
       text: "curriculumPage.courseSquares.islamic",
-      edges: "0.0.1.1",
+      edges: "0.0.0.0",
     },
     {
       text: "curriculumPage.courseSquares.modern",
-      edges: "0.1.1.1",
+      edges: "0.1.1.0",
     },
   ],
 
