@@ -72,8 +72,8 @@ const WelcomeSection = () => {
               desktop: ["2vw", "1.1.0.1"],
             }}
             sx={{
-              gridRow: "1 / 11",
-              gridColumn: "1 / 15",
+              gridRow: "1 / 16",
+              gridColumn: "1 / 20",
             }}
           >
             <Avatar

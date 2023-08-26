@@ -14,12 +14,12 @@ export const GridLayoutStyles = {
   direction: "ltr",
   display: "grid",
   gridTemplateColumns: {
-    xs: "repeat(20, 1.5vw)",
-    md: "repeat(20, 0.5vw)",
+    xs: "repeat(25, 1.5vw)",
+    md: "repeat(25, 0.5vw)",
   },
   gridTemplateRows: {
-    xs: "repeat(18, 1.5vw)",
-    md: "repeat(18, 0.5vw)",
+    xs: "repeat(25, 1.5vw)",
+    md: "repeat(25, 0.5vw)",
   },
   gap: { xs: 1, md: 2 },
 };
