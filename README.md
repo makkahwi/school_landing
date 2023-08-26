@@ -1,1 +1,3 @@
-# AIS School repo
+# Schools Landing Page
+
+Next.Js & Typescript based
