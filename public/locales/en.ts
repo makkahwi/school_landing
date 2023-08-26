@@ -21,8 +21,6 @@ const en = {
     welcomeSection: {
       title: "Al-Aqsa Integrated School Malaysia (AIS)",
       subtitle: "Welcome to",
-      discription:
-        "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018.The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment",
     },
     whyAISSection: {
       title: "Why AIS ?",
@@ -31,6 +29,8 @@ const en = {
         item2: "Cambridge Sciences' Curriculum",
         item3: "Reasonable & Affordable Charges",
       },
+      discription:
+        "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018.The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment",
     },
     newsSection: {
       news: "News",

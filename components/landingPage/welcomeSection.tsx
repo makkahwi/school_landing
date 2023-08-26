@@ -1,4 +1,7 @@
-import { GridLayoutStyles, SquaresShape } from "@/components/landingPage/styles";
+import {
+  GridLayoutStyles,
+  SquaresShape,
+} from "@/components/landingPage/styles";
 import useTranslation from "@/hooks/useTranslation";
 import { landingPage } from "@/utils/constants";
 import { Box, Container, Stack } from "@mui/material";
@@ -68,14 +71,6 @@ const WelcomeSection = () => {
           >
             {t("landingPage.welcomeSection.title")}
           </Typography>
-
-          {/* <Typography
-              textAlign="justify"
-              color={theme.palette.basic.dark}
-              fontSize={{ xs: "6vw", md: "1.5vw" }}
-            >
-              {t("landingPage.welcomeSection.discription")}
-            </Typography> */}
         </Stack>
       </Container>
 
