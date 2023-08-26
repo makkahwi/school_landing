@@ -7,91 +7,93 @@ import theme from "@/styles/theme";
 
 // Interfaces ------------------------------------------
 export interface LinkElementProps {
-    data: string | JSX.Element;
-    icon: ReactNode;
-    href?: string;
-    itemLocale?: string;
-    onClick?(): void;
-    color: string;
+  data: string | JSX.Element;
+  icon: ReactNode;
+  href?: string;
+  itemLocale?: string;
+  onClick?(): void;
+  color: string;
 }
 
 // Layout components ------------------------------------------
 
 export const LayoutBox = styled(Stack)(({ theme }) => ({
-    width: "100%",
-    background: theme.palette.blue.main,
+  width: "100%",
+  background: theme.palette.blue.main,
 }));
 
 // Main components ------------------------------------------
 
 export const MainContainer = styled("main")(() => ({
-    overflow: "scroll",
-    overflowX: "hidden",
-    height: "100vh",
-    width: "100%",
+  overflow: "scroll",
+  overflowX: "hidden",
+  height: "100vh",
+  width: "100%",
 }));
 
 // Header components ------------------------------------------
 
 export const HeaderAnimation = {
-    HeaderOpenningDesktop: keyframes`
+  HeaderOpenningDesktop: keyframes`
         0% {width: 5.5rem;}
         100% {width: max(15%, 18rem);}
     `,
-    HeaderClosingDesktop: keyframes`
+  HeaderClosingDesktop: keyframes`
         0% {width: max(15%, 18rem);}
         100% {width: 5.5rem;}
     `,
-    HeaderOpenningMobile: keyframes`
+  HeaderOpenningMobile: keyframes`
         0% {height: 5rem;}
         100% {height: 30rem;}
     `,
-    HeaderClosingMobile: keyframes`
+  HeaderClosingMobile: keyframes`
         0% {height: 30rem;}
         100% {height: 5rem;}
     `,
 };
 
 export const HeaderButton = styled(Container)(() => ({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "4rem",
-    height: "4rem",
-    cursor: "pointer",
-    minWidth: "4rem",
-    minHeight: "4rem",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "4rem",
+  height: "4rem",
+  cursor: "pointer",
+  minWidth: "4rem",
+  minHeight: "4rem",
 }));
 
 // Navbar components ------------------------------------------
 
 export const NavLinkStyles: CSS.Properties = {
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
-    width: "100%",
-    overflow: "hidden",
-    whiteSpace: "nowrap",
+  display: "flex",
+  alignItems: "center",
+  textDecoration: "none",
+  width: "100%",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
 };
 
 export const NavStackStyles = {
-    justifyContent: "space-between",
-    width: "100%",
-    height: "100%",
+  justifyContent: "space-between",
+  width: "100%",
+  height: "100%",
 };
 
 export const MainLogo = styled(Avatar)(() => ({
-    maxHeight: "2rem",
-    overflow: "hidden",
+  maxHeight: "2rem",
+  overflow: "hidden",
 }));
 
 // Footer components ------------------------------------------
 
 export const FooterContainer = styled("footer")(() => ({
-    width: "100%",
-    height: "auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    background: theme.palette.basic.main,
+  width: "100%",
+  height: "auto",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  background: theme.palette.blue.dark,
+  color: "white",
+  padding: "10px 0px",
 }));

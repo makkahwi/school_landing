@@ -647,7 +647,9 @@ const en = {
 
   footer: {
     copyRights:
-      "All Rights Reserved for Al-Aqsa Integrated School Malaysia (Aqsa Integrated Enterprise 002879423-W) © 2018 - 2022 | Built & Hosted By Arromi Creatives",
+      "All Rights Reserved for Al-Aqsa Integrated School Malaysia 2018 - ",
+    by: "Compliment By",
+    developer: "Semesteer",
   },
 };
 
