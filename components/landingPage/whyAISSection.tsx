@@ -25,9 +25,6 @@ const WhyAISSection = () => {
           variant="h3"
           fontWeight="bold"
           color={theme.palette.orange.main}
-          sx={{
-            textShadow: `0px 0px 2px ${theme.palette.orange.main}`,
-          }}
         >
           {t("landingPage.whyAISSection.title")}
         </Typography>
