@@ -126,11 +126,11 @@ const Widgets = () => {
           >
             <Avatar
               sx={{
-                height: "auto",
-                width: { xs: "70%", md: "70%" },
+                height: "80%",
+                width: "auto",
               }}
               variant="square"
-              src="global\logo2.png"
+              src="https://aqsa.edu.my/wp-content/uploads/2019/03/AIS-Light-Blue-En-Logo.png"
               alt="logo 2"
             />
           </Square>
