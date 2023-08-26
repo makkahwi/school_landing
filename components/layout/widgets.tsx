@@ -33,26 +33,26 @@ const Widgets = () => {
       <Stack justifyContent="center">
         <Box sx={LowerGridStyles}>
           <Square
-            bgcolor={theme.palette.basic.light}
+            bgcolor={theme.palette.brown.main}
             radius={{
               mobile: ["7vw", "1.1.0.1"],
               desktop: ["2vw", "1.1.0.1"],
             }}
             sx={{
               gridRow: "1 / 3",
-              gridColumn: "5 / 7",
+              gridColumn: "15 / 20",
             }}
           />
 
           <Square
-            bgcolor={theme.palette.orange.main}
+            bgcolor={theme.palette.blue.light}
             radius={{
               mobile: ["7vw", "1.1.1.0"],
               desktop: ["2vw", "1.1.1.0"],
             }}
             sx={{
               gridRow: "1 / 3",
-              gridColumn: "11 / 13",
+              gridColumn: "20 / 25",
             }}
           />
 
@@ -63,8 +63,8 @@ const Widgets = () => {
               desktop: ["3vw", "1.0.1.1"],
             }}
             sx={{
-              gridRow: "3 / 12",
-              gridColumn: "1 / 10",
+              gridRow: "3 / 8",
+              gridColumn: "1 / 20",
             }}
           >
             <Stack
@@ -74,7 +74,7 @@ const Widgets = () => {
               height="100%"
             >
               {landingPage.widgetLinks
-                .slice(0, landingPage.widgetLinks.length / 2)
+                .slice(0, landingPage.widgetLinks.length / 3)
                 .map((link) => (
                   <LinkComp {...link} />
                 ))}
@@ -88,7 +88,23 @@ const Widgets = () => {
             >
               {landingPage.widgetLinks
                 .slice(
-                  landingPage.widgetLinks.length / 2,
+                  landingPage.widgetLinks.length / 3,
+                  (landingPage.widgetLinks.length / 3) * 2
+                )
+                .map((link) => (
+                  <LinkComp {...link} />
+                ))}
+            </Stack>
+
+            <Stack
+              justifyContent="space-evenly"
+              alignItems="center"
+              width="100%"
+              height="100%"
+            >
+              {landingPage.widgetLinks
+                .slice(
+                  (landingPage.widgetLinks.length / 3) * 2,
                   landingPage.widgetLinks.length
                 )
                 .map((link) => (
@@ -104,8 +120,8 @@ const Widgets = () => {
               desktop: ["3vw", "0.1.1.1"],
             }}
             sx={{
-              gridRow: "3 / 12",
-              gridColumn: "10 / 19",
+              gridRow: "3 / 8",
+              gridColumn: "20 / 30",
             }}
           >
             <Avatar

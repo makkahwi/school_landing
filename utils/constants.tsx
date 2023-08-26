@@ -248,6 +248,7 @@ export const landingPage = {
 
   widgetLinks: [
     { link: "", label: "landingPage.newsSection.job" },
+    { link: "", label: "landingPage.newsSection.levels" },
     { link: "", label: "landingPage.newsSection.student" },
     { link: "", label: "landingPage.newsSection.registration" },
     { link: "", label: "landingPage.newsSection.staff" },

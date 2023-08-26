@@ -59,8 +59,8 @@ export const LowerGridStyles = {
     md: "repeat(12, 2vw)",
   },
   gridTemplateRows: {
-    xs: "repeat(11, 3vw)",
-    md: "repeat(11, 2vw)",
+    xs: "repeat(8, 3vw)",
+    md: "repeat(8, 2vw)",
   },
   gap: { xs: 2, md: 4 },
 };
