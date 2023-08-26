@@ -6,6 +6,7 @@ import { landingPage } from "@/utils/constants";
 import Square from "../shared/Square";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
+import { Fragment } from "react";
 
 const WhyAISSection = () => {
   const router = useRouter();
@@ -49,54 +50,52 @@ const WhyAISSection = () => {
         direction={{ xs: "column", md: "row" }}
         sx={{ height: { xs: "auto", md: "80%" } }}
       >
-        {landingPage.whyAIS_icons.map((item, index) => {
-          return (
-            <React.Fragment key={`whyAIS section item number ${index}`}>
-              <Square
-                bgcolor={theme.palette.orange.main}
-                radius={{
-                  mobile: ["4vw", "1.1.1.1"],
-                  desktop: ["2vw", "1.1.1.1"],
-                }}
+        {landingPage.whyAIS_icons.map((item, index) => (
+          <Fragment key={`whyAIS section item number ${index}`}>
+            <Square
+              bgcolor={theme.palette.orange.main}
+              radius={{
+                mobile: ["4vw", "1.1.1.1"],
+                desktop: ["2vw", "1.1.1.1"],
+              }}
+              sx={{
+                width: { xs: "100%", md: "20%" },
+                height: "90%",
+              }}
+            >
+              <Stack
+                justifyContent="center"
+                alignItems="center"
                 sx={{
-                  width: { xs: "100%", md: "20%" },
-                  height: "90%",
+                  padding: 3,
+                  width: "100%",
+                  height: "100%",
                 }}
               >
-                <Stack
-                  justifyContent="center"
-                  alignItems="center"
+                <Avatar
+                  variant="square"
+                  alt={item.alt}
+                  src={item.src}
                   sx={{
-                    padding: 3,
-                    width: "100%",
-                    height: "100%",
+                    width: { xs: "35vw", md: "auto" },
+                    height: { xs: "35vw", md: "auto" },
+                    maxWidth: { md: "12vw" },
                   }}
-                >
-                  <Avatar
-                    variant="square"
-                    alt={item.alt}
-                    src={item.src}
-                    sx={{
-                      width: { xs: "35vw", md: "auto" },
-                      height: { xs: "35vw", md: "auto" },
-                      maxWidth: { md: "12vw" },
-                    }}
-                  />
+                />
 
-                  <Typography
-                    mt={2}
-                    variant="h6"
-                    textAlign="center"
-                    color={theme.palette.basic.light}
-                    fontWeight="bold"
-                  >
-                    {t(item.text)}
-                  </Typography>
-                </Stack>
-              </Square>
-            </React.Fragment>
-          );
-        })}
+                <Typography
+                  mt={2}
+                  variant="h6"
+                  textAlign="center"
+                  color={theme.palette.basic.light}
+                  fontWeight="bold"
+                >
+                  {t(item.text)}
+                </Typography>
+              </Stack>
+            </Square>
+          </Fragment>
+        ))}
       </Stack>
     </Box>
   );

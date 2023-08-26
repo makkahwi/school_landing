@@ -47,14 +47,12 @@ const en = {
 
   curriculumPage: {
     title: "AIS CURRICULUM",
-
     courses: "AIS Curriculum contains courses from 3 different divisions",
     courseSquares: {
       languages: "Languages",
       islamic: "Islamic",
       modern: "Modern",
     },
-
     languages: "Languages",
     languagesContents: {
       arabic: "Arabic",
@@ -67,7 +65,6 @@ const en = {
       malayContent:
         "The local language of Malays, which enhance students’ capability to interact with the locals of Malaysia",
     },
-
     islamicStudies: "Islamic Studies",
     islamicStudiesContent:
       "The religious part of the curriculum is divided into three sections: Islamic Fiqh, Quran Memorization & Recitation, and Islamic Culture Education . As for the Islamic Fiqh, AIS depends on the heritage of Imam Shafi’I, and it is keen to teach the Quran and the rules of recitation and memorizing it. In the aspect of Islamic education, the curriculum contains all that develop good Islamic values and manners among students. Curriculum units vary to include Hadith, Prophetic Hadith, Sunnah, and others.",
