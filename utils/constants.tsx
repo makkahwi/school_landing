@@ -38,7 +38,7 @@ interface navbarItemsProps {
 export const departmentColors = {
   academic: theme.palette.blue.dark,
   engage: theme.palette.orange.main,
-  about: theme.palette.brown.main,
+  about: theme.palette.blue.light,
   community: theme.palette.basic.ligth,
 };
 

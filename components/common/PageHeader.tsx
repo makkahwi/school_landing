@@ -1,17 +1,32 @@
+import theme from "@/styles/theme";
+import { Box } from "@mui/material";
+
+import { UpperSquaresGrid } from "../Curriculum/styles";
 import PageSection from "./PageSection";
 import PageSectionColumn from "./PageSectionColumn";
 import Square from "./Square";
 import Text from "./Text";
-import theme from "@/styles/theme";
-import { Box, Typography } from "@mui/material";
 
-import { UpperSquaresGrid } from "../Curriculum/styles";
+const PageHeader = ({ bg = theme.palette.basic.main, title = "" }) => {
+  const secondColor = () => {
+    switch (bg) {
+      case theme.palette.blue.dark:
+        return theme.palette.basic.light;
+      case theme.palette.blue.light:
+        return theme.palette.brown.main;
+      case theme.palette.brown.main:
+        return theme.palette.orange.main;
+      case theme.palette.orange.main:
+        return theme.palette.brown.main;
+      default:
+        return theme.palette.blue.dark;
+    }
+  };
 
-const PageHeader = ({ bg = "", title = "" }) => {
   return (
     <PageSection bgcolor={bg}>
       <PageSectionColumn justify="start" align="end" md={6}>
-        <Text variant="title" color={theme.palette.basic.light}>
+        <Text variant="title" color={secondColor()}>
           {title}
         </Text>
       </PageSectionColumn>
@@ -19,7 +34,7 @@ const PageHeader = ({ bg = "", title = "" }) => {
       <PageSectionColumn justify="end" align="start" md={6}>
         <Box sx={UpperSquaresGrid}>
           <Square
-            bgcolor={theme.palette.blue.light}
+            bgcolor={secondColor()}
             radius={{
               mobile: ["3vw", "1.1.0.1"],
               desktop: ["1vw", "1.1.0.1"],
@@ -31,7 +46,7 @@ const PageHeader = ({ bg = "", title = "" }) => {
           />
 
           <Square
-            bgcolor={theme.palette.blue.light}
+            bgcolor={secondColor()}
             radius={{
               mobile: ["4vw", "1.1.1.0"],
               desktop: ["1.5vw", "1.1.1.0"],
@@ -43,7 +58,7 @@ const PageHeader = ({ bg = "", title = "" }) => {
           />
 
           <Square
-            bgcolor={theme.palette.blue.light}
+            bgcolor={secondColor()}
             radius={{
               mobile: ["4vw", "0.1.1.1"],
               desktop: ["1.5vw", "0.1.1.1"],

@@ -4,7 +4,6 @@ import { communityPage } from "@/utils/constants";
 import { Avatar } from "@mui/material";
 import { useRouter } from "next/router";
 
-import CardComp from "../common/Card";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import Text from "../common/Text";
