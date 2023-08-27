@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import ScrollableList from "../../components/common/ScrollableList";
+import Text from "../common/Text";
 
 const ClubsSection = () => {
   const router = useRouter();
@@ -15,13 +16,9 @@ const ClubsSection = () => {
   return (
     <PageSection bg={theme.palette.blue.dark}>
       <PageSectionColumn>
-        <Typography
-          color={theme.palette.basic.light}
-          fontWeight="bold"
-          fontSize={{ xs: "10vw", md: "5vw" }}
-        >
+        <Text color={theme.palette.basic.light} variant="title">
           {t("curriculumPage.clubs")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       <PageSectionColumn>

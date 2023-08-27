@@ -3,12 +3,12 @@ import theme from "@/styles/theme";
 import { curriculumPage } from "@/utils/constants";
 import { Box, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
 
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
 import { LanguagesGrid, TitleStyles } from "../../components/Curriculum/styles";
+import Text from "../common/Text";
 
 const LanguagesSection = () => {
   const router = useRouter();
@@ -111,24 +111,11 @@ const LanguagesSection = () => {
       <PageSectionColumn md={6}>
         {curriculumPage.languages.map((item, i) => (
           <Stack pb={5} key={i}>
-            <Typography
-              sx={{
-                color: theme.palette.blue.dark,
-                fontWeight: "bold",
-                fontSize: { xs: "8vw", md: "1.75vw" },
-              }}
-            >
+            <Text variant="subtitle" color={theme.palette.blue.dark}>
               {t(item.title)}
-            </Typography>
+            </Text>
 
-            <Typography
-              sx={{
-                fontSize: { xs: "5vw", md: "1.25vw" },
-              }}
-              textAlign="justify"
-            >
-              {t(item.content)}
-            </Typography>
+            <Text justify>{t(item.content)}</Text>
           </Stack>
         ))}
       </PageSectionColumn>

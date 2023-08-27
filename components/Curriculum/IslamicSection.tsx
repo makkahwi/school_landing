@@ -6,10 +6,8 @@ import { useRouter } from "next/router";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
-import {
-  IslamicStudiesGrid,
-  TitleStyles,
-} from "../../components/Curriculum/styles";
+import { IslamicStudiesGrid } from "../../components/Curriculum/styles";
+import Text from "../common/Text";
 
 const IslamicSection = () => {
   const router = useRouter();
@@ -18,20 +16,11 @@ const IslamicSection = () => {
   return (
     <PageSection>
       <PageSectionColumn md={6}>
-        <Typography
-          sx={{ ...TitleStyles, textAlign: "justify", alignSelf: "start" }}
-        >
+        <Text color={theme.palette.blue.dark} variant="title">
           {t("curriculumPage.islamicStudies")}
-        </Typography>
+        </Text>
 
-        <Typography
-          sx={{
-            fontSize: { xs: "5vw", md: "1.25vw" },
-            textAlign: "justify",
-          }}
-        >
-          {t("curriculumPage.islamicStudiesContent")}
-        </Typography>
+        <Text justify>{t("curriculumPage.islamicStudiesContent")}</Text>
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>

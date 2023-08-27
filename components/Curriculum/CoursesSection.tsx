@@ -1,12 +1,12 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { curriculumPage } from "@/utils/constants";
-import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
+import Text from "../common/Text";
 
 const CoursesSection = () => {
   const router = useRouter();
@@ -15,13 +15,9 @@ const CoursesSection = () => {
   return (
     <PageSection>
       <PageSectionColumn>
-        <Typography
-          color={theme.palette.orange.main}
-          fontWeight="bold"
-          fontSize={{ xs: "8vw", md: "2vw" }}
-        >
+        <Text color={theme.palette.orange.main} variant="subtitle">
           {t("curriculumPage.courses")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       {curriculumPage.courseSquares.map((item, i) => (
@@ -38,14 +34,9 @@ const CoursesSection = () => {
               height: { xs: "60vw", md: "15vw" },
             }}
           >
-            <Typography
-              fontWeight="bold"
-              m={0}
-              fontSize={{ xs: "7vw", md: "1.7vw" }}
-              color={theme.palette.basic.light}
-            >
+            <Text color={theme.palette.basic.light} variant="subtitle">
               {t(item.text)}
-            </Typography>
+            </Text>
           </Square>
         </PageSectionColumn>
       ))}

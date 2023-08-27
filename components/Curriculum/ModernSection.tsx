@@ -6,10 +6,8 @@ import { useRouter } from "next/router";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
-import {
-  ModernScienceGrid,
-  TitleStyles,
-} from "../../components/Curriculum/styles";
+import { ModernScienceGrid } from "../../components/Curriculum/styles";
+import Text from "../common/Text";
 
 const ModernSection = () => {
   const router = useRouter();
@@ -18,14 +16,9 @@ const ModernSection = () => {
   return (
     <PageSection bg={theme.palette.orange.main}>
       <PageSectionColumn md={6}>
-        <Typography
-          sx={{
-            ...TitleStyles,
-            color: theme.palette.basic.light,
-          }}
-        >
+        <Text color={theme.palette.basic.light} variant="title">
           {t("curriculumPage.modernSciences")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>
@@ -153,16 +146,9 @@ const ModernSection = () => {
       </PageSectionColumn>
 
       <PageSectionColumn>
-        <Typography
-          sx={{
-            color: theme.palette.basic.light,
-            width: { xs: "100%", md: "80%" },
-            fontSize: { xs: "6vw", md: "1.5vw" },
-            textAlign: "justify",
-          }}
-        >
+        <Text color={theme.palette.basic.light} justify>
           {t("curriculumPage.modernSciencesContent")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
     </PageSection>
   );

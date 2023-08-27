@@ -1,12 +1,14 @@
-import PageSection from "../common/PageSection";
-import PageSectionColumn from "../common/PageSectionColumn";
-import ScrollableList from "../common/ScrollableList";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { curriculumPage } from "@/utils/constants";
 import { Box, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
+
+import PageSection from "../common/PageSection";
+import PageSectionColumn from "../common/PageSectionColumn";
+import ScrollableList from "../common/ScrollableList";
+import Text from "../common/Text";
 
 const ActivitiesSection = () => {
   const router = useRouter();
@@ -15,13 +17,9 @@ const ActivitiesSection = () => {
   return (
     <PageSection bg={theme.palette.orange.main}>
       <PageSectionColumn>
-        <Typography
-          color={theme.palette.basic.light}
-          fontWeight="bold"
-          fontSize={{ xs: "10vw", md: "5vw" }}
-        >
+        <Text color={theme.palette.basic.light} variant="title">
           {t("curriculumPage.activities")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       <PageSectionColumn>

@@ -5,6 +5,8 @@ import { Box, Stack, styled, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 
+import Text from "./Text";
+
 interface ScrollableListProps {
   items: {
     text: string;
@@ -207,18 +209,9 @@ const ScrollableList = ({
                 >
                   <Box>{item.icon}</Box>
 
-                  <Typography
-                    fontSize={{
-                      md: "1.5vw",
-                      xs: "5vw",
-                    }}
-                    mt="1vw"
-                    textAlign="center"
-                    fontWeight="bold"
-                    color={textColor}
-                  >
+                  <Text color={textColor} variant="subtitle" center>
                     {t(item.text)}
-                  </Typography>
+                  </Text>
                 </Stack>
               </React.Fragment>
             );

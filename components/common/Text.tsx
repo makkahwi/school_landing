@@ -14,9 +14,9 @@ const Text = ({
       case "title":
         return { variant: "h3", fontWeight: "bold", lineHeight: 1.5, mb: 4 };
       case "subtitle":
-        return { variant: "h5", my: 4 };
+        return { variant: "h4", fontWeight: "bold", my: 2 };
       default:
-        return { variant: "h6", lineHeight: 2, my: 4 };
+        return { variant: "h6", my: 4 };
     }
   };
 

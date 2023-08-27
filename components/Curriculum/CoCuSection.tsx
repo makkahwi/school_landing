@@ -1,16 +1,13 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Avatar, Box, Stack, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
 
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
-import {
-  AvatarStyles,
-  CoCurriculumGrid,
-} from "../../components/Curriculum/styles";
+import { CoCurriculumGrid } from "../../components/Curriculum/styles";
+import Text from "../common/Text";
 
 const CoCorriculumSection = () => {
   const router = useRouter();
@@ -19,28 +16,13 @@ const CoCorriculumSection = () => {
   return (
     <PageSection>
       <PageSectionColumn md={6}>
-        <Typography
-          mb={5}
-          sx={{
-            color: theme.palette.blue.dark,
-            width: { xs: "100%", md: "80%" },
-            fontSize: { xs: "6vw", md: "1.5vw" },
-            textAlign: "center",
-          }}
-        >
+        <Text color={theme.palette.blue.dark} justify>
           {t("curriculumPage.coText")}
-        </Typography>
+        </Text>
 
-        <Typography
-          sx={{
-            color: theme.palette.blue.dark,
-            width: { xs: "100%", md: "80%" },
-            fontSize: { xs: "6vw", md: "1.5vw" },
-            textAlign: "justify",
-          }}
-        >
+        <Text color={theme.palette.blue.dark} justify>
           {t("curriculumPage.modernSciencesContent")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>

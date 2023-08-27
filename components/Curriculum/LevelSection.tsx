@@ -7,6 +7,7 @@ import React from "react";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import ScrollableList from "../../components/common/ScrollableList";
+import Text from "../common/Text";
 
 interface LevelSectionProps {
   section: {
@@ -64,20 +65,13 @@ const LevelSection = ({ section }: LevelSectionProps) => {
           alignItems={{ xs: "center", md: "flex-start" }}
           mb={{ xs: 5, md: 0 }}
         >
-          <Typography
-            color={titleColor}
-            fontSize={{ xs: "9vw", md: "3vw" }}
-            fontWeight="bold"
-          >
+          <Text color={titleColor} variant="title">
             {t(title)}
-          </Typography>
-          <Typography
-            color={subTitleColor}
-            fontSize={{ xs: "7vw", md: "1.5vw" }}
-            textAlign="justify"
-          >
+          </Text>
+
+          <Text color={subTitleColor} variant="subtitle" justify>
             {t(subTitle)}
-          </Typography>
+          </Text>
         </Stack>
       </PageSectionColumn>
 

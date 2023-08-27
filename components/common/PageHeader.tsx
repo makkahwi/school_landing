@@ -1,24 +1,19 @@
+import PageSection from "./PageSection";
+import PageSectionColumn from "./PageSectionColumn";
+import Square from "./Square";
+import Text from "./Text";
 import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
 
 import { UpperSquaresGrid } from "../Curriculum/styles";
-import PageSection from "./PageSection";
-import PageSectionColumn from "./PageSectionColumn";
-import Square from "./Square";
 
 const PageHeader = ({ bg = "", title = "" }) => {
   return (
     <PageSection bgcolor={bg}>
       <PageSectionColumn justify="start" align="end" md={6}>
-        <Typography
-          mt={3}
-          mb={3}
-          fontSize={{ xs: "5vw", md: "2.5vw" }}
-          color={theme.palette.basic.light}
-          fontWeight="bold"
-        >
+        <Text variant="title" color={theme.palette.basic.light}>
           {title}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       <PageSectionColumn justify="end" align="start" md={6}>
