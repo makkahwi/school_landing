@@ -407,7 +407,8 @@ const en = {
 
     jobs: {
       title: "JOB OPPORTUNITIES",
-      subtitle: "Opportunities For Teaching",
+      Academic: "Academic Opportunities",
+      NonAcademic: "Non-Academic Opportunities",
       jobDescription: "Job Describtion",
       qualifications: "Qualifications",
       documents: "Documents to Apply",
