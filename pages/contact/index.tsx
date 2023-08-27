@@ -1,19 +1,20 @@
+import PageHeader from "@/components/common/PageHeader";
+import ContactsAndLocation from "@/pages/contact/ContactsSection";
+import useTranslation from "@/hooks/useTranslation";
+import ContactForm from "@/pages/contact/ContactForm";
+import { departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
-import React from "react";
-import WelcomeSection from "@/components/contactPage/welcomeSection";
-import ContactForm from "@/components/contactPage/contactForm";
-import ContactsAndLocation from "@/components/contactPage/contactsAndLocation";
+import { useRouter } from "next/router";
 
-/**
- *  the contact page
- *
- */
 export default function Contact() {
-    return (
-        <Stack>
-            <WelcomeSection />
-            <ContactForm />
-            <ContactsAndLocation />
-        </Stack>
-    );
+  const router = useRouter();
+  const { t } = useTranslation(router);
+
+  return (
+    <Stack>
+      <PageHeader bg={departmentColors.about} title={t("contactPage.title")} />
+      <ContactForm />
+      <ContactsAndLocation />
+    </Stack>
+  );
 }
