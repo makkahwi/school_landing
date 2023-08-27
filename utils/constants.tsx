@@ -746,7 +746,7 @@ export const registrationPage = {
       items: Array(4)
         .fill(1)
         .map((_, i) => i + 1)
-        .map((index) => {
+        .map((_, index) => {
           return {
             title: `registrationPage.structure.item1.item${index}.title`,
             price: `registrationPage.structure.item1.item${index}.price`,

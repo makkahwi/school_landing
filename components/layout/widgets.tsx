@@ -3,10 +3,11 @@ import theme from "@/styles/theme";
 import { landingPage } from "@/utils/constants";
 import { Box, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
+import Link from "next/link";
 import { useRouter } from "next/router";
+
 import Square from "../common/Square";
 import { LowerGridStyles } from "../LandingPage/styles";
-import Link from "next/link";
 
 const Widgets = () => {
   const router = useRouter();
@@ -75,8 +76,8 @@ const Widgets = () => {
             >
               {landingPage.widgetLinks
                 .slice(0, landingPage.widgetLinks.length / 3)
-                .map((link) => (
-                  <LinkComp {...link} />
+                .map((link, i) => (
+                  <LinkComp {...link} key={i} />
                 ))}
             </Stack>
 
@@ -91,8 +92,8 @@ const Widgets = () => {
                   landingPage.widgetLinks.length / 3,
                   (landingPage.widgetLinks.length / 3) * 2
                 )
-                .map((link) => (
-                  <LinkComp {...link} />
+                .map((link, i) => (
+                  <LinkComp {...link} key={i} />
                 ))}
             </Stack>
 
@@ -107,8 +108,8 @@ const Widgets = () => {
                   (landingPage.widgetLinks.length / 3) * 2,
                   landingPage.widgetLinks.length
                 )
-                .map((link) => (
-                  <LinkComp {...link} />
+                .map((link, i) => (
+                  <LinkComp {...link} key={i} />
                 ))}
             </Stack>
           </Square>
