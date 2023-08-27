@@ -115,12 +115,12 @@ export const ModernScienceGrid = {
   display: "grid",
   justifyContent: "center",
   gridTemplateColumns: {
-    xs: "repeat(23, 0.1vw)",
-    md: "repeat(23, 0.7vw)",
+    xs: "repeat(25, 0.1vw)",
+    md: "repeat(25, 0.7vw)",
   },
   gridTemplateRows: {
-    xs: "repeat(10, 0.1vw)",
-    md: "repeat(10, 0.7vw)",
+    xs: "repeat(12, 0.1vw)",
+    md: "repeat(12, 0.7vw)",
   },
   gap: { xs: 1.5, md: 2 },
 };
