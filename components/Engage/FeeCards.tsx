@@ -1,11 +1,12 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
 
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
+import Text from "../common/Text";
 
 interface FeeCardsProps {
   templateId: string;
@@ -28,16 +29,9 @@ const FeeCards = ({ boxes, isSubStack, bg, cardBg }: FeeCardsProps) => {
     <PageSection bg={bg}>
       {boxes.map((box, i) => (
         <PageSectionColumn key={i}>
-          <Typography
-            p={3}
-            width="100%"
-            textAlign="center"
-            fontSize={{ xs: "3vw", md: "2.5vw" }}
-            fontWeight="bold"
-            color={theme.palette.basic.dark}
-          >
+          <Text variant="title" center>
             {t(box.title)}
-          </Typography>
+          </Text>
 
           <PageSection bg={bg}>
             {box.items.map((item, y) => (
@@ -54,17 +48,9 @@ const FeeCards = ({ boxes, isSubStack, bg, cardBg }: FeeCardsProps) => {
                   }}
                 >
                   <Stack spacing={1} p={3} width="100%">
-                    <Typography
-                      textAlign="center"
-                      fontWeight="bold"
-                      fontSize={{
-                        xs: "3vw",
-                        md: "2vw",
-                      }}
-                      color={theme.palette.basic.dark}
-                    >
+                    <Text variant="subtitle" center>
                       {t(item.title)}
-                    </Typography>
+                    </Text>
 
                     <Stack
                       direction={isSubStack ? "column" : "row"}
@@ -74,27 +60,17 @@ const FeeCards = ({ boxes, isSubStack, bg, cardBg }: FeeCardsProps) => {
                         alignItems: "center",
                       }}
                     >
-                      <Typography
-                        textAlign="center"
-                        fontSize={{
-                          xs: "3vw",
-                          md: "5vw",
-                        }}
+                      <Text
+                        variant="title"
+                        center
                         color={theme.palette.orange.main}
                       >
                         {t(item.price)}
-                      </Typography>
+                      </Text>
 
-                      <Typography
-                        textAlign="center"
-                        fontSize={{
-                          xs: "3vw",
-                          md: "1.5vw",
-                        }}
-                        color={bg}
-                      >
+                      <Text color={bg} center>
                         {t(item.description)}
-                      </Typography>
+                      </Text>
                     </Stack>
                   </Stack>
                 </Square>

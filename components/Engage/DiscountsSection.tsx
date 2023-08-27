@@ -1,12 +1,13 @@
-import PageSection from "../common/PageSection";
-import PageSectionColumn from "../common/PageSectionColumn";
-import FeeCards from "./FeeCards";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { registrationPage } from "@/utils/constants";
-import { Avatar, Stack, Typography } from "@mui/material";
+import { Avatar } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
+
+import PageSection from "../common/PageSection";
+import PageSectionColumn from "../common/PageSectionColumn";
+import Text from "../common/Text";
+import FeeCards from "./FeeCards";
 
 const DiscountsSection = () => {
   const router = useRouter();
@@ -15,16 +16,9 @@ const DiscountsSection = () => {
   return (
     <PageSection>
       <PageSectionColumn md={6}>
-        <Typography
-          p={3}
-          width="100%"
-          textAlign="center"
-          fontSize={{ xs: "5vw", md: "4vw" }}
-          fontWeight="bold"
-          color={theme.palette.orange.main}
-        >
+        <Text color={theme.palette.orange.main} variant="title">
           {t("registrationPage.discounts.title")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>

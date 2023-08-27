@@ -2,19 +2,14 @@ import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { registrationPage } from "@/utils/constants";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import {
-  Collapse,
-  List,
-  ListItemButton,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Collapse, List, ListItemButton, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 import CardComp from "../../components/common/Card";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
+import Text from "../common/Text";
 
 const RequirementsSection = () => {
   const router = useRouter();
@@ -35,14 +30,9 @@ const RequirementsSection = () => {
               aria-labelledby="nested-list-subheader"
               sx={{ width: "100%" }}
               subheader={
-                <Typography
-                  fontSize={{ xs: "5vw", md: "2.5vw" }}
-                  width="100%"
-                  textAlign="center"
-                  color={theme.palette.brown.main}
-                >
+                <Text color={theme.palette.brown.main} variant="subtitle">
                   {t(item.title)}
-                </Typography>
+                </Text>
               }
             >
               {item.lists.map((list, listIndex) => (
@@ -53,15 +43,7 @@ const RequirementsSection = () => {
                     sx={{ width: "100%" }}
                     onClick={() => handleClick(list.trigger)}
                   >
-                    <Typography
-                      fontSize={{
-                        xs: "2vw",
-                        md: "1.5vw",
-                      }}
-                      width="100%"
-                    >
-                      {t(list.title)}
-                    </Typography>
+                    <Text>{t(list.title)}</Text>
 
                     {trigger === list.trigger ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
