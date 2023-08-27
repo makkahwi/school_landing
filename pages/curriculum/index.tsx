@@ -1,13 +1,13 @@
 import PageHeader from "@/components/common/PageHeader";
-import useTranslation from "@/hooks/useTranslation";
 import ActivitiesSection from "@/components/Curriculum/ActivitiesSection";
-import ClubsSection from "@/pages/curriculum/ClubsSection";
-import CoCorriculumSection from "@/pages/curriculum/CoCuSection";
-import CoursesSection from "@/pages/curriculum/CoursesSection";
-import IslamicSection from "@/pages/curriculum/IslamicSection";
-import LanguagesSection from "@/pages/curriculum/LanguagesSection";
-import LevelTemplate from "@/pages/curriculum/LevelSection";
-import ModernSection from "@/pages/curriculum/ModernSection";
+import ClubsSection from "@/components/Curriculum/ClubsSection";
+import CoCorriculumSection from "@/components/Curriculum/CoCuSection";
+import CoursesSection from "@/components/Curriculum/CoursesSection";
+import IslamicSection from "@/components/Curriculum/IslamicSection";
+import LanguagesSection from "@/components/Curriculum/LanguagesSection";
+import LevelSection from "@/components/Curriculum/LevelSection";
+import ModernSection from "@/components/Curriculum/ModernSection";
+import useTranslation from "@/hooks/useTranslation";
 import { curriculumPage, departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
@@ -41,7 +41,7 @@ export default function Curriculum() {
       />
 
       {curriculumPage.levelsPageSections.map((section, i) => (
-        <LevelTemplate section={section} key={i} />
+        <LevelSection section={section} key={i} />
       ))}
     </Stack>
   );

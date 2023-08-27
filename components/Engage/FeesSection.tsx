@@ -5,11 +5,11 @@ import { Avatar, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
 
-import PageSection from "../../components/common/pageSection";
+import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import FeeCards from "./FeeCards";
 
-const StructureSection = () => {
+const FeesSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
@@ -52,4 +52,4 @@ const StructureSection = () => {
   );
 };
 
-export default StructureSection;
+export default FeesSection;

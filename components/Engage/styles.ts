@@ -24,3 +24,19 @@ export const AvatarStyles = {
   transform: "translateX(-50%)",
   zIndex: "15",
 };
+
+export const JobsGrid = {
+  width: { xs: "100%", md: "50%" },
+  position: "relative",
+  display: "grid",
+  justifyContent: "center",
+  gridTemplateColumns: {
+    xs: "repeat(20, 3vw)",
+    md: "repeat(20, 1vw)",
+  },
+  gridTemplateRows: {
+    xs: "repeat(18, 3vw)",
+    md: "repeat(18, 1vw)",
+  },
+  gap: { xs: 1.5, md: 1.5 },
+};

@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-import PageSection from "../common/pageSection";
+import PageSection from "../common/PageSection";
 import Square from "../common/Square";
 import {
   NewsAnimation,

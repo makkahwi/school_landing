@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import React from "react";
 
 import CardComp from "../common/Card";
-import PageSection from "../common/pageSection";
+import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import Square from "../common/Square";
 

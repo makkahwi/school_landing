@@ -1,5 +1,5 @@
 import PageSectionColumn from "@/components/common/PageSectionColumn";
-import PageSection from "@/components/common/pageSection";
+import PageSection from "@/components/common/PageSection";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { Typography } from "@mui/material";

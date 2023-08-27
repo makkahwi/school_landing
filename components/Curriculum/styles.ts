@@ -1,7 +1,5 @@
 import theme from "@/styles/theme";
 
-// Welcome Section ------------------------------------------
-
 export const UpperSquaresStyles = {
   display: "flex",
   justifyContent: "flex-end",

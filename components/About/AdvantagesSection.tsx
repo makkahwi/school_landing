@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { Fragment } from "react";
 
 import CardComp from "../common/Card";
-import PageSection from "../common/pageSection";
+import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 
 const AdvantagesSection = () => {

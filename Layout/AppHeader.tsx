@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
-import Navbar from "./navbar";
 import { HeaderAnimation } from "@/Layout/styles";
 import { AppBar } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-/**
- * the header section in the layout
- *
- */
+import Navbar from "./AppNavbar";
+
 const Header = () => {
   const isDesktop = useMediaQuery("(min-width:900px)");
   const [navIsOpened, setNavIsOpened] = useState(true);

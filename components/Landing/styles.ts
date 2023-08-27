@@ -1,6 +1,6 @@
-import { keyframes, styled } from "@mui/material/styles";
-import { Container, Stack, Box } from "@mui/material";
 import theme from "@/styles/theme";
+import { Box, Container, Stack } from "@mui/material";
+import { keyframes, styled } from "@mui/material/styles";
 
 // Welcome Section ------------------------------------------
 

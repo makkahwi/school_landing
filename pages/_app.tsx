@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 
 import type { AppProps } from "next/app";
-import Layout from "@/Layout/layout";
+import Layout from "@/Layout";
 import theme from "@/styles/theme";
 import { ThemeProvider } from "@mui/material";
 

@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import CardComp from "../../components/common/Card";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
-import PageSection from "../../components/common/pageSection";
+import PageSection from "../../components/common/PageSection";
 
 const ContactsSection = () => {
   const router = useRouter();

@@ -1,11 +1,12 @@
-import CardComp from "../common/Card";
-import PageSection from "../common/pageSection";
-import PageSectionColumn from "../common/PageSectionColumn";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { Button, TextField, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
+
+import CardComp from "../common/Card";
+import PageSection from "../common/PageSection";
+import PageSectionColumn from "../common/PageSectionColumn";
 
 const ContactForm = () => {
   const router = useRouter();
@@ -27,7 +28,7 @@ const ContactForm = () => {
           {Array(5)
             .fill(1)
             .map((_, i) => i + 1)
-            .map((_,i) => (
+            .map((_, i) => (
               <React.Fragment key={`text field item number: ${i}`}>
                 <TextField
                   label={t(`contactPage.formInput${i}`)}

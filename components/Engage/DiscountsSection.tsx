@@ -1,4 +1,4 @@
-import PageSection from "../common/pageSection";
+import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import FeeCards from "./FeeCards";
 import useTranslation from "@/hooks/useTranslation";

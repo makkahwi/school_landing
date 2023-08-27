@@ -1,22 +1,17 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @next/next/no-img-element */
+import { MainLogo, NavStackStyles } from "@/Layout/styles";
 import { navbarPage } from "@/utils/constants";
+import LanguageIcon from "@mui/icons-material/Language";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Stack } from "@mui/system";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Dispatch, SetStateAction } from "react";
 import React from "react";
-import { NavStackStyles, MainLogo } from "@/Layout/styles";
-import { Stack } from "@mui/system";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import MenuIcon from "@mui/icons-material/Menu";
-import LanguageIcon from "@mui/icons-material/Language";
-import NavItem from "./navItem";
 
-/**
- * the navbar section in the layout
- *
- */
+import NavItem from "./NavbarItem";
+
 const Navbar = ({
   navIsOpened,
   setNavIsOpened,

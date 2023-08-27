@@ -2,15 +2,19 @@ import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { registrationPage } from "@/utils/constants";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import { Collapse, List, ListItemButton, Stack, Typography } from "@mui/material";
+import {
+  Collapse,
+  List,
+  ListItemButton,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 import CardComp from "../../components/common/Card";
-import PageSection from "../../components/common/pageSection";
+import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
-import Square from "../../components/common/Square";
-import {} from "../../components/Registration/styles";
 
 const RequirementsSection = () => {
   const router = useRouter();

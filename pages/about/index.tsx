@@ -1,12 +1,12 @@
-import AISBeginning from "@/pages/about/AISBeginning";
 import AdvantagesSection from "@/components/About/AdvantagesSection";
+import AISBeginning from "@/components/About/AISBeginning";
+import Facilities from "@/components/About/Facilities";
+import VisionMissionObjectives from "@/components/About/VisionMissionObjectives";
 import PageHeader from "@/components/common/PageHeader";
 import useTranslation from "@/hooks/useTranslation";
 import { departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
-import Facilities from "./Facilities";
-import VisionMissionObjectives from "./VisionMissionObjectives";
 
 export default function AboutAIS() {
   const router = useRouter();

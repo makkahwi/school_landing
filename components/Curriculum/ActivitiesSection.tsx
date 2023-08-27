@@ -1,4 +1,4 @@
-import PageSection from "../common/pageSection";
+import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import ScrollableList from "../common/ScrollableList";
 import useTranslation from "@/hooks/useTranslation";

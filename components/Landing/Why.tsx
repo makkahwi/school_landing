@@ -1,12 +1,12 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { landingPage } from "@/utils/constants";
-import { Card, CardContent, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 
 import CardComp from "../common/Card";
-import PageSection from "../common/pageSection";
+import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 
 const WhyAISSection = () => {

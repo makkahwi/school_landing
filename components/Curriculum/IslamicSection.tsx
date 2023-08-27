@@ -3,7 +3,7 @@ import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
-import PageSection from "../../components/common/pageSection";
+import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
 import {

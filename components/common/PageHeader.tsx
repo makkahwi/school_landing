@@ -2,7 +2,7 @@ import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
 
 import { UpperSquaresGrid } from "../Curriculum/styles";
-import PageSection from "./pageSection";
+import PageSection from "./PageSection";
 import PageSectionColumn from "./PageSectionColumn";
 import Square from "./Square";
 
