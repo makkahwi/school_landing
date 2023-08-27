@@ -1,6 +1,6 @@
 import PageHeader from "@/components/common/PageHeader";
 import useTranslation from "@/hooks/useTranslation";
-import ActivitiesSection from "@/pages/curriculum/ActivitiesSection";
+import ActivitiesSection from "@/components/Curriculum/ActivitiesSection";
 import ClubsSection from "@/pages/curriculum/ClubsSection";
 import CoCorriculumSection from "@/pages/curriculum/CoCuSection";
 import CoursesSection from "@/pages/curriculum/CoursesSection";

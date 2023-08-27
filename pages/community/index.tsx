@@ -1,5 +1,5 @@
 import PageHeader from "@/components/common/PageHeader";
-import LatestNews from "@/pages/community/NewsSection";
+import LatestNews from "@/components/Community/NewsSection";
 import useTranslation from "@/hooks/useTranslation";
 import { departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";

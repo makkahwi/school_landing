@@ -1,7 +1,7 @@
 import PageHeader from "@/components/common/PageHeader";
 import JobOpportunitiesSection from "@/pages/engage/JobsSection";
 import useTranslation from "@/hooks/useTranslation";
-import DiscountSection from "@/pages/engage/DiscountsSection";
+import DiscountSection from "@/components/Engage/DiscountsSection";
 import FeesSection from "@/pages/engage/FeesSection";
 import RequirementsSection from "@/pages/engage/RequirementsSection";
 import { departmentColors } from "@/utils/constants";

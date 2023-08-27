@@ -1,7 +1,7 @@
 import PageHeader from "@/components/common/PageHeader";
 import ContactsAndLocation from "@/pages/contact/ContactsSection";
 import useTranslation from "@/hooks/useTranslation";
-import ContactForm from "@/pages/contact/ContactForm";
+import ContactForm from "@/components/Contact/ContactForm";
 import { departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";

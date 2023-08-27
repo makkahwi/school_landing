@@ -1,5 +1,5 @@
 import AISBeginning from "@/pages/about/AISBeginning";
-import AdvantagesSection from "@/pages/about/AdvantagesSection";
+import AdvantagesSection from "@/components/About/AdvantagesSection";
 import PageHeader from "@/components/common/PageHeader";
 import useTranslation from "@/hooks/useTranslation";
 import { departmentColors } from "@/utils/constants";
