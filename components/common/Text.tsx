@@ -12,9 +12,7 @@ const Text = ({
   const props = () => {
     switch (variant.toLowerCase()) {
       case "title":
-        return { variant: "h3", fontWeight: "bold", mb: 4 };
-      case "centertitle":
-        return { variant: "h3", fontWeight: "bold", mb: 4 };
+        return { variant: "h3", fontWeight: "bold", lineHeight: 1.5, mb: 4 };
       case "subtitle":
         return { variant: "h5", my: 4 };
       default:

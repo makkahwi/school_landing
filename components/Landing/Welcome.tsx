@@ -11,6 +11,7 @@ import React from "react";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import Square from "../common/Square";
+import Text from "../common/Text";
 
 const WelcomeSection = () => {
   const router = useRouter();
@@ -30,16 +31,9 @@ const WelcomeSection = () => {
             }}
           />
 
-          <Typography
-            variant="h3"
-            color={theme.palette.blue.dark}
-            fontWeight="bold"
-            align="center"
-            pt={3}
-            lineHeight={2}
-          >
+          <Text color={theme.palette.blue.dark} variant="title" center>
             {t("landingPage.welcomeSection.title")}
-          </Typography>
+          </Text>
         </Stack>
       </PageSectionColumn>
 

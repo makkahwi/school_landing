@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import CardComp from "../common/Card";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
+import Text from "../common/Text";
 
 const WhyAISSection = () => {
   const router = useRouter();
@@ -22,22 +23,11 @@ const WhyAISSection = () => {
       }}
     >
       <PageSectionColumn>
-        <Typography
-          variant="h3"
-          fontWeight="bold"
-          color={theme.palette.orange.main}
-        >
+        <Text color={theme.palette.orange.main} variant="title">
           {t("landingPage.whyAISSection.title")}
-        </Typography>
+        </Text>
 
-        <Typography
-          textAlign="justify"
-          color={theme.palette.basic.dark}
-          fontSize={{ xs: "6vw", md: "1.25vw" }}
-          mt={6}
-        >
-          {t("landingPage.whyAISSection.discription")}
-        </Typography>
+        <Text>{t("landingPage.whyAISSection.discription")}</Text>
       </PageSectionColumn>
 
       <PageSectionColumn>
@@ -55,15 +45,13 @@ const WhyAISSection = () => {
                   }}
                 />
 
-                <Typography
-                  mt={4}
-                  variant="h6"
-                  textAlign="center"
+                <Text
+                  variant="subtitle"
+                  center
                   color={theme.palette.basic.light}
-                  fontWeight="bold"
                 >
                   {t(item.text)}
-                </Typography>
+                </Text>
               </CardComp>
             </PageSectionColumn>
           ))}

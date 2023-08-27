@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 
 import PageSection from "../common/PageSection";
 import Square from "../common/Square";
+import Text from "../common/Text";
 import {
   NewsAnimation,
   NewsArrowStyles,
@@ -107,13 +108,9 @@ const NewsSection = () => {
               gridColumn: "1 / 11",
             }}
           >
-            <Typography
-              color={theme.palette.basic.light}
-              fontWeight="bold"
-              fontSize={{ xs: "6vw", sm: "4vw", md: "3vw" }}
-            >
+            <Text color={theme.palette.basic.light} variant="title">
               {t("landingPage.newsSection.news")}
-            </Typography>
+            </Text>
           </Square>
 
           {landingPage.newsSquares.map((block, index) => {
@@ -169,16 +166,9 @@ const NewsSection = () => {
             alignItems: "center",
           }}
         >
-          <Typography
-            sx={{
-              fontSize: { xs: "8vw", sm: "4vw", md: "2vw" },
-              width: "80%",
-              textAlign: "center",
-            }}
-            color={theme.palette.blue.dark}
-          >
+          <Text variant="subtitle" color={theme.palette.blue.dark}>
             {t(landingPage.news[currentPhoto].title)}
-          </Typography>
+          </Text>
         </Box>
       </Stack>
     </PageSection>
