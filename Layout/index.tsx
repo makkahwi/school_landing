@@ -1,6 +1,6 @@
-import Header from "@/Layout/AppHeader";
-import Main from "@/Layout/AppMain";
 import HeadElement from "@/Layout/Head";
+import Header from "@/Layout/Header";
+import Main from "@/Layout/Main";
 import { useRouter } from "next/router";
 import React from "react";
 
