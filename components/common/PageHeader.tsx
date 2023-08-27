@@ -1,7 +1,5 @@
-import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
-import { useRouter } from "next/router";
 
 import { UpperSquaresGrid } from "../CurriculumPage/styles";
 import PageSection from "./pageSection";
@@ -9,9 +7,6 @@ import PageSectionColumn from "./PageSectionColumn";
 import Square from "./Square";
 
 const PageHeader = ({ bg = "", title = "" }) => {
-  const router = useRouter();
-  const { t } = useTranslation(router);
-
   return (
     <PageSection bgcolor={bg}>
       <PageSectionColumn justify="start" align="end" md={6}>

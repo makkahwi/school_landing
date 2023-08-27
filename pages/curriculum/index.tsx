@@ -7,12 +7,10 @@ import CoursesSection from "@/pages/curriculum/CoursesSection";
 import IslamicSection from "@/pages/curriculum/IslamicSection";
 import LanguagesSection from "@/pages/curriculum/LanguagesSection";
 import LevelTemplate from "@/pages/curriculum/LevelSection";
-import LevelsSection from "@/pages/curriculum/LevelsSection";
 import ModernSection from "@/pages/curriculum/ModernSection";
 import { curriculumPage, departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
 
 export default function Curriculum() {
   const router = useRouter();

@@ -5,6 +5,7 @@ import { Card, CardContent, Grid, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 
+import CardComp from "../common/Card";
 import PageSection from "../common/pageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 
@@ -43,43 +44,27 @@ const WhyAISSection = () => {
         <Grid container spacing={3}>
           {landingPage.whyAIS_icons.map((item, i) => (
             <PageSectionColumn lg={4} md={6} key={i}>
-              <Card
-                style={{
-                  backgroundColor: theme.palette.orange.main,
-                  borderRadius: "25px",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <CardContent
-                  style={{
-                    textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
+              <CardComp bg={theme.palette.orange.main}>
+                <Avatar
+                  variant="square"
+                  alt={item.alt}
+                  src={item.src}
+                  sx={{
+                    width: "50%",
+                    height: "auto",
                   }}
-                >
-                  <Avatar
-                    variant="square"
-                    alt={item.alt}
-                    src={item.src}
-                    sx={{
-                      width: "50%",
-                      height: "auto",
-                    }}
-                  />
+                />
 
-                  <Typography
-                    mt={4}
-                    variant="h6"
-                    textAlign="center"
-                    color={theme.palette.basic.light}
-                    fontWeight="bold"
-                  >
-                    {t(item.text)}
-                  </Typography>
-                </CardContent>
-              </Card>
+                <Typography
+                  mt={4}
+                  variant="h6"
+                  textAlign="center"
+                  color={theme.palette.basic.light}
+                  fontWeight="bold"
+                >
+                  {t(item.text)}
+                </Typography>
+              </CardComp>
             </PageSectionColumn>
           ))}
         </Grid>
