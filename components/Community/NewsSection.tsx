@@ -1,14 +1,13 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { communityPage } from "@/utils/constants";
-import { Avatar, Stack, Typography } from "@mui/material";
+import { Avatar } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
 
 import CardComp from "../common/Card";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
-import Square from "../common/Square";
+import Text from "../common/Text";
 
 const NewsSection = () => {
   const router = useRouter();
@@ -17,60 +16,30 @@ const NewsSection = () => {
   return (
     <PageSection>
       {communityPage.latestNews.map((item, i) => (
-        <PageSectionColumn key={i}>
-          <PageSection>
-            <PageSectionColumn md={4}>
-              <Avatar
-                variant="square"
-                src={item.src}
-                sx={{
-                  width: "90%",
-                  height: "auto",
-                }}
-              />
-              <Typography
-                color={theme.palette.blue.dark}
-                fontWeight="bold"
-                textAlign="center"
-                fontSize={{ xs: "3vw", md: "3vw" }}
-                width="auto"
-                p={2}
-              >
-                {t(item.title)}
-              </Typography>
+        <PageSectionColumn md={6} key={i}>
+          <Avatar
+            variant="square"
+            src={item.src}
+            sx={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+          <Text color={theme.palette.blue.dark} variant="SUBtitle" center>
+            {t(item.title)}
+          </Text>
 
-              <Typography
-                color={theme.palette.blue.dark}
-                fontWeight="bold"
-                textAlign="center"
-                fontSize={{ xs: "3vw", md: "2vw" }}
-                width="auto"
-                p={2}
-              >
-                {item.date}
-              </Typography>
-            </PageSectionColumn>
+          <Text justify>
+            {item.description
+              .map((desc) => t(desc))
+              .join(". ")
+              .slice(0, 110)}
+            {"..."}
+          </Text>
 
-            <PageSectionColumn md={8}>
-              <CardComp bg={theme.palette.blue.dark}>
-                {item.description.map((paragraph, y) => (
-                  <Typography
-                    color={theme.palette.basic.light}
-                    textAlign="justify"
-                    fontSize={{
-                      xs: "3vw",
-                      md: "1.5vw",
-                    }}
-                    width="auto"
-                    p={2}
-                    key={y}
-                  >
-                    {t(paragraph)}
-                  </Typography>
-                ))}
-              </CardComp>
-            </PageSectionColumn>
-          </PageSection>
+          <Text color={theme.palette.blue.dark} center>
+            {item.date}
+          </Text>
         </PageSectionColumn>
       ))}
     </PageSection>
