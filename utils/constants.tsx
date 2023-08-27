@@ -215,7 +215,7 @@ export const landingPage = {
     {
       radiusMobile: ["1.5vw", "1.1.0.1"],
       radiusDesktop: ["1.5vw", "1.1.0.1"],
-      bgcolor: theme.palette.basic.light,
+      bgcolor: theme.palette.basic.main,
       rows: "1 / 5",
       cols: "10 / 14",
     },

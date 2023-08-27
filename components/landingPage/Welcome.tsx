@@ -72,23 +72,21 @@ const WelcomeSection = () => {
               />
             </Square>
 
-            {landingPage.welcomeSquares.map((block, index) => {
-              return (
-                <React.Fragment key={`welcome square page-1 number: ${index}`}>
-                  <Square
-                    bgcolor={block.bgcolor}
-                    radius={{
-                      mobile: block.radiusMobile,
-                      desktop: block.radiusDesktop,
-                    }}
-                    sx={{
-                      gridRow: block.rows,
-                      gridColumn: block.cols,
-                    }}
-                  />
-                </React.Fragment>
-              );
-            })}
+            {landingPage.welcomeSquares.map((block, index) => (
+              <React.Fragment key={`welcome square page-1 number: ${index}`}>
+                <Square
+                  bgcolor={block.bgcolor}
+                  radius={{
+                    mobile: block.radiusMobile,
+                    desktop: block.radiusDesktop,
+                  }}
+                  sx={{
+                    gridRow: block.rows,
+                    gridColumn: block.cols,
+                  }}
+                />
+              </React.Fragment>
+            ))}
           </Box>
         </SquaresShape>
       </PageSectionColumn>

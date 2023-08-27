@@ -11,7 +11,12 @@ import React, { useEffect, useState } from "react";
 
 import PageSection from "../common/pageSection";
 import Square from "../common/Square";
-import { NewsAnimation, NewsArrowStyles, NewsGridStyles, PageFlipComponent } from "./styles";
+import {
+  NewsAnimation,
+  NewsArrowStyles,
+  NewsGridStyles,
+  PageFlipComponent,
+} from "./styles";
 
 const NewsSection = () => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
