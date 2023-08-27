@@ -46,7 +46,7 @@ const WhyAISSection = () => {
                 />
 
                 <Text
-                  variant="subtitle"
+                  variant="cardTitle"
                   center
                   color={theme.palette.basic.light}
                 >
