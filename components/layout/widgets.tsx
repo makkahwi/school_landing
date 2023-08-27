@@ -5,7 +5,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 import Square from "../common/Square";
-import { LowerGridStyles } from "../landingPage/styles";
+import { LowerGridStyles } from "../LandingPage/styles";
 import Link from "next/link";
 
 const Widgets = () => {
