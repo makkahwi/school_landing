@@ -35,6 +35,10 @@ interface navbarItemsProps {
   size: string;
 }
 
+export const departmentColors = {
+  academic: theme.palette.blue.dark,
+};
+
 /**
  *  navbar constants
  */
