@@ -5,9 +5,11 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
+
 import CardComp from "../../components/common/Card";
-import PageSectionColumn from "../../components/common/PageSectionColumn";
 import PageSection from "../../components/common/PageSection";
+import PageSectionColumn from "../../components/common/PageSectionColumn";
+import Text from "../common/Text";
 
 const ContactsSection = () => {
   const router = useRouter();
@@ -19,14 +21,9 @@ const ContactsSection = () => {
         <CardComp bg={theme.palette.blue.dark}>
           <PageSection bg={theme.palette.blue.dark}>
             <PageSectionColumn>
-              <Typography
-                m={3}
-                fontSize={{ xs: "5vw", md: "3vw" }}
-                fontWeight="bold"
-                color={theme.palette.basic.light}
-              >
+              <Text color={theme.palette.basic.light} variant="subtitle" center>
                 {t("contactPage.contactTitle")}
-              </Typography>
+              </Text>
             </PageSectionColumn>
 
             <PageSectionColumn md={4}>
@@ -37,28 +34,21 @@ const ContactsSection = () => {
                   height: "auto",
                 }}
               />
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "2vw" }}
-                fontWeight="bold"
+              <Text
                 color={theme.palette.basic.light}
+                variant="cardtitle"
+                center
               >
                 {t("contactPage.contact1.title")}
-              </Typography>
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "1.5vw" }}
-                color={theme.palette.basic.light}
-              >
+              </Text>
+
+              <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact1.description1")}
-              </Typography>
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "1.5vw" }}
-                color={theme.palette.basic.light}
-              >
+              </Text>
+
+              <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact1.description2")}
-              </Typography>
+              </Text>
             </PageSectionColumn>
 
             <PageSectionColumn md={4}>
@@ -69,21 +59,18 @@ const ContactsSection = () => {
                   height: "auto",
                 }}
               />
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "2vw" }}
-                fontWeight="bold"
+
+              <Text
                 color={theme.palette.basic.light}
+                variant="cardtitle"
+                center
               >
                 {t("contactPage.contact2.title")}
-              </Typography>
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "1.5vw" }}
-                color={theme.palette.basic.light}
-              >
+              </Text>
+
+              <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact2.description1")}
-              </Typography>
+              </Text>
             </PageSectionColumn>
 
             <PageSectionColumn md={4}>
@@ -94,35 +81,26 @@ const ContactsSection = () => {
                   height: "auto",
                 }}
               />
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "2vw" }}
-                fontWeight="bold"
+
+              <Text
                 color={theme.palette.basic.light}
+                variant="cardtitle"
+                center
               >
                 {t("contactPage.contact3.title")}
-              </Typography>
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "1.5vw" }}
-                color={theme.palette.basic.light}
-              >
+              </Text>
+
+              <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact3.description1")}
-              </Typography>
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "1.5vw" }}
-                color={theme.palette.basic.light}
-              >
+              </Text>
+
+              <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact3.description2")}
-              </Typography>
-              <Typography
-                m={2}
-                fontSize={{ xs: "3vw", md: "1.5vw" }}
-                color={theme.palette.basic.light}
-              >
+              </Text>
+
+              <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact3.description3")}
-              </Typography>
+              </Text>
             </PageSectionColumn>
           </PageSection>
         </CardComp>

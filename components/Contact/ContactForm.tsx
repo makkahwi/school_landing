@@ -7,6 +7,7 @@ import React from "react";
 import CardComp from "../common/Card";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
+import Text from "../common/Text";
 
 const ContactForm = () => {
   const router = useRouter();
@@ -16,14 +17,9 @@ const ContactForm = () => {
     <PageSection>
       <PageSectionColumn>
         <CardComp bg={theme.palette.blue.dark}>
-          <Typography
-            m={3}
-            fontSize={{ xs: "5vw", md: "3vw" }}
-            fontWeight="bold"
-            color={theme.palette.basic.light}
-          >
+          <Text color={theme.palette.basic.light} variant="subtitle" center>
             {t("contactPage.formTitle")}
-          </Typography>
+          </Text>
 
           {Array(5)
             .fill(1)
