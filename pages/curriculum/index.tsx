@@ -1,14 +1,14 @@
 import PageHeader from "@/components/common/PageHeader";
-import ActivitiesSection from "@/components/curriculumPage/activitiesSection";
-import ClubsSection from "@/components/curriculumPage/clubsSection";
-import CoCorriculumSection from "@/components/curriculumPage/coCorriculumSection";
-import CoursesSection from "@/components/curriculumPage/coursesSection";
-import IslamicSection from "@/components/curriculumPage/islamicSection";
-import LanguagesSection from "@/components/curriculumPage/languagesSection";
-import LevelsSection from "@/components/curriculumPage/levelsSection";
-import LevelTemplate from "@/components/curriculumPage/levelTemplate";
-import ModernSection from "@/components/curriculumPage/modernSection";
 import useTranslation from "@/hooks/useTranslation";
+import ActivitiesSection from "@/pages/curriculum/ActivitiesSection";
+import ClubsSection from "@/pages/curriculum/ClubsSection";
+import CoCorriculumSection from "@/pages/curriculum/CoCuSection";
+import CoursesSection from "@/pages/curriculum/CoursesSection";
+import IslamicSection from "@/pages/curriculum/IslamicSection";
+import LanguagesSection from "@/pages/curriculum/LanguagesSection";
+import LevelTemplate from "@/pages/curriculum/LevelSection";
+import LevelsSection from "@/pages/curriculum/LevelsSection";
+import ModernSection from "@/pages/curriculum/ModernSection";
 import { curriculumPage, departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
@@ -28,15 +28,22 @@ export default function Curriculum() {
       <LanguagesSection />
       <IslamicSection />
       <ModernSection />
+
+      <PageHeader
+        bg={departmentColors.academic}
+        title={t("curriculumPage.coCURRICULUM")}
+      />
       <CoCorriculumSection />
       <ClubsSection />
       <ActivitiesSection />
-      <LevelsSection />
 
-      {curriculumPage.levelsPageSections.map((section, index) => (
-        <React.Fragment key={`level section number: ${index}`}>
-          <LevelTemplate section={section} />
-        </React.Fragment>
+      <PageHeader
+        bg={departmentColors.academic}
+        title={t("curriculumPage.levels.title")}
+      />
+
+      {curriculumPage.levelsPageSections.map((section, i) => (
+        <LevelTemplate section={section} key={i} />
       ))}
     </Stack>
   );

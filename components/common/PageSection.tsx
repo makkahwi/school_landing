@@ -2,22 +2,24 @@ import theme from "@/styles/theme";
 import { Grid } from "@mui/material";
 
 const PageSection = ({
-  id = "",
   bg = theme.palette.basic.light,
   children,
   sx = {},
+  justify = "center",
+  align = "center",
+  p = 7,
   ...rest
 }) => {
   return (
     <Grid
       container
-      p={7}
-      px={15}
+      p={p}
+      // px={15}
       bgcolor={bg}
       sx={{
         width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: align,
+        justifyContent: justify,
         ...sx,
       }}
       {...rest}

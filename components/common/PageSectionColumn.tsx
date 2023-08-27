@@ -2,19 +2,19 @@ import theme from "@/styles/theme";
 import { Grid } from "@mui/material";
 
 const PageSectionColumn = ({
-  id = "",
   bg = theme.palette.basic.light,
   children,
   sx = {},
   xs = 12,
   justify = "center",
   align = "center",
+  p = 2,
   ...rest
 }) => {
   return (
     <Grid
       item
-      p={2}
+      p={p}
       xs={xs}
       sx={{
         alignItems: align,

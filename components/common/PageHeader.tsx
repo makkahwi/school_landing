@@ -3,7 +3,7 @@ import theme from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
-import { UpperSquaresGrid } from "../curriculumPage/styles";
+import { UpperSquaresGrid } from "../CurriculumPage/styles";
 import PageSection from "./pageSection";
 import PageSectionColumn from "./PageSectionColumn";
 import Square from "./Square";
