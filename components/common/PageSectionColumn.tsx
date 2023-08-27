@@ -7,6 +7,8 @@ const PageSectionColumn = ({
   children,
   sx = {},
   xs = 12,
+  justify = "center",
+  align = "center",
   ...rest
 }) => {
   return (
@@ -15,8 +17,8 @@ const PageSectionColumn = ({
       p={2}
       xs={xs}
       sx={{
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: align,
+        justifyContent: justify,
         ...sx,
       }}
       {...rest}
