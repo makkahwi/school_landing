@@ -2,7 +2,7 @@ import useTranslation from "@/hooks/useTranslation";
 import { useRouter } from "next/router";
 import { Stack, Typography, Box } from "@mui/material";
 import theme from "@/styles/theme";
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import {

@@ -2,7 +2,7 @@ import useTranslation from "@/hooks/useTranslation";
 import { useRouter } from "next/router";
 import { Stack, Container, Typography, Box } from "@mui/material";
 import theme from "@/styles/theme";
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import React from "react";
 import ArrowDownwardRoundedIcon from "@mui/icons-material/ArrowDownwardRounded";
 import { curriculumPage } from "@/utils/constants";

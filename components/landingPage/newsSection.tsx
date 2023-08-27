@@ -8,7 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import {
   NewsAnimation,
   NewsArrowStyles,

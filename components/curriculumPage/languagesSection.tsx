@@ -5,7 +5,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
 
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import { LanguagesGrid, TitleStyles } from "./styles";
 
 const LanguagesSection = () => {

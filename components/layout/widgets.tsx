@@ -4,7 +4,7 @@ import { landingPage } from "@/utils/constants";
 import { Box, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import { LowerGridStyles } from "../landingPage/styles";
 import Link from "next/link";
 

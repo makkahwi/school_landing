@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
 import React from "react";
 
-import Square from "../shared/Square";
+import Square from "../common/Square";
 
 const WelcomeSection = () => {
   const router = useRouter();

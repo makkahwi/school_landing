@@ -5,8 +5,12 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
 
-import Square from "../shared/Square";
-import { ModernScienceContainer, ModernScienceGrid, TitleStyles } from "./styles";
+import Square from "../common/Square";
+import {
+  ModernScienceContainer,
+  ModernScienceGrid,
+  TitleStyles,
+} from "./styles";
 
 const ModernSection = () => {
   const router = useRouter();

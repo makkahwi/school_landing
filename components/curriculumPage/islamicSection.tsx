@@ -4,7 +4,7 @@ import ArrowDownwardRoundedIcon from "@mui/icons-material/ArrowDownwardRounded";
 import { Avatar, Box, Container, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import { IslamicStudiesGrid, TitleStyles } from "./styles";
 
 const IslamicSection = () => {

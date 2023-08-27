@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { Stack, Container, Typography, Box } from "@mui/material";
 import theme from "@/styles/theme";
 import { aboutPage } from "@/utils/constants";
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 

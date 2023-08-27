@@ -2,7 +2,7 @@ import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { Box, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
-import Square from "../shared/Square";
+import Square from "../common/Square";
 import { UpperSquaresGrid, UpperSquaresStyles } from "./styles";
 
 const WelcomeSection = () => {
