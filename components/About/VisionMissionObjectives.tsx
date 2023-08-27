@@ -1,11 +1,14 @@
 import CardComp from "@/components/common/Card";
-import PageSectionColumn from "@/components/common/PageSectionColumn";
 import PageSection from "@/components/common/PageSection";
+import PageSectionColumn from "@/components/common/PageSectionColumn";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { aboutPage } from "@/utils/constants";
 import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
+
+import Text from "../common/Text";
+
 const VisionMissionObjectives = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
@@ -15,42 +18,21 @@ const VisionMissionObjectives = () => {
       {["vision", "mission"].map((item, i) => (
         <PageSectionColumn md={6} key={i}>
           <CardComp bg={theme.palette.orange.main}>
-            <Typography
-              fontSize={{
-                xs: "10vw",
-                md: "3vw",
-              }}
-              color={theme.palette.basic.light}
-            >
+            <Text color={theme.palette.basic.light} variant="cardTitle" center>
               {t(`aboutPage.${item}.title`)}
-            </Typography>
+            </Text>
 
-            <Typography
-              fontSize={{
-                xs: "4vw",
-                md: "1.5vw",
-              }}
-              color={theme.palette.basic.light}
-            >
+            <Text color={theme.palette.basic.light} justify>
               {t(`aboutPage.${item}.text`)}
-            </Typography>
+            </Text>
           </CardComp>
         </PageSectionColumn>
       ))}
 
       <PageSectionColumn>
-        <Typography
-          mt={10}
-          mb={5}
-          fontSize={{
-            xs: "10vw",
-            md: "3vw",
-          }}
-          fontWeight="bold"
-          color={theme.palette.orange.main}
-        >
+        <Text color={theme.palette.orange.main} variant="title">
           {t("aboutPage.objectives.title")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       {aboutPage.objectives.map((item, i) => (
@@ -58,25 +40,13 @@ const VisionMissionObjectives = () => {
           <CardComp bg={theme.palette.orange.main}>
             {item.icon}
 
-            <Typography
-              fontSize={{
-                xs: "10vw",
-                md: "3vw",
-              }}
-              color={theme.palette.basic.light}
-            >
+            <Text color={theme.palette.basic.light} variant="cardTitle" center>
               {t(item.title)}
-            </Typography>
+            </Text>
 
-            <Typography
-              fontSize={{
-                xs: "4vw",
-                md: "1.5vw",
-              }}
-              color={theme.palette.basic.light}
-            >
+            <Text color={theme.palette.basic.light} justify>
               {t(item.text)}
-            </Typography>
+            </Text>
           </CardComp>
         </PageSectionColumn>
       ))}

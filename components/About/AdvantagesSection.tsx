@@ -1,7 +1,6 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { aboutPage } from "@/utils/constants";
-import { Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
@@ -9,6 +8,7 @@ import { Fragment } from "react";
 import CardComp from "../common/Card";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
+import Text from "../common/Text";
 
 const AdvantagesSection = () => {
   const router = useRouter();
@@ -17,16 +17,9 @@ const AdvantagesSection = () => {
   return (
     <PageSection bg={theme.palette.basic.light}>
       <PageSectionColumn>
-        <Typography
-          fontSize={{
-            xs: "10vw",
-            md: "3vw",
-          }}
-          fontWeight="bold"
-          color={theme.palette.orange.main}
-        >
+        <Text color={theme.palette.orange.main} variant="title">
           {t("aboutPage.whyAISTitle")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       {aboutPage.whyAIScards.map((item, i) => (
@@ -49,30 +42,21 @@ const AdvantagesSection = () => {
                   maxWidth: { md: "12vw" },
                 }}
               />
-              <Typography
-                mt={2}
-                variant="h6"
-                textAlign="center"
+
+              <Text
                 color={theme.palette.basic.light}
+                variant="cardtitle"
+                center
               >
                 {t(item.text)}
-              </Typography>
+              </Text>
             </CardComp>
           </PageSectionColumn>
 
           <PageSectionColumn md={8}>
-            <Typography
-              textAlign="justify"
-              width={{ xs: "100%", md: "60%" }}
-              color={theme.palette.orange.main}
-              fontWeight="bold"
-              fontSize={{
-                xs: "5vw",
-                md: "1.5vw",
-              }}
-            >
+            <Text color={theme.palette.orange.main} justify>
               {t(item.longText)}
-            </Typography>
+            </Text>
           </PageSectionColumn>
         </Fragment>
       ))}

@@ -1,9 +1,10 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
-import PageSectionColumn from "../../components/common/PageSectionColumn";
+
 import PageSection from "../../components/common/PageSection";
+import PageSectionColumn from "../../components/common/PageSectionColumn";
+import Text from "../common/Text";
 
 const AISBeginning = () => {
   const router = useRouter();
@@ -12,31 +13,16 @@ const AISBeginning = () => {
   return (
     <PageSection bg="">
       <PageSectionColumn>
-        <Typography
-          fontSize={{
-            xs: "10vw",
-            md: "3vw",
-          }}
-          fontWeight="bold"
-          color={theme.palette.orange.main}
-        >
+        <Text color={theme.palette.orange.main} variant="title">
           {t("aboutPage.beginningAISTitle")}
-        </Typography>
+        </Text>
       </PageSectionColumn>
 
       {["1", "2", "3"].map((_, i) => (
         <PageSectionColumn key={i}>
-          <Typography
-            mt={2}
-            textAlign="justify"
-            fontSize={{
-              xs: "4vw",
-              md: "1.5vw",
-            }}
-            color={theme.palette.orange.main}
-          >
+          <Text color={theme.palette.orange.main} justify>
             {t(`aboutPage.foundingStory.paragraph${i + 1}`)}
-          </Typography>
+          </Text>
         </PageSectionColumn>
       ))}
     </PageSection>
