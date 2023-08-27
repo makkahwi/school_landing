@@ -1,17 +1,21 @@
+import PageHeader from "@/components/common/PageHeader";
+import LatestNews from "@/pages/community/NewsSection";
+import useTranslation from "@/hooks/useTranslation";
+import { departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
-import React from "react";
-import WelcomeSection from "@/components/communityPage/welcomeSection";
-import LatestNews from "@/components/communityPage/latestNews";
+import { useRouter } from "next/router";
 
-/**
- *  the community page
- *
- */
 export default function Community() {
-    return (
-        <Stack>
-            <WelcomeSection />
-            <LatestNews />
-        </Stack>
-    );
+  const router = useRouter();
+  const { t } = useTranslation(router);
+
+  return (
+    <Stack>
+      <PageHeader
+        bg={departmentColors.community}
+        title={t("communityPage.title")}
+      />
+      <LatestNews />
+    </Stack>
+  );
 }
