@@ -1,23 +1,31 @@
-import DiscountSection from "@/components/registrationPage/discountSection";
-import RequirementsSection from "@/components/registrationPage/requirementsSection";
-import StructureSection from "@/components/registrationPage/structureSection";
-import WelcomeSection from "@/components/registrationPage/welcomeSection";
-import JobOpportunitiesSection from "@/components/registrationPage/jobOpportunitiesSection";
+import PageHeader from "@/components/common/PageHeader";
+import DiscountSection from "@/components/Engage/DiscountsSection";
+import FeesSection from "@/components/Engage/FeesSection";
+import JobsSection from "@/components/Engage/JobsSection";
+import RequirementsSection from "@/components/Engage/RequirementsSection";
+import useTranslation from "@/hooks/useTranslation";
+import { departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
-import React from "react";
+import { useRouter } from "next/router";
 
-/**
- *  the levels page
- *
- */
 export default function RegistrationAndFees() {
-    return (
-        <Stack>
-            <WelcomeSection />
-            <RequirementsSection />
-            <StructureSection />
-            <DiscountSection />
-            <JobOpportunitiesSection />
-        </Stack>
-    );
+  const router = useRouter();
+  const { t } = useTranslation(router);
+
+  return (
+    <Stack>
+      <PageHeader
+        bg={departmentColors.engage}
+        title={t("registrationPage.title")}
+      />
+      <RequirementsSection />
+      <FeesSection />
+      <DiscountSection />
+      <PageHeader
+        bg={departmentColors.engage}
+        title={t("registrationPage.jobs.title")}
+      />
+      <JobsSection />
+    </Stack>
+  );
 }

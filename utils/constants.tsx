@@ -35,6 +35,13 @@ interface navbarItemsProps {
   size: string;
 }
 
+export const departmentColors = {
+  academic: theme.palette.blue.dark,
+  engage: theme.palette.orange.main,
+  about: theme.palette.blue.light,
+  community: theme.palette.basic.ligth,
+};
+
 /**
  *  navbar constants
  */
@@ -215,7 +222,7 @@ export const landingPage = {
     {
       radiusMobile: ["1.5vw", "1.1.0.1"],
       radiusDesktop: ["1.5vw", "1.1.0.1"],
-      bgcolor: theme.palette.basic.light,
+      bgcolor: theme.palette.basic.main,
       rows: "1 / 5",
       cols: "10 / 14",
     },
@@ -362,11 +369,10 @@ export const curriculumPage = {
       title: "curriculumPage.levels.sections.section1.title",
       subTitle: "curriculumPage.levels.sections.section1.subTitle",
       image: "",
-
-      bgColor: theme.palette.basic.main,
+      bgColor: "",
       titleColor: theme.palette.orange.main,
-      subTitleColor: theme.palette.basic.dark,
-      iconsColor: theme.palette.orange.main,
+      subTitleColor: theme.palette.brown.dark,
+      iconsColor: theme.palette.brown.main,
 
       listElemnts: (size: string, color: string) => [
         {
@@ -475,10 +481,10 @@ export const curriculumPage = {
       subTitle: "curriculumPage.levels.sections.section3.subTitle",
       image: "",
 
-      bgColor: theme.palette.orange.main,
-      titleColor: theme.palette.basic.light,
+      bgColor: theme.palette.basic.light,
+      titleColor: theme.palette.blue.dark,
       subTitleColor: theme.palette.basic.dark,
-      iconsColor: theme.palette.basic.light,
+      iconsColor: theme.palette.blue.dark,
 
       listElemnts: (size: string, color: string) => [
         {
@@ -562,10 +568,10 @@ export const curriculumPage = {
       subTitle: "curriculumPage.levels.sections.section4.subTitle",
       image: "",
 
-      bgColor: theme.palette.basic.main,
-      titleColor: theme.palette.blue.dark,
-      subTitleColor: theme.palette.basic.dark,
-      iconsColor: theme.palette.blue.dark,
+      bgColor: theme.palette.orange.main,
+      titleColor: theme.palette.basic.light,
+      subTitleColor: theme.palette.brown.main,
+      iconsColor: theme.palette.basic.light,
 
       listElemnts: (size: string, color: string) => [
         {
@@ -740,7 +746,7 @@ export const registrationPage = {
       items: Array(4)
         .fill(1)
         .map((_, i) => i + 1)
-        .map((index) => {
+        .map((_, index) => {
           return {
             title: `registrationPage.structure.item1.item${index}.title`,
             price: `registrationPage.structure.item1.item${index}.price`,

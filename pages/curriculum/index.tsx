@@ -1,39 +1,48 @@
+import PageHeader from "@/components/common/PageHeader";
+import ActivitiesSection from "@/components/Curriculum/ActivitiesSection";
+import ClubsSection from "@/components/Curriculum/ClubsSection";
+import CoCorriculumSection from "@/components/Curriculum/CoCuSection";
+import CoursesSection from "@/components/Curriculum/CoursesSection";
+import IslamicSection from "@/components/Curriculum/IslamicSection";
+import LanguagesSection from "@/components/Curriculum/LanguagesSection";
+import LevelSection from "@/components/Curriculum/LevelSection";
+import ModernSection from "@/components/Curriculum/ModernSection";
+import useTranslation from "@/hooks/useTranslation";
+import { curriculumPage, departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
-import WelcomeSection from "@/components/curriculumPage/welcomeSection";
-import CoursesSection from "@/components/curriculumPage/coursesSection";
-import LanguagesSection from "@/components/curriculumPage/languagesSection";
-import IslamicSection from "@/components/curriculumPage/islamicSection";
-import ModernSection from "@/components/curriculumPage/modernSection";
-import CoCorriculumSection from "@/components/curriculumPage/coCorriculumSection";
-import ClubsSection from "@/components/curriculumPage/clubsSection";
-import ActivitiesSection from "@/components/curriculumPage/activitiesSection";
-import { curriculumPage } from "@/utils/constants";
-import React from "react";
-import LevelTemplate from "@/components/curriculumPage/levelTemplate";
-import LevelsSection from "@/components/curriculumPage/levelsSection";
+import { useRouter } from "next/router";
 
-/**
- *  the curriculum page
- *
- */
 export default function Curriculum() {
-    return (
-        <Stack>
-            <WelcomeSection />
-            <CoursesSection />
-            <LanguagesSection />
-            <IslamicSection />
-            <ModernSection />
-            <CoCorriculumSection />
-            <ClubsSection />
-            <ActivitiesSection />
-            <LevelsSection />
+  const router = useRouter();
+  const { t } = useTranslation(router);
 
-            {curriculumPage.levelsPageSections.map((section, index) => (
-                <React.Fragment key={`level section number: ${index}`}>
-                    <LevelTemplate section={section} />
-                </React.Fragment>
-            ))}
-        </Stack>
-    );
+  return (
+    <Stack>
+      <PageHeader
+        bg={departmentColors.academic}
+        title={t("curriculumPage.title")}
+      />
+      <CoursesSection />
+      <LanguagesSection />
+      <IslamicSection />
+      <ModernSection />
+
+      <PageHeader
+        bg={departmentColors.academic}
+        title={t("curriculumPage.coCURRICULUM")}
+      />
+      <CoCorriculumSection />
+      <ClubsSection />
+      <ActivitiesSection />
+
+      <PageHeader
+        bg={departmentColors.academic}
+        title={t("curriculumPage.levels.title")}
+      />
+
+      {curriculumPage.levelsPageSections.map((section, i) => (
+        <LevelSection section={section} key={i} />
+      ))}
+    </Stack>
+  );
 }
