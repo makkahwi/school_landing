@@ -254,15 +254,23 @@ export const landingPage = {
   ],
 
   widgetLinks: [
-    { link: "", label: "landingPage.newsSection.job" },
-    { link: "", label: "landingPage.newsSection.levels" },
-    { link: "", label: "landingPage.newsSection.student" },
-    { link: "", label: "landingPage.newsSection.registration" },
-    { link: "", label: "landingPage.newsSection.staff" },
-    { link: "", label: "landingPage.newsSection.curriculum" },
-    { link: "", label: "landingPage.newsSection.website" },
-    { link: "", label: "landingPage.newsSection.levels" },
-    { link: "", label: "landingPage.newsSection.data" },
+    { link: "/about", label: "landingPage.whyAISSection.title" },
+    { link: "/academics", label: "landingPage.newsSection.levels" },
+    { link: "/academics", label: "landingPage.newsSection.curriculum" },
+    { link: "/engage", label: "landingPage.newsSection.registration" },
+    { link: "/engage", label: "landingPage.newsSection.job" },
+    {
+      link: "https://students.aqsa.edu.my",
+      label: "landingPage.newsSection.student",
+      target: "_blank",
+    },
+    // {
+    //   link: "https://students.aqsa.edu.my",
+    //   label: "landingPage.newsSection.staff",
+    //   target: "_blank",
+    // },
+    // { link: "", label: "landingPage.newsSection.website" },
+    // { link: "", label: "landingPage.newsSection.data" },
   ],
 };
 

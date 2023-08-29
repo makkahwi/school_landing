@@ -22,7 +22,6 @@ Next.Js & Typescript based
     - Jobs
   - News
   - Contact
-- Fix Widget Links
 - Capitalize Localization Keys
 - Turn Localization .map to lists
 - Localize To Arabic

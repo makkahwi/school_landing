@@ -13,7 +13,7 @@ const Widgets = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const LinkComp = ({ label, link }) => (
+  const LinkComp = ({ label, link, ...rest }) => (
     <Typography
       fontSize={{
         xs: "2.5vw",
@@ -23,7 +23,11 @@ const Widgets = () => {
       color={theme.palette.basic.light}
       key={`item tagged: ${label}`}
     >
-      <Link href={link} style={{ color: "inherit", textDecoration: "none" }}>
+      <Link
+        href={link}
+        style={{ color: "inherit", textDecoration: "none" }}
+        {...rest}
+      >
         {t(label)}
       </Link>
     </Typography>
