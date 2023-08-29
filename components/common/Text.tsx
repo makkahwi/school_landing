@@ -18,7 +18,7 @@ const Text = ({
       case "cardtitle":
         return { variant: "h5", fontWeight: "bold", my: 2 };
       case "p":
-        return { variant: "p", my: 4, lineHeight: 1.5 };
+        return { variant: "p", my: 4, lineHeight: 1.25 };
       default:
         return { variant: "h6", my: 4 };
     }

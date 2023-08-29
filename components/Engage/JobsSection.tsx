@@ -14,128 +14,69 @@ const JobsSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const jobOpBox = (title: string, item: string[]) => {
-    return (
-      <Stack width="100%">
-        <Text color={theme.palette.blue.dark} variant="subtitle">
-          {t(title)}
-        </Text>
+  const JobDetails = ({ title, items }) => (
+    <Stack width="100%">
+      <Text color={theme.palette.blue.dark} variant="cardTitle">
+        {t(title)}
+      </Text>
 
-        {item.map((bullet, i) => (
-          <React.Fragment key={i}>
-            <Typography
-              textAlign="left"
-              width="100%"
-              fontSize={{
-                xs: "1vw",
-                md: "1vw",
-              }}
-            >
-              {t(bullet)}
-            </Typography>
-          </React.Fragment>
+      <Text>
+        {items.map((bullet, i) => (
+          <span key={i} style={{ lineHeight: 2 }}>
+            {t(bullet)}
+            <br />
+          </span>
         ))}
-      </Stack>
-    );
-  };
-
+      </Text>
+    </Stack>
+  );
   const JobSection = ({ item }) => (
-    <PageSectionColumn>
-      <CardComp bg={theme.palette.basic.main}>
-        <Typography
-          textAlign="left"
-          width="100%"
-          color={theme.palette.blue.dark}
-          fontSize={{
-            xs: "3vw",
-            md: "4vw",
-          }}
-        >
-          {t(item.title)}
-        </Typography>
+    <CardComp>
+      <Text color={theme.palette.blue.dark} variant="subtitle">
+        {t(item.title)}
+      </Text>
 
-        {jobOpBox("registrationPage.jobs.jobDescription", item.jobDescription)}
+      <JobDetails
+        title="registrationPage.jobs.jobDescription"
+        items={item.jobDescription}
+      />
 
-        {jobOpBox("registrationPage.jobs.qualifications", item.qualifications)}
+      <JobDetails
+        title="registrationPage.jobs.qualifications"
+        items={item.qualifications}
+      />
 
-        {jobOpBox("registrationPage.jobs.documents", item.documents)}
+      <JobDetails
+        title="registrationPage.jobs.documents"
+        items={item.documents}
+      />
 
-        <Typography
-          pt={5}
-          fontWeight="bold"
-          fontSize={{
-            xs: "2vw",
-            md: "1.5vw",
-          }}
-        >
-          {t("registrationPage.jobs.emailText")}
-        </Typography>
-
-        <Typography
-          fontWeight="bold"
-          fontSize={{
-            xs: "2vw",
-            md: "1.5vw",
-          }}
-        >
-          {t("registrationPage.jobs.email")}
-        </Typography>
-
-        <Button
-          sx={{
-            fontWeight: "bold",
-            fontSize: {
-              xs: "2vw",
-              md: "1.5vw",
-            },
-            bgcolor: theme.palette.blue.dark,
-            color: theme.palette.basic.light,
-            padding: 2,
-            borderRadius: "1vw",
-            width: "40%",
-
-            "&:hover": {
-              color: theme.palette.blue.dark,
-              bgcolor: theme.palette.basic.light,
-            },
-          }}
-        >
-          {t("registrationPage.jobs.apply")}
-        </Button>
-      </CardComp>
-    </PageSectionColumn>
+      <Button
+        size="large"
+        sx={{
+          fontWeight: "bold",
+          width: "50%",
+          bgcolor: theme.palette.blue.dark,
+          color: theme.palette.basic.light,
+          borderRadius: "1vw",
+          "&:hover": {
+            color: theme.palette.blue.dark,
+            bgcolor: theme.palette.basic.light,
+          },
+        }}
+      >
+        {t("registrationPage.jobs.apply")}
+      </Button>
+    </CardComp>
   );
 
   return (
-    <PageSection bg={theme.palette.basic.light}>
-      <PageSectionColumn md={6}>
-        <Text variant="subtitle">{t("registrationPage.jobs.Academic")}</Text>
-
-        <Grid container>
-          {registrationPage.jobsSection.map((item, i) => (
-            <JobSection item={item} key={i} />
-          ))}
-        </Grid>
-      </PageSectionColumn>
-
-      <PageSectionColumn md={6}>
-        <Typography
-          p={3}
-          width="100%"
-          textAlign="center"
-          fontSize={{ xs: "3vw", md: "2.5vw" }}
-          fontWeight="bold"
-          color={theme.palette.basic.dark}
-        >
-          {t("registrationPage.jobs.NonAcademic")}
-        </Typography>
-
-        <Grid container>
-          {registrationPage.jobsSection.map((item, i) => (
-            <JobSection item={item} key={i} />
-          ))}
-        </Grid>
-      </PageSectionColumn>
+    <PageSection bg="">
+      {registrationPage.jobsSection.map((item, i) => (
+        <PageSectionColumn md={6} key={i}>
+          <JobSection item={item} />
+        </PageSectionColumn>
+      ))}
     </PageSection>
   );
 };

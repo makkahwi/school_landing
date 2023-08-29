@@ -431,7 +431,6 @@ const en = {
       jobDescription: "Job Describtion",
       qualifications: "Qualifications",
       documents: "Documents to Apply",
-      emailText: "Start communicating to apply for job(s) listed through",
       email: "Email: Principal@aqsa.edu.my",
       apply: "Apply",
 
