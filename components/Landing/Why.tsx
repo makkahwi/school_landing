@@ -1,7 +1,6 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { landingPage } from "@/utils/constants";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 
@@ -13,6 +12,24 @@ import Text from "../common/Text";
 const WhyAISSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
+
+  const whyAIS_icons = [
+    {
+      src: "/landingPage/islamic-icon.png",
+      alt: "islamic-icon",
+      text: t("landingPage.whyAISSection.items.item1"),
+    },
+    {
+      src: "/landingPage/cambridge-icon.png",
+      alt: "cambridge-icon",
+      text: t("landingPage.whyAISSection.items.item2"),
+    },
+    {
+      src: "/landingPage/cheap-zone-icon.png",
+      alt: "cheap-zone-icon",
+      text: t("landingPage.whyAISSection.items.item3"),
+    },
+  ];
 
   return (
     <PageSection
@@ -32,7 +49,7 @@ const WhyAISSection = () => {
 
       <PageSectionColumn>
         <Grid container spacing={3}>
-          {landingPage.whyAIS_icons.map((item, i) => (
+          {whyAIS_icons.map((item, i) => (
             <PageSectionColumn lg={4} md={6} key={i}>
               <CardComp bg={theme.palette.orange.main}>
                 <Avatar
@@ -50,7 +67,7 @@ const WhyAISSection = () => {
                   center
                   color={theme.palette.basic.light}
                 >
-                  {t(item.text)}
+                  {item.text}
                 </Text>
               </CardComp>
             </PageSectionColumn>

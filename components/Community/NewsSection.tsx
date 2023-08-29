@@ -1,6 +1,5 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { communityPage } from "@/utils/constants";
 import { Avatar } from "@mui/material";
 import { useRouter } from "next/router";
 
@@ -12,9 +11,32 @@ const NewsSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const latestNews = [
+    {
+      title: t("communityPage.latestNews.item1.title"),
+      description: [
+        "communityPage.latestNews.item1.description.paragraph1",
+        "communityPage.latestNews.item1.description.paragraph2",
+        "communityPage.latestNews.item1.description.paragraph3",
+      ],
+      src: "/landingPage/news1.jpeg",
+      date: "29/4/2019",
+    },
+    {
+      title: t("communityPage.latestNews.item2.title"),
+      description: [
+        "communityPage.latestNews.item2.description.paragraph1",
+        "communityPage.latestNews.item2.description.paragraph2",
+        "communityPage.latestNews.item2.description.paragraph3",
+      ],
+      src: "/landingPage/news2.jpeg",
+      date: "29/4/2019",
+    },
+  ];
+
   return (
     <PageSection>
-      {communityPage.latestNews.map((item, i) => (
+      {latestNews.map((item, i) => (
         <PageSectionColumn md={6} key={i}>
           <Avatar
             variant="square"
@@ -25,7 +47,7 @@ const NewsSection = () => {
             }}
           />
           <Text color={theme.palette.blue.dark} variant="cardTitle" center>
-            {t(item.title)}
+            {item.title}
           </Text>
 
           <Text color={theme.palette.blue.dark}>{item.date}</Text>

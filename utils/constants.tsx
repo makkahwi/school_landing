@@ -1,7 +1,6 @@
 import theme from "@/styles/theme";
 import AppleIcon from "@mui/icons-material/Apple";
 import BalanceIcon from "@mui/icons-material/Balance";
-import BarChartIcon from "@mui/icons-material/BarChart";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import BrushIcon from "@mui/icons-material/Brush";
 import CalculateIcon from "@mui/icons-material/Calculate";
@@ -9,7 +8,6 @@ import ConstructionIcon from "@mui/icons-material/Construction";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ErrorIcon from "@mui/icons-material/Error";
-import ExploreIcon from "@mui/icons-material/Explore";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import GTranslateIcon from "@mui/icons-material/GTranslate";
@@ -19,7 +17,6 @@ import MenuBookSharpIcon from "@mui/icons-material/MenuBookSharp";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import MosqueIcon from "@mui/icons-material/Mosque";
 import PeopleIcon from "@mui/icons-material/People";
-import PersonIcon from "@mui/icons-material/Person";
 import PlagiarismIcon from "@mui/icons-material/Plagiarism";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import PublicIcon from "@mui/icons-material/Public";
@@ -39,7 +36,7 @@ export const departmentColors = {
   academic: theme.palette.blue.dark,
   engage: theme.palette.orange.main,
   about: theme.palette.blue.light,
-  community: theme.palette.basic.ligth,
+  community: theme.palette.basic.light,
 };
 
 /**
@@ -193,24 +190,6 @@ export const landingPage = {
     },
   ],
 
-  whyAIS_icons: [
-    {
-      src: "/landingPage/islamic-icon.png",
-      alt: "islamic-icon",
-      text: "landingPage.whyAISSection.items.item1",
-    },
-    {
-      src: "/landingPage/cambridge-icon.png",
-      alt: "cambridge-icon",
-      text: "landingPage.whyAISSection.items.item2",
-    },
-    {
-      src: "/landingPage/cheap-zone-icon.png",
-      alt: "cheap-zone-icon",
-      text: "landingPage.whyAISSection.items.item3",
-    },
-  ],
-
   newsSquares: [
     {
       radiusMobile: ["1.5vw", "1.1.0.1"],
@@ -278,36 +257,6 @@ export const landingPage = {
  *  curreculum page constants
  */
 export const curriculumPage = {
-  courseSquares: [
-    {
-      text: "curriculumPage.courseSquares.languages",
-      edges: "1.0.0.1",
-    },
-    {
-      text: "curriculumPage.courseSquares.islamic",
-      edges: "0.0.0.0",
-    },
-    {
-      text: "curriculumPage.courseSquares.modern",
-      edges: "0.1.1.0",
-    },
-  ],
-
-  languages: [
-    {
-      title: "curriculumPage.languagesContents.arabic",
-      content: "curriculumPage.languagesContents.arabicContent",
-    },
-    {
-      title: "curriculumPage.languagesContents.english",
-      content: "curriculumPage.languagesContents.englishContent",
-    },
-    {
-      title: "curriculumPage.languagesContents.malay",
-      content: "curriculumPage.languagesContents.malayContent",
-    },
-  ],
-
   clubsItems: (size: string, color: string) => [
     {
       text: "curriculumPage.clubsContents.art",
@@ -689,65 +638,6 @@ export const curriculumPage = {
  *  registration page constants
  */
 export const registrationPage = {
-  requirementsSection: [
-    {
-      title: "registrationPage.details.requires.title",
-      lists: [
-        {
-          title: "registrationPage.details.requires.lists.item1.title",
-          items: [
-            "registrationPage.details.requires.lists.item1.items.item1",
-            "registrationPage.details.requires.lists.item1.items.item2",
-            "registrationPage.details.requires.lists.item1.items.item3",
-            "registrationPage.details.requires.lists.item1.items.item4",
-          ],
-          trigger: "1",
-        },
-        {
-          title: "registrationPage.details.requires.lists.item2.title",
-          items: ["registrationPage.details.requires.lists.item2.items.item1"],
-          trigger: "2",
-        },
-        {
-          title: "registrationPage.details.requires.lists.item3.title",
-          items: [
-            "registrationPage.details.requires.lists.item3.items.item1",
-            "registrationPage.details.requires.lists.item3.items.item2",
-          ],
-          trigger: "3",
-        },
-        {
-          title: "registrationPage.details.requires.lists.item4.title",
-          items: [
-            "registrationPage.details.requires.lists.item4.items.item1",
-            "registrationPage.details.requires.lists.item4.items.item2",
-          ],
-          trigger: "4",
-        },
-      ],
-    },
-    {
-      title: "registrationPage.details.deadlines.title",
-      lists: [
-        {
-          title: "registrationPage.details.deadlines.lists.item1.title",
-          items: ["registrationPage.details.deadlines.lists.item1.items.item1"],
-          trigger: "5",
-        },
-        {
-          title: "registrationPage.details.deadlines.lists.item2.title",
-          items: ["registrationPage.details.deadlines.lists.item2.items.item1"],
-          trigger: "6",
-        },
-        {
-          title: "registrationPage.details.deadlines.lists.item3.title",
-          items: ["registrationPage.details.deadlines.lists.item3.items.item1"],
-          trigger: "7",
-        },
-      ],
-    },
-  ],
-
   structureSection: [
     {
       title: "registrationPage.structure.item1.title",
@@ -941,219 +831,6 @@ export const registrationPage = {
           description: "registrationPage.discounts.item3.item1.description",
         },
       ],
-    },
-  ],
-
-  jobsSection: [
-    {
-      title: "registrationPage.jobs.item1.title",
-      jobDescription: [
-        `registrationPage.jobs.item1.jobDescription.item1`,
-        ,
-        `registrationPage.jobs.item1.jobDescription.item2`,
-      ],
-      qualifications: [
-        `registrationPage.jobs.item1.qualifications.item1`,
-        `registrationPage.jobs.item1.qualifications.item2`,
-        `registrationPage.jobs.item1.qualifications.item3`,
-        `registrationPage.jobs.item1.qualifications.item4`,
-        `registrationPage.jobs.item1.qualifications.item5`,
-        `registrationPage.jobs.item1.qualifications.item6`,
-        `registrationPage.jobs.item1.qualifications.item7`,
-        `registrationPage.jobs.item1.qualifications.item8`,
-      ],
-      documents: [
-        `registrationPage.jobs.item1.documents.item1`,
-        `registrationPage.jobs.item1.documents.item2`,
-        `registrationPage.jobs.item1.documents.item3`,
-        `registrationPage.jobs.item1.documents.item4`,
-        `registrationPage.jobs.item1.documents.item5`,
-      ],
-    },
-    {
-      title: "registrationPage.jobs.item2.title",
-      jobDescription: [
-        `registrationPage.jobs.item2.jobDescription.item1`,
-        ,
-        `registrationPage.jobs.item2.jobDescription.item2`,
-      ],
-      qualifications: [
-        `registrationPage.jobs.item2.qualifications.item1`,
-        `registrationPage.jobs.item2.qualifications.item2`,
-        `registrationPage.jobs.item2.qualifications.item3`,
-        `registrationPage.jobs.item2.qualifications.item4`,
-        `registrationPage.jobs.item2.qualifications.item5`,
-        `registrationPage.jobs.item2.qualifications.item6`,
-        `registrationPage.jobs.item2.qualifications.item7`,
-        `registrationPage.jobs.item2.qualifications.item8`,
-        `registrationPage.jobs.item2.qualifications.item9`,
-      ],
-      documents: [
-        `registrationPage.jobs.item2.documents.item1`,
-        `registrationPage.jobs.item2.documents.item2`,
-        `registrationPage.jobs.item2.documents.item3`,
-        `registrationPage.jobs.item2.documents.item4`,
-        `registrationPage.jobs.item2.documents.item5`,
-      ],
-    },
-    {
-      title: "registrationPage.jobs.item3.title",
-      jobDescription: [
-        `registrationPage.jobs.item3.jobDescription.item1`,
-        `registrationPage.jobs.item3.jobDescription.item2`,
-      ],
-      qualifications: [
-        `registrationPage.jobs.item3.qualifications.item1`,
-        `registrationPage.jobs.item3.qualifications.item2`,
-        `registrationPage.jobs.item3.qualifications.item3`,
-        `registrationPage.jobs.item3.qualifications.item4`,
-        `registrationPage.jobs.item3.qualifications.item5`,
-        `registrationPage.jobs.item3.qualifications.item6`,
-        `registrationPage.jobs.item3.qualifications.item7`,
-        `registrationPage.jobs.item3.qualifications.item8`,
-      ],
-      documents: [
-        `registrationPage.jobs.item3.documents.item1`,
-        `registrationPage.jobs.item3.documents.item2`,
-        `registrationPage.jobs.item3.documents.item3`,
-        `registrationPage.jobs.item3.documents.item4`,
-        `registrationPage.jobs.item3.documents.item5`,
-      ],
-    },
-  ],
-};
-
-/**
- *  about page constants
- */
-export const aboutPage = {
-  whyAIScards: [
-    {
-      src: "/landingPage/islamic-icon.png",
-      alt: "islamic-icon",
-      text: "aboutPage.whyCards.item1.text",
-      longText: "aboutPage.whyCards.item1.longText",
-    },
-    {
-      src: "/landingPage/cambridge-icon.png",
-      alt: "cambridge-icon",
-      text: "aboutPage.whyCards.item2.text",
-      longText: "aboutPage.whyCards.item2.longText",
-    },
-    {
-      src: "/landingPage/cheap-zone-icon.png",
-      alt: "cheap-zone-icon",
-      text: "aboutPage.whyCards.item3.text",
-      longText: "aboutPage.whyCards.item3.longText",
-    },
-  ],
-
-  objectives: [
-    {
-      title: "aboutPage.objectives.items.item1.title",
-      text: "aboutPage.objectives.items.item1.text",
-      icon: (
-        <ExploreIcon
-          sx={{
-            color: theme.palette.basic.light,
-            width: "30%",
-            height: "auto",
-          }}
-        />
-      ),
-    },
-    {
-      title: "aboutPage.objectives.items.item2.title",
-      text: "aboutPage.objectives.items.item2.text",
-      icon: (
-        <PersonIcon
-          sx={{
-            color: theme.palette.basic.light,
-            width: "30%",
-            height: "auto",
-          }}
-        />
-      ),
-    },
-    {
-      title: "aboutPage.objectives.items.item3.title",
-      text: "aboutPage.objectives.items.item3.text",
-      icon: (
-        <PsychologyIcon
-          sx={{
-            color: theme.palette.basic.light,
-            width: "30%",
-            height: "auto",
-          }}
-        />
-      ),
-    },
-    {
-      title: "aboutPage.objectives.items.item4.title",
-      text: "aboutPage.objectives.items.item4.text",
-      icon: (
-        <BarChartIcon
-          sx={{
-            color: theme.palette.basic.light,
-            width: "30%",
-            height: "auto",
-          }}
-        />
-      ),
-    },
-    {
-      title: "aboutPage.objectives.items.item5.title",
-      text: "aboutPage.objectives.items.item5.text",
-      icon: (
-        <Brightness3Icon
-          sx={{
-            color: theme.palette.basic.light,
-            width: "30%",
-            height: "auto",
-          }}
-        />
-      ),
-    },
-    {
-      title: "aboutPage.objectives.items.item6.title",
-      text: "aboutPage.objectives.items.item6.text",
-      icon: (
-        <HomeIcon
-          sx={{
-            color: theme.palette.basic.light,
-            width: "30%",
-            height: "auto",
-          }}
-        />
-      ),
-    },
-  ],
-};
-
-/**
- *  about page constants
- */
-export const communityPage = {
-  latestNews: [
-    {
-      title: "communityPage.latestNews.item1.title",
-      description: [
-        "communityPage.latestNews.item1.description.paragraph1",
-        "communityPage.latestNews.item1.description.paragraph2",
-        "communityPage.latestNews.item1.description.paragraph3",
-      ],
-      src: "/landingPage/news1.jpeg",
-      date: "29/4/2019",
-    },
-    {
-      title: "communityPage.latestNews.item2.title",
-      description: [
-        "communityPage.latestNews.item2.description.paragraph1",
-        "communityPage.latestNews.item2.description.paragraph2",
-        "communityPage.latestNews.item2.description.paragraph3",
-      ],
-      src: "/landingPage/news2.jpeg",
-      date: "29/4/2019",
     },
   ],
 };

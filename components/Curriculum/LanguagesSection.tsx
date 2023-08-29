@@ -79,6 +79,21 @@ const LanguagesSection = () => {
     },
   ];
 
+  const languages = [
+    {
+      title: t("curriculumPage.languagesContents.arabic"),
+      content: t("curriculumPage.languagesContents.arabicContent"),
+    },
+    {
+      title: t("curriculumPage.languagesContents.english"),
+      content: t("curriculumPage.languagesContents.englishContent"),
+    },
+    {
+      title: t("curriculumPage.languagesContents.malay"),
+      content: t("curriculumPage.languagesContents.malayContent"),
+    },
+  ];
+
   return (
     <PageSection bg="">
       <PageSectionColumn md={6}>
@@ -107,13 +122,13 @@ const LanguagesSection = () => {
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>
-        {curriculumPage.languages.map((item, i) => (
+        {languages.map((item, i) => (
           <Stack pb={5} key={i}>
             <Text variant="subtitle" color={theme.palette.blue.dark}>
-              {t(item.title)}
+              {item.title}
             </Text>
 
-            <Text justify>{t(item.content)}</Text>
+            <Text justify>{item.content}</Text>
           </Stack>
         ))}
       </PageSectionColumn>

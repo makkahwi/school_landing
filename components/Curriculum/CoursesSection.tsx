@@ -1,6 +1,5 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { curriculumPage } from "@/utils/constants";
 import { useRouter } from "next/router";
 
 import PageSection from "../../components/common/PageSection";
@@ -12,6 +11,21 @@ const CoursesSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const courseSquares = [
+    {
+      text: t("curriculumPage.courseSquares.languages"),
+      edges: "1.0.0.1",
+    },
+    {
+      text: t("curriculumPage.courseSquares.islamic"),
+      edges: "0.0.0.0",
+    },
+    {
+      text: t("curriculumPage.courseSquares.modern"),
+      edges: "0.1.1.0",
+    },
+  ];
+
   return (
     <PageSection>
       <PageSectionColumn>
@@ -20,7 +34,7 @@ const CoursesSection = () => {
         </Text>
       </PageSectionColumn>
 
-      {curriculumPage.courseSquares.map((item, i) => (
+      {courseSquares.map((item, i) => (
         <PageSectionColumn md={4} key={i}>
           <Square
             bgcolor={theme.palette.orange.main}
@@ -35,7 +49,7 @@ const CoursesSection = () => {
             }}
           >
             <Text color={theme.palette.basic.light} variant="subtitle">
-              {t(item.text)}
+              {item.text}
             </Text>
           </Square>
         </PageSectionColumn>

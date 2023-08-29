@@ -1,9 +1,8 @@
 import useWindowSize from "@/hooks/useWindowSize";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import { Box, Stack, styled, Typography } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import React from "react";
+import { Box, Stack, styled } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
 
 import Text from "./Text";
 
@@ -209,7 +208,7 @@ const ScrollableList = ({
                 <Box>{item.icon}</Box>
 
                 <Text color={textColor} variant="cardTitle" center>
-                  {t(item.text)}
+                  {item.text}
                 </Text>
               </Stack>
             </React.Fragment>
