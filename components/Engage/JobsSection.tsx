@@ -39,6 +39,73 @@ const JobsSection = () => {
     );
   };
 
+  const JobSection = ({ item }) => (
+    <PageSectionColumn>
+      <CardComp bg={theme.palette.basic.main}>
+        <Typography
+          textAlign="left"
+          width="100%"
+          color={theme.palette.blue.dark}
+          fontSize={{
+            xs: "3vw",
+            md: "4vw",
+          }}
+        >
+          {t(item.title)}
+        </Typography>
+
+        {jobOpBox("registrationPage.jobs.jobDescription", item.jobDescription)}
+
+        {jobOpBox("registrationPage.jobs.qualifications", item.qualifications)}
+
+        {jobOpBox("registrationPage.jobs.documents", item.documents)}
+
+        <Typography
+          pt={5}
+          fontWeight="bold"
+          fontSize={{
+            xs: "2vw",
+            md: "1.5vw",
+          }}
+        >
+          {t("registrationPage.jobs.emailText")}
+        </Typography>
+
+        <Typography
+          fontWeight="bold"
+          fontSize={{
+            xs: "2vw",
+            md: "1.5vw",
+          }}
+        >
+          {t("registrationPage.jobs.email")}
+        </Typography>
+
+        <Button
+          sx={{
+            fontWeight: "bold",
+            fontSize: {
+              xs: "2vw",
+              md: "1.5vw",
+            },
+            bgcolor: theme.palette.blue.dark,
+            color: theme.palette.basic.light,
+            padding: 2,
+            borderRadius: "1vw",
+            width: "40%",
+
+            "&:hover": {
+              color: theme.palette.blue.dark,
+              bgcolor: theme.palette.basic.light,
+            },
+          }}
+        >
+          {t("registrationPage.jobs.apply")}
+        </Button>
+      </CardComp>
+    </PageSectionColumn>
+  );
+
   return (
     <PageSection bg={theme.palette.basic.light}>
       <PageSectionColumn md={6}>
@@ -46,76 +113,7 @@ const JobsSection = () => {
 
         <Grid container>
           {registrationPage.jobsSection.map((item, i) => (
-            <PageSectionColumn key={i}>
-              <CardComp bg={theme.palette.basic.main}>
-                <Typography
-                  textAlign="left"
-                  width="100%"
-                  color={theme.palette.blue.dark}
-                  fontSize={{
-                    xs: "3vw",
-                    md: "4vw",
-                  }}
-                >
-                  {t(item.title)}
-                </Typography>
-
-                {jobOpBox(
-                  "registrationPage.jobs.jobDescription",
-                  item.jobDescription
-                )}
-
-                {jobOpBox(
-                  "registrationPage.jobs.qualifications",
-                  item.qualifications
-                )}
-
-                {jobOpBox("registrationPage.jobs.documents", item.documents)}
-
-                <Typography
-                  pt={5}
-                  fontWeight="bold"
-                  fontSize={{
-                    xs: "2vw",
-                    md: "1.5vw",
-                  }}
-                >
-                  {t("registrationPage.jobs.emailText")}
-                </Typography>
-
-                <Typography
-                  fontWeight="bold"
-                  fontSize={{
-                    xs: "2vw",
-                    md: "1.5vw",
-                  }}
-                >
-                  {t("registrationPage.jobs.email")}
-                </Typography>
-
-                <Button
-                  sx={{
-                    fontWeight: "bold",
-                    fontSize: {
-                      xs: "2vw",
-                      md: "1.5vw",
-                    },
-                    bgcolor: theme.palette.blue.dark,
-                    color: theme.palette.basic.light,
-                    padding: 2,
-                    borderRadius: "1vw",
-                    width: "40%",
-
-                    "&:hover": {
-                      color: theme.palette.blue.dark,
-                      bgcolor: theme.palette.basic.light,
-                    },
-                  }}
-                >
-                  {t("registrationPage.jobs.apply")}
-                </Button>
-              </CardComp>
-            </PageSectionColumn>
+            <JobSection item={item} key={i} />
           ))}
         </Grid>
       </PageSectionColumn>
@@ -134,76 +132,7 @@ const JobsSection = () => {
 
         <Grid container>
           {registrationPage.jobsSection.map((item, i) => (
-            <PageSectionColumn key={i}>
-              <CardComp bg={theme.palette.basic.main}>
-                <Typography
-                  textAlign="left"
-                  width="100%"
-                  color={theme.palette.blue.dark}
-                  fontSize={{
-                    xs: "3vw",
-                    md: "4vw",
-                  }}
-                >
-                  {t(item.title)}
-                </Typography>
-
-                {jobOpBox(
-                  "registrationPage.jobs.jobDescription",
-                  item.jobDescription
-                )}
-
-                {jobOpBox(
-                  "registrationPage.jobs.qualifications",
-                  item.qualifications
-                )}
-
-                {jobOpBox("registrationPage.jobs.documents", item.documents)}
-
-                <Typography
-                  pt={5}
-                  fontWeight="bold"
-                  fontSize={{
-                    xs: "2vw",
-                    md: "1.5vw",
-                  }}
-                >
-                  {t("registrationPage.jobs.emailText")}
-                </Typography>
-
-                <Typography
-                  fontWeight="bold"
-                  fontSize={{
-                    xs: "2vw",
-                    md: "1.5vw",
-                  }}
-                >
-                  {t("registrationPage.jobs.email")}
-                </Typography>
-
-                <Button
-                  sx={{
-                    fontWeight: "bold",
-                    fontSize: {
-                      xs: "2vw",
-                      md: "1.5vw",
-                    },
-                    bgcolor: theme.palette.blue.dark,
-                    color: theme.palette.basic.light,
-                    padding: 2,
-                    borderRadius: "1vw",
-                    width: "40%",
-
-                    "&:hover": {
-                      color: theme.palette.blue.dark,
-                      bgcolor: theme.palette.basic.light,
-                    },
-                  }}
-                >
-                  {t("registrationPage.jobs.apply")}
-                </Button>
-              </CardComp>
-            </PageSectionColumn>
+            <JobSection item={item} key={i} />
           ))}
         </Grid>
       </PageSectionColumn>

@@ -13,6 +13,42 @@ const CoCorriculumSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const squares = [
+    {
+      bgColor: theme.palette.orange.main,
+      radius: {
+        mobile: ["6vw", "1.1.1.1"],
+        desktop: ["2vw", "1.1.1.1"],
+      },
+      sx: {
+        gridRow: "1 / 2",
+        gridColumn: "1 / 2",
+      },
+    },
+    {
+      bgColor: theme.palette.orange.main,
+      radius: {
+        mobile: ["6vw", "1.1.1.1"],
+        desktop: ["2vw", "1.1.1.1"],
+      },
+      sx: {
+        gridRow: "2 / 3",
+        gridColumn: "1 / 2",
+      },
+    },
+    {
+      bgColor: theme.palette.orange.main,
+      radius: {
+        mobile: ["6vw", "1.1.1.1"],
+        desktop: ["2vw", "1.1.1.1"],
+      },
+      sx: {
+        gridRow: "1 / 3",
+        gridColumn: "2 / 3",
+      },
+    },
+  ];
+
   return (
     <PageSection>
       <PageSectionColumn md={6}>
@@ -27,43 +63,9 @@ const CoCorriculumSection = () => {
 
       <PageSectionColumn md={6}>
         <Box sx={CoCurriculumGrid}>
-          {/* <Avatar sx={AvatarStyles} variant="square" /> */}
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["6vw", "1.1.1.1"],
-              desktop: ["2vw", "1.1.1.1"],
-            }}
-            sx={{
-              gridRow: "1 / 2",
-              gridColumn: "1 / 2",
-            }}
-          />
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["6vw", "1.1.1.1"],
-              desktop: ["2vw", "1.1.1.1"],
-            }}
-            sx={{
-              gridRow: "2 / 3",
-              gridColumn: "1 / 2",
-            }}
-          />
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["6vw", "1.1.1.1"],
-              desktop: ["2vw", "1.1.1.1"],
-            }}
-            sx={{
-              gridRow: "1 / 3",
-              gridColumn: "2 / 3",
-            }}
-          />
+          {squares.map(({ bgColor, radius, sx }, i) => (
+            <Square bgcolor={bgColor} radius={radius} sx={sx} key={i} />
+          ))}
         </Box>
       </PageSectionColumn>
     </PageSection>

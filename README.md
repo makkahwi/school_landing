@@ -4,7 +4,6 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Build .map Where Applies
 - Fix Section Paddings
 - Fix Photos & Assets
 - Build Landing Header Slider
