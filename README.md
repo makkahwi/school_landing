@@ -15,6 +15,19 @@ Next.Js & Typescript based
 - Link Form UI To Email / Firebase
 - Fix Scroll Up Upon Route Update
 - Split Pages
+  - About
+    - Why
+    - Facilites
+    - Staff
+  - Academic
+    - Curriculum
+    - CoCu
+    - Levels
+  - Engage
+    - Fees
+    - Jobs
+  - News
+  - Contact
 - Fix Widget Links
 - Replace App Header with Sticky Top One
 - Localize To Arabic
