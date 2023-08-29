@@ -82,7 +82,7 @@ const LevelSection = ({ section }: LevelSectionProps) => {
           textColor={iconsColor}
           arrowColor={theme.palette.basic.light}
           desktop={{
-            width: 0.62,
+            width: 0.7,
             height: "15vw",
             arrowSize: "8vw",
             iconSize: 6,

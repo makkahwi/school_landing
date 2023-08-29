@@ -4,7 +4,6 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Fix Section Paddings
 - Fix Photos & Assets
 - Build Landing Header Slider
 - Fix Landing News Section

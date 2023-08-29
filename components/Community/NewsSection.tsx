@@ -24,20 +24,22 @@ const NewsSection = () => {
               height: "auto",
             }}
           />
-          <Text color={theme.palette.blue.dark} variant="SUBtitle" center>
+          <Text color={theme.palette.blue.dark} variant="cardTitle" center>
             {t(item.title)}
           </Text>
 
-          <Text justify>
+          <Text color={theme.palette.blue.dark}>{item.date}</Text>
+
+          <Text variant="p" justify>
             {item.description
               .map((desc) => t(desc))
               .join(". ")
               .slice(0, 110)}
-            {"..."}
+            {"..."}{" "}
           </Text>
 
-          <Text color={theme.palette.blue.dark} center>
-            {item.date}
+          <Text variant="p" color={theme.palette.blue.dark}>
+            {"Read More"}
           </Text>
         </PageSectionColumn>
       ))}

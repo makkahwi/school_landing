@@ -208,7 +208,7 @@ const ScrollableList = ({
               >
                 <Box>{item.icon}</Box>
 
-                <Text color={textColor} variant="subtitle" center>
+                <Text color={textColor} variant="cardTitle" center>
                   {t(item.text)}
                 </Text>
               </Stack>
