@@ -7,7 +7,6 @@ Next.Js & Typescript based
 - Fix Photos & Assets
 - Update Job Opps
 - Link Form UI To Email / Firebase
-- Fix Scroll Up Upon Route Update
 - Split Pages
   - About
     - Why
