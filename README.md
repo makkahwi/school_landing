@@ -23,7 +23,6 @@ Next.Js & Typescript based
   - News
   - Contact
 - Fix Widget Links
-- Replace App Header with Sticky Top One
 - Capitalize Localization Keys
 - Turn Localization .map to lists
 - Localize To Arabic
