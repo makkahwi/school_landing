@@ -7,8 +7,6 @@ Next.Js & Typescript based
 - Fix Photos & Assets
 - Build Landing Header Slider
 - Fix CoCU Sliders UI
-- Update To Level 12
-- Update Fees
 - Add Facilities Gallery Section
 - Update Job Opps
 - Fix Contact Form UI
@@ -30,4 +28,5 @@ Next.Js & Typescript based
   - Contact
 - Fix Widget Links
 - Replace App Header with Sticky Top One
+- Capitalize Localization Keys
 - Localize To Arabic

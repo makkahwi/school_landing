@@ -743,7 +743,7 @@ export const registrationPage = {
   structureSection: [
     {
       title: "registrationPage.structure.item1.title",
-      items: Array(4)
+      items: Array(5)
         .fill(1)
         .map((_, i) => ({
           title: `registrationPage.structure.item1.item${i + 1}.title`,
@@ -755,7 +755,7 @@ export const registrationPage = {
     },
     {
       title: "registrationPage.structure.item2.title",
-      items: Array(3)
+      items: Array(5)
         .fill(1)
         .map((_, i) => ({
           title: `registrationPage.structure.item2.item${i + 1}.title`,
@@ -777,7 +777,7 @@ export const registrationPage = {
     },
     {
       title: "registrationPage.structure.item4.title",
-      items: Array(12)
+      items: Array(13)
         .fill(1)
         .map((_, i) => ({
           title: `registrationPage.structure.item4.item${i + 1}.title`,
