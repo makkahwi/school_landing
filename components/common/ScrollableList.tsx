@@ -156,7 +156,7 @@ const ScrollableList = ({
       height={{ xs: mobile.height, md: desktop.height }}
     >
       <ArrowWrapper
-        width={{ xs: "18vw", md: "8vw" }}
+        width={{ xs: "9vw", md: "4vw" }}
         ref={arrowRef}
         onClick={() => handleButton("left")}
       >
@@ -218,7 +218,7 @@ const ScrollableList = ({
       </Box>
 
       <ArrowWrapper
-        width={{ xs: "18vw", md: "8vw" }}
+        width={{ xs: "9vw", md: "4vw" }}
         ref={arrowRef}
         onClick={() => handleButton("right")}
       >

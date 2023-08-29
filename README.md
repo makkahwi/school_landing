@@ -6,9 +6,6 @@ Next.Js & Typescript based
 
 - Fix Photos & Assets
 - Build Landing Header Slider
-- Fix Landing News Section
-  - Align "News"
-  - Include Title Within Box
 - Fix CoCU Sliders UI
 - Update To Level 12
 - Update Fees
