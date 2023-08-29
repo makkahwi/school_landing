@@ -5,10 +5,7 @@ Next.Js & Typescript based
 ## To Do
 
 - Fix Photos & Assets
-- Build Landing Header Slider
-- Fix CoCU Sliders UI
 - Update Job Opps
-- Fix Contact Form UI
 - Link Form UI To Email / Firebase
 - Fix Scroll Up Upon Route Update
 - Split Pages
@@ -28,4 +25,14 @@ Next.Js & Typescript based
 - Fix Widget Links
 - Replace App Header with Sticky Top One
 - Capitalize Localization Keys
+- Turn Localization .map to lists
 - Localize To Arabic
+
+### Mustafa To Do
+
+- Build Landing Header Slider
+- Fix News Slider (Img Cover Box)
+- Fix CoCU Sliders UI
+  - Responsiveness
+  - Full width
+  - Infinite loop
