@@ -103,6 +103,14 @@ const ContactsSection = () => {
               </Text>
             </PageSectionColumn>
           </PageSection>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1062.784001361683!2d101.70160315987847!3d3.1811413772820534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc496ec68f95b9%3A0x700d8de6e4eb4ef6!2sAl-Aqsa%20Integrated%20School!5e0!3m2!1sen!2sjo!4v1693287795800!5m2!1sen!2sjo"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            loading="lazy"
+          />
         </CardComp>
       </PageSectionColumn>
     </PageSection>

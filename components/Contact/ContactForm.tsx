@@ -1,6 +1,6 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Button, TextField, Typography } from "@mui/material";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -21,16 +21,20 @@ const ContactForm = () => {
             {t("contactPage.formTitle")}
           </Text>
 
-          {Array(5)
-            .fill(1)
-            .map((_, i) => (
-              <React.Fragment key={i}>
-                <TextField
-                  label={t(`contactPage.formInput${i + 1}`)}
-                  variant="outlined"
-                />
-              </React.Fragment>
-            ))}
+          <Grid container>
+            {Array(5)
+              .fill(1)
+              .map((_, i) => (
+                <Grid item md={6} p={1} key={i}>
+                  <TextField
+                    label={t(`contactPage.formInput${i + 1}`)}
+                    variant="outlined"
+                    fullWidth
+                    style={{ margin: "10px auto", backgroundColor: "white" }}
+                  />
+                </Grid>
+              ))}
+          </Grid>
 
           <Button size="large" variant="contained">
             {t("contactPage.formButton")}
