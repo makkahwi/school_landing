@@ -7,7 +7,6 @@ Next.Js & Typescript based
 - Fix Photos & Assets
 - Build Landing Header Slider
 - Fix CoCU Sliders UI
-- Add Facilities Gallery Section
 - Update Job Opps
 - Fix Contact Form UI
 - Link Form UI To Email / Firebase
