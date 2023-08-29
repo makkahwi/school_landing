@@ -751,27 +751,63 @@ export const registrationPage = {
   structureSection: [
     {
       title: "registrationPage.structure.item1.title",
-      items: Array(5)
-        .fill(1)
-        .map((_, i) => ({
-          title: `registrationPage.structure.item1.item${i + 1}.title`,
-          price: `registrationPage.structure.item1.item${i + 1}.price`,
-          description: `registrationPage.structure.item1.item${
-            i + 1
-          }.description`,
-        })),
+      items: [
+        {
+          title: `registrationPage.structure.item1.item1.title`,
+          price: `registrationPage.structure.item1.item1.price`,
+          description: `registrationPage.structure.item1.item1.description`,
+        },
+        {
+          title: `registrationPage.structure.item1.item2.title`,
+          price: `registrationPage.structure.item1.item2.price`,
+          description: `registrationPage.structure.item1.item2.description`,
+        },
+        {
+          title: `registrationPage.structure.item1.item3.title`,
+          price: `registrationPage.structure.item1.item3.price`,
+          description: `registrationPage.structure.item1.item3.description`,
+        },
+        {
+          title: `registrationPage.structure.item1.item4.title`,
+          price: `registrationPage.structure.item1.item4.price`,
+          description: `registrationPage.structure.item1.item4.description`,
+        },
+        {
+          title: `registrationPage.structure.item1.item5.title`,
+          price: `registrationPage.structure.item1.item5.price`,
+          description: `registrationPage.structure.item1.item5.description`,
+        },
+      ],
     },
     {
       title: "registrationPage.structure.item2.title",
-      items: Array(5)
-        .fill(1)
-        .map((_, i) => ({
-          title: `registrationPage.structure.item2.item${i + 1}.title`,
-          price: `registrationPage.structure.item2.item${i + 1}.price`,
-          description: `registrationPage.structure.item2.item${
-            i + 1
-          }.description`,
-        })),
+      items: [
+        {
+          title: `registrationPage.structure.item2.item1.title`,
+          price: `registrationPage.structure.item2.item1.price`,
+          description: `registrationPage.structure.item2.item1.description`,
+        },
+        {
+          title: `registrationPage.structure.item2.item2.title`,
+          price: `registrationPage.structure.item2.item2.price`,
+          description: `registrationPage.structure.item2.item2.description`,
+        },
+        {
+          title: `registrationPage.structure.item2.item3.title`,
+          price: `registrationPage.structure.item2.item3.price`,
+          description: `registrationPage.structure.item2.item3.description`,
+        },
+        {
+          title: `registrationPage.structure.item2.item4.title`,
+          price: `registrationPage.structure.item2.item4.price`,
+          description: `registrationPage.structure.item2.item4.description`,
+        },
+        {
+          title: `registrationPage.structure.item2.item5.title`,
+          price: `registrationPage.structure.item2.item5.price`,
+          description: `registrationPage.structure.item2.item5.description`,
+        },
+      ],
     },
     {
       title: "registrationPage.structure.item3.title",
@@ -785,15 +821,83 @@ export const registrationPage = {
     },
     {
       title: "registrationPage.structure.item4.title",
-      items: Array(13)
-        .fill(1)
-        .map((_, i) => ({
-          title: `registrationPage.structure.item4.item${i + 1}.title`,
-          price: `registrationPage.structure.item4.item${i + 1}.price`,
-          description: `registrationPage.structure.item4.item${
-            i + 1
-          }.description`,
-        })),
+      items: [
+        {
+          title: `registrationPage.structure.item4.item1.title`,
+          price: `registrationPage.structure.item4.item1.price`,
+          description: `registrationPage.structure.item4.item1.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item2.title`,
+          price: `registrationPage.structure.item4.item2.price`,
+          description: `registrationPage.structure.item4.item2.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item3.title`,
+          price: `registrationPage.structure.item4.item3.price`,
+          description: `registrationPage.structure.item4.item3.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item4.title`,
+          price: `registrationPage.structure.item4.item4.price`,
+          description: `registrationPage.structure.item4.item4.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item5.title`,
+          price: `registrationPage.structure.item4.item5.price`,
+          description: `registrationPage.structure.item4.item5.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item6.title`,
+          price: `registrationPage.structure.item4.item6.price`,
+          description: `registrationPage.structure.item4.item6.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item7.title`,
+          price: `registrationPage.structure.item4.item7.price`,
+          description: `registrationPage.structure.item4.item7.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item8.title`,
+          price: `registrationPage.structure.item4.item8.price`,
+          description: `registrationPage.structure.item4.item8.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item9.title`,
+          price: `registrationPage.structure.item4.item9.price`,
+          description: `registrationPage.structure.item4.item9.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item10.title`,
+          price: `registrationPage.structure.item4.item10.price`,
+          description: `registrationPage.structure.item4.item10.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item11.title`,
+          price: `registrationPage.structure.item4.item11.price`,
+          description: `registrationPage.structure.item4.item11.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item12.title`,
+          price: `registrationPage.structure.item4.item12.price`,
+          description: `registrationPage.structure.item4.item12.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item13.title`,
+          price: `registrationPage.structure.item4.item13.price`,
+          description: `registrationPage.structure.item4.item13.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item14.title`,
+          price: `registrationPage.structure.item4.item14.price`,
+          description: `registrationPage.structure.item4.item14.description`,
+        },
+        {
+          title: `registrationPage.structure.item4.item15.title`,
+          price: `registrationPage.structure.item4.item15.price`,
+          description: `registrationPage.structure.item4.item15.description`,
+        },
+      ],
     },
   ],
 
@@ -810,15 +914,23 @@ export const registrationPage = {
     },
     {
       title: "registrationPage.discounts.item2.title",
-      items: Array(3)
-        .fill(1)
-        .map((_, i) => ({
-          title: `registrationPage.discounts.item2.item${i + 1}.title`,
-          price: `registrationPage.discounts.item2.item${i + 1}.price`,
-          description: `registrationPage.discounts.item2.item${
-            i + 1
-          }.description`,
-        })),
+      items: [
+        {
+          title: `registrationPage.discounts.item2.item1.title`,
+          price: `registrationPage.discounts.item2.item1.price`,
+          description: `registrationPage.discounts.item2.item1.description`,
+        },
+        {
+          title: `registrationPage.discounts.item2.item2.title`,
+          price: `registrationPage.discounts.item2.item2.price`,
+          description: `registrationPage.discounts.item2.item2.description`,
+        },
+        {
+          title: `registrationPage.discounts.item2.item3.title`,
+          price: `registrationPage.discounts.item2.item3.price`,
+          description: `registrationPage.discounts.item2.item3.description`,
+        },
+      ],
     },
     {
       title: "registrationPage.discounts.item3.title",
@@ -835,51 +947,78 @@ export const registrationPage = {
   jobsSection: [
     {
       title: "registrationPage.jobs.item1.title",
-      jobDescription: Array(2)
-        .fill(1)
-        .map(
-          (_, i) => `registrationPage.jobs.item1.jobDescription.item${i + 1}`
-        ),
-      qualifications: Array(8)
-        .fill(1)
-        .map(
-          (_, i) => `registrationPage.jobs.item1.qualifications.item${i + 1}`
-        ),
-      documents: Array(5)
-        .fill(1)
-        .map((_, i) => `registrationPage.jobs.item1.documents.item${i + 1}`),
+      jobDescription: [
+        `registrationPage.jobs.item1.jobDescription.item1`,
+        ,
+        `registrationPage.jobs.item1.jobDescription.item2`,
+      ],
+      qualifications: [
+        `registrationPage.jobs.item1.qualifications.item1`,
+        `registrationPage.jobs.item1.qualifications.item2`,
+        `registrationPage.jobs.item1.qualifications.item3`,
+        `registrationPage.jobs.item1.qualifications.item4`,
+        `registrationPage.jobs.item1.qualifications.item5`,
+        `registrationPage.jobs.item1.qualifications.item6`,
+        `registrationPage.jobs.item1.qualifications.item7`,
+        `registrationPage.jobs.item1.qualifications.item8`,
+      ],
+      documents: [
+        `registrationPage.jobs.item1.documents.item1`,
+        `registrationPage.jobs.item1.documents.item2`,
+        `registrationPage.jobs.item1.documents.item3`,
+        `registrationPage.jobs.item1.documents.item4`,
+        `registrationPage.jobs.item1.documents.item5`,
+      ],
     },
     {
       title: "registrationPage.jobs.item2.title",
-      jobDescription: Array(2)
-        .fill(1)
-        .map(
-          (_, i) => `registrationPage.jobs.item2.jobDescription.item${i + 1}`
-        ),
-      qualifications: Array(9)
-        .fill(1)
-        .map(
-          (_, i) => `registrationPage.jobs.item2.qualifications.item${i + 1}`
-        ),
-      documents: Array(5)
-        .fill(1)
-        .map((_, i) => `registrationPage.jobs.item2.documents.item${i + 1}`),
+      jobDescription: [
+        `registrationPage.jobs.item2.jobDescription.item1`,
+        ,
+        `registrationPage.jobs.item2.jobDescription.item2`,
+      ],
+      qualifications: [
+        `registrationPage.jobs.item2.qualifications.item1`,
+        `registrationPage.jobs.item2.qualifications.item2`,
+        `registrationPage.jobs.item2.qualifications.item3`,
+        `registrationPage.jobs.item2.qualifications.item4`,
+        `registrationPage.jobs.item2.qualifications.item5`,
+        `registrationPage.jobs.item2.qualifications.item6`,
+        `registrationPage.jobs.item2.qualifications.item7`,
+        `registrationPage.jobs.item2.qualifications.item8`,
+        `registrationPage.jobs.item2.qualifications.item9`,
+      ],
+      documents: [
+        `registrationPage.jobs.item2.documents.item1`,
+        `registrationPage.jobs.item2.documents.item2`,
+        `registrationPage.jobs.item2.documents.item3`,
+        `registrationPage.jobs.item2.documents.item4`,
+        `registrationPage.jobs.item2.documents.item5`,
+      ],
     },
     {
       title: "registrationPage.jobs.item3.title",
-      jobDescription: Array(2)
-        .fill(1)
-        .map(
-          (_, i) => `registrationPage.jobs.item3.jobDescription.item${i + 1}`
-        ),
-      qualifications: Array(8)
-        .fill(1)
-        .map(
-          (_, i) => `registrationPage.jobs.item3.qualifications.item${i + 1}`
-        ),
-      documents: Array(5)
-        .fill(1)
-        .map((_, i) => `registrationPage.jobs.item3.documents.item${i + 1}`),
+      jobDescription: [
+        `registrationPage.jobs.item3.jobDescription.item1`,
+        `registrationPage.jobs.item3.jobDescription.item2`,
+      ],
+      qualifications: [
+        `registrationPage.jobs.item3.qualifications.item1`,
+        `registrationPage.jobs.item3.qualifications.item2`,
+        `registrationPage.jobs.item3.qualifications.item3`,
+        `registrationPage.jobs.item3.qualifications.item4`,
+        `registrationPage.jobs.item3.qualifications.item5`,
+        `registrationPage.jobs.item3.qualifications.item6`,
+        `registrationPage.jobs.item3.qualifications.item7`,
+        `registrationPage.jobs.item3.qualifications.item8`,
+      ],
+      documents: [
+        `registrationPage.jobs.item3.documents.item1`,
+        `registrationPage.jobs.item3.documents.item2`,
+        `registrationPage.jobs.item3.documents.item3`,
+        `registrationPage.jobs.item3.documents.item4`,
+        `registrationPage.jobs.item3.documents.item5`,
+      ],
     },
   ],
 };

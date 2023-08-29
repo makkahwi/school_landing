@@ -13,6 +13,14 @@ const ContactForm = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const formInput = [
+    t(`contactPage.formInput1`),
+    t(`contactPage.formInput2`),
+    t(`contactPage.formInput3`),
+    t(`contactPage.formInput4`),
+    t(`contactPage.formInput5`),
+  ];
+
   return (
     <PageSection>
       <PageSectionColumn>
@@ -22,18 +30,16 @@ const ContactForm = () => {
           </Text>
 
           <Grid container>
-            {Array(5)
-              .fill(1)
-              .map((_, i) => (
-                <Grid item md={6} p={1} key={i}>
-                  <TextField
-                    label={t(`contactPage.formInput${i + 1}`)}
-                    variant="outlined"
-                    fullWidth
-                    style={{ margin: "10px auto", backgroundColor: "white" }}
-                  />
-                </Grid>
-              ))}
+            {formInput.map((text, i) => (
+              <Grid item md={6} p={1} key={i}>
+                <TextField
+                  label={text}
+                  variant="outlined"
+                  fullWidth
+                  style={{ margin: "10px auto", backgroundColor: "white" }}
+                />
+              </Grid>
+            ))}
           </Grid>
 
           <Button size="large" variant="contained">

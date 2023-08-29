@@ -23,7 +23,6 @@ Next.Js & Typescript based
   - News
   - Contact
 - Capitalize Localization Keys
-- Turn Localization .map to lists
 - Localize To Arabic
 
 ### Mustafa To Do
