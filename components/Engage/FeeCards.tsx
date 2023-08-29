@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
+import Column from "../common/Column";
+import Row from "../common/Row";
 import Text from "../common/Text";
 
 interface FeeCardsProps {
@@ -33,9 +35,9 @@ const FeeCards = ({ boxes, isSubStack, bg, cardBg }: FeeCardsProps) => {
             {t(box.title)}
           </Text>
 
-          <PageSection bg={bg}>
+          <Row>
             {box.items.map((item, y) => (
-              <PageSectionColumn md={6} key={y}>
+              <Column md={6} key={y}>
                 <Square
                   bgcolor={cardBg}
                   radius={{
@@ -74,9 +76,9 @@ const FeeCards = ({ boxes, isSubStack, bg, cardBg }: FeeCardsProps) => {
                     </Stack>
                   </Stack>
                 </Square>
-              </PageSectionColumn>
+              </Column>
             ))}
-          </PageSection>
+          </Row>
         </PageSectionColumn>
       ))}
     </PageSection>

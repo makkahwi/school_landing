@@ -9,6 +9,8 @@ import { useRouter } from "next/router";
 import CardComp from "../../components/common/Card";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
+import Column from "../common/Column";
+import Row from "../common/Row";
 import Text from "../common/Text";
 
 const ContactsSection = () => {
@@ -19,14 +21,14 @@ const ContactsSection = () => {
     <PageSection bg="">
       <PageSectionColumn>
         <CardComp bg={theme.palette.blue.dark}>
-          <PageSection bg={theme.palette.blue.dark}>
-            <PageSectionColumn>
+          <Row>
+            <Column>
               <Text color={theme.palette.basic.light} variant="subtitle" center>
                 {t("contactPage.contactTitle")}
               </Text>
-            </PageSectionColumn>
+            </Column>
 
-            <PageSectionColumn md={4}>
+            <Column md={4}>
               <LocalPhoneIcon
                 sx={{
                   color: theme.palette.basic.light,
@@ -49,9 +51,9 @@ const ContactsSection = () => {
               <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact1.description2")}
               </Text>
-            </PageSectionColumn>
+            </Column>
 
-            <PageSectionColumn md={4}>
+            <Column md={4}>
               <EmailIcon
                 sx={{
                   color: theme.palette.basic.light,
@@ -71,9 +73,9 @@ const ContactsSection = () => {
               <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact2.description1")}
               </Text>
-            </PageSectionColumn>
+            </Column>
 
-            <PageSectionColumn md={4}>
+            <Column md={4}>
               <PushPinIcon
                 sx={{
                   color: theme.palette.basic.light,
@@ -101,8 +103,8 @@ const ContactsSection = () => {
               <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact3.description3")}
               </Text>
-            </PageSectionColumn>
-          </PageSection>
+            </Column>
+          </Row>
 
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1062.784001361683!2d101.70160315987847!3d3.1811413772820534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc496ec68f95b9%3A0x700d8de6e4eb4ef6!2sAl-Aqsa%20Integrated%20School!5e0!3m2!1sen!2sjo!4v1693287795800!5m2!1sen!2sjo"
