@@ -63,8 +63,8 @@ const WelcomeSection = () => {
               />
             </Square>
 
-            {landingPage.welcomeSquares.map((block, index) => (
-              <React.Fragment key={`welcome square page-1 number: ${index}`}>
+            {landingPage.welcomeSquares.map((block, i) => (
+              <React.Fragment key={i}>
                 <Square
                   bgcolor={block.bgcolor}
                   radius={{

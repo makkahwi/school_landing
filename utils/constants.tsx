@@ -745,27 +745,25 @@ export const registrationPage = {
       title: "registrationPage.structure.item1.title",
       items: Array(4)
         .fill(1)
-        .map((_, i) => i + 1)
-        .map((_, index) => {
-          return {
-            title: `registrationPage.structure.item1.item${index}.title`,
-            price: `registrationPage.structure.item1.item${index}.price`,
-            description: `registrationPage.structure.item1.item${index}.description`,
-          };
-        }),
+        .map((_, i) => ({
+          title: `registrationPage.structure.item1.item${i + 1}.title`,
+          price: `registrationPage.structure.item1.item${i + 1}.price`,
+          description: `registrationPage.structure.item1.item${
+            i + 1
+          }.description`,
+        })),
     },
     {
       title: "registrationPage.structure.item2.title",
       items: Array(3)
         .fill(1)
-        .map((_, i) => i + 1)
-        .map((index) => {
-          return {
-            title: `registrationPage.structure.item2.item${index}.title`,
-            price: `registrationPage.structure.item2.item${index}.price`,
-            description: `registrationPage.structure.item2.item${index}.description`,
-          };
-        }),
+        .map((_, i) => ({
+          title: `registrationPage.structure.item2.item${i + 1}.title`,
+          price: `registrationPage.structure.item2.item${i + 1}.price`,
+          description: `registrationPage.structure.item2.item${
+            i + 1
+          }.description`,
+        })),
     },
     {
       title: "registrationPage.structure.item3.title",
@@ -781,14 +779,13 @@ export const registrationPage = {
       title: "registrationPage.structure.item4.title",
       items: Array(12)
         .fill(1)
-        .map((_, i) => i + 1)
-        .map((index) => {
-          return {
-            title: `registrationPage.structure.item4.item${index}.title`,
-            price: `registrationPage.structure.item4.item${index}.price`,
-            description: `registrationPage.structure.item4.item${index}.description`,
-          };
-        }),
+        .map((_, i) => ({
+          title: `registrationPage.structure.item4.item${i + 1}.title`,
+          price: `registrationPage.structure.item4.item${i + 1}.price`,
+          description: `registrationPage.structure.item4.item${
+            i + 1
+          }.description`,
+        })),
     },
   ],
 
@@ -807,14 +804,13 @@ export const registrationPage = {
       title: "registrationPage.discounts.item2.title",
       items: Array(3)
         .fill(1)
-        .map((_, i) => i + 1)
-        .map((index) => {
-          return {
-            title: `registrationPage.discounts.item2.item${index}.title`,
-            price: `registrationPage.discounts.item2.item${index}.price`,
-            description: `registrationPage.discounts.item2.item${index}.description`,
-          };
-        }),
+        .map((_, i) => ({
+          title: `registrationPage.discounts.item2.item${i + 1}.title`,
+          price: `registrationPage.discounts.item2.item${i + 1}.price`,
+          description: `registrationPage.discounts.item2.item${
+            i + 1
+          }.description`,
+        })),
     },
     {
       title: "registrationPage.discounts.item3.title",

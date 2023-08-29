@@ -23,11 +23,10 @@ const ContactForm = () => {
 
           {Array(5)
             .fill(1)
-            .map((_, i) => i + 1)
             .map((_, i) => (
-              <React.Fragment key={`text field item number: ${i}`}>
+              <React.Fragment key={i}>
                 <TextField
-                  label={t(`contactPage.formInput${i}`)}
+                  label={t(`contactPage.formInput${i + 1}`)}
                   variant="outlined"
                 />
               </React.Fragment>

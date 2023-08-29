@@ -113,23 +113,21 @@ const NewsSection = () => {
             </Text>
           </Square>
 
-          {landingPage.newsSquares.map((block, index) => {
-            return (
-              <React.Fragment key={`news squares page-1 number: ${index}`}>
-                <Square
-                  bgcolor={block.bgcolor}
-                  radius={{
-                    mobile: block.radiusMobile,
-                    desktop: block.radiusDesktop,
-                  }}
-                  sx={{
-                    gridRow: block.rows,
-                    gridColumn: block.cols,
-                  }}
-                />
-              </React.Fragment>
-            );
-          })}
+          {landingPage.newsSquares.map((block, i) => (
+            <React.Fragment key={i}>
+              <Square
+                bgcolor={block.bgcolor}
+                radius={{
+                  mobile: block.radiusMobile,
+                  desktop: block.radiusDesktop,
+                }}
+                sx={{
+                  gridRow: block.rows,
+                  gridColumn: block.cols,
+                }}
+              />
+            </React.Fragment>
+          ))}
 
           <Avatar
             src="global\quds-icon.png"

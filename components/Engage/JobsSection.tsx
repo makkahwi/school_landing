@@ -21,10 +21,8 @@ const JobsSection = () => {
           {t(title)}
         </Text>
 
-        {item.map((bullet, bulletIndex) => (
-          <React.Fragment
-            key={`jobs section ${title} bullet number: ${bulletIndex}`}
-          >
+        {item.map((bullet, i) => (
+          <React.Fragment key={i}>
             <Typography
               textAlign="left"
               width="100%"

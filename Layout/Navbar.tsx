@@ -126,15 +126,9 @@ const Navbar = ({
         color,
       })}
 
-      {navbarPage
-        .navbarItems({ color: color, size: "100%" })
-        .map((item, index) => {
-          return (
-            <React.Fragment key={`Link Element number: ${index}`}>
-              {NavItem({ ...item, color })}
-            </React.Fragment>
-          );
-        })}
+      {navbarPage.navbarItems({ color: color, size: "100%" }).map((item, i) => (
+        <React.Fragment key={i}>{NavItem({ ...item, color })}</React.Fragment>
+      ))}
 
       {NavItem({
         data:

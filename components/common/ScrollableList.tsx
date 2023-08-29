@@ -189,33 +189,31 @@ const ScrollableList = ({
             },
           }}
         >
-          {items.map((item, index) => {
-            return (
-              <React.Fragment key={`${uniqueId} item number: ${index}`}>
-                <Stack
-                  direction="column"
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    width: {
-                      xs: `${mobile.iconSize.toString()}vw`,
-                      md: `${desktop.iconSize.toString()}vw`,
-                    },
-                    margin: {
-                      xs: `${mobile.marginSize.toString()}vw`,
-                      md: `${desktop.marginSize.toString()}vw`,
-                    },
-                  }}
-                >
-                  <Box>{item.icon}</Box>
+          {items.map((item, i) => (
+            <React.Fragment key={i}>
+              <Stack
+                direction="column"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: {
+                    xs: `${mobile.iconSize.toString()}vw`,
+                    md: `${desktop.iconSize.toString()}vw`,
+                  },
+                  margin: {
+                    xs: `${mobile.marginSize.toString()}vw`,
+                    md: `${desktop.marginSize.toString()}vw`,
+                  },
+                }}
+              >
+                <Box>{item.icon}</Box>
 
-                  <Text color={textColor} variant="subtitle" center>
-                    {t(item.text)}
-                  </Text>
-                </Stack>
-              </React.Fragment>
-            );
-          })}
+                <Text color={textColor} variant="subtitle" center>
+                  {t(item.text)}
+                </Text>
+              </Stack>
+            </React.Fragment>
+          ))}
         </MiddleContent>
       </Box>
 

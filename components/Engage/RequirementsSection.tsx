@@ -2,7 +2,13 @@ import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import { registrationPage } from "@/utils/constants";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import { Collapse, List, ListItemButton, Stack, Typography } from "@mui/material";
+import {
+  Collapse,
+  List,
+  ListItemButton,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
@@ -35,10 +41,8 @@ const RequirementsSection = () => {
                 </Text>
               }
             >
-              {item.lists.map((list, listIndex) => (
-                <React.Fragment
-                  key={`registration square list number ${listIndex}`}
-                >
+              {item.lists.map((list, i) => (
+                <React.Fragment key={i}>
                   <ListItemButton
                     sx={{ width: "100%" }}
                     onClick={() => handleClick(list.trigger)}
@@ -54,10 +58,8 @@ const RequirementsSection = () => {
                     unmountOnExit
                   >
                     <Stack spacing={2}>
-                      {list.items.map((text, textIndex) => (
-                        <React.Fragment
-                          key={`registration square list item number ${textIndex}`}
-                        >
+                      {list.items.map((text, y) => (
+                        <React.Fragment key={y}>
                           <Typography
                             fontSize={{
                               xs: "2vw",
