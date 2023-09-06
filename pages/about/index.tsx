@@ -1,6 +1,5 @@
 import AdvantagesSection from "@/components/About/AdvantagesSection";
 import AISBeginning from "@/components/About/AISBeginning";
-import Facilities from "@/components/About/Facilities";
 import VisionMissionObjectives from "@/components/About/VisionMissionObjectives";
 import PageHeader from "@/components/common/PageHeader";
 import useTranslation from "@/hooks/useTranslation";
@@ -18,7 +17,6 @@ export default function AboutAIS() {
       <AdvantagesSection />
       <AISBeginning />
       <VisionMissionObjectives />
-      <Facilities />
     </Stack>
   );
 }

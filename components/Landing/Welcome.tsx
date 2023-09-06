@@ -31,7 +31,7 @@ const WelcomeSection = () => {
             }}
           />
 
-          <Text color={theme.palette.blue.dark} variant="title" center>
+          <Text color={theme.palette.blue.dark} variant="subTitle" center>
             {t("landingPage.welcomeSection.title")}
           </Text>
         </Stack>

@@ -7,20 +7,9 @@ Next.Js & Typescript based
 - Fix Photos & Assets
 - Update Job Opps
 - Link Form UI To Email / Firebase
-- Split Pages
-  - About
-    - Why
-    - Facilites
-    - Staff
-  - Academic
-    - Curriculum
-    - CoCu
-    - Levels
-  - Engage
-    - Fees
-    - Jobs
-  - News
-  - Contact
+- Build new pages
+  - Staff
+  - News by id
 - Capitalize Localization Keys
 - Localize To Arabic
 

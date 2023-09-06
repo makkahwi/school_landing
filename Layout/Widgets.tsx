@@ -68,7 +68,7 @@ const Widgets = () => {
               desktop: ["3vw", "1.0.1.1"],
             }}
             sx={{
-              gridRow: "3 / 8",
+              gridRow: "4 / 8",
               gridColumn: "1 / 20",
             }}
           >
@@ -125,7 +125,7 @@ const Widgets = () => {
               desktop: ["3vw", "0.1.1.1"],
             }}
             sx={{
-              gridRow: "3 / 8",
+              gridRow: "4 / 8",
               gridColumn: "20 / 30",
             }}
           >

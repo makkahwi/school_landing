@@ -21,11 +21,6 @@ export default function RegistrationAndFees() {
       <RequirementsSection />
       <FeesSection />
       <DiscountSection />
-      <PageHeader
-        bg={departmentColors.engage}
-        title={t("registrationPage.jobs.title")}
-      />
-      <JobsSection />
     </Stack>
   );
 }
