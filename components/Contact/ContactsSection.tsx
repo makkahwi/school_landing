@@ -20,7 +20,7 @@ const ContactsSection = () => {
   return (
     <PageSection bg="">
       <PageSectionColumn>
-        <CardComp bg={theme.palette.blue.dark}>
+        <CardComp bg={theme.palette.brown.main}>
           <Row>
             <Column>
               <Text color={theme.palette.basic.light} variant="subtitle" center>
@@ -31,7 +31,7 @@ const ContactsSection = () => {
             <Column md={4}>
               <LocalPhoneIcon
                 sx={{
-                  color: theme.palette.basic.light,
+                  color: theme.palette.orange.main,
                   width: { xs: "3vw", md: "6vw" },
                   height: "auto",
                 }}
@@ -56,7 +56,7 @@ const ContactsSection = () => {
             <Column md={4}>
               <EmailIcon
                 sx={{
-                  color: theme.palette.basic.light,
+                  color: theme.palette.orange.main,
                   width: { xs: "3vw", md: "6vw" },
                   height: "auto",
                 }}
@@ -78,7 +78,7 @@ const ContactsSection = () => {
             <Column md={4}>
               <PushPinIcon
                 sx={{
-                  color: theme.palette.basic.light,
+                  color: theme.palette.orange.main,
                   width: { xs: "3vw", md: "6vw" },
                   height: "auto",
                 }}

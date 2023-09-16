@@ -24,7 +24,7 @@ const ContactForm = () => {
   return (
     <PageSection>
       <PageSectionColumn>
-        <CardComp bg={theme.palette.blue.dark}>
+        <CardComp bg={theme.palette.brown.main}>
           <Text color={theme.palette.basic.light} variant="subtitle" center>
             {t("contactPage.formTitle")}
           </Text>
