@@ -135,7 +135,7 @@ const Widgets = () => {
                 width: "auto",
               }}
               variant="square"
-              src="https://aqsa.edu.my/wp-content/uploads/2019/03/AIS-Light-Blue-En-Logo.png"
+              src="/images/AIS-Light-Blue-En-Logo.png"
               alt="logo 2"
             />
           </Square>

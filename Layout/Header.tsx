@@ -57,10 +57,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <img
-              src="https://aqsa.edu.my/wp-content/uploads/2019/03/AIS-En-Mobile-Logo-1-e1588382619889.png"
-              width="90%"
-            />
+            <img src="/images/AIS-En-Mobile-Logo-1-White.png" width="90%" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

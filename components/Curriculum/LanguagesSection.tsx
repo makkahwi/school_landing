@@ -31,6 +31,7 @@ const LanguagesSection = () => {
       },
       textColor: theme.palette.orange.main,
       text: "Selamat Datang",
+      img: "/images/Languages-M.png",
     },
     {
       bgColor: theme.palette.blue.dark,
@@ -48,6 +49,7 @@ const LanguagesSection = () => {
       },
       textColor: theme.palette.basic.light,
       text: "Welcome",
+      img: "/images/Languages-E.png",
     },
     {
       bgColor: theme.palette.brown.main,
@@ -76,6 +78,7 @@ const LanguagesSection = () => {
       },
       textColor: theme.palette.brown.main,
       text: "أهلاً وسهلاً",
+      img: "/images/Languages-A.png",
     },
   ];
 
@@ -99,7 +102,7 @@ const LanguagesSection = () => {
       <PageSectionColumn md={6}>
         <Box sx={LanguagesGrid}>
           {squares?.map(
-            ({ bgColor, radius, sx, fontSize, textColor, text }, i) => (
+            ({ bgColor, radius, sx, fontSize, textColor, text, img }, i) => (
               <Square bgcolor={bgColor} radius={radius} sx={sx} key={i}>
                 {text && (
                   <Typography
@@ -108,7 +111,8 @@ const LanguagesSection = () => {
                     color={textColor}
                     textAlign="center"
                   >
-                    {text}
+                    <img src={img} width="100%" />
+                    {/* {text} */}
                   </Typography>
                 )}
               </Square>

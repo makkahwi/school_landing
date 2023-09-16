@@ -24,7 +24,7 @@ const VisionMissionObjectives = () => {
         <ExploreIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "30%",
+            width: "20%",
             height: "auto",
           }}
         />
@@ -37,7 +37,7 @@ const VisionMissionObjectives = () => {
         <PersonIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "30%",
+            width: "20%",
             height: "auto",
           }}
         />
@@ -50,7 +50,7 @@ const VisionMissionObjectives = () => {
         <PsychologyIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "30%",
+            width: "20%",
             height: "auto",
           }}
         />
@@ -63,7 +63,7 @@ const VisionMissionObjectives = () => {
         <BarChartIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "30%",
+            width: "20%",
             height: "auto",
           }}
         />
@@ -76,7 +76,7 @@ const VisionMissionObjectives = () => {
         <Brightness3Icon
           sx={{
             color: theme.palette.basic.light,
-            width: "30%",
+            width: "20%",
             height: "auto",
           }}
         />
@@ -89,7 +89,7 @@ const VisionMissionObjectives = () => {
         <HomeIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "30%",
+            width: "20%",
             height: "auto",
           }}
         />

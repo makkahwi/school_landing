@@ -15,17 +15,17 @@ const WhyAISSection = () => {
 
   const whyAIS_icons = [
     {
-      src: "/landingPage/islamic-icon.png",
+      src: "/images/Islamic.png",
       alt: "islamic-icon",
       text: t("landingPage.whyAISSection.items.item1"),
     },
     {
-      src: "/landingPage/cambridge-icon.png",
+      src: "/images/Cambridge.png",
       alt: "cambridge-icon",
       text: t("landingPage.whyAISSection.items.item2"),
     },
     {
-      src: "/landingPage/cheap-zone-icon.png",
+      src: "/images/Cheap.png",
       alt: "cheap-zone-icon",
       text: t("landingPage.whyAISSection.items.item3"),
     },

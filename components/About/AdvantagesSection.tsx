@@ -15,19 +15,19 @@ const AdvantagesSection = () => {
 
   const whyAIScards = [
     {
-      src: "/landingPage/islamic-icon.png",
+      src: "/images/Islamic.png",
       alt: "islamic-icon",
       text: t("aboutPage.whyCards.item1.text"),
       longText: t("aboutPage.whyCards.item1.longText"),
     },
     {
-      src: "/landingPage/cambridge-icon.png",
+      src: "/images/Cambridge.png",
       alt: "cambridge-icon",
       text: t("aboutPage.whyCards.item2.text"),
       longText: t("aboutPage.whyCards.item2.longText"),
     },
     {
-      src: "/landingPage/cheap-zone-icon.png",
+      src: "/images/Cheap.png",
       alt: "cheap-zone-icon",
       text: t("aboutPage.whyCards.item3.text"),
       longText: t("aboutPage.whyCards.item3.longText"),

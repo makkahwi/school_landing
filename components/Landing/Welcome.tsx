@@ -24,14 +24,14 @@ const WelcomeSection = () => {
         <Stack spacing={3} alignItems="center" justifyContent="center">
           <Avatar
             alt="Main Logo"
-            src="/global/logo.png"
+            src="/images/AIS-Favcion-Logo.png"
             sx={{
-              width: { xs: "20vw", md: "8vw" },
-              height: { xs: "20vw", md: "8vw" },
+              width: { xs: "20vw", md: "12vw" },
+              height: { xs: "20vw", md: "12vw" },
             }}
           />
 
-          <Text color={theme.palette.blue.dark} variant="title" center>
+          <Text color={theme.palette.blue.dark} variant="subtitle" center>
             {t("landingPage.welcomeSection.title")}
           </Text>
         </Stack>
@@ -53,9 +53,7 @@ const WelcomeSection = () => {
               <Avatar
                 variant="square"
                 alt="Main Image"
-                src={
-                  "https://aqsa.edu.my/wp-content/uploads/2019/04/Photo-7.jpg"
-                }
+                src={"/images/Photo-9.jpg"}
                 sx={{
                   width: "100%",
                   height: "100%",

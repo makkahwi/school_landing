@@ -4,7 +4,6 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Fix Photos & Assets
 - Update Job Opps
 - Link Form UI To Email / Firebase
 - Split Pages

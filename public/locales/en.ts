@@ -651,7 +651,7 @@ const en = {
     },
     contact2: {
       title: "Email Questions",
-      description1: "contact@aqsa.edu.my",
+      description1: "Principal@aqsa.edu.my",
     },
     contact3: {
       title: "Meet on Site",

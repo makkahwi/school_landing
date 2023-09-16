@@ -23,7 +23,7 @@ const DiscountsSection = () => {
 
       <PageSectionColumn md={6}>
         <Avatar
-          src="global\quds-icon.png"
+          src="/images/Char-1-Color.png"
           variant="square"
           sx={{
             width: "30%",

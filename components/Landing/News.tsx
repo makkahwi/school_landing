@@ -130,7 +130,7 @@ const NewsSection = () => {
           ))}
 
           <Avatar
-            src="global\quds-icon.png"
+            src="/images/Char-1-Color.png"
             variant="square"
             sx={{
               padding: 1,
