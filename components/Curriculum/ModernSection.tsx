@@ -103,13 +103,13 @@ const ModernSection = () => {
 
   return (
     <PageSection bg={theme.palette.orange.main}>
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={8}>
         <Text color={theme.palette.basic.light} variant="title" bold>
           {t("curriculumPage.modernSciences")}
         </Text>
       </PageSectionColumn>
 
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={4}>
         <Box sx={ModernScienceGrid}>
           {squares?.map(
             ({ bgColor, radius, sx, fontSize, textColor, text }, i) => (

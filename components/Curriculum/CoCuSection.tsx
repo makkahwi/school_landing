@@ -54,7 +54,7 @@ const CoCorriculumSection = () => {
 
   return (
     <PageSection>
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={8}>
         <Text color={theme.palette.blue.dark} justify>
           {t("curriculumPage.coText")}
         </Text>
@@ -64,7 +64,7 @@ const CoCorriculumSection = () => {
         </Text>
       </PageSectionColumn>
 
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={4}>
         <Box sx={CoCurriculumGrid}>
           {squares.map(({ bgColor, radius, sx, img }, i) => (
             <Square bgcolor={bgColor} radius={radius} sx={sx} key={i}>

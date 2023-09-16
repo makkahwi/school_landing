@@ -80,7 +80,7 @@ const IslamicSection = () => {
 
   return (
     <PageSection>
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={8}>
         <Text color={theme.palette.blue.dark} variant="title" bold>
           {t("curriculumPage.islamicStudies")}
         </Text>
@@ -90,7 +90,7 @@ const IslamicSection = () => {
         </Text>
       </PageSectionColumn>
 
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={4}>
         <Box sx={IslamicStudiesGrid}>
           {squares?.map(
             ({ bgColor, radius, sx, fontSize, textColor, text }, i) => (

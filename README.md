@@ -7,6 +7,9 @@ Next.Js & Typescript based
 - Add News Post Details Page
 - Re-assaign Sections Theme Color of Header & Contents
 - Turn all view-click contents to static
+- Fix theme colros
+  - Remove fainted colors
+  - Assign auto color opposites
 - Link Form UI To Email / Firebase
 - Split Pages
   - About
@@ -29,7 +32,3 @@ Next.Js & Typescript based
 
 - Build Landing Header Slider
 - Fix News Slider (Img Cover Box)
-- Fix CoCU Sliders UI
-  - Responsiveness
-  - Full width
-  - Infinite loop
