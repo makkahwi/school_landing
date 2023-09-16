@@ -29,7 +29,7 @@ const ActivitiesSection = () => {
           textColor={theme.palette.basic.light}
           arrowColor={theme.palette.basic.light}
           desktop={{
-            width: 0.62,
+            width: 0.9,
             height: "15vw",
             arrowSize: "8vw",
             iconSize: 6,

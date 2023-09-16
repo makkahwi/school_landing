@@ -1,9 +1,8 @@
 import useWindowSize from "@/hooks/useWindowSize";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import { Box, Stack, styled, Typography } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import React from "react";
+import { Box, Stack, styled } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
 
 import Text from "./Text";
 
@@ -156,7 +155,7 @@ const ScrollableList = ({
       height={{ xs: mobile.height, md: desktop.height }}
     >
       <ArrowWrapper
-        width={{ xs: "18vw", md: "8vw" }}
+        width={{ xs: "9vw", md: "4vw" }}
         ref={arrowRef}
         onClick={() => handleButton("left")}
       >
@@ -189,38 +188,36 @@ const ScrollableList = ({
             },
           }}
         >
-          {items.map((item, index) => {
-            return (
-              <React.Fragment key={`${uniqueId} item number: ${index}`}>
-                <Stack
-                  direction="column"
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    width: {
-                      xs: `${mobile.iconSize.toString()}vw`,
-                      md: `${desktop.iconSize.toString()}vw`,
-                    },
-                    margin: {
-                      xs: `${mobile.marginSize.toString()}vw`,
-                      md: `${desktop.marginSize.toString()}vw`,
-                    },
-                  }}
-                >
-                  <Box>{item.icon}</Box>
+          {items.map((item, i) => (
+            <React.Fragment key={i}>
+              <Stack
+                direction="column"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: {
+                    xs: `${mobile.iconSize.toString()}vw`,
+                    md: `${desktop.iconSize.toString()}vw`,
+                  },
+                  margin: {
+                    xs: `${mobile.marginSize.toString()}vw`,
+                    md: `${desktop.marginSize.toString()}vw`,
+                  },
+                }}
+              >
+                <Box>{item.icon}</Box>
 
-                  <Text color={textColor} variant="subtitle" center>
-                    {t(item.text)}
-                  </Text>
-                </Stack>
-              </React.Fragment>
-            );
-          })}
+                <Text color={textColor} variant="cardTitle" center>
+                  {item.text}
+                </Text>
+              </Stack>
+            </React.Fragment>
+          ))}
         </MiddleContent>
       </Box>
 
       <ArrowWrapper
-        width={{ xs: "18vw", md: "8vw" }}
+        width={{ xs: "9vw", md: "4vw" }}
         ref={arrowRef}
         onClick={() => handleButton("right")}
       >

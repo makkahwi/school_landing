@@ -13,7 +13,7 @@ const Widgets = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const LinkComp = ({ label, link }) => (
+  const LinkComp = ({ label, link, ...rest }) => (
     <Typography
       fontSize={{
         xs: "2.5vw",
@@ -23,7 +23,11 @@ const Widgets = () => {
       color={theme.palette.basic.light}
       key={`item tagged: ${label}`}
     >
-      <Link href={link} style={{ color: "inherit", textDecoration: "none" }}>
+      <Link
+        href={link}
+        style={{ color: "inherit", textDecoration: "none" }}
+        {...rest}
+      >
         {t(label)}
       </Link>
     </Typography>
@@ -46,7 +50,7 @@ const Widgets = () => {
           />
 
           <Square
-            bgcolor={theme.palette.blue.light}
+            bgcolor={theme.palette.orange.main}
             radius={{
               mobile: ["7vw", "1.1.1.0"],
               desktop: ["2vw", "1.1.1.0"],
@@ -131,7 +135,7 @@ const Widgets = () => {
                 width: "auto",
               }}
               variant="square"
-              src="https://aqsa.edu.my/wp-content/uploads/2019/03/AIS-Light-Blue-En-Logo.png"
+              src="/images/AIS-Light-Blue-En-Logo.png"
               alt="logo 2"
             />
           </Square>

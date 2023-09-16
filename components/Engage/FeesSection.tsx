@@ -16,18 +16,19 @@ const FeesSection = () => {
   return (
     <PageSection bg="">
       <PageSectionColumn md={6}>
-        <Text color={theme.palette.orange.main} variant="title">
+        <Text color={theme.palette.orange.main} variant="title" center>
           {t("registrationPage.structure.title")}
         </Text>
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>
         <Avatar
-          src="global\quds-icon.png"
+          src="/images/Char-1-Color.png"
           variant="square"
           sx={{
             width: "30%",
             height: "auto",
+            margin: "auto auto",
           }}
         />
       </PageSectionColumn>
@@ -39,6 +40,7 @@ const FeesSection = () => {
           boxes={registrationPage.structureSection}
           bg=""
           cardBg={theme.palette.basic.light}
+          currency
         />
       </PageSectionColumn>
     </PageSection>

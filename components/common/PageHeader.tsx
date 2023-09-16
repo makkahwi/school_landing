@@ -12,8 +12,6 @@ const PageHeader = ({ bg = theme.palette.basic.main, title = "" }) => {
     switch (bg) {
       case theme.palette.blue.dark:
         return theme.palette.basic.light;
-      case theme.palette.blue.light:
-        return theme.palette.brown.main;
       case theme.palette.brown.main:
         return theme.palette.orange.main;
       case theme.palette.orange.main:
@@ -25,13 +23,13 @@ const PageHeader = ({ bg = theme.palette.basic.main, title = "" }) => {
 
   return (
     <PageSection bgcolor={bg}>
-      <PageSectionColumn justify="start" align="end" md={6}>
+      <PageSectionColumn justify="start" align="end" md={9}>
         <Text variant="title" color={secondColor()}>
           {title}
         </Text>
       </PageSectionColumn>
 
-      <PageSectionColumn justify="end" align="start" md={6}>
+      <PageSectionColumn justify="end" align="start" md={3}>
         <Box sx={UpperSquaresGrid}>
           <Square
             bgcolor={secondColor()}

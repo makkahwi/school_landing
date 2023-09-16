@@ -4,23 +4,30 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Fix .map Keys
-- Build .map Where Applies
-- Fix Section Paddings
-- Fix Photos & Assets
-- Build Landing Header Slider
-- Fix Landing News Section
-  - Align "News"
-  - Include Title Within Box
-- Fix CoCU Sliders UI
-- Update To Level 12
-- Update Fees
-- Add Facilities Gallery Section
-- Update Job Opps
-- Fix Contact Form UI
+- Add News Post Details Page
+- Re-assaign Sections Theme Color of Header & Contents
+- Turn all click-to-view contents to statics
+- Fix theme colros
+  - Assign auto color opposites
 - Link Form UI To Email / Firebase
-- Fix Scroll Up Upon Route Update
 - Split Pages
-- Fix Widget Links
-- Replace App Header with Sticky Top One
+  - About
+    - Why
+    - Facilites
+    - Staff
+  - Academic
+    - Curriculum
+    - CoCu
+    - Levels
+  - Engage
+    - Fees
+    - Jobs
+  - News
+  - Contact
+- Capitalize Localization Keys
 - Localize To Arabic
+
+### Mustafa To Do
+
+- Build Landing Header Slider
+- Fix News Slider (Img Cover Box)

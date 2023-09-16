@@ -25,9 +25,7 @@ export const LayoutBox = styled(Stack)(({ theme }) => ({
 // Main components ------------------------------------------
 
 export const MainContainer = styled("main")(() => ({
-  overflow: "scroll",
   overflowX: "hidden",
-  height: "100vh",
   width: "100%",
 }));
 

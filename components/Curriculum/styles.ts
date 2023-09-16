@@ -56,7 +56,7 @@ export const CoursesContainerStyles = {
 
 export const LanguagesGrid = {
   direction: "ltr",
-  width: { xs: "100%", md: "50%" },
+  width: "100%",
   display: "grid",
   justifyContent: "center",
   gridTemplateColumns: {
@@ -84,7 +84,7 @@ export const TitleStyles = {
 
 export const IslamicStudiesGrid = {
   direction: "ltr",
-  width: { xs: "100%", md: "50%" },
+  width: "100%",
   display: "grid",
   justifyContent: "center",
   gridTemplateColumns: {
@@ -109,12 +109,12 @@ export const ModernScienceContainer = {
 
 export const ModernScienceGrid = {
   direction: "ltr",
-  width: { xs: "100%", md: "50%" },
+  width: "100%",
   display: "grid",
   justifyContent: "center",
   gridTemplateColumns: {
-    xs: "repeat(25, 0.1vw)",
-    md: "repeat(25, 0.7vw)",
+    xs: "repeat(17, 0.1vw)",
+    md: "repeat(17, 0.7vw)",
   },
   gridTemplateRows: {
     xs: "repeat(12, 0.1vw)",
@@ -128,7 +128,7 @@ export const ModernScienceGrid = {
 export const CoCurriculumGrid = {
   direction: "ltr",
   position: "relative",
-  width: { xs: "100%", md: "50%" },
+  width: "100%",
   display: "grid",
   justifyContent: "center",
   gridTemplateColumns: {
@@ -143,7 +143,7 @@ export const CoCurriculumGrid = {
 };
 
 export const AvatarStyles = {
-  width: { xs: "50%", md: "28vw" },
+  width: "100%",
   height: "auto",
   position: "absolute",
   bottom: "0px",
@@ -155,7 +155,7 @@ export const AvatarStyles = {
 // Levels section
 
 export const WelcomeGrid = {
-  width: { xs: "100%", md: "50%" },
+  width: "100%",
   position: "relative",
   display: "grid",
   justifyContent: "center",

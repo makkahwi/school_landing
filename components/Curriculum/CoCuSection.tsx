@@ -13,57 +13,64 @@ const CoCorriculumSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const squares = [
+    {
+      bgColor: theme.palette.orange.main,
+      radius: {
+        mobile: ["6vw", "1.1.1.1"],
+        desktop: ["2vw", "1.1.1.1"],
+      },
+      sx: {
+        gridRow: "1 / 2",
+        gridColumn: "1 / 2",
+      },
+      img: "/images/contact_banner-2.jpg",
+    },
+    {
+      bgColor: theme.palette.orange.main,
+      radius: {
+        mobile: ["6vw", "1.1.1.1"],
+        desktop: ["2vw", "1.1.1.1"],
+      },
+      sx: {
+        gridRow: "2 / 3",
+        gridColumn: "1 / 2",
+      },
+      img: "/images/blog-6-featured.jpg",
+    },
+    {
+      bgColor: theme.palette.orange.main,
+      radius: {
+        mobile: ["6vw", "1.1.1.1"],
+        desktop: ["2vw", "1.1.1.1"],
+      },
+      sx: {
+        gridRow: "1 / 3",
+        gridColumn: "2 / 3",
+      },
+      img: "/images/blog-7-featured.jpg",
+    },
+  ];
+
   return (
     <PageSection>
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={8}>
         <Text color={theme.palette.blue.dark} justify>
           {t("curriculumPage.coText")}
         </Text>
 
-        <Text color={theme.palette.blue.dark} justify>
+        <Text color={theme.palette.blue.dark} justify doubleHeight>
           {t("curriculumPage.modernSciencesContent")}
         </Text>
       </PageSectionColumn>
 
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={4}>
         <Box sx={CoCurriculumGrid}>
-          {/* <Avatar sx={AvatarStyles} variant="square" /> */}
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["6vw", "1.1.1.1"],
-              desktop: ["2vw", "1.1.1.1"],
-            }}
-            sx={{
-              gridRow: "1 / 2",
-              gridColumn: "1 / 2",
-            }}
-          />
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["6vw", "1.1.1.1"],
-              desktop: ["2vw", "1.1.1.1"],
-            }}
-            sx={{
-              gridRow: "2 / 3",
-              gridColumn: "1 / 2",
-            }}
-          />
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["6vw", "1.1.1.1"],
-              desktop: ["2vw", "1.1.1.1"],
-            }}
-            sx={{
-              gridRow: "1 / 3",
-              gridColumn: "2 / 3",
-            }}
-          />
+          {squares.map(({ bgColor, radius, sx, img }, i) => (
+            <Square bgcolor={bgColor} radius={radius} sx={sx} key={i}>
+              <img src={img} width="auto" height="100%" />
+            </Square>
+          ))}
         </Box>
       </PageSectionColumn>
     </PageSection>

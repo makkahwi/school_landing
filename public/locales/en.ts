@@ -30,7 +30,7 @@ const en = {
         item3: "Reasonable & Affordable Charges",
       },
       discription:
-        "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018.The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment",
+        "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018. The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment.",
     },
     newsSection: {
       news: "News",
@@ -104,7 +104,7 @@ const en = {
 
       sections: {
         section1: {
-          title: "Kinder Garten",
+          title: "Kindergarten",
           subTitle:
             "Pre-school curriculum, prepare kids aging 5 - 6 years old to primary level.",
 
@@ -153,9 +153,9 @@ const en = {
           },
         },
         section4: {
-          title: "Level 7 - 11",
+          title: "Level 7 - 12",
           subTitle:
-            "These levels of study are for kids aging 12 - 16 years old, constrain on listed courses.",
+            "These levels of study are for kids aging 12 - 18 years old, constrain on listed courses.",
 
           listElemnts: {
             txt1: "Computer Skills",
@@ -182,6 +182,9 @@ const en = {
 
   registrationPage: {
     title: "REGISTRATION & FEES",
+    NoJobs:
+      "There are no available job vacancies at the time, you still may email us @",
+    Email: "principal@aqsa.edu.my",
 
     details: {
       requires: {
@@ -195,19 +198,14 @@ const en = {
               item3: "2 Photocopies of Student’s Birth Certificate",
               item4:
                 "2 Photocopies of Student’s Malaysian Visa / Residence Permit",
-            },
-          },
-          item2: {
-            title: "Photos",
-            items: {
-              item1: "4 Passport-size photos with white or Blue Background",
+              item5: "4 Passport-size photos with white or Blue Background",
             },
           },
           item3: {
             title: "Latest School Certificates",
             items: {
               item1:
-                "For no-first-grade students, a certificate of latest level finished need to be submitted",
+                "For 2nd grade & above students, a certificate of latest level finished need to be submitted",
               item2: "2 Photocopies",
             },
           },
@@ -216,7 +214,7 @@ const en = {
             items: {
               item1:
                 "There is an online-based form need to be filled before coming to school",
-              item2: "+ Manual Form (Download the Form or collect at school)",
+              item2: "Manual Form (Download the Form or collect at school)",
             },
           },
         },
@@ -247,46 +245,61 @@ const en = {
     },
 
     structure: {
+      currency: "RM",
       title: "Fees' Structure",
-
       item1: {
         title: "One-time Fees",
         item1: {
           title: "Registration Fees",
-          price: "450",
+          price: "300",
           description: "Non-refundable",
         },
         item2: {
-          title: "First Student Visa",
-          price: "1500",
-          description: "Include first 6 months visa",
+          title: "Placemen Test Fees",
+          price: "150",
+          description: "For 2nd Grade & Above",
         },
         item3: {
+          title: "First Student Visa",
+          price: "1600",
+          description: "Include first 6 months visa",
+        },
+        item4: {
           title: "Onetime Deposit (Refundable)",
           price: "500",
           description: "For KG & Levels 1 to 6",
         },
-        item4: {
+        item5: {
           title: "Onetime Deposit (Refundable)",
           price: "800",
-          description: "For Levels 7 to 11",
+          description: "For Levels 7 to 12",
         },
       },
       item2: {
         title: "Fees per Year",
         item1: {
           title: "Books' Fees",
-          price: "0",
-          description: "Free of Charge",
+          price: "300",
+          description: "For KG & Levels 1 to 6",
         },
         item2: {
-          title: "Uniform Fees",
-          price: "0",
-          description: "Free of Charge",
+          title: "Books' Fees",
+          price: "400",
+          description: "For Levels 7 to 9",
         },
         item3: {
+          title: "Books' Fees",
+          price: "450",
+          description: "For Levels 10 to 12",
+        },
+        item4: {
+          title: "Uniform Fees",
+          price: "200",
+          description: "All Levels",
+        },
+        item5: {
           title: "Visa Renewal Fees",
-          price: "300",
+          price: "600",
           description: "Yearly",
         },
       },
@@ -294,7 +307,7 @@ const en = {
         title: "School-Bus Fees",
         item1: {
           title: "Kuala Lumpur Area",
-          price: "150",
+          price: "200 - 300",
           description: "per month",
         },
       },
@@ -302,62 +315,67 @@ const en = {
         title: "Tuition Fees",
         item1: {
           title: "KG",
-          price: "1250",
+          price: "1750",
           description: "per semester",
         },
         item2: {
           title: "Level 1",
-          price: "2000",
+          price: "2700",
           description: "per semester",
         },
         item3: {
           title: "Level 2",
-          price: "2000",
+          price: "2700",
           description: "per semester",
         },
         item4: {
           title: "Level 3",
-          price: "2250",
+          price: "3000",
           description: "per semester",
         },
         item5: {
           title: "Level 4",
-          price: "2250",
+          price: "3000",
           description: "per semester",
         },
         item6: {
           title: "Level 5",
-          price: "2500",
+          price: "3000",
           description: "per semester",
         },
         item7: {
           title: "Level 6",
-          price: "2500",
+          price: "3000",
           description: "per semester",
         },
         item8: {
           title: "Level 7",
-          price: "2750",
+          price: "3500",
           description: "per semester",
         },
         item9: {
           title: "Level 8",
-          price: "3000",
+          price: "3500",
           description: "per semester",
         },
         item10: {
           title: "Level 9",
-          price: "3250",
+          price: "3750",
           description: "per semester",
         },
         item11: {
           title: "Level 10",
-          price: "3500",
+          price: "3750",
           description: "per semester",
         },
         item12: {
           title: "Level 11",
-          price: "3750",
+          price: "4000",
+          description: "per semester",
+        },
+        item13: {
+          title: "Level 12",
+          price: "4500",
           description: "per semester",
         },
       },
@@ -371,7 +389,7 @@ const en = {
         item1: {
           title: "Any or Both Parents are University Students",
           price: "10%",
-          description: "Discount (applicable for tuition fees only)",
+          description: "applicable for tuition fees only",
         },
       },
       item2: {
@@ -380,19 +398,19 @@ const en = {
           title: "First Sibling",
           price: "5%",
           description:
-            "Discount (applicable for tuition fees only for the lowest-level sibling)",
+            "applicable for tuition fees only for the lowest-level sibling",
         },
         item2: {
           title: "Second Sibling",
           price: "10%",
           description:
-            "Discount (applicable for tuition fees only for the second lowest-level sibling)",
+            "applicable for tuition fees only for the second lowest-level sibling",
         },
         item3: {
           title: "Third & Above Sibling",
           price: "15%",
           description:
-            "Discount (applicable for tuition fees only for the third / forth … lowest-level sibling)",
+            "applicable for tuition fees only for the third / forth … lowest-level sibling",
         },
       },
       item3: {
@@ -400,7 +418,7 @@ const en = {
         item1: {
           title: "If parents paid for a whole year",
           price: "5%",
-          description: "Discount (applicable for tuition fees only)",
+          description: "applicable for tuition fees only",
         },
       },
     },
@@ -412,9 +430,8 @@ const en = {
       jobDescription: "Job Describtion",
       qualifications: "Qualifications",
       documents: "Documents to Apply",
-      emailText: "Start communicating to apply for job(s) listed through",
       email: "Email: Principal@aqsa.edu.my",
-      apply: "Apply",
+      apply: "You may apply by emailing resume to Principal@aqsa.edu.my",
 
       item1: {
         title: "English Teacher",
@@ -633,7 +650,7 @@ const en = {
     },
     contact2: {
       title: "Email Questions",
-      description1: "contact@aqsa.edu.my",
+      description1: "Principal@aqsa.edu.my",
     },
     contact3: {
       title: "Meet on Site",

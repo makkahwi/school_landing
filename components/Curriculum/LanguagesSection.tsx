@@ -14,93 +14,110 @@ const LanguagesSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const squares = [
+    {
+      bgColor: theme.palette.brown.main,
+      radius: {
+        mobile: ["5.5vw", "1.1.0.1"],
+        desktop: ["3vw", "1.1.0.1"],
+      },
+      sx: {
+        gridRow: "1 / 5",
+        gridColumn: "2 / 6",
+      },
+      fontSize: {
+        xs: "2.5vw",
+        md: "1vw",
+      },
+      textColor: theme.palette.orange.main,
+      text: "Selamat Datang",
+      img: "/images/Languages-M.png",
+    },
+    {
+      bgColor: theme.palette.blue.dark,
+      radius: {
+        mobile: ["6vw", "1.0.1.1"],
+        desktop: ["3vw", "1.0.1.1"],
+      },
+      sx: {
+        gridRow: "5 / 10",
+        gridColumn: "1 / 6",
+      },
+      fontSize: {
+        xs: "3.75vw",
+        md: "1.5vw",
+      },
+      textColor: theme.palette.basic.light,
+      text: "Welcome",
+      img: "/images/Languages-E.png",
+    },
+    {
+      bgColor: theme.palette.brown.main,
+      radius: {
+        mobile: ["2vw", "1.0.1.1"],
+        desktop: ["1.5vw", "1.0.1.1"],
+      },
+      sx: {
+        gridRow: "10 / 12",
+        gridColumn: "4 / 6",
+      },
+    },
+    {
+      bgColor: theme.palette.orange.main,
+      radius: {
+        mobile: ["7vw", "0.1.1.1"],
+        desktop: ["4vw", "0.1.1.1"],
+      },
+      sx: {
+        gridRow: "5 / 12",
+        gridColumn: "6 / 13",
+      },
+      fontSize: {
+        xs: "5vw",
+        md: "2vw",
+      },
+      textColor: theme.palette.brown.main,
+      text: "أهلاً وسهلاً",
+      img: "/images/Languages-A.png",
+    },
+  ];
+
+  const languages = [
+    {
+      title: t("curriculumPage.languagesContents.arabic"),
+      content: t("curriculumPage.languagesContents.arabicContent"),
+    },
+    {
+      title: t("curriculumPage.languagesContents.english"),
+      content: t("curriculumPage.languagesContents.englishContent"),
+    },
+    {
+      title: t("curriculumPage.languagesContents.malay"),
+      content: t("curriculumPage.languagesContents.malayContent"),
+    },
+  ];
+
   return (
     <PageSection bg="">
       <PageSectionColumn md={6}>
         <Box sx={LanguagesGrid}>
-          <Square
-            bgcolor={theme.palette.brown.main}
-            radius={{
-              mobile: ["5.5vw", "1.1.0.1"],
-              desktop: ["3vw", "1.1.0.1"],
-            }}
-            sx={{
-              gridRow: "1 / 5",
-              gridColumn: "2 / 6",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "2.5vw",
-                md: "1vw",
-              }}
-              fontWeight="bold"
-              color={theme.palette.orange.main}
-              textAlign="center"
-            >
-              Selamat Datang
-            </Typography>
-          </Square>
-
-          <Square
-            bgcolor={theme.palette.blue.dark}
-            radius={{
-              mobile: ["6vw", "1.0.1.1"],
-              desktop: ["3vw", "1.0.1.1"],
-            }}
-            sx={{
-              gridRow: "5 / 10",
-              gridColumn: "1 / 6",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "3.75vw",
-                md: "1.5vw",
-              }}
-              fontWeight="bold"
-              color="white"
-              textAlign="center"
-            >
-              Welcome
-            </Typography>
-          </Square>
-
-          <Square
-            bgcolor={theme.palette.brown.main}
-            radius={{
-              mobile: ["2vw", "1.0.1.1"],
-              desktop: ["1.5vw", "1.0.1.1"],
-            }}
-            sx={{
-              gridRow: "10 / 12",
-              gridColumn: "4 / 6",
-            }}
-          />
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["7vw", "0.1.1.1"],
-              desktop: ["4vw", "0.1.1.1"],
-            }}
-            sx={{
-              gridRow: "5 / 12",
-              gridColumn: "6 / 13",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "5vw",
-                md: "2vw",
-              }}
-              fontWeight="bold"
-              color={theme.palette.brown.main}
-              textAlign="center"
-            >
-              أهلاً وسهلاً
-            </Typography>
-          </Square>
+          {squares?.map(
+            ({ bgColor, radius, sx, fontSize, textColor, text, img }, i) => (
+              <Square bgcolor={bgColor} radius={radius} sx={sx} key={i}>
+                {text && (
+                  <Typography
+                    fontSize={fontSize}
+                    fontWeight="bold"
+                    color={textColor}
+                    textAlign="center"
+                  >
+                    {/* <img src={img} width="100%" /> */}
+                    {text}
+                  </Typography>
+                )}
+              </Square>
+            )
+          )}
 
           <Typography sx={TitleStyles}>
             {t("curriculumPage.languages")}
@@ -109,13 +126,15 @@ const LanguagesSection = () => {
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>
-        {curriculumPage.languages.map((item, i) => (
+        {languages.map((item, i) => (
           <Stack pb={5} key={i}>
-            <Text variant="subtitle" color={theme.palette.blue.dark}>
-              {t(item.title)}
+            <Text variant="subtitle" color={theme.palette.blue.dark} bold>
+              {item.title}
             </Text>
 
-            <Text justify>{t(item.content)}</Text>
+            <Text justify doubleHeight>
+              {item.content}
+            </Text>
           </Stack>
         ))}
       </PageSectionColumn>

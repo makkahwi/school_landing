@@ -10,6 +10,12 @@ const AISBeginning = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const paragraphs = [
+    t(`aboutPage.foundingStory.paragraph1`),
+    t(`aboutPage.foundingStory.paragraph2`),
+    t(`aboutPage.foundingStory.paragraph3`),
+  ];
+
   return (
     <PageSection bg="">
       <PageSectionColumn>
@@ -18,10 +24,10 @@ const AISBeginning = () => {
         </Text>
       </PageSectionColumn>
 
-      {["1", "2", "3"].map((_, i) => (
+      {paragraphs.map((text, i) => (
         <PageSectionColumn key={i}>
-          <Text color={theme.palette.orange.main} justify>
-            {t(`aboutPage.foundingStory.paragraph${i + 1}`)}
+          <Text color={theme.palette.basic.dark} justify doubleHeight bold>
+            {text}
           </Text>
         </PageSectionColumn>
       ))}

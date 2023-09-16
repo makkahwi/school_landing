@@ -1,6 +1,5 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { aboutPage } from "@/utils/constants";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
@@ -14,6 +13,27 @@ const AdvantagesSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const whyAIScards = [
+    {
+      src: "/images/Islamic.png",
+      alt: "islamic-icon",
+      text: t("aboutPage.whyCards.item1.text"),
+      longText: t("aboutPage.whyCards.item1.longText"),
+    },
+    {
+      src: "/images/Cambridge.png",
+      alt: "cambridge-icon",
+      text: t("aboutPage.whyCards.item2.text"),
+      longText: t("aboutPage.whyCards.item2.longText"),
+    },
+    {
+      src: "/images/Cheap.png",
+      alt: "cheap-zone-icon",
+      text: t("aboutPage.whyCards.item3.text"),
+      longText: t("aboutPage.whyCards.item3.longText"),
+    },
+  ];
+
   return (
     <PageSection bg={theme.palette.basic.light}>
       <PageSectionColumn>
@@ -22,7 +42,7 @@ const AdvantagesSection = () => {
         </Text>
       </PageSectionColumn>
 
-      {aboutPage.whyAIScards.map((item, i) => (
+      {whyAIScards.map((item, i) => (
         <Fragment key={i}>
           <PageSectionColumn md={4}>
             <CardComp bg={theme.palette.orange.main}>
@@ -39,6 +59,7 @@ const AdvantagesSection = () => {
                     xs: "35vw",
                     md: "auto",
                   },
+                  margin: "auto auto",
                   maxWidth: { md: "12vw" },
                 }}
               />
@@ -47,15 +68,17 @@ const AdvantagesSection = () => {
                 color={theme.palette.basic.light}
                 variant="cardtitle"
                 center
+                bold
+                mt={4}
               >
-                {t(item.text)}
+                {item.text}
               </Text>
             </CardComp>
           </PageSectionColumn>
 
           <PageSectionColumn md={8}>
-            <Text color={theme.palette.orange.main} justify>
-              {t(item.longText)}
+            <Text color={theme.palette.orange.main} justify doubleHeight bold>
+              {item.longText}
             </Text>
           </PageSectionColumn>
         </Fragment>

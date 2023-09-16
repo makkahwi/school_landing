@@ -13,140 +13,125 @@ const ModernSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const squares = [
+    {
+      bgColor: theme.palette.brown.main,
+      radius: {
+        mobile: ["2vw", "1.1.0.1"],
+        desktop: ["1.5vw", "1.1.0.1"],
+      },
+      sx: {
+        gridRow: "1 / 5",
+        gridColumn: "3 / 7",
+      },
+      fontSize: {
+        xs: "2vw",
+        md: "1vw",
+      },
+      textColor: theme.palette.basic.light,
+      text: "Math",
+    },
+    {
+      bgColor: theme.palette.blue.dark,
+      radius: {
+        mobile: ["5vw", "1.0.1.1"],
+        desktop: ["3vw", "1.0.1.1"],
+      },
+      sx: {
+        gridRow: "5 / 11",
+        gridColumn: "1 / 7",
+      },
+      fontSize: {
+        xs: "4.5vw",
+        md: "1.75vw",
+      },
+      textColor: theme.palette.basic.light,
+      text: "Science",
+    },
+    {
+      bgColor: theme.palette.basic.light,
+      radius: {
+        mobile: ["7vw", "0.1.1.1"],
+        desktop: ["4vw", "0.1.1.1"],
+      },
+      sx: {
+        gridRow: "5 / 16",
+        gridColumn: "7 / 17",
+      },
+      fontSize: {
+        xs: "5vw",
+        md: "2vw",
+      },
+      textColor: theme.palette.brown.main,
+      text: "Computer Science",
+    },
+    {
+      bgColor: theme.palette.blue.dark,
+      radius: {
+        mobile: ["2vw", "1.1.1.0"],
+        desktop: ["1.5vw", "1.1.1.0"],
+      },
+      sx: {
+        gridRow: "2 / 5",
+        gridColumn: "7 / 10",
+      },
+      fontSize: {
+        xs: "2vw",
+        md: "1vw",
+      },
+      textColor: theme.palette.basic.light,
+      text: "Sports",
+    },
+    {
+      bgColor: theme.palette.brown.main,
+      radius: {
+        mobile: ["1vw", "1.0.1.1"],
+        desktop: ["1vw", "1.0.1.1"],
+      },
+      sx: {
+        gridRow: "11 / 15",
+        gridColumn: "4 / 7",
+      },
+      fontSize: {
+        xs: "2vw",
+        md: "1vw",
+      },
+      textColor: theme.palette.basic.light,
+      text: "Arts",
+    },
+  ];
+
   return (
     <PageSection bg={theme.palette.orange.main}>
-      <PageSectionColumn md={6}>
-        <Text color={theme.palette.basic.light} variant="title">
+      <PageSectionColumn md={8}>
+        <Text color={theme.palette.basic.light} variant="title" bold>
           {t("curriculumPage.modernSciences")}
         </Text>
       </PageSectionColumn>
 
-      <PageSectionColumn md={6}>
+      <PageSectionColumn md={4}>
         <Box sx={ModernScienceGrid}>
-          <Square
-            bgcolor={theme.palette.brown.main}
-            radius={{
-              mobile: ["2vw", "1.1.0.1"],
-              desktop: ["1.5vw", "1.1.0.1"],
-            }}
-            sx={{
-              gridRow: "1 / 5",
-              gridColumn: "1 / 5",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "2vw",
-                md: "1vw",
-              }}
-              fontWeight="bold"
-              color={theme.palette.basic.light}
-              textAlign="center"
-            >
-              Math
-            </Typography>
-          </Square>
-
-          <Square
-            bgcolor={theme.palette.blue.dark}
-            radius={{
-              mobile: ["5vw", "1.0.1.1"],
-              desktop: ["3vw", "1.0.1.1"],
-            }}
-            sx={{
-              gridRow: "1 / 7",
-              gridColumn: "5 / 11",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "4.5vw",
-                md: "1.75vw",
-              }}
-              fontWeight="bold"
-              color={theme.palette.basic.light}
-              textAlign="center"
-            >
-              Science
-            </Typography>
-          </Square>
-
-          <Square
-            bgcolor={theme.palette.basic.light}
-            radius={{
-              mobile: ["7vw", "0.1.1.1"],
-              desktop: ["4vw", "0.1.1.1"],
-            }}
-            sx={{
-              gridRow: "1 / 11",
-              gridColumn: "11 / 21",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "5vw",
-                md: "2vw",
-              }}
-              fontWeight="bold"
-              color={theme.palette.brown.main}
-              textAlign="center"
-            >
-              Computer Science
-            </Typography>
-          </Square>
-
-          <Square
-            bgcolor={theme.palette.blue.dark}
-            radius={{
-              mobile: ["2vw", "1.1.1.0"],
-              desktop: ["1.5vw", "1.1.1.0"],
-            }}
-            sx={{
-              gridRow: "1 / 4",
-              gridColumn: "21 / 24",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "2vw",
-                md: "1vw",
-              }}
-              fontWeight="bold"
-              color={theme.palette.basic.light}
-              textAlign="center"
-            >
-              Sports
-            </Typography>
-          </Square>
-
-          <Square
-            bgcolor={theme.palette.brown.main}
-            radius={{
-              mobile: ["1vw", "0.1.1.1"],
-              desktop: ["1vw", "0.1.1.1"],
-            }}
-            sx={{
-              gridRow: "4 / 7",
-              gridColumn: "21 / 24",
-            }}
-          >
-            <Typography
-              fontSize={{
-                xs: "2vw",
-                md: "1vw",
-              }}
-              fontWeight="bold"
-              color={theme.palette.basic.light}
-              textAlign="center"
-            >
-              Arts
-            </Typography>
-          </Square>
+          {squares?.map(
+            ({ bgColor, radius, sx, fontSize, textColor, text }, i) => (
+              <Square bgcolor={bgColor} radius={radius} sx={sx} key={i}>
+                {text && (
+                  <Typography
+                    fontSize={fontSize}
+                    fontWeight="bold"
+                    color={textColor}
+                    textAlign="center"
+                  >
+                    {text}
+                  </Typography>
+                )}
+              </Square>
+            )
+          )}
         </Box>
       </PageSectionColumn>
 
       <PageSectionColumn>
-        <Text color={theme.palette.basic.light} justify>
+        <Text color={theme.palette.basic.light} justify doubleHeight bold>
           {t("curriculumPage.modernSciencesContent")}
         </Text>
       </PageSectionColumn>

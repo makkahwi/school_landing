@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@mui/material";
 
-const CardComp = ({ bg = "", children }) => {
+const CardComp = ({ bg = "", children, ...rest }) => {
   return (
     <Card
       style={{
