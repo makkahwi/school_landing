@@ -35,7 +35,7 @@ interface navbarItemsProps {
 export const departmentColors = {
   academic: theme.palette.blue.dark,
   engage: theme.palette.orange.main,
-  about: theme.palette.blue.light,
+  about: theme.palette.blue.dark,
   community: theme.palette.basic.light,
 };
 
@@ -145,82 +145,6 @@ export const navbarPage = {
  *  landing page constants
  */
 export const landingPage = {
-  welcomeSquares: [
-    {
-      radiusMobile: ["1.5vw", "1.1.1.0"],
-      radiusDesktop: ["0.5vw", "1.1.1.0"],
-      bgcolor: theme.palette.orange.main,
-      rows: "10 / 12",
-      cols: "20 /22",
-    },
-    {
-      radiusMobile: ["3vw", "1.1.1.0"],
-      radiusDesktop: ["1.5vw", "1.1.1.0"],
-      bgcolor: theme.palette.brown.main,
-      rows: "12 / 16",
-      cols: "20 / 24",
-    },
-    {
-      radiusMobile: ["2.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.2vw", "1.1.0.1"],
-      bgcolor: theme.palette.basic.main,
-      rows: "16 / 19",
-      cols: "9 / 12",
-    },
-    {
-      radiusMobile: ["6vw", "1.0.1.1"],
-      radiusDesktop: ["3vw", "1.0.1.1"],
-      bgcolor: theme.palette.orange.main,
-      rows: "16 / 24",
-      cols: "12 / 20",
-    },
-    {
-      radiusMobile: ["5vw", "0.1.1.1"],
-      radiusDesktop: ["2.2vw", "0.1.1.1"],
-      bgcolor: theme.palette.blue.dark,
-      rows: "16 / 22",
-      cols: "20 / 26",
-    },
-    {
-      radiusMobile: ["1.5vw", "0.1.1.1"],
-      radiusDesktop: ["0.5vw", "0.1.1.1"],
-      bgcolor: theme.palette.brown.main,
-      rows: "22 / 24",
-      cols: "20 / 22",
-    },
-  ],
-
-  newsSquares: [
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["0.8vw", "1.1.0.1"],
-      bgcolor: theme.palette.blue.dark,
-      rows: "3 / 5",
-      cols: "8 / 10",
-    },
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.5vw", "1.1.0.1"],
-      bgcolor: theme.palette.basic.main,
-      rows: "1 / 5",
-      cols: "10 / 14",
-    },
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.2vw", "1.1.1.0"],
-      bgcolor: theme.palette.orange.main,
-      rows: "2 / 5",
-      cols: "14 / 17",
-    },
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.2vw", "1.0.1.1"],
-      bgcolor: theme.palette.brown.main,
-      rows: "5 / 8",
-      cols: "11 / 14",
-    },
-  ],
-
   news: [
     {
       title: "communityPage.latestNews.item1.title",

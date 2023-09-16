@@ -12,8 +12,6 @@ const PageHeader = ({ bg = theme.palette.basic.main, title = "" }) => {
     switch (bg) {
       case theme.palette.blue.dark:
         return theme.palette.basic.light;
-      case theme.palette.blue.light:
-        return theme.palette.brown.main;
       case theme.palette.brown.main:
         return theme.palette.orange.main;
       case theme.palette.orange.main:

@@ -50,7 +50,7 @@ const Widgets = () => {
           />
 
           <Square
-            bgcolor={theme.palette.blue.light}
+            bgcolor={theme.palette.orange.main}
             radius={{
               mobile: ["7vw", "1.1.1.0"],
               desktop: ["2vw", "1.1.1.0"],
