@@ -6,9 +6,8 @@ Next.Js & Typescript based
 
 - Add News Post Details Page
 - Re-assaign Sections Theme Color of Header & Contents
-- Turn all view-click contents to static
+- Turn all click-to-view contents to statics
 - Fix theme colros
-  - Remove fainted colors
   - Assign auto color opposites
 - Link Form UI To Email / Firebase
 - Split Pages
