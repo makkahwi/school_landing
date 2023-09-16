@@ -7,6 +7,7 @@ import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import CardComp from "../common/Card";
 import Text from "../common/Text";
+import Link from "next/link";
 
 const JobsSection = () => {
   const router = useRouter();
@@ -21,7 +22,7 @@ const JobsSection = () => {
       <Text>
         {items.map((bullet, i) => (
           <span key={i} style={{ lineHeight: 2 }}>
-            {t(bullet)}
+            {bullet}
             <br />
           </span>
         ))}
@@ -50,108 +51,73 @@ const JobsSection = () => {
         items={item.documents}
       />
 
-      <Button
-        size="large"
-        sx={{
-          fontWeight: "bold",
-          width: "50%",
-          bgcolor: theme.palette.blue.dark,
-          color: theme.palette.basic.light,
-          borderRadius: "1vw",
-          "&:hover": {
-            color: theme.palette.blue.dark,
-            bgcolor: theme.palette.basic.light,
-          },
-        }}
-      >
-        {t("registrationPage.jobs.apply")}
-      </Button>
+      <Link target="_blank" href="mailto:Principal@aqsa.edu.my">
+        <Button
+          size="large"
+          sx={{
+            fontWeight: "bold",
+            width: "50%",
+            bgcolor: theme.palette.blue.dark,
+            color: theme.palette.basic.light,
+            borderRadius: "1vw",
+            "&:hover": {
+              color: theme.palette.blue.dark,
+              bgcolor: theme.palette.basic.light,
+            },
+          }}
+        >
+          {t("registrationPage.jobs.apply")}
+        </Button>
+      </Link>
     </CardComp>
   );
 
   const jobsSection = [
-    {
-      title: t("registrationPage.jobs.item1.title"),
-      jobDescription: [
-        t("registrationPage.jobs.item1.jobDescription.item1"),
-        t("registrationPage.jobs.item1.jobDescription.item2"),
-      ],
-      qualifications: [
-        t("registrationPage.jobs.item1.qualifications.item1"),
-        t("registrationPage.jobs.item1.qualifications.item2"),
-        t("registrationPage.jobs.item1.qualifications.item3"),
-        t("registrationPage.jobs.item1.qualifications.item4"),
-        t("registrationPage.jobs.item1.qualifications.item5"),
-        t("registrationPage.jobs.item1.qualifications.item6"),
-        t("registrationPage.jobs.item1.qualifications.item7"),
-        t("registrationPage.jobs.item1.qualifications.item8"),
-      ],
-      documents: [
-        t("registrationPage.jobs.item1.documents.item1"),
-        t("registrationPage.jobs.item1.documents.item2"),
-        t("registrationPage.jobs.item1.documents.item3"),
-        t("registrationPage.jobs.item1.documents.item4"),
-        t("registrationPage.jobs.item1.documents.item5"),
-      ],
-    },
-    {
-      title: t("registrationPage.jobs.item2.title"),
-      jobDescription: [
-        t("registrationPage.jobs.item2.jobDescription.item1"),
-        t("registrationPage.jobs.item2.jobDescription.item2"),
-      ],
-      qualifications: [
-        t("registrationPage.jobs.item2.qualifications.item1"),
-        t("registrationPage.jobs.item2.qualifications.item2"),
-        t("registrationPage.jobs.item2.qualifications.item3"),
-        t("registrationPage.jobs.item2.qualifications.item4"),
-        t("registrationPage.jobs.item2.qualifications.item5"),
-        t("registrationPage.jobs.item2.qualifications.item6"),
-        t("registrationPage.jobs.item2.qualifications.item7"),
-        t("registrationPage.jobs.item2.qualifications.item8"),
-        t("registrationPage.jobs.item2.qualifications.item9"),
-      ],
-      documents: [
-        t("registrationPage.jobs.item2.documents.item1"),
-        t("registrationPage.jobs.item2.documents.item2"),
-        t("registrationPage.jobs.item2.documents.item3"),
-        t("registrationPage.jobs.item2.documents.item4"),
-        t("registrationPage.jobs.item2.documents.item5"),
-      ],
-    },
-    {
-      title: t("registrationPage.jobs.item3.title"),
-      jobDescription: [
-        t("registrationPage.jobs.item3.jobDescription.item1"),
-        t("registrationPage.jobs.item3.jobDescription.item2"),
-      ],
-      qualifications: [
-        t("registrationPage.jobs.item3.qualifications.item1"),
-        t("registrationPage.jobs.item3.qualifications.item2"),
-        t("registrationPage.jobs.item3.qualifications.item3"),
-        t("registrationPage.jobs.item3.qualifications.item4"),
-        t("registrationPage.jobs.item3.qualifications.item5"),
-        t("registrationPage.jobs.item3.qualifications.item6"),
-        t("registrationPage.jobs.item3.qualifications.item7"),
-        t("registrationPage.jobs.item3.qualifications.item8"),
-      ],
-      documents: [
-        t("registrationPage.jobs.item3.documents.item1"),
-        t("registrationPage.jobs.item3.documents.item2"),
-        t("registrationPage.jobs.item3.documents.item3"),
-        t("registrationPage.jobs.item3.documents.item4"),
-        t("registrationPage.jobs.item3.documents.item5"),
-      ],
-    },
+    // {
+    //   title: t("registrationPage.jobs.item1.title"),
+    //   jobDescription: [
+    //     t("registrationPage.jobs.item1.jobDescription.item1"),
+    //     t("registrationPage.jobs.item1.jobDescription.item2"),
+    //   ],
+    //   qualifications: [
+    //     t("registrationPage.jobs.item1.qualifications.item1"),
+    //     t("registrationPage.jobs.item1.qualifications.item2"),
+    //     t("registrationPage.jobs.item1.qualifications.item3"),
+    //     t("registrationPage.jobs.item1.qualifications.item4"),
+    //     t("registrationPage.jobs.item1.qualifications.item5"),
+    //     t("registrationPage.jobs.item1.qualifications.item6"),
+    //     t("registrationPage.jobs.item1.qualifications.item7"),
+    //     t("registrationPage.jobs.item1.qualifications.item8"),
+    //   ],
+    //   documents: [
+    //     t("registrationPage.jobs.item1.documents.item1"),
+    //     t("registrationPage.jobs.item1.documents.item2"),
+    //     t("registrationPage.jobs.item1.documents.item3"),
+    //     t("registrationPage.jobs.item1.documents.item4"),
+    //     t("registrationPage.jobs.item1.documents.item5"),
+    //   ],
+    // },
   ];
 
   return (
     <PageSection bg="">
-      {jobsSection.map((item, i) => (
-        <PageSectionColumn md={6} key={i}>
-          <JobSection item={item} />
+      {jobsSection.length ? (
+        jobsSection.map((item, i) => (
+          <PageSectionColumn md={6} key={i}>
+            <JobSection item={item} />
+          </PageSectionColumn>
+        ))
+      ) : (
+        <PageSectionColumn md={12}>
+          <Text center variant="cardtitle">
+            {t("registrationPage.NoJobs")}
+          </Text>
+
+          <Text center variant="subtitle">
+            {t("registrationPage.Email")}
+          </Text>
         </PageSectionColumn>
-      ))}
+      )}
     </PageSection>
   );
 };

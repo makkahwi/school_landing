@@ -182,6 +182,9 @@ const en = {
 
   registrationPage: {
     title: "REGISTRATION & FEES",
+    NoJobs:
+      "There are no available job vacancies at the time, you still may email us @",
+    Email: "principal@aqsa.edu.my",
 
     details: {
       requires: {
@@ -432,7 +435,7 @@ const en = {
       qualifications: "Qualifications",
       documents: "Documents to Apply",
       email: "Email: Principal@aqsa.edu.my",
-      apply: "Apply",
+      apply: "You may apply by emailing resume to Principal@aqsa.edu.my",
 
       item1: {
         title: "English Teacher",
