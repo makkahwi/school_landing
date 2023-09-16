@@ -111,8 +111,8 @@ const LanguagesSection = () => {
                     color={textColor}
                     textAlign="center"
                   >
-                    <img src={img} width="100%" />
-                    {/* {text} */}
+                    {/* <img src={img} width="100%" /> */}
+                    {text}
                   </Typography>
                 )}
               </Square>

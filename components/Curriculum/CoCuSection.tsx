@@ -24,6 +24,7 @@ const CoCorriculumSection = () => {
         gridRow: "1 / 2",
         gridColumn: "1 / 2",
       },
+      img: "/images/contact_banner-2.jpg",
     },
     {
       bgColor: theme.palette.orange.main,
@@ -35,6 +36,7 @@ const CoCorriculumSection = () => {
         gridRow: "2 / 3",
         gridColumn: "1 / 2",
       },
+      img: "/images/blog-6-featured.jpg",
     },
     {
       bgColor: theme.palette.orange.main,
@@ -46,6 +48,7 @@ const CoCorriculumSection = () => {
         gridRow: "1 / 3",
         gridColumn: "2 / 3",
       },
+      img: "/images/blog-7-featured.jpg",
     },
   ];
 
@@ -63,8 +66,10 @@ const CoCorriculumSection = () => {
 
       <PageSectionColumn md={6}>
         <Box sx={CoCurriculumGrid}>
-          {squares.map(({ bgColor, radius, sx }, i) => (
-            <Square bgcolor={bgColor} radius={radius} sx={sx} key={i} />
+          {squares.map(({ bgColor, radius, sx, img }, i) => (
+            <Square bgcolor={bgColor} radius={radius} sx={sx} key={i}>
+              <img src={img} width="auto" height="100%" />
+            </Square>
           ))}
         </Box>
       </PageSectionColumn>
