@@ -59,6 +59,7 @@ const AdvantagesSection = () => {
                     xs: "35vw",
                     md: "auto",
                   },
+                  margin: "auto auto",
                   maxWidth: { md: "12vw" },
                 }}
               />
@@ -67,6 +68,8 @@ const AdvantagesSection = () => {
                 color={theme.palette.basic.light}
                 variant="cardtitle"
                 center
+                bold
+                mt={4}
               >
                 {item.text}
               </Text>
@@ -74,7 +77,7 @@ const AdvantagesSection = () => {
           </PageSectionColumn>
 
           <PageSectionColumn md={8}>
-            <Text color={theme.palette.orange.main} justify>
+            <Text color={theme.palette.orange.main} justify doubleHeight bold>
               {item.longText}
             </Text>
           </PageSectionColumn>

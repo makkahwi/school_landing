@@ -325,7 +325,7 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section1.title",
       subTitle: "curriculumPage.levels.sections.section1.subTitle",
-      image: "",
+      image: "/images/Char-3-Color.png",
       bgColor: "",
       titleColor: theme.palette.orange.main,
       subTitleColor: theme.palette.brown.dark,
@@ -373,7 +373,7 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section2.title",
       subTitle: "curriculumPage.levels.sections.section2.subTitle",
-      image: "",
+      image: "/images/Char-1-White.png",
 
       bgColor: theme.palette.blue.dark,
       titleColor: theme.palette.orange.main,
@@ -436,7 +436,7 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section3.title",
       subTitle: "curriculumPage.levels.sections.section3.subTitle",
-      image: "",
+      image: "/images/Char-1-Color.png",
 
       bgColor: theme.palette.basic.light,
       titleColor: theme.palette.blue.dark,
@@ -523,7 +523,7 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section4.title",
       subTitle: "curriculumPage.levels.sections.section4.subTitle",
-      image: "",
+      image: "/images/Char-2-Color.png",
 
       bgColor: theme.palette.orange.main,
       titleColor: theme.palette.basic.light,
@@ -776,16 +776,6 @@ export const registrationPage = {
           title: `registrationPage.structure.item4.item13.title`,
           price: `registrationPage.structure.item4.item13.price`,
           description: `registrationPage.structure.item4.item13.description`,
-        },
-        {
-          title: `registrationPage.structure.item4.item14.title`,
-          price: `registrationPage.structure.item4.item14.price`,
-          description: `registrationPage.structure.item4.item14.description`,
-        },
-        {
-          title: `registrationPage.structure.item4.item15.title`,
-          price: `registrationPage.structure.item4.item15.price`,
-          description: `registrationPage.structure.item4.item15.description`,
         },
       ],
     },

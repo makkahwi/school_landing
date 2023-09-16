@@ -24,7 +24,7 @@ const VisionMissionObjectives = () => {
         <ExploreIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "20%",
+            width: "10%",
             height: "auto",
           }}
         />
@@ -37,7 +37,7 @@ const VisionMissionObjectives = () => {
         <PersonIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "20%",
+            width: "10%",
             height: "auto",
           }}
         />
@@ -50,7 +50,7 @@ const VisionMissionObjectives = () => {
         <PsychologyIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "20%",
+            width: "10%",
             height: "auto",
           }}
         />
@@ -63,7 +63,7 @@ const VisionMissionObjectives = () => {
         <BarChartIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "20%",
+            width: "10%",
             height: "auto",
           }}
         />
@@ -76,7 +76,7 @@ const VisionMissionObjectives = () => {
         <Brightness3Icon
           sx={{
             color: theme.palette.basic.light,
-            width: "20%",
+            width: "10%",
             height: "auto",
           }}
         />
@@ -89,7 +89,7 @@ const VisionMissionObjectives = () => {
         <HomeIcon
           sx={{
             color: theme.palette.basic.light,
-            width: "20%",
+            width: "10%",
             height: "auto",
           }}
         />
@@ -102,11 +102,16 @@ const VisionMissionObjectives = () => {
       {["vision", "mission"].map((item, i) => (
         <PageSectionColumn md={6} key={i}>
           <CardComp bg={theme.palette.orange.main}>
-            <Text color={theme.palette.basic.light} variant="cardTitle" center>
+            <Text
+              color={theme.palette.basic.light}
+              variant="subTitle"
+              center
+              bold
+            >
               {t(`aboutPage.${item}.title`)}
             </Text>
 
-            <Text color={theme.palette.basic.light} justify>
+            <Text color={theme.palette.basic.light} justify doubleHeight>
               {t(`aboutPage.${item}.text`)}
             </Text>
           </CardComp>
@@ -114,7 +119,7 @@ const VisionMissionObjectives = () => {
       ))}
 
       <PageSectionColumn>
-        <Text color={theme.palette.orange.main} variant="title">
+        <Text color={theme.palette.orange.main} variant="subtitle">
           {t("aboutPage.objectives.title")}
         </Text>
       </PageSectionColumn>
@@ -124,11 +129,16 @@ const VisionMissionObjectives = () => {
           <CardComp bg={theme.palette.orange.main}>
             {item.icon}
 
-            <Text color={theme.palette.basic.light} variant="cardTitle" center>
+            <Text
+              color={theme.palette.basic.light}
+              variant="cardTitle"
+              center
+              bold
+            >
               {item.title}
             </Text>
 
-            <Text color={theme.palette.basic.light} justify>
+            <Text color={theme.palette.basic.light} justify doubleHeight>
               {item.text}
             </Text>
           </CardComp>

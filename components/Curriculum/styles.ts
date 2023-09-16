@@ -113,8 +113,8 @@ export const ModernScienceGrid = {
   display: "grid",
   justifyContent: "center",
   gridTemplateColumns: {
-    xs: "repeat(25, 0.1vw)",
-    md: "repeat(25, 0.7vw)",
+    xs: "repeat(17, 0.1vw)",
+    md: "repeat(17, 0.7vw)",
   },
   gridTemplateRows: {
     xs: "repeat(12, 0.1vw)",

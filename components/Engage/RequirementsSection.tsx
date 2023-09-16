@@ -36,13 +36,9 @@ const RequirementsSection = () => {
             t("registrationPage.details.requires.lists.item1.items.item2"),
             t("registrationPage.details.requires.lists.item1.items.item3"),
             t("registrationPage.details.requires.lists.item1.items.item4"),
+            t("registrationPage.details.requires.lists.item1.items.item5"),
           ],
           trigger: "1",
-        },
-        {
-          title: t("registrationPage.details.requires.lists.item2.title"),
-          items: ["registrationPage.details.requires.lists.item2.items.item1"],
-          trigger: "2",
         },
         {
           title: t("registrationPage.details.requires.lists.item3.title"),
@@ -100,7 +96,7 @@ const RequirementsSection = () => {
               aria-labelledby="nested-list-subheader"
               sx={{ width: "100%" }}
               subheader={
-                <Text color={theme.palette.brown.main} variant="subtitle">
+                <Text color={theme.palette.brown.main} variant="cardTitle" bold>
                   {item.title}
                 </Text>
               }
@@ -110,8 +106,25 @@ const RequirementsSection = () => {
                   <ListItemButton
                     sx={{ width: "100%" }}
                     onClick={() => handleClick(list.trigger)}
+                    style={{
+                      backgroundColor:
+                        trigger === list.trigger
+                          ? "rgba(0,0,0,0.15)"
+                          : "transparent",
+                    }}
                   >
-                    <Text>{t(list.title)}</Text>
+                    <Text
+                      variant="cardTitle"
+                      my={2}
+                      me={2}
+                      color={
+                        trigger === list.trigger
+                          ? theme.palette.basic.light
+                          : theme.palette.basic.dark
+                      }
+                    >
+                      {list.title}
+                    </Text>
 
                     {trigger === list.trigger ? <ExpandLess /> : <ExpandMore />}
                   </ListItemButton>
@@ -120,26 +133,20 @@ const RequirementsSection = () => {
                     in={trigger === list.trigger}
                     timeout="auto"
                     unmountOnExit
+                    style={{ backgroundColor: "rgba(0,0,0,0.15)" }}
                   >
-                    <Stack spacing={2}>
-                      {list.items.map((text, y) => (
-                        <React.Fragment key={y}>
-                          <Typography
-                            fontSize={{
-                              xs: "2vw",
-                              md: "1.2vw",
-                            }}
-                            width="80%"
-                            sx={{
-                              pl: 4,
-                              color: theme.palette.basic.light,
-                            }}
-                          >
-                            {`# ${t(text)}`}
-                          </Typography>
-                        </React.Fragment>
-                      ))}
-                    </Stack>
+                    {list.items.map((text, y) => (
+                      <Stack spacing={2} my={2} px={4} key={y}>
+                        <Text
+                          variant="cardTitle"
+                          justify
+                          bold
+                          color={theme.palette.basic.light}
+                        >
+                          {text}
+                        </Text>
+                      </Stack>
+                    ))}
                   </Collapse>
                 </React.Fragment>
               ))}

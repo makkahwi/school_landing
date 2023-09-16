@@ -7,6 +7,9 @@ const Text = ({
   children = "",
   center = false,
   justify = false,
+  bold = false,
+  doubleHeight = false,
+  style = {},
   ...rest
 }) => {
   const props = () => {
@@ -19,6 +22,8 @@ const Text = ({
         return { variant: "h5", fontWeight: "bold", my: 2 };
       case "p":
         return { variant: "p", my: 4, lineHeight: 1.25 };
+      case "sm":
+        return { variant: "sm", my: 2, lineHeight: 1 };
       default:
         return { variant: "h6", my: 4 };
     }
@@ -29,6 +34,8 @@ const Text = ({
       {...props()}
       textAlign={justify ? "justify" : center ? "center" : "start"}
       color={color}
+      fontWeight={bold ? "bold" : "regular"}
+      style={{ lineHeight: doubleHeight ? 2 : 1, ...style }}
       {...rest}
     >
       {children}

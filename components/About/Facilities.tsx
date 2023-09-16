@@ -76,7 +76,7 @@ const Facilities = () => {
 
       {["1", "2"].map((item, i) => (
         <PageSectionColumn key={i}>
-          <Text color={theme.palette.orange.main} justify>
+          <Text color={theme.palette.orange.main} justify doubleHeight bold>
             {t(`aboutPage.campus.paragraph${item}`)}
           </Text>
         </PageSectionColumn>

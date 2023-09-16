@@ -104,7 +104,7 @@ const en = {
 
       sections: {
         section1: {
-          title: "Kinder Garten",
+          title: "Kindergarten",
           subTitle:
             "Pre-school curriculum, prepare kids aging 5 - 6 years old to primary level.",
 
@@ -198,19 +198,14 @@ const en = {
               item3: "2 Photocopies of Student’s Birth Certificate",
               item4:
                 "2 Photocopies of Student’s Malaysian Visa / Residence Permit",
-            },
-          },
-          item2: {
-            title: "Photos",
-            items: {
-              item1: "4 Passport-size photos with white or Blue Background",
+              item5: "4 Passport-size photos with white or Blue Background",
             },
           },
           item3: {
             title: "Latest School Certificates",
             items: {
               item1:
-                "For no-first-grade students, a certificate of latest level finished need to be submitted",
+                "For 2nd grade & above students, a certificate of latest level finished need to be submitted",
               item2: "2 Photocopies",
             },
           },
@@ -219,7 +214,7 @@ const en = {
             items: {
               item1:
                 "There is an online-based form need to be filled before coming to school",
-              item2: "+ Manual Form (Download the Form or collect at school)",
+              item2: "Manual Form (Download the Form or collect at school)",
             },
           },
         },
@@ -250,6 +245,7 @@ const en = {
     },
 
     structure: {
+      currency: "RM",
       title: "Fees' Structure",
       item1: {
         title: "One-time Fees",
@@ -393,7 +389,7 @@ const en = {
         item1: {
           title: "Any or Both Parents are University Students",
           price: "10%",
-          description: "Discount (applicable for tuition fees only)",
+          description: "applicable for tuition fees only",
         },
       },
       item2: {
@@ -402,19 +398,19 @@ const en = {
           title: "First Sibling",
           price: "5%",
           description:
-            "Discount (applicable for tuition fees only for the lowest-level sibling)",
+            "applicable for tuition fees only for the lowest-level sibling",
         },
         item2: {
           title: "Second Sibling",
           price: "10%",
           description:
-            "Discount (applicable for tuition fees only for the second lowest-level sibling)",
+            "applicable for tuition fees only for the second lowest-level sibling",
         },
         item3: {
           title: "Third & Above Sibling",
           price: "15%",
           description:
-            "Discount (applicable for tuition fees only for the third / forth … lowest-level sibling)",
+            "applicable for tuition fees only for the third / forth … lowest-level sibling",
         },
       },
       item3: {
@@ -422,7 +418,7 @@ const en = {
         item1: {
           title: "If parents paid for a whole year",
           price: "5%",
-          description: "Discount (applicable for tuition fees only)",
+          description: "applicable for tuition fees only",
         },
       },
     },

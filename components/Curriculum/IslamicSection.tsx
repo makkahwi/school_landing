@@ -81,11 +81,13 @@ const IslamicSection = () => {
   return (
     <PageSection>
       <PageSectionColumn md={6}>
-        <Text color={theme.palette.blue.dark} variant="title">
+        <Text color={theme.palette.blue.dark} variant="title" bold>
           {t("curriculumPage.islamicStudies")}
         </Text>
 
-        <Text justify>{t("curriculumPage.islamicStudiesContent")}</Text>
+        <Text justify doubleHeight>
+          {t("curriculumPage.islamicStudiesContent")}
+        </Text>
       </PageSectionColumn>
 
       <PageSectionColumn md={6}>

@@ -128,11 +128,13 @@ const LanguagesSection = () => {
       <PageSectionColumn md={6}>
         {languages.map((item, i) => (
           <Stack pb={5} key={i}>
-            <Text variant="subtitle" color={theme.palette.blue.dark}>
+            <Text variant="subtitle" color={theme.palette.blue.dark} bold>
               {item.title}
             </Text>
 
-            <Text justify>{item.content}</Text>
+            <Text justify doubleHeight>
+              {item.content}
+            </Text>
           </Stack>
         ))}
       </PageSectionColumn>

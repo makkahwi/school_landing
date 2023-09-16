@@ -44,7 +44,7 @@ const WhyAISSection = () => {
           {t("landingPage.whyAISSection.title")}
         </Text>
 
-        <Text>{t("landingPage.whyAISSection.discription")}</Text>
+        <Text doubleHeight>{t("landingPage.whyAISSection.discription")}</Text>
       </PageSectionColumn>
 
       <PageSectionColumn>
@@ -59,6 +59,7 @@ const WhyAISSection = () => {
                   sx={{
                     width: "50%",
                     height: "auto",
+                    margin: "auto auto",
                   }}
                 />
 
@@ -66,6 +67,8 @@ const WhyAISSection = () => {
                   variant="cardTitle"
                   center
                   color={theme.palette.basic.light}
+                  mt={4}
+                  bold
                 >
                   {item.text}
                 </Text>

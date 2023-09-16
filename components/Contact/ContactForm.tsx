@@ -14,11 +14,11 @@ const ContactForm = () => {
   const { t } = useTranslation(router);
 
   const formInput = [
-    t(`contactPage.formInput1`),
-    t(`contactPage.formInput2`),
-    t(`contactPage.formInput3`),
-    t(`contactPage.formInput4`),
-    t(`contactPage.formInput5`),
+    { title: t(`contactPage.formInput1`), name: "name" },
+    { title: t(`contactPage.formInput2`), name: "email" },
+    { title: t(`contactPage.formInput3`), name: "phone" },
+    { title: t(`contactPage.formInput4`), name: "age" },
+    { title: t(`contactPage.formInput5`), name: "msg", fullWidth: true },
   ];
 
   return (
@@ -29,22 +29,27 @@ const ContactForm = () => {
             {t("contactPage.formTitle")}
           </Text>
 
-          <Grid container>
-            {formInput.map((text, i) => (
-              <Grid item md={6} p={1} key={i}>
+          <Grid container justifyContent="center" py={5} px={20}>
+            {formInput.map(({ title, fullWidth }, i) => (
+              <Grid item md={fullWidth ? 12 : 6} p={1} key={i}>
+                <Text color={theme.palette.basic.light} bold>
+                  {title}
+                </Text>
+
                 <TextField
-                  label={text}
                   variant="outlined"
                   fullWidth
                   style={{ margin: "10px auto", backgroundColor: "white" }}
                 />
               </Grid>
             ))}
-          </Grid>
 
-          <Button size="large" variant="contained">
-            {t("contactPage.formButton")}
-          </Button>
+            <Grid item md={12} pt={5}>
+              <Button size="large" fullWidth>
+                {t("contactPage.formButton")}
+              </Button>
+            </Grid>
+          </Grid>
         </CardComp>
       </PageSectionColumn>
     </PageSection>

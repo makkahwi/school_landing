@@ -16,7 +16,7 @@ const DiscountsSection = () => {
   return (
     <PageSection>
       <PageSectionColumn md={6}>
-        <Text color={theme.palette.orange.main} variant="title">
+        <Text color={theme.palette.orange.main} variant="title" center>
           {t("registrationPage.discounts.title")}
         </Text>
       </PageSectionColumn>
@@ -28,6 +28,7 @@ const DiscountsSection = () => {
           sx={{
             width: "30%",
             height: "auto",
+            margin: "auto auto",
           }}
         />
       </PageSectionColumn>
@@ -36,8 +37,6 @@ const DiscountsSection = () => {
         templateId="discount section"
         isSubStack={true}
         boxes={registrationPage.discountSection}
-        bg={theme.palette.basic.light}
-        cardBg={theme.palette.basic.main}
       />
     </PageSection>
   );
