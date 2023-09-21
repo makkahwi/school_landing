@@ -21,8 +21,14 @@ Next.Js & Typescript based
     - Jobs
   - News
   - Contact
-- Capitalize Localization Keys
-- Localize To Arabic
+- Minor UI Fixes
+  - Same equal-height cards
+  - Add Academic & Engage Briefs to Home
+  - Mobile views
+- Localozation fixes
+  - Use t with phrases instead of dynamic
+  - Capitalize Localization Keys
+  - Localize To Arabic
 
 ### Mustafa To Do
 
