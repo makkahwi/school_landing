@@ -35,7 +35,7 @@ interface navbarItemsProps {
 export const departmentColors = {
   academic: theme.palette.blue.dark,
   engage: theme.palette.orange.main,
-  about: theme.palette.brown.main,
+  about: theme.palette.basic.main,
   community: theme.palette.basic.light,
 };
 
@@ -449,10 +449,10 @@ export const curriculumPage = {
       subTitle: "curriculumPage.levels.sections.section4.subTitle",
       image: "/images/Char-2-Color.png",
 
-      bgColor: theme.palette.orange.main,
-      titleColor: theme.palette.brown.main,
-      subTitleColor: theme.palette.brown.main,
-      iconsColor: theme.palette.brown.main,
+      bgColor: theme.palette.blue.dark,
+      titleColor: theme.palette.orange.main,
+      subTitleColor: theme.palette.orange.main,
+      iconsColor: theme.palette.orange.main,
 
       listElemnts: (size: string, color: string) => [
         {

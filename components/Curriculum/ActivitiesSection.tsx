@@ -13,7 +13,7 @@ const ActivitiesSection = () => {
   const { t } = useTranslation(router);
 
   return (
-    <PageSection bg={theme.palette.orange.main}>
+    <PageSection bg={theme.palette.basic.light}>
       <PageSectionColumn>
         <Text color={theme.palette.brown.main} variant="title">
           {t("curriculumPage.activities")}

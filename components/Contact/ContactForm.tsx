@@ -5,8 +5,10 @@ import { useRouter } from "next/router";
 import React from "react";
 
 import CardComp from "../common/Card";
+import Column from "../common/Column";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
+import Row from "../common/Row";
 import Text from "../common/Text";
 
 const ContactForm = () => {
@@ -24,15 +26,15 @@ const ContactForm = () => {
   return (
     <PageSection>
       <PageSectionColumn>
-        <CardComp bg={theme.palette.brown.main}>
-          <Text color={theme.palette.basic.light} variant="subtitle" center>
+        <CardComp bg={theme.palette.basic.main}>
+          <Text color={theme.palette.brown.main} variant="subtitle" center>
             {t("contactPage.formTitle")}
           </Text>
 
-          <Grid container justifyContent="center" py={5} px={20}>
+          <Row py={5} px={20}>
             {formInput.map(({ title, fullWidth }, i) => (
-              <Grid item md={fullWidth ? 12 : 6} p={1} key={i}>
-                <Text color={theme.palette.basic.light} bold>
+              <Column md={fullWidth ? 12 : 6} p={1} key={i}>
+                <Text color={theme.palette.brown.main} bold>
                   {title}
                 </Text>
 
@@ -41,15 +43,15 @@ const ContactForm = () => {
                   fullWidth
                   style={{ margin: "10px auto", backgroundColor: "white" }}
                 />
-              </Grid>
+              </Column>
             ))}
 
-            <Grid item md={12} pt={5}>
-              <Button size="large" fullWidth>
+            <Column md={12} pt={5}>
+              <Button size="large" fullWidth color="info" variant="contained">
                 {t("contactPage.formButton")}
               </Button>
-            </Grid>
-          </Grid>
+            </Column>
+          </Row>
         </CardComp>
       </PageSectionColumn>
     </PageSection>

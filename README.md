@@ -4,7 +4,6 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Re-assaign Sections Theme Color of Header & Contents
 - Fix theme colros
   - Assign auto color opposites
 - Link Form UI To Email / Firebase

@@ -77,7 +77,7 @@ const AdvantagesSection = () => {
           </PageSectionColumn>
 
           <PageSectionColumn md={8}>
-            <Text color={theme.palette.orange.main} justify doubleHeight bold>
+            <Text color={theme.palette.blue.dark} justify doubleHeight bold>
               {item.longText}
             </Text>
           </PageSectionColumn>

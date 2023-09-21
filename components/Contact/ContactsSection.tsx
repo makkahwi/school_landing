@@ -20,10 +20,10 @@ const ContactsSection = () => {
   return (
     <PageSection bg="">
       <PageSectionColumn>
-        <CardComp bg={theme.palette.brown.main}>
+        <CardComp bg={theme.palette.basic.light}>
           <Row>
             <Column>
-              <Text color={theme.palette.basic.light} variant="subtitle" center>
+              <Text color={theme.palette.brown.main} variant="subtitle" center>
                 {t("contactPage.contactTitle")}
               </Text>
             </Column>
@@ -31,24 +31,20 @@ const ContactsSection = () => {
             <Column md={4}>
               <LocalPhoneIcon
                 sx={{
-                  color: theme.palette.orange.main,
+                  color: theme.palette.brown.main,
                   width: { xs: "3vw", md: "6vw" },
                   height: "auto",
                 }}
               />
-              <Text
-                color={theme.palette.basic.light}
-                variant="cardtitle"
-                center
-              >
+              <Text color={theme.palette.brown.main} variant="cardtitle" center>
                 {t("contactPage.contact1.title")}
               </Text>
 
-              <Text color={theme.palette.basic.light} center>
+              <Text color={theme.palette.brown.main} center>
                 {t("contactPage.contact1.description1")}
               </Text>
 
-              <Text color={theme.palette.basic.light} center>
+              <Text color={theme.palette.brown.main} center>
                 {t("contactPage.contact1.description2")}
               </Text>
             </Column>
@@ -56,21 +52,17 @@ const ContactsSection = () => {
             <Column md={4}>
               <EmailIcon
                 sx={{
-                  color: theme.palette.orange.main,
+                  color: theme.palette.brown.main,
                   width: { xs: "3vw", md: "6vw" },
                   height: "auto",
                 }}
               />
 
-              <Text
-                color={theme.palette.basic.light}
-                variant="cardtitle"
-                center
-              >
+              <Text color={theme.palette.brown.main} variant="cardtitle" center>
                 {t("contactPage.contact2.title")}
               </Text>
 
-              <Text color={theme.palette.basic.light} center>
+              <Text color={theme.palette.brown.main} center>
                 {t("contactPage.contact2.description1")}
               </Text>
             </Column>
@@ -78,25 +70,21 @@ const ContactsSection = () => {
             <Column md={4}>
               <PushPinIcon
                 sx={{
-                  color: theme.palette.orange.main,
+                  color: theme.palette.brown.main,
                   width: { xs: "3vw", md: "6vw" },
                   height: "auto",
                 }}
               />
 
-              <Text
-                color={theme.palette.basic.light}
-                variant="cardtitle"
-                center
-              >
+              <Text color={theme.palette.brown.main} variant="cardtitle" center>
                 {t("contactPage.contact3.title")}
               </Text>
 
-              <Text color={theme.palette.basic.light} center>
+              <Text color={theme.palette.brown.main} center>
                 {t("contactPage.contact3.description1")}
               </Text>
 
-              <Text color={theme.palette.basic.light} center>
+              <Text color={theme.palette.brown.main} center>
                 {t("contactPage.contact3.description2")}
               </Text>
             </Column>
@@ -110,7 +98,7 @@ const ContactsSection = () => {
             loading="lazy"
           />
 
-          <Text color={theme.palette.basic.light} center>
+          <Text color={theme.palette.brown.main} center>
             {t("contactPage.contact3.description3")}
           </Text>
         </CardComp>

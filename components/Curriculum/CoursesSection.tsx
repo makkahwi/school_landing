@@ -29,7 +29,7 @@ const CoursesSection = () => {
   return (
     <PageSection>
       <PageSectionColumn>
-        <Text color={theme.palette.orange.main} variant="subtitle">
+        <Text color={theme.palette.blue.dark} variant="subtitle">
           {t("curriculumPage.courses")}
         </Text>
       </PageSectionColumn>
@@ -37,7 +37,7 @@ const CoursesSection = () => {
       {courseSquares.map((item, i) => (
         <PageSectionColumn md={3} key={i}>
           <Square
-            bgcolor={theme.palette.orange.main}
+            bgcolor={theme.palette.blue.dark}
             radius={{
               mobile: ["10vw", item.edges],
               desktop: ["3vw", item.edges],

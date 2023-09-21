@@ -101,7 +101,7 @@ const VisionMissionObjectives = () => {
     <PageSection>
       {["vision", "mission"].map((item, i) => (
         <PageSectionColumn md={6} key={i}>
-          <CardComp bg={theme.palette.orange.main}>
+          <CardComp bg={theme.palette.blue.dark}>
             <Text
               color={theme.palette.basic.light}
               variant="subTitle"
@@ -126,7 +126,7 @@ const VisionMissionObjectives = () => {
 
       {objectives.map((item, i) => (
         <PageSectionColumn md={4} key={i}>
-          <CardComp bg={theme.palette.orange.main}>
+          <CardComp bg={theme.palette.blue.dark}>
             {item.icon}
 
             <Text
