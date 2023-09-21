@@ -251,8 +251,8 @@ export const curriculumPage = {
       subTitle: "curriculumPage.levels.sections.section1.subTitle",
       image: "/images/Char-3-Color.png",
       bgColor: "",
-      titleColor: theme.palette.orange.main,
-      subTitleColor: theme.palette.brown.dark,
+      titleColor: theme.palette.brown.main,
+      subTitleColor: theme.palette.brown.main,
       iconsColor: theme.palette.brown.main,
 
       listElemnts: (size: string, color: string) => [
@@ -300,9 +300,9 @@ export const curriculumPage = {
       image: "/images/Char-1-White.png",
 
       bgColor: theme.palette.blue.dark,
-      titleColor: theme.palette.orange.main,
+      titleColor: theme.palette.basic.light,
       subTitleColor: theme.palette.basic.light,
-      iconsColor: theme.palette.orange.main,
+      iconsColor: theme.palette.basic.light,
 
       listElemnts: (size: string, color: string) => [
         {
@@ -364,7 +364,7 @@ export const curriculumPage = {
 
       bgColor: theme.palette.basic.light,
       titleColor: theme.palette.blue.dark,
-      subTitleColor: theme.palette.basic.dark,
+      subTitleColor: theme.palette.blue.dark,
       iconsColor: theme.palette.blue.dark,
 
       listElemnts: (size: string, color: string) => [
@@ -450,9 +450,9 @@ export const curriculumPage = {
       image: "/images/Char-2-Color.png",
 
       bgColor: theme.palette.orange.main,
-      titleColor: theme.palette.basic.light,
+      titleColor: theme.palette.brown.main,
       subTitleColor: theme.palette.brown.main,
-      iconsColor: theme.palette.basic.light,
+      iconsColor: theme.palette.brown.main,
 
       listElemnts: (size: string, color: string) => [
         {
