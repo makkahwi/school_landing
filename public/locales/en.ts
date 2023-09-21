@@ -642,21 +642,22 @@ const en = {
     formInput4: "How old is your little child?",
     formInput5: "How can we help you?",
 
-    contactTitle: "OR Contact us through these",
+    contactTitle: "OR Contact Us Through",
     contact1: {
-      title: "Give Us A Call",
+      title: "A Call",
       description1: "+603-40316469",
       description2: "+6011-2888-4817",
     },
     contact2: {
-      title: "Email Questions",
+      title: "Email",
       description1: "Principal@aqsa.edu.my",
     },
     contact3: {
-      title: "Meet on Site",
+      title: "Meeting on-site",
       description1: "Monday - Friday",
       description2: "8am - 3pm",
-      description3: "Scroll down to map",
+      description3:
+        "Al-Aqsa Integrated School @ No.5, Jalan Pahang Kecil, 53200 Kuala Lumpur",
     },
   },
 

@@ -99,10 +99,6 @@ const ContactsSection = () => {
               <Text color={theme.palette.basic.light} center>
                 {t("contactPage.contact3.description2")}
               </Text>
-
-              <Text color={theme.palette.basic.light} center>
-                {t("contactPage.contact3.description3")}
-              </Text>
             </Column>
           </Row>
 
@@ -113,6 +109,10 @@ const ContactsSection = () => {
             style={{ border: 0 }}
             loading="lazy"
           />
+
+          <Text color={theme.palette.basic.light} center>
+            {t("contactPage.contact3.description3")}
+          </Text>
         </CardComp>
       </PageSectionColumn>
     </PageSection>
