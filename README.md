@@ -11,7 +11,7 @@ Next.Js & Typescript based
   - Same equal-height cards
   - Add Academic & Engage Briefs to Home
   - Mobile views
-- Localozation fixes
+- localization fixes
   - Use t with phrases instead of dynamic
   - Capitalize Localization Keys
   - Localize To Arabic
