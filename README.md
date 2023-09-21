@@ -4,7 +4,6 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Add News Post Details Page
 - Re-assaign Sections Theme Color of Header & Contents
 - Turn all click-to-view contents to statics
 - Fix theme colros

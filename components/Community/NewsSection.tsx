@@ -6,33 +6,34 @@ import { useRouter } from "next/router";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import Text from "../common/Text";
+import Link from "next/link";
+
+export const latestNews = [
+  {
+    title: "communityPage.latestNews.item1.title",
+    description: [
+      "communityPage.latestNews.item1.description.paragraph1",
+      "communityPage.latestNews.item1.description.paragraph2",
+      "communityPage.latestNews.item1.description.paragraph3",
+    ],
+    src: "/landingPage/news1.jpeg",
+    date: "29/4/2019",
+  },
+  {
+    title: "communityPage.latestNews.item2.title",
+    description: [
+      "communityPage.latestNews.item2.description.paragraph1",
+      "communityPage.latestNews.item2.description.paragraph2",
+      "communityPage.latestNews.item2.description.paragraph3",
+    ],
+    src: "/landingPage/news2.jpeg",
+    date: "29/4/2019",
+  },
+];
 
 const NewsSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
-
-  const latestNews = [
-    {
-      title: t("communityPage.latestNews.item1.title"),
-      description: [
-        "communityPage.latestNews.item1.description.paragraph1",
-        "communityPage.latestNews.item1.description.paragraph2",
-        "communityPage.latestNews.item1.description.paragraph3",
-      ],
-      src: "/landingPage/news1.jpeg",
-      date: "29/4/2019",
-    },
-    {
-      title: t("communityPage.latestNews.item2.title"),
-      description: [
-        "communityPage.latestNews.item2.description.paragraph1",
-        "communityPage.latestNews.item2.description.paragraph2",
-        "communityPage.latestNews.item2.description.paragraph3",
-      ],
-      src: "/landingPage/news2.jpeg",
-      date: "29/4/2019",
-    },
-  ];
 
   return (
     <PageSection>
@@ -47,7 +48,7 @@ const NewsSection = () => {
             }}
           />
           <Text color={theme.palette.blue.dark} variant="cardTitle" center>
-            {item.title}
+            {t(item.title)}
           </Text>
 
           <Text color={theme.palette.blue.dark}>{item.date}</Text>
@@ -60,9 +61,11 @@ const NewsSection = () => {
             {"..."}{" "}
           </Text>
 
-          <Text variant="p" color={theme.palette.blue.dark}>
-            {"Read More"}
-          </Text>
+          <Link href={`/news/${t(item.title).replaceAll(" ", "_")}`}>
+            <Text variant="p" color={theme.palette.blue.dark}>
+              {"Read More"}
+            </Text>
+          </Link>
         </PageSectionColumn>
       ))}
     </PageSection>
