@@ -13,14 +13,14 @@ const JobsSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const JobDetails = ({ title, items }) => (
+  const JobDetails = ({ title = "", items = [] }) => (
     <Stack width="100%">
       <Text color={theme.palette.blue.dark} variant="cardTitle">
-        {t(title)}
+        {title}
       </Text>
 
       <Text>
-        {items.map((bullet, i) => (
+        {items?.map((bullet, i) => (
           <span key={i} style={{ lineHeight: 2 }}>
             {bullet}
             <br />
@@ -30,26 +30,25 @@ const JobsSection = () => {
     </Stack>
   );
 
-  const JobSection = ({ item }) => (
+  const JobSection = ({
+    item = { title: "", jobDescription: [], qualifications: [], documents: [] },
+  }) => (
     <CardComp>
       <Text color={theme.palette.blue.dark} variant="subtitle">
         {item.title}
       </Text>
 
       <JobDetails
-        title="registrationPage.jobs.jobDescription"
+        title={t("Engage.Jobs.JobDescription")}
         items={item.jobDescription}
       />
 
       <JobDetails
-        title="registrationPage.jobs.qualifications"
+        title={t("Engage.Jobs.Qualifications")}
         items={item.qualifications}
       />
 
-      <JobDetails
-        title="registrationPage.jobs.documents"
-        items={item.documents}
-      />
+      <JobDetails title={t("Engage.Jobs.Documents")} items={item.documents} />
 
       <Link target="_blank" href="mailto:Principal@aqsa.edu.my">
         <Button
@@ -66,43 +65,43 @@ const JobsSection = () => {
             },
           }}
         >
-          {t("registrationPage.jobs.apply")}
+          {t("Engage.Jobs.Apply")}
         </Button>
       </Link>
     </CardComp>
   );
 
-  const jobsSection = [
+  const jobsList = [
     // {
-    //   title: t("registrationPage.jobs.item1.title"),
+    //   title: t("Engage.Jobs.Opportunity1.Title"),
     //   jobDescription: [
-    //     t("registrationPage.jobs.item1.jobDescription.item1"),
-    //     t("registrationPage.jobs.item1.jobDescription.item2"),
+    //     t("Engage.Jobs.Opportunity1.Description.Point1"),
+    //     t("Engage.Jobs.Opportunity1.Description.Point2"),
     //   ],
     //   qualifications: [
-    //     t("registrationPage.jobs.item1.qualifications.item1"),
-    //     t("registrationPage.jobs.item1.qualifications.item2"),
-    //     t("registrationPage.jobs.item1.qualifications.item3"),
-    //     t("registrationPage.jobs.item1.qualifications.item4"),
-    //     t("registrationPage.jobs.item1.qualifications.item5"),
-    //     t("registrationPage.jobs.item1.qualifications.item6"),
-    //     t("registrationPage.jobs.item1.qualifications.item7"),
-    //     t("registrationPage.jobs.item1.qualifications.item8"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point1"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point2"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point3"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point4"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point5"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point6"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point7"),
+    //     t("Engage.Jobs.Opportunity1.Qualifications.Point8"),
     //   ],
     //   documents: [
-    //     t("registrationPage.jobs.item1.documents.item1"),
-    //     t("registrationPage.jobs.item1.documents.item2"),
-    //     t("registrationPage.jobs.item1.documents.item3"),
-    //     t("registrationPage.jobs.item1.documents.item4"),
-    //     t("registrationPage.jobs.item1.documents.item5"),
+    //     t("Engage.Jobs.Opportunity1.Documents.Point1"),
+    //     t("Engage.Jobs.Opportunity1.Documents.Point2"),
+    //     t("Engage.Jobs.Opportunity1.Documents.Point3"),
+    //     t("Engage.Jobs.Opportunity1.Documents.Point4"),
+    //     t("Engage.Jobs.Opportunity1.Documents.Point5"),
     //   ],
     // },
   ];
 
   return (
     <PageSection bg="">
-      {jobsSection.length ? (
-        jobsSection.map((item, i) => (
+      {jobsList.length ? (
+        jobsList?.map((item, i) => (
           <PageSectionColumn md={6} key={i}>
             <JobSection item={item} />
           </PageSectionColumn>
@@ -110,11 +109,11 @@ const JobsSection = () => {
       ) : (
         <PageSectionColumn md={12}>
           <Text center variant="cardtitle">
-            {t("registrationPage.NoJobs")}
+            {t("Engage.Jobs.NoJobs")}
           </Text>
 
           <Text center variant="subtitle">
-            {t("registrationPage.Email")}
+            {t("Engage.Jobs.Email")}
           </Text>
         </PageSectionColumn>
       )}

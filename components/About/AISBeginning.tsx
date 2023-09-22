@@ -11,16 +11,16 @@ const AISBeginning = () => {
   const { t } = useTranslation(router);
 
   const paragraphs = [
-    t(`aboutPage.foundingStory.paragraph1`),
-    t(`aboutPage.foundingStory.paragraph2`),
-    t(`aboutPage.foundingStory.paragraph3`),
+    t(`About.Beginnings.Para1`),
+    t(`About.Beginnings.Para2`),
+    t(`About.Beginnings.Para3`),
   ];
 
   return (
     <PageSection bg="">
       <PageSectionColumn>
         <Text color={theme.palette.orange.main} variant="title">
-          {t("aboutPage.beginningAISTitle")}
+          {t("About.Beginnings.Title")}
         </Text>
       </PageSectionColumn>
 

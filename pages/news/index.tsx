@@ -11,10 +11,7 @@ export default function News() {
 
   return (
     <Stack>
-      <PageHeader
-        bg={departmentColors.community}
-        title={t("communityPage.title")}
-      />
+      <PageHeader bg={departmentColors.community} title={t("News.Title")} />
       <LatestNews />
     </Stack>
   );

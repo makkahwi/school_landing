@@ -66,10 +66,7 @@ export default function AISTeam() {
 
   return (
     <Stack>
-      <PageHeader
-        bg={departmentColors.about}
-        title={t("aboutPage.Team.Title")}
-      />
+      <PageHeader bg={departmentColors.about} title={t("About.Team.Title")} />
       <PageSection>
         <Row>
           {team.map(({ name, img, position }, i) => (

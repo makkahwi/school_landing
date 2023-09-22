@@ -17,15 +17,15 @@ const RegisterSection = () => {
       <Row spacing={3}>
         <Column>
           <Text color={theme.palette.basic.light} variant="title" bold>
-            {t("Landing.Register.Title")}
+            {t("Engage.Registration.Title")}
           </Text>
 
           <Text color={theme.palette.basic.light} doubleHeight justify>
-            {t("Landing.Register.Description")}
+            {t("Engage.Registration.Description")}
           </Text>
 
           <Button fullWidth color="error">
-            {t("Landing.Register.RegisterNow")}
+            {t("Engage.Registration.RegisterNow")}
           </Button>
         </Column>
       </Row>

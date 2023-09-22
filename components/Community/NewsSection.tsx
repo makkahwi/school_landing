@@ -10,21 +10,21 @@ import Link from "next/link";
 
 export const latestNews = [
   {
-    title: "communityPage.latestNews.item1.title",
+    title: "News.LatestNews.News1.Title",
     description: [
-      "communityPage.latestNews.item1.description.paragraph1",
-      "communityPage.latestNews.item1.description.paragraph2",
-      "communityPage.latestNews.item1.description.paragraph3",
+      "News.LatestNews.News1.Para1",
+      "News.LatestNews.News1.Para2",
+      "News.LatestNews.News1.Para3",
     ],
     src: "/landingPage/news1.jpeg",
     date: "29/4/2019",
   },
   {
-    title: "communityPage.latestNews.item2.title",
+    title: "News.LatestNews.News2.Title",
     description: [
-      "communityPage.latestNews.item2.description.paragraph1",
-      "communityPage.latestNews.item2.description.paragraph2",
-      "communityPage.latestNews.item2.description.paragraph3",
+      "News.LatestNews.News2.Para1",
+      "News.LatestNews.News2.Para2",
+      "News.LatestNews.News2.Para3",
     ],
     src: "/landingPage/news2.jpeg",
     date: "29/4/2019",

@@ -13,7 +13,7 @@ export default function WhyAIS() {
 
   return (
     <Stack>
-      <PageHeader bg={departmentColors.about} title={t("aboutPage.title")} />
+      <PageHeader bg={departmentColors.about} title={t("About.Title")} />
       <AdvantagesSection />
       <AISBeginning />
       <VisionMissionObjectives />

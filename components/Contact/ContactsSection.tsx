@@ -24,7 +24,7 @@ const ContactsSection = () => {
           <Row>
             <Column>
               <Text color={theme.palette.brown.main} variant="subtitle" center>
-                {t("contactPage.contactTitle")}
+                {t("Contact.Contacts.Title")}
               </Text>
             </Column>
 
@@ -37,15 +37,15 @@ const ContactsSection = () => {
                 }}
               />
               <Text color={theme.palette.brown.main} variant="cardtitle" center>
-                {t("contactPage.contact1.title")}
+                {t("Contact.Contacts.Call.Title")}
               </Text>
 
               <Text color={theme.palette.brown.main} center>
-                {t("contactPage.contact1.description1")}
+                {t("Contact.Contacts.Call.Description1")}
               </Text>
 
               <Text color={theme.palette.brown.main} center>
-                {t("contactPage.contact1.description2")}
+                {t("Contact.Contacts.Call.Description2")}
               </Text>
             </Column>
 
@@ -59,11 +59,11 @@ const ContactsSection = () => {
               />
 
               <Text color={theme.palette.brown.main} variant="cardtitle" center>
-                {t("contactPage.contact2.title")}
+                {t("Contact.Contacts.Email.Title")}
               </Text>
 
               <Text color={theme.palette.brown.main} center>
-                {t("contactPage.contact2.description1")}
+                {t("Contact.Contacts.Email.Description1")}
               </Text>
             </Column>
 
@@ -77,15 +77,15 @@ const ContactsSection = () => {
               />
 
               <Text color={theme.palette.brown.main} variant="cardtitle" center>
-                {t("contactPage.contact3.title")}
+                {t("Contact.Contacts.Meeting.Title")}
               </Text>
 
               <Text color={theme.palette.brown.main} center>
-                {t("contactPage.contact3.description1")}
+                {t("Contact.Contacts.Meeting.Description1")}
               </Text>
 
               <Text color={theme.palette.brown.main} center>
-                {t("contactPage.contact3.description2")}
+                {t("Contact.Contacts.Meeting.Description2")}
               </Text>
             </Column>
           </Row>
@@ -99,7 +99,7 @@ const ContactsSection = () => {
           />
 
           <Text color={theme.palette.brown.main} center>
-            {t("contactPage.contact3.description3")}
+            {t("Contact.Contacts.Meeting.Description3")}
           </Text>
         </CardComp>
       </PageSectionColumn>

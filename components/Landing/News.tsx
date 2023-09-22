@@ -1,3 +1,7 @@
+import { latestNews } from "@/components/Community/NewsSection";
+import PageSection from "@/components/common/PageSection";
+import Square from "@/components/common/Square";
+import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
@@ -5,20 +9,15 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import { Box, Stack } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-
-import { latestNews } from "../Community/NewsSection";
-import PageSection from "../common/PageSection";
-import Square from "../common/Square";
-import Text from "../common/Text";
 import {
   NewsAnimation,
   NewsArrowStyles,
   NewsGridStyles,
   PageFlipComponent,
 } from "./styles";
-import Link from "next/link";
 
 const NewsSection = () => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -134,7 +133,7 @@ const NewsSection = () => {
             }}
           >
             <Text color={theme.palette.basic.light} variant="title">
-              {t("landingPage.newsSection.news")}
+              {t("News.News")}
             </Text>
           </Square>
 

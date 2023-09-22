@@ -1,9 +1,7 @@
-import useTranslation from "@/hooks/useTranslation";
+import theme from "@/styles/theme";
 import Column from "./Column";
 import Row from "./Row";
-import { useRouter } from "next/router";
 import Text from "./Text";
-import theme from "@/styles/theme";
 
 interface StaticListProps {
   items: {
@@ -16,9 +14,6 @@ const StaticList = ({
   items,
   color = theme.palette.basic.light,
 }: StaticListProps) => {
-  const router = useRouter();
-  const { t } = useTranslation(router);
-
   return (
     <Row>
       {items?.map(({ icon, text }, i) => (
@@ -28,7 +23,7 @@ const StaticList = ({
           </Text>
 
           <Text color={color} center>
-            {t(text)}
+            {text}
           </Text>
         </Column>
       ))}

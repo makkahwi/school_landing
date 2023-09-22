@@ -27,59 +27,53 @@ const RequirementsSection = () => {
 
   const requirementsSection = [
     {
-      title: t("registrationPage.details.requires.title"),
+      title: t("Engage.Registration.Requirements.Title"),
       lists: [
         {
-          title: t("registrationPage.details.requires.lists.item1.title"),
+          title: t("Engage.Registration.Requirements.Id.Title"),
           items: [
-            t("registrationPage.details.requires.lists.item1.items.item1"),
-            t("registrationPage.details.requires.lists.item1.items.item2"),
-            t("registrationPage.details.requires.lists.item1.items.item3"),
-            t("registrationPage.details.requires.lists.item1.items.item4"),
-            t("registrationPage.details.requires.lists.item1.items.item5"),
+            t("Engage.Registration.Requirements.Id.Point1"),
+            t("Engage.Registration.Requirements.Id.Point2"),
+            t("Engage.Registration.Requirements.Id.Point3"),
+            t("Engage.Registration.Requirements.Id.Point4"),
+            t("Engage.Registration.Requirements.Id.Point5"),
           ],
           trigger: "1",
         },
         {
-          title: t("registrationPage.details.requires.lists.item3.title"),
+          title: t("Engage.Registration.Requirements.LastSchool.Title"),
           items: [
-            t("registrationPage.details.requires.lists.item3.items.item1"),
-            t("registrationPage.details.requires.lists.item3.items.item2"),
+            t("Engage.Registration.Requirements.LastSchool.Point1"),
+            t("Engage.Registration.Requirements.LastSchool.Point2"),
           ],
-          trigger: "3",
+          trigger: "2",
         },
         {
-          title: t("registrationPage.details.requires.lists.item4.title"),
+          title: t("Engage.Registration.Requirements.Forms.Title"),
           items: [
-            t("registrationPage.details.requires.lists.item4.items.item1"),
-            t("registrationPage.details.requires.lists.item4.items.item2"),
+            t("Engage.Registration.Requirements.Forms.Point1"),
+            t("Engage.Registration.Requirements.Forms.Point2"),
           ],
-          trigger: "4",
+          trigger: "3",
         },
       ],
     },
     {
-      title: t("registrationPage.details.deadlines.title"),
+      title: t("Engage.Registration.Deadlines.Title"),
       lists: [
         {
-          title: t("registrationPage.details.deadlines.lists.item1.title"),
-          items: [
-            t("registrationPage.details.deadlines.lists.item1.items.item1"),
-          ],
+          title: t("Engage.Registration.Deadlines.Sem1.Title"),
+          items: [t("Engage.Registration.Deadlines.Sem1.Description")],
           trigger: "5",
         },
         {
-          title: t("registrationPage.details.deadlines.lists.item2.title"),
-          items: [
-            t("registrationPage.details.deadlines.lists.item2.items.item1"),
-          ],
+          title: t("Engage.Registration.Deadlines.Sem2.Title"),
+          items: [t("Engage.Registration.Deadlines.Sem2.Description")],
           trigger: "6",
         },
         {
-          title: t("registrationPage.details.deadlines.lists.item3.title"),
-          items: [
-            t("registrationPage.details.deadlines.lists.item3.items.item1"),
-          ],
+          title: t("Engage.Registration.Deadlines.Sem3.Title"),
+          items: [t("Engage.Registration.Deadlines.Sem3.Description")],
           trigger: "7",
         },
       ],

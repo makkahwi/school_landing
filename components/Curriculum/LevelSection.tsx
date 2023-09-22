@@ -1,6 +1,4 @@
-import useTranslation from "@/hooks/useTranslation";
 import { Avatar, Stack } from "@mui/material";
-import { useRouter } from "next/router";
 
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
@@ -29,9 +27,6 @@ interface LevelSectionProps {
 }
 
 const LevelSection = ({ section }: LevelSectionProps) => {
-  const router = useRouter();
-  const { t } = useTranslation(router);
-
   const {
     title,
     subTitle,
@@ -64,11 +59,11 @@ const LevelSection = ({ section }: LevelSectionProps) => {
           mb={{ xs: 5, md: 0 }}
         >
           <Text color={titleColor} variant="title">
-            {t(title)}
+            {title}
           </Text>
 
           <Text color={subTitleColor} variant="subtitle" justify>
-            {t(subTitle)}
+            {subTitle}
           </Text>
         </Stack>
       </PageSectionColumn>

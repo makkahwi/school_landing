@@ -55,12 +55,8 @@ const CoCorriculumSection = () => {
   return (
     <PageSection>
       <PageSectionColumn md={8}>
-        <Text color={theme.palette.blue.dark} justify>
-          {t("curriculumPage.coText")}
-        </Text>
-
         <Text color={theme.palette.blue.dark} justify doubleHeight>
-          {t("curriculumPage.modernSciencesContent")}
+          {t("Academics.CoCurriculum.Description")}
         </Text>
       </PageSectionColumn>
 

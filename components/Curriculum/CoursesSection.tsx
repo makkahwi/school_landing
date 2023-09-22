@@ -13,15 +13,15 @@ const CoursesSection = () => {
 
   const courseSquares = [
     {
-      text: t("curriculumPage.courseSquares.languages"),
+      text: t("Academics.Curriculum.Languages.Title"),
       edges: "1.0.0.1",
     },
     {
-      text: t("curriculumPage.courseSquares.islamic"),
+      text: t("Academics.Curriculum.Islamic.Islamic"),
       edges: "0.0.0.0",
     },
     {
-      text: t("curriculumPage.courseSquares.modern"),
+      text: t("Academics.Curriculum.Modern.Modern"),
       edges: "0.1.1.0",
     },
   ];
@@ -30,7 +30,7 @@ const CoursesSection = () => {
     <PageSection>
       <PageSectionColumn>
         <Text color={theme.palette.blue.dark} variant="subtitle">
-          {t("curriculumPage.courses")}
+          {t("Academics.Curriculum.Description")}
         </Text>
       </PageSectionColumn>
 

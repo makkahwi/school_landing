@@ -29,7 +29,7 @@ const ModernSection = () => {
         md: "1vw",
       },
       textColor: theme.palette.basic.light,
-      text: "Math",
+      text: t("Academics.Curriculum.Modern.Math"),
     },
     {
       bgColor: theme.palette.orange.main,
@@ -46,7 +46,7 @@ const ModernSection = () => {
         md: "1.75vw",
       },
       textColor: theme.palette.basic.light,
-      text: "Science",
+      text: t("Academics.Curriculum.Modern.Science"),
     },
     {
       bgColor: theme.palette.basic.light,
@@ -63,7 +63,7 @@ const ModernSection = () => {
         md: "2vw",
       },
       textColor: theme.palette.brown.main,
-      text: "Computer Science",
+      text: t("Academics.Curriculum.Modern.ComputerScience"),
     },
     {
       bgColor: theme.palette.orange.main,
@@ -80,7 +80,7 @@ const ModernSection = () => {
         md: "1vw",
       },
       textColor: theme.palette.basic.light,
-      text: "Sports",
+      text: t("Academics.Curriculum.Modern.Sports"),
     },
     {
       bgColor: theme.palette.brown.main,
@@ -97,7 +97,7 @@ const ModernSection = () => {
         md: "1vw",
       },
       textColor: theme.palette.basic.light,
-      text: "Arts",
+      text: t("Academics.Curriculum.Modern.Arts"),
     },
   ];
 
@@ -126,11 +126,11 @@ const ModernSection = () => {
 
       <PageSectionColumn md={8}>
         <Text color={theme.palette.basic.light} variant="title" bold>
-          {t("curriculumPage.modernSciences")}
+          {t("Academics.Curriculum.Modern.Title")}
         </Text>
 
         <Text color={theme.palette.basic.light} justify doubleHeight bold>
-          {t("curriculumPage.modernSciencesContent")}
+          {t("Academics.Curriculum.Modern.Description")}
         </Text>
       </PageSectionColumn>
     </PageSection>

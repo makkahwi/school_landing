@@ -12,7 +12,7 @@ export default function Contact() {
 
   return (
     <Stack>
-      <PageHeader bg={departmentColors.about} title={t("contactPage.title")} />
+      <PageHeader bg={departmentColors.about} title={t("Contact.Title")} />
       <ContactForm />
       <ContactsSection />
     </Stack>

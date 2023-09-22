@@ -1,33 +1,32 @@
+import CardComp from "@/components/common/Card";
+import Column from "@/components/common/Column";
+import PageSection from "@/components/common/PageSection";
+import Row from "@/components/common/Row";
+import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 
-import CardComp from "../common/Card";
-import Column from "../common/Column";
-import PageSection from "../common/PageSection";
-import Row from "../common/Row";
-import Text from "../common/Text";
-
-const WhyAISSection = () => {
+const AboutSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const whyAIS_icons = [
+  const cards = [
     {
       src: "/images/Islamic.png",
       alt: "islamic-icon",
-      text: t("landingPage.whyAISSection.items.item1"),
+      text: t("About.WhyAIS.Islamic.Title"),
     },
     {
       src: "/images/Cambridge.png",
       alt: "cambridge-icon",
-      text: t("landingPage.whyAISSection.items.item2"),
+      text: t("About.WhyAIS.Cambridge.Title"),
     },
     {
       src: "/images/Cheap.png",
       alt: "cheap-zone-icon",
-      text: t("landingPage.whyAISSection.items.item3"),
+      text: t("About.WhyAIS.Reasonable.Title"),
     },
   ];
 
@@ -36,15 +35,15 @@ const WhyAISSection = () => {
       <Row spacing={3}>
         <Column>
           <Text color={theme.palette.orange.main} variant="title">
-            {t("landingPage.whyAISSection.title")}
+            {t("About.Title")}
           </Text>
 
           <Text doubleHeight justify>
-            {t("landingPage.whyAISSection.Description")}
+            {t("About.Description")}
           </Text>
         </Column>
 
-        {whyAIS_icons.map((item, i) => (
+        {cards.map((item, i) => (
           <Column lg={4} md={6} key={i}>
             <CardComp bg={theme.palette.orange.main}>
               <Avatar
@@ -75,4 +74,4 @@ const WhyAISSection = () => {
   );
 };
 
-export default WhyAISSection;
+export default AboutSection;

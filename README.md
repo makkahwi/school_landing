@@ -10,11 +10,10 @@ Next.Js & Typescript based
   - Same equal-height cards
   - Mobile views
 - localization fixes
-  - Use t with phrases instead of dynamic
-  - Capitalize Localization Keys
   - Localize To Arabic
 - Minor Code Fixes
   - Turn Relative Paths To Absolute
+  - Turn Es5 => Es6 Exports
 
 ### Mustafa To Do
 

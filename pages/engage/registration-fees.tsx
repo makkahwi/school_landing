@@ -15,7 +15,7 @@ export default function RegistrationFees() {
     <Stack>
       <PageHeader
         bg={departmentColors.engage}
-        title={t("registrationPage.title")}
+        title={t("Engage.Registration.Title")}
       />
       <RequirementsSection />
       <FeesSection />

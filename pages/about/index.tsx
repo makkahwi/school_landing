@@ -13,7 +13,7 @@ export default function AboutAIS() {
 
   return (
     <Stack>
-      <PageHeader bg={departmentColors.about} title={t("aboutPage.title")} />
+      <PageHeader bg={departmentColors.about} title={t("About.title")} />
       <AdvantagesSection />
       <AISBeginning />
       <VisionMissionObjectives />

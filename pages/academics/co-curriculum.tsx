@@ -15,7 +15,7 @@ export default function CoCorriculum() {
     <Stack>
       <PageHeader
         bg={departmentColors.academic}
-        title={t("curriculumPage.coCURRICULUM")}
+        title={t("Academics.CoCurriculum.Title")}
       />
       <CoCorriculumSection />
       <ClubsSection />

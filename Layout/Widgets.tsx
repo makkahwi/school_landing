@@ -35,27 +35,27 @@ const Widgets = () => {
   const widgetLinks = [
     {
       link: "/about/why-ais",
-      label: t("landingPage.whyAISSection.title"),
+      label: t("About.Title"),
     },
     {
       link: "/academics/study-levels",
-      label: t("landingPage.newsSection.levels"),
+      label: t("Academics.StudyLevels.Title"),
     },
     {
       link: "/academics/curriculum",
-      label: t("landingPage.newsSection.curriculum"),
+      label: t("Academics.Curriculum.Title"),
     },
     {
       link: "/engage/registration-fees",
-      label: t("landingPage.newsSection.registration"),
+      label: t("Engage.Registration.Title"),
     },
     {
       link: "/engage/job-opportunities",
-      label: t("landingPage.newsSection.job"),
+      label: t("Engage.Jobs.Title"),
     },
     {
       link: "https://students.aqsa.edu.my",
-      label: t("landingPage.newsSection.student"),
+      label: t("StudentPortal"),
       target: "_blank",
     },
   ];

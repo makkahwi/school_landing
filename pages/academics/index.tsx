@@ -14,10 +14,7 @@ export default function Academics() {
 
   return (
     <Stack>
-      <PageHeader
-        bg={departmentColors.academic}
-        title={t("curriculumPage.title")}
-      />
+      <PageHeader bg={departmentColors.academic} title={t("Academics.Title")} />
       <CoursesSection />
       <LanguagesSection />
       <IslamicSection />

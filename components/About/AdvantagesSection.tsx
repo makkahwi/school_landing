@@ -17,20 +17,20 @@ const AdvantagesSection = () => {
     {
       src: "/images/Islamic.png",
       alt: "islamic-icon",
-      text: t("aboutPage.whyCards.item1.text"),
-      longText: t("aboutPage.whyCards.item1.longText"),
+      text: t("About.WhyAIS.Islamic.Title"),
+      longText: t("About.WhyAIS.Islamic.Description"),
     },
     {
       src: "/images/Cambridge.png",
       alt: "cambridge-icon",
-      text: t("aboutPage.whyCards.item2.text"),
-      longText: t("aboutPage.whyCards.item2.longText"),
+      text: t("About.WhyAIS.Cambridge.Title"),
+      longText: t("About.WhyAIS.Cambridge.Description"),
     },
     {
       src: "/images/Cheap.png",
       alt: "cheap-zone-icon",
-      text: t("aboutPage.whyCards.item3.text"),
-      longText: t("aboutPage.whyCards.item3.longText"),
+      text: t("About.WhyAIS.Reasonable.Title"),
+      longText: t("About.WhyAIS.Reasonable.Description"),
     },
   ];
 
@@ -38,7 +38,7 @@ const AdvantagesSection = () => {
     <PageSection bg={theme.palette.basic.light}>
       <PageSectionColumn>
         <Text color={theme.palette.orange.main} variant="title">
-          {t("aboutPage.whyAISTitle")}
+          {t("About.WhyAIS.Title")}
         </Text>
       </PageSectionColumn>
 

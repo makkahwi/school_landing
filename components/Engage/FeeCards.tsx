@@ -39,7 +39,7 @@ const FeeCards = ({
       {boxes.map((box, i) => (
         <PageSectionColumn key={i}>
           <Text variant="subTitle" center bold>
-            {t(box.title)}
+            {box.title}
           </Text>
 
           <Row>
@@ -64,7 +64,7 @@ const FeeCards = ({
                         my={3}
                         style={{ textDecoration: "underline" }}
                       >
-                        {t(item.title)}
+                        {item.title}
                       </Text>
                     </Grid>
 
@@ -77,16 +77,14 @@ const FeeCards = ({
                         color={theme.palette.orange.main}
                       >
                         {currency
-                          ? t("registrationPage.structure.currency") +
-                            " " +
-                            t(item.price)
-                          : t(item.price)}
+                          ? t("Engage.Fees.Currency") + " " + item.price
+                          : item.price}
                       </Text>
                     </Grid>
 
                     <Grid item md={12} px={1}>
                       <Text color={bg} center>
-                        {t(item.description)}
+                        {item.description}
                       </Text>
                     </Grid>
                   </Grid>

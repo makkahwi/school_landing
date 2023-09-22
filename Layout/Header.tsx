@@ -1,4 +1,5 @@
 import Text from "@/components/common/Text";
+import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -11,49 +12,52 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { useRouter } from "next/router";
 import * as React from "react";
 
-const links = [
-  { title: "Home", link: "" },
-  {
-    title: "About",
-    link: "about",
-    links: [
-      { title: "Why AIS", link: "why-ais" },
-      { title: "AIS Facilities", link: "facilities" },
-      // { title: "AIS Team", link: "ais-team" },
-    ],
-  },
-  {
-    title: "Academics",
-    link: "academics",
-    links: [
-      { title: "Study Levels", link: "study-levels" },
-      { title: "Curriculum", link: "curriculum" },
-      { title: "Co-Curriculum", link: "co-curriculum" },
-    ],
-  },
-  {
-    title: "Engage",
-    link: "engage",
-    links: [
-      { title: "Registration & Fees", link: "registration-fees" },
-      { title: "Job Opportunities", link: "job-opportunities" },
-    ],
-  },
-  { title: "News", link: "news" },
-  { title: "Contact", link: "contact" },
-];
-
 function ResponsiveAppBar() {
+  const router = useRouter();
+  const { t } = useTranslation(router);
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
   const [anchorSubMenu, setAnchorSubMenu] = React.useState<null | HTMLElement>(
     null
   );
-
   const [submenu, setSubmenu] = React.useState<string>("");
+
+  const links = [
+    { title: "Home", link: "" },
+    {
+      title: "About",
+      link: "about",
+      links: [
+        { title: "Why AIS", link: "why-ais" },
+        { title: "AIS Facilities", link: "facilities" },
+        // { title: "AIS Team", link: "ais-team" },
+      ],
+    },
+    {
+      title: "Academics",
+      link: "academics",
+      links: [
+        { title: "Study Levels", link: "study-levels" },
+        { title: "Curriculum", link: "curriculum" },
+        { title: "Co-Curriculum", link: "co-curriculum" },
+      ],
+    },
+    {
+      title: "Engage",
+      link: "engage",
+      links: [
+        { title: "Registration & Fees", link: "registration-fees" },
+        { title: "Job Opportunities", link: "job-opportunities" },
+      ],
+    },
+    { title: "News", link: "news" },
+    { title: "Contact", link: "contact" },
+  ];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -219,10 +223,10 @@ function ResponsiveAppBar() {
             <Typography
               onClick={() => console.log("lang change")}
               sx={{ p: 0 }}
-              variant="h4"
+              variant="h6"
               color={theme.palette.basic.light}
             >
-              ع
+              {t("OtherLang")}
             </Typography>
           </Box>
         </Toolbar>

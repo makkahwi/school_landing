@@ -13,16 +13,16 @@ const AcademicSection = () => {
 
   const contents = [
     {
-      title: t("Landing.Academic.StudyLevels.Title"),
-      desc: t("Landing.Academic.StudyLevels.Description"),
+      title: t("Academics.StudyLevels.Title"),
+      desc: t("Academics.StudyLevels.Description"),
     },
     {
-      title: t("Landing.Academic.Curriculum.Title"),
-      desc: t("Landing.Academic.Curriculum.Description"),
+      title: t("Academics.Curriculum.Title"),
+      desc: t("Academics.Curriculum.Description"),
     },
     {
-      title: t("Landing.Academic.CoCurriculum.Title"),
-      desc: t("Landing.Academic.CoCurriculum.Description"),
+      title: t("Academics.CoCurriculum.Title"),
+      desc: t("Academics.CoCurriculum.Description"),
     },
   ];
 
@@ -31,7 +31,7 @@ const AcademicSection = () => {
       <Row spacing={3}>
         <Column>
           <Text color={theme.palette.orange.main} variant="title">
-            {t("Landing.Academic.Title")}
+            {t("Academics.Title")}
           </Text>
         </Column>
 

@@ -18,8 +18,8 @@ const VisionMissionObjectives = () => {
 
   const objectives = [
     {
-      title: t("aboutPage.objectives.items.item1.title"),
-      text: t("aboutPage.objectives.items.item1.text"),
+      title: t("About.Objectives.MoralCompass.Title"),
+      text: t("About.Objectives.MoralCompass.Description"),
       icon: (
         <ExploreIcon
           sx={{
@@ -31,8 +31,8 @@ const VisionMissionObjectives = () => {
       ),
     },
     {
-      title: t("aboutPage.objectives.items.item2.title"),
-      text: t("aboutPage.objectives.items.item2.text"),
+      title: t("About.Objectives.CharacterBuilding.Title"),
+      text: t("About.Objectives.CharacterBuilding.Description"),
       icon: (
         <PersonIcon
           sx={{
@@ -44,8 +44,8 @@ const VisionMissionObjectives = () => {
       ),
     },
     {
-      title: t("aboutPage.objectives.items.item3.title"),
-      text: t("aboutPage.objectives.items.item3.text"),
+      title: t("About.Objectives.Creativity.Title"),
+      text: t("About.Objectives.Creativity.Description"),
       icon: (
         <PsychologyIcon
           sx={{
@@ -57,8 +57,8 @@ const VisionMissionObjectives = () => {
       ),
     },
     {
-      title: t("aboutPage.objectives.items.item4.title"),
-      text: t("aboutPage.objectives.items.item4.text"),
+      title: t("About.Objectives.ApplicableKnowledge.Title"),
+      text: t("About.Objectives.ApplicableKnowledge.Description"),
       icon: (
         <BarChartIcon
           sx={{
@@ -70,8 +70,8 @@ const VisionMissionObjectives = () => {
       ),
     },
     {
-      title: t("aboutPage.objectives.items.item5.title"),
-      text: t("aboutPage.objectives.items.item5.text"),
+      title: t("About.Objectives.QuranReservation.Title"),
+      text: t("About.Objectives.QuranReservation.Description"),
       icon: (
         <Brightness3Icon
           sx={{
@@ -83,8 +83,8 @@ const VisionMissionObjectives = () => {
       ),
     },
     {
-      title: t("aboutPage.objectives.items.item6.title"),
-      text: t("aboutPage.objectives.items.item6.text"),
+      title: t("About.Objectives.Palestine.Title"),
+      text: t("About.Objectives.Palestine.Description"),
       icon: (
         <HomeIcon
           sx={{
@@ -97,9 +97,20 @@ const VisionMissionObjectives = () => {
     },
   ];
 
+  const visionMission = [
+    {
+      title: t("About.Vision.Title"),
+      desc: t("About.Vision.Description"),
+    },
+    {
+      title: t("About.Mission.Title"),
+      desc: t("About.Mission.Description"),
+    },
+  ];
+
   return (
     <PageSection>
-      {["vision", "mission"].map((item, i) => (
+      {visionMission.map(({ title, desc }, i) => (
         <PageSectionColumn md={6} key={i}>
           <CardComp bg={theme.palette.blue.dark}>
             <Text
@@ -108,11 +119,11 @@ const VisionMissionObjectives = () => {
               center
               bold
             >
-              {t(`aboutPage.${item}.title`)}
+              {title}
             </Text>
 
             <Text color={theme.palette.basic.light} justify doubleHeight>
-              {t(`aboutPage.${item}.text`)}
+              {desc}
             </Text>
           </CardComp>
         </PageSectionColumn>
@@ -120,7 +131,7 @@ const VisionMissionObjectives = () => {
 
       <PageSectionColumn>
         <Text color={theme.palette.orange.main} variant="subtitle">
-          {t("aboutPage.objectives.title")}
+          {t("About.Objectives.Title")}
         </Text>
       </PageSectionColumn>
 

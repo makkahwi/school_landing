@@ -16,7 +16,7 @@ export default function Corriculum() {
     <Stack>
       <PageHeader
         bg={departmentColors.academic}
-        title={t("curriculumPage.title")}
+        title={t("Academics.Curriculum.Title")}
       />
       <CoursesSection />
       <LanguagesSection />

@@ -68,19 +68,15 @@ const Facilities = () => {
 
   return (
     <PageSection>
-      <PageSectionColumn>
-        <Text color={theme.palette.orange.main} variant="title">
-          {t("aboutPage.campus.title")}
-        </Text>
-      </PageSectionColumn>
-
-      {["1", "2"].map((item, i) => (
-        <PageSectionColumn key={i}>
-          <Text color={theme.palette.blue.dark} justify doubleHeight bold>
-            {t(`aboutPage.campus.paragraph${item}`)}
-          </Text>
-        </PageSectionColumn>
-      ))}
+      {[t("About.Facilities.Para1"), t("About.Facilities.Para2")].map(
+        (item, i) => (
+          <PageSectionColumn key={i}>
+            <Text color={theme.palette.blue.dark} justify doubleHeight bold>
+              {item}
+            </Text>
+          </PageSectionColumn>
+        )
+      )}
 
       <PageSectionColumn>
         <PhotoGallery photos={photos} />
