@@ -6,9 +6,6 @@ Next.Js & Typescript based
 
 - Fix theme colros
   - Assign auto color opposites
-- Build new pages
-  - Staff
-  - News by id
 - Minor UI Fixes
   - Same equal-height cards
   - Add Academic & Engage Briefs to Home

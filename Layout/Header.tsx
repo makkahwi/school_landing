@@ -21,7 +21,7 @@ const links = [
     links: [
       { title: "Why AIS", link: "why-ais" },
       { title: "AIS Facilities", link: "facilities" },
-      { title: "AIS Team", link: "ais-team" },
+      // { title: "AIS Team", link: "ais-team" },
     ],
   },
   {
