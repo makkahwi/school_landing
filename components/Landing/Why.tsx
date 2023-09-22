@@ -40,7 +40,7 @@ const WhyAISSection = () => {
           </Text>
 
           <Text doubleHeight justify>
-            {t("landingPage.whyAISSection.discription")}
+            {t("landingPage.whyAISSection.Description")}
           </Text>
         </Column>
 

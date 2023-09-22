@@ -8,7 +8,6 @@ Next.Js & Typescript based
   - Assign auto color opposites
 - Minor UI Fixes
   - Same equal-height cards
-  - Add Engage Briefs to Home
   - Mobile views
 - localization fixes
   - Use t with phrases instead of dynamic

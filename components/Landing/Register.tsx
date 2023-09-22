@@ -1,0 +1,36 @@
+import useTranslation from "@/hooks/useTranslation";
+import theme from "@/styles/theme";
+import { useRouter } from "next/router";
+
+import Column from "../common/Column";
+import PageSection from "../common/PageSection";
+import Row from "../common/Row";
+import Text from "../common/Text";
+import { Button } from "@mui/material";
+
+const RegisterSection = () => {
+  const router = useRouter();
+  const { t } = useTranslation(router);
+
+  return (
+    <PageSection py={20} bgcolor={theme.palette.orange.main}>
+      <Row spacing={3}>
+        <Column>
+          <Text color={theme.palette.basic.light} variant="title" bold>
+            {t("Landing.Register.Title")}
+          </Text>
+
+          <Text color={theme.palette.basic.light} doubleHeight justify>
+            {t("Landing.Register.Description")}
+          </Text>
+
+          <Button fullWidth color="error">
+            {t("Landing.Register.RegisterNow")}
+          </Button>
+        </Column>
+      </Row>
+    </PageSection>
+  );
+};
+
+export default RegisterSection;
