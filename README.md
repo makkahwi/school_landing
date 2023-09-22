@@ -6,7 +6,6 @@ Next.Js & Typescript based
 
 - Fix theme colros
   - Assign auto color opposites
-- Link Form UI To Email / Firebase
 - Build new pages
   - Staff
   - News by id
