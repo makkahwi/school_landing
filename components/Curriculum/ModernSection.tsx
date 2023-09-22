@@ -22,7 +22,7 @@ const ModernSection = () => {
       },
       sx: {
         gridRow: "1 / 5",
-        gridColumn: "1 / 5",
+        gridColumn: "3 / 7",
       },
       fontSize: {
         xs: "2vw",
@@ -32,14 +32,14 @@ const ModernSection = () => {
       text: "Math",
     },
     {
-      bgColor: theme.palette.blue.dark,
+      bgColor: theme.palette.orange.main,
       radius: {
         mobile: ["5vw", "1.0.1.1"],
         desktop: ["3vw", "1.0.1.1"],
       },
       sx: {
-        gridRow: "1 / 7",
-        gridColumn: "5 / 11",
+        gridRow: "5 / 11",
+        gridColumn: "1 / 7",
       },
       fontSize: {
         xs: "4.5vw",
@@ -55,8 +55,8 @@ const ModernSection = () => {
         desktop: ["4vw", "0.1.1.1"],
       },
       sx: {
-        gridRow: "1 / 11",
-        gridColumn: "11 / 21",
+        gridRow: "5 / 16",
+        gridColumn: "7 / 17",
       },
       fontSize: {
         xs: "5vw",
@@ -66,14 +66,14 @@ const ModernSection = () => {
       text: "Computer Science",
     },
     {
-      bgColor: theme.palette.blue.dark,
+      bgColor: theme.palette.orange.main,
       radius: {
         mobile: ["2vw", "1.1.1.0"],
         desktop: ["1.5vw", "1.1.1.0"],
       },
       sx: {
-        gridRow: "1 / 4",
-        gridColumn: "21 / 24",
+        gridRow: "2 / 5",
+        gridColumn: "7 / 10",
       },
       fontSize: {
         xs: "2vw",
@@ -85,12 +85,12 @@ const ModernSection = () => {
     {
       bgColor: theme.palette.brown.main,
       radius: {
-        mobile: ["1vw", "0.1.1.1"],
-        desktop: ["1vw", "0.1.1.1"],
+        mobile: ["1vw", "1.0.1.1"],
+        desktop: ["1vw", "1.0.1.1"],
       },
       sx: {
-        gridRow: "4 / 7",
-        gridColumn: "21 / 24",
+        gridRow: "11 / 15",
+        gridColumn: "4 / 7",
       },
       fontSize: {
         xs: "2vw",
@@ -102,14 +102,8 @@ const ModernSection = () => {
   ];
 
   return (
-    <PageSection bg={theme.palette.orange.main}>
-      <PageSectionColumn md={6}>
-        <Text color={theme.palette.basic.light} variant="title">
-          {t("curriculumPage.modernSciences")}
-        </Text>
-      </PageSectionColumn>
-
-      <PageSectionColumn md={6}>
+    <PageSection bg={theme.palette.blue.dark}>
+      <PageSectionColumn md={4}>
         <Box sx={ModernScienceGrid}>
           {squares?.map(
             ({ bgColor, radius, sx, fontSize, textColor, text }, i) => (
@@ -130,8 +124,12 @@ const ModernSection = () => {
         </Box>
       </PageSectionColumn>
 
-      <PageSectionColumn>
-        <Text color={theme.palette.basic.light} justify>
+      <PageSectionColumn md={8}>
+        <Text color={theme.palette.basic.light} variant="title" bold>
+          {t("curriculumPage.modernSciences")}
+        </Text>
+
+        <Text color={theme.palette.basic.light} justify doubleHeight bold>
           {t("curriculumPage.modernSciencesContent")}
         </Text>
       </PageSectionColumn>

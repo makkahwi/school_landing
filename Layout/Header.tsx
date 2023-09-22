@@ -1,3 +1,4 @@
+import Text from "@/components/common/Text";
 import theme from "@/styles/theme";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -10,14 +11,36 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
 import * as React from "react";
 
 const links = [
   { title: "Home", link: "" },
-  { title: "About", link: "about" },
-  { title: "Academics", link: "academics" },
-  { title: "Engage", link: "engage" },
+  {
+    title: "About",
+    link: "about",
+    links: [
+      { title: "Why AIS", link: "why-ais" },
+      { title: "AIS Facilities", link: "facilities" },
+      { title: "AIS Team", link: "ais-team" },
+    ],
+  },
+  {
+    title: "Academics",
+    link: "academics",
+    links: [
+      { title: "Study Levels", link: "study-levels" },
+      { title: "Curriculum", link: "curriculum" },
+      { title: "Co-Curriculum", link: "co-curriculum" },
+    ],
+  },
+  {
+    title: "Engage",
+    link: "engage",
+    links: [
+      { title: "Registration & Fees", link: "registration-fees" },
+      { title: "Job Opportunities", link: "job-opportunities" },
+    ],
+  },
   { title: "News", link: "news" },
   { title: "Contact", link: "contact" },
 ];
@@ -26,6 +49,11 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
+  const [anchorSubMenu, setAnchorSubMenu] = React.useState<null | HTMLElement>(
+    null
+  );
+
+  const [submenu, setSubmenu] = React.useState<string>("");
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -57,10 +85,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <img
-              src="https://aqsa.edu.my/wp-content/uploads/2019/03/AIS-En-Mobile-Logo-1-e1588382619889.png"
-              width="90%"
-            />
+            <img src="/images/AIS-En-Mobile-Logo-1-White.png" width="90%" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -95,9 +120,9 @@ function ResponsiveAppBar() {
             >
               {links.map(({ title, link }, i) => (
                 <MenuItem key={i} onClick={handleCloseNavMenu}>
-                  <Typography href={"/" + link} textAlign="center">
+                  <Text href={"/" + link} center>
                     {title}
-                  </Typography>
+                  </Text>
                 </MenuItem>
               ))}
             </Menu>
@@ -125,20 +150,69 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {links.map(({ title, link }, i) => (
-              <Button
-                key={i}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: theme.palette.basic.light,
-                  display: "block",
-                }}
-                href={"/" + link}
-              >
-                {title}
-              </Button>
-            ))}
+            {links.map(({ title, link, links }, i) =>
+              links ? (
+                <React.Fragment key={i}>
+                  <Button
+                    key={i}
+                    aria-controls={
+                      submenu === link ? `${link}-basic-menu` : undefined
+                    }
+                    aria-haspopup="true"
+                    aria-expanded={submenu === link ? "true" : undefined}
+                    onClick={(e) => {
+                      setSubmenu((current) => (current === link ? "" : link));
+                      setAnchorSubMenu(e.currentTarget);
+                    }}
+                    sx={{
+                      my: 2,
+                      color: theme.palette.basic.light,
+                      display: "block",
+                    }}
+                  >
+                    {title}
+                  </Button>
+
+                  <Menu
+                    id={`${link}-basic-menu`}
+                    open={submenu === link}
+                    anchorEl={anchorSubMenu}
+                    onClose={() => setSubmenu("")}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                  >
+                    {links.map(({ link: sublink, title: subtitle }, y) => (
+                      <MenuItem onClick={() => setSubmenu("")} key={y}>
+                        <Button
+                          onClick={() => setSubmenu("")}
+                          sx={{
+                            color: theme.palette.blue.dark,
+                            display: "block",
+                          }}
+                          href={"/" + link + "/" + sublink}
+                        >
+                          {subtitle}
+                        </Button>
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </React.Fragment>
+              ) : (
+                <Button
+                  key={i}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: theme.palette.basic.light,
+                    display: "block",
+                  }}
+                  href={"/" + link}
+                >
+                  {title}
+                </Button>
+              )
+            )}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

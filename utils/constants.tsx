@@ -35,7 +35,7 @@ interface navbarItemsProps {
 export const departmentColors = {
   academic: theme.palette.blue.dark,
   engage: theme.palette.orange.main,
-  about: theme.palette.blue.light,
+  about: theme.palette.basic.main,
   community: theme.palette.basic.light,
 };
 
@@ -145,82 +145,6 @@ export const navbarPage = {
  *  landing page constants
  */
 export const landingPage = {
-  welcomeSquares: [
-    {
-      radiusMobile: ["1.5vw", "1.1.1.0"],
-      radiusDesktop: ["0.5vw", "1.1.1.0"],
-      bgcolor: theme.palette.orange.main,
-      rows: "10 / 12",
-      cols: "20 /22",
-    },
-    {
-      radiusMobile: ["3vw", "1.1.1.0"],
-      radiusDesktop: ["1.5vw", "1.1.1.0"],
-      bgcolor: theme.palette.brown.main,
-      rows: "12 / 16",
-      cols: "20 / 24",
-    },
-    {
-      radiusMobile: ["2.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.2vw", "1.1.0.1"],
-      bgcolor: theme.palette.basic.main,
-      rows: "16 / 19",
-      cols: "9 / 12",
-    },
-    {
-      radiusMobile: ["6vw", "1.0.1.1"],
-      radiusDesktop: ["3vw", "1.0.1.1"],
-      bgcolor: theme.palette.orange.main,
-      rows: "16 / 24",
-      cols: "12 / 20",
-    },
-    {
-      radiusMobile: ["5vw", "0.1.1.1"],
-      radiusDesktop: ["2.2vw", "0.1.1.1"],
-      bgcolor: theme.palette.blue.dark,
-      rows: "16 / 22",
-      cols: "20 / 26",
-    },
-    {
-      radiusMobile: ["1.5vw", "0.1.1.1"],
-      radiusDesktop: ["0.5vw", "0.1.1.1"],
-      bgcolor: theme.palette.brown.main,
-      rows: "22 / 24",
-      cols: "20 / 22",
-    },
-  ],
-
-  newsSquares: [
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["0.8vw", "1.1.0.1"],
-      bgcolor: theme.palette.blue.dark,
-      rows: "3 / 5",
-      cols: "8 / 10",
-    },
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.5vw", "1.1.0.1"],
-      bgcolor: theme.palette.basic.main,
-      rows: "1 / 5",
-      cols: "10 / 14",
-    },
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.2vw", "1.1.1.0"],
-      bgcolor: theme.palette.orange.main,
-      rows: "2 / 5",
-      cols: "14 / 17",
-    },
-    {
-      radiusMobile: ["1.5vw", "1.1.0.1"],
-      radiusDesktop: ["1.2vw", "1.0.1.1"],
-      bgcolor: theme.palette.brown.main,
-      rows: "5 / 8",
-      cols: "11 / 14",
-    },
-  ],
-
   news: [
     {
       title: "communityPage.latestNews.item1.title",
@@ -325,10 +249,10 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section1.title",
       subTitle: "curriculumPage.levels.sections.section1.subTitle",
-      image: "",
+      image: "/images/Char-3-Color.png",
       bgColor: "",
-      titleColor: theme.palette.orange.main,
-      subTitleColor: theme.palette.brown.dark,
+      titleColor: theme.palette.brown.main,
+      subTitleColor: theme.palette.brown.main,
       iconsColor: theme.palette.brown.main,
 
       listElemnts: (size: string, color: string) => [
@@ -373,12 +297,12 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section2.title",
       subTitle: "curriculumPage.levels.sections.section2.subTitle",
-      image: "",
+      image: "/images/Char-1-White.png",
 
       bgColor: theme.palette.blue.dark,
-      titleColor: theme.palette.orange.main,
+      titleColor: theme.palette.basic.light,
       subTitleColor: theme.palette.basic.light,
-      iconsColor: theme.palette.orange.main,
+      iconsColor: theme.palette.basic.light,
 
       listElemnts: (size: string, color: string) => [
         {
@@ -436,11 +360,11 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section3.title",
       subTitle: "curriculumPage.levels.sections.section3.subTitle",
-      image: "",
+      image: "/images/Char-1-Color.png",
 
       bgColor: theme.palette.basic.light,
       titleColor: theme.palette.blue.dark,
-      subTitleColor: theme.palette.basic.dark,
+      subTitleColor: theme.palette.blue.dark,
       iconsColor: theme.palette.blue.dark,
 
       listElemnts: (size: string, color: string) => [
@@ -523,12 +447,12 @@ export const curriculumPage = {
     {
       title: "curriculumPage.levels.sections.section4.title",
       subTitle: "curriculumPage.levels.sections.section4.subTitle",
-      image: "",
+      image: "/images/Char-2-Color.png",
 
-      bgColor: theme.palette.orange.main,
-      titleColor: theme.palette.basic.light,
-      subTitleColor: theme.palette.brown.main,
-      iconsColor: theme.palette.basic.light,
+      bgColor: theme.palette.blue.dark,
+      titleColor: theme.palette.orange.main,
+      subTitleColor: theme.palette.orange.main,
+      iconsColor: theme.palette.orange.main,
 
       listElemnts: (size: string, color: string) => [
         {
@@ -776,16 +700,6 @@ export const registrationPage = {
           title: `registrationPage.structure.item4.item13.title`,
           price: `registrationPage.structure.item4.item13.price`,
           description: `registrationPage.structure.item4.item13.description`,
-        },
-        {
-          title: `registrationPage.structure.item4.item14.title`,
-          price: `registrationPage.structure.item4.item14.price`,
-          description: `registrationPage.structure.item4.item14.description`,
-        },
-        {
-          title: `registrationPage.structure.item4.item15.title`,
-          price: `registrationPage.structure.item4.item15.price`,
-          description: `registrationPage.structure.item4.item15.description`,
         },
       ],
     },

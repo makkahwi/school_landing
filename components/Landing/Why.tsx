@@ -15,17 +15,17 @@ const WhyAISSection = () => {
 
   const whyAIS_icons = [
     {
-      src: "/landingPage/islamic-icon.png",
+      src: "/images/Islamic.png",
       alt: "islamic-icon",
       text: t("landingPage.whyAISSection.items.item1"),
     },
     {
-      src: "/landingPage/cambridge-icon.png",
+      src: "/images/Cambridge.png",
       alt: "cambridge-icon",
       text: t("landingPage.whyAISSection.items.item2"),
     },
     {
-      src: "/landingPage/cheap-zone-icon.png",
+      src: "/images/Cheap.png",
       alt: "cheap-zone-icon",
       text: t("landingPage.whyAISSection.items.item3"),
     },
@@ -44,7 +44,7 @@ const WhyAISSection = () => {
           {t("landingPage.whyAISSection.title")}
         </Text>
 
-        <Text>{t("landingPage.whyAISSection.discription")}</Text>
+        <Text doubleHeight>{t("landingPage.whyAISSection.discription")}</Text>
       </PageSectionColumn>
 
       <PageSectionColumn>
@@ -59,6 +59,7 @@ const WhyAISSection = () => {
                   sx={{
                     width: "50%",
                     height: "auto",
+                    margin: "auto auto",
                   }}
                 />
 
@@ -66,6 +67,8 @@ const WhyAISSection = () => {
                   variant="cardTitle"
                   center
                   color={theme.palette.basic.light}
+                  mt={4}
+                  bold
                 >
                   {item.text}
                 </Text>

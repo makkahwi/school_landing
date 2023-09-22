@@ -26,7 +26,7 @@ const AISBeginning = () => {
 
       {paragraphs.map((text, i) => (
         <PageSectionColumn key={i}>
-          <Text color={theme.palette.orange.main} justify>
+          <Text color={theme.palette.basic.dark} justify doubleHeight bold>
             {text}
           </Text>
         </PageSectionColumn>

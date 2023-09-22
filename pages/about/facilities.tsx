@@ -11,10 +11,7 @@ export default function FacilitiesPage() {
 
   return (
     <Stack>
-      <PageHeader
-        bg={departmentColors.about}
-        title={t("aboutPage.facilities.title")}
-      />
+      <PageHeader bg={departmentColors.about} title={t("aboutPage.title")} />
       <Facilities />
     </Stack>
   );

@@ -30,7 +30,7 @@ const en = {
         item3: "Reasonable & Affordable Charges",
       },
       discription:
-        "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018.The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment",
+        "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018. The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment.",
     },
     newsSection: {
       news: "News",
@@ -104,7 +104,7 @@ const en = {
 
       sections: {
         section1: {
-          title: "Kinder Garten",
+          title: "Kindergarten",
           subTitle:
             "Pre-school curriculum, prepare kids aging 5 - 6 years old to primary level.",
 
@@ -182,6 +182,9 @@ const en = {
 
   registrationPage: {
     title: "REGISTRATION & FEES",
+    NoJobs:
+      "There are no available job vacancies at the time, you still may email us @",
+    Email: "principal@aqsa.edu.my",
 
     details: {
       requires: {
@@ -195,19 +198,14 @@ const en = {
               item3: "2 Photocopies of Student’s Birth Certificate",
               item4:
                 "2 Photocopies of Student’s Malaysian Visa / Residence Permit",
-            },
-          },
-          item2: {
-            title: "Photos",
-            items: {
-              item1: "4 Passport-size photos with white or Blue Background",
+              item5: "4 Passport-size photos with white or Blue Background",
             },
           },
           item3: {
             title: "Latest School Certificates",
             items: {
               item1:
-                "For no-first-grade students, a certificate of latest level finished need to be submitted",
+                "For 2nd grade & above students, a certificate of latest level finished need to be submitted",
               item2: "2 Photocopies",
             },
           },
@@ -216,7 +214,7 @@ const en = {
             items: {
               item1:
                 "There is an online-based form need to be filled before coming to school",
-              item2: "+ Manual Form (Download the Form or collect at school)",
+              item2: "Manual Form (Download the Form or collect at school)",
             },
           },
         },
@@ -247,6 +245,7 @@ const en = {
     },
 
     structure: {
+      currency: "RM",
       title: "Fees' Structure",
       item1: {
         title: "One-time Fees",
@@ -390,7 +389,7 @@ const en = {
         item1: {
           title: "Any or Both Parents are University Students",
           price: "10%",
-          description: "Discount (applicable for tuition fees only)",
+          description: "applicable for tuition fees only",
         },
       },
       item2: {
@@ -399,19 +398,19 @@ const en = {
           title: "First Sibling",
           price: "5%",
           description:
-            "Discount (applicable for tuition fees only for the lowest-level sibling)",
+            "applicable for tuition fees only for the lowest-level sibling",
         },
         item2: {
           title: "Second Sibling",
           price: "10%",
           description:
-            "Discount (applicable for tuition fees only for the second lowest-level sibling)",
+            "applicable for tuition fees only for the second lowest-level sibling",
         },
         item3: {
           title: "Third & Above Sibling",
           price: "15%",
           description:
-            "Discount (applicable for tuition fees only for the third / forth … lowest-level sibling)",
+            "applicable for tuition fees only for the third / forth … lowest-level sibling",
         },
       },
       item3: {
@@ -419,7 +418,7 @@ const en = {
         item1: {
           title: "If parents paid for a whole year",
           price: "5%",
-          description: "Discount (applicable for tuition fees only)",
+          description: "applicable for tuition fees only",
         },
       },
     },
@@ -432,7 +431,7 @@ const en = {
       qualifications: "Qualifications",
       documents: "Documents to Apply",
       email: "Email: Principal@aqsa.edu.my",
-      apply: "Apply",
+      apply: "You may apply by emailing resume to Principal@aqsa.edu.my",
 
       item1: {
         title: "English Teacher",
@@ -645,21 +644,22 @@ const en = {
     formInput4: "How old is your little child?",
     formInput5: "How can we help you?",
 
-    contactTitle: "OR Contact us through these",
+    contactTitle: "OR Contact Us Through",
     contact1: {
-      title: "Give Us A Call",
+      title: "A Call",
       description1: "+603-40316469",
       description2: "+6011-2888-4817",
     },
     contact2: {
-      title: "Email Questions",
-      description1: "contact@aqsa.edu.my",
+      title: "Email",
+      description1: "Principal@aqsa.edu.my",
     },
     contact3: {
-      title: "Meet on Site",
+      title: "Meeting on-site",
       description1: "Monday - Friday",
       description2: "8am - 3pm",
-      description3: "Scroll down to map",
+      description3:
+        "Al-Aqsa Integrated School @ No.5, Jalan Pahang Kecil, 53200 Kuala Lumpur",
     },
   },
 

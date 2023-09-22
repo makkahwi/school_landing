@@ -7,7 +7,7 @@ import { departmentColors } from "@/utils/constants";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
 
-export default function Curriculum() {
+export default function CoCorriculum() {
   const router = useRouter();
   const { t } = useTranslation(router);
 

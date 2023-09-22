@@ -1,14 +1,14 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { landingPage } from "@/utils/constants";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
+import { latestNews } from "../Community/NewsSection";
 import PageSection from "../common/PageSection";
 import Square from "../common/Square";
 import Text from "../common/Text";
@@ -18,6 +18,7 @@ import {
   NewsGridStyles,
   PageFlipComponent,
 } from "./styles";
+import Link from "next/link";
 
 const NewsSection = () => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -27,11 +28,11 @@ const NewsSection = () => {
   const arrowClickHandler = (arrow: string) => {
     if (arrow === "left") {
       setCurrentPhoto((prev) => {
-        return prev === 0 ? landingPage.news.length - 1 : prev - 1;
+        return prev === 0 ? latestNews.length - 1 : prev - 1;
       });
     } else {
       setCurrentPhoto((prev) => {
-        return prev === landingPage.news.length - 1 ? 0 : prev + 1;
+        return prev === latestNews.length - 1 ? 0 : prev + 1;
       });
     }
   };
@@ -63,7 +64,7 @@ const NewsSection = () => {
           borderRadius: { md: "0 5vw 5vw 5vw" },
           animation: `${NewsAnimation} 1.7s both ease`,
         }}
-        src={landingPage.news[currentPhoto].src}
+        src={latestNews[currentPhoto].src}
       />
 
       <IconButton
@@ -93,6 +94,30 @@ const NewsSection = () => {
     };
   }, []);
 
+  const squares = [
+    {
+      radiusMobile: ["1.5vw", "1.1.0.1"],
+      radiusDesktop: ["0.8vw", "1.1.0.1"],
+      bgcolor: theme.palette.brown.main,
+      rows: "3 / 5",
+      cols: "8 / 10",
+    },
+    {
+      radiusMobile: ["1.5vw", "1.1.0.1"],
+      radiusDesktop: ["1.5vw", "1.1.0.1"],
+      bgcolor: theme.palette.blue.dark,
+      rows: "1 / 5",
+      cols: "10 / 14",
+    },
+    {
+      radiusMobile: ["1.5vw", "1.1.0.1"],
+      radiusDesktop: ["1.2vw", "1.1.1.0"],
+      bgcolor: theme.palette.orange.main,
+      rows: "2 / 5",
+      cols: "14 / 17",
+    },
+  ];
+
   return (
     <PageSection>
       <Stack justifyContent="center">
@@ -104,8 +129,8 @@ const NewsSection = () => {
               desktop: ["3vw", "1.0.1.1"],
             }}
             sx={{
-              gridRow: "5 / 10",
-              gridColumn: "1 / 11",
+              gridRow: "5 / 15",
+              gridColumn: "4 / 14",
             }}
           >
             <Text color={theme.palette.basic.light} variant="title">
@@ -113,7 +138,7 @@ const NewsSection = () => {
             </Text>
           </Square>
 
-          {landingPage.newsSquares.map((block, i) => (
+          {squares.map((block, i) => (
             <React.Fragment key={i}>
               <Square
                 bgcolor={block.bgcolor}
@@ -128,18 +153,6 @@ const NewsSection = () => {
               />
             </React.Fragment>
           ))}
-
-          <Avatar
-            src="global\quds-icon.png"
-            variant="square"
-            sx={{
-              padding: 1,
-              width: "auto",
-              height: "100%",
-              gridRow: "10 / 20",
-              gridColumn: "1 / 14",
-            }}
-          />
 
           <Square
             bgcolor={theme.palette.blue.dark}
@@ -164,9 +177,16 @@ const NewsSection = () => {
             alignItems: "center",
           }}
         >
-          <Text variant="subtitle" color={theme.palette.blue.dark}>
-            {t(landingPage.news[currentPhoto].title)}
-          </Text>
+          <Link
+            href={`/news/${t(latestNews[currentPhoto].title).replaceAll(
+              " ",
+              "_"
+            )}`}
+          >
+            <Text variant="subtitle" color={theme.palette.blue.dark}>
+              {t(latestNews[currentPhoto].title)}
+            </Text>
+          </Link>
         </Box>
       </Stack>
     </PageSection>

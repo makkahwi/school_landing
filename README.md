@@ -4,20 +4,22 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Fix Photos & Assets
-- Update Job Opps
+- Fix theme colros
+  - Assign auto color opposites
 - Link Form UI To Email / Firebase
 - Build new pages
   - Staff
   - News by id
-- Capitalize Localization Keys
-- Localize To Arabic
+- Minor UI Fixes
+  - Same equal-height cards
+  - Add Academic & Engage Briefs to Home
+  - Mobile views
+- localization fixes
+  - Use t with phrases instead of dynamic
+  - Capitalize Localization Keys
+  - Localize To Arabic
 
 ### Mustafa To Do
 
 - Build Landing Header Slider
 - Fix News Slider (Img Cover Box)
-- Fix CoCU Sliders UI
-  - Responsiveness
-  - Full width
-  - Infinite loop
