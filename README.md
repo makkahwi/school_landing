@@ -13,6 +13,8 @@ Next.Js & Typescript based
   - Use t with phrases instead of dynamic
   - Capitalize Localization Keys
   - Localize To Arabic
+- Minor Code Fixes
+  - Turn Relative Paths To Absolute
 
 ### Mustafa To Do
 
