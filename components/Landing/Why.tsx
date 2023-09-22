@@ -1,12 +1,12 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Grid } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/router";
 
 import CardComp from "../common/Card";
+import Column from "../common/Column";
 import PageSection from "../common/PageSection";
-import PageSectionColumn from "../common/PageSectionColumn";
+import Row from "../common/Row";
 import Text from "../common/Text";
 
 const WhyAISSection = () => {
@@ -32,51 +32,45 @@ const WhyAISSection = () => {
   ];
 
   return (
-    <PageSection
-      py={20}
-      bgcolor=""
-      sx={{
-        height: { xs: "auto", md: "100vh" },
-      }}
-    >
-      <PageSectionColumn>
-        <Text color={theme.palette.orange.main} variant="title">
-          {t("landingPage.whyAISSection.title")}
-        </Text>
+    <PageSection py={20} bgcolor="">
+      <Row spacing={3}>
+        <Column>
+          <Text color={theme.palette.orange.main} variant="title">
+            {t("landingPage.whyAISSection.title")}
+          </Text>
 
-        <Text doubleHeight>{t("landingPage.whyAISSection.discription")}</Text>
-      </PageSectionColumn>
+          <Text doubleHeight justify>
+            {t("landingPage.whyAISSection.discription")}
+          </Text>
+        </Column>
 
-      <PageSectionColumn>
-        <Grid container spacing={3}>
-          {whyAIS_icons.map((item, i) => (
-            <PageSectionColumn lg={4} md={6} key={i}>
-              <CardComp bg={theme.palette.orange.main}>
-                <Avatar
-                  variant="square"
-                  alt={item.alt}
-                  src={item.src}
-                  sx={{
-                    width: "50%",
-                    height: "auto",
-                    margin: "auto auto",
-                  }}
-                />
+        {whyAIS_icons.map((item, i) => (
+          <Column lg={4} md={6} key={i}>
+            <CardComp bg={theme.palette.orange.main}>
+              <Avatar
+                variant="square"
+                alt={item.alt}
+                src={item.src}
+                sx={{
+                  width: "50%",
+                  height: "auto",
+                  margin: "auto auto",
+                }}
+              />
 
-                <Text
-                  variant="cardTitle"
-                  center
-                  color={theme.palette.basic.light}
-                  mt={4}
-                  bold
-                >
-                  {item.text}
-                </Text>
-              </CardComp>
-            </PageSectionColumn>
-          ))}
-        </Grid>
-      </PageSectionColumn>
+              <Text
+                variant="cardTitle"
+                center
+                color={theme.palette.basic.light}
+                mt={4}
+                bold
+              >
+                {item.text}
+              </Text>
+            </CardComp>
+          </Column>
+        ))}
+      </Row>
     </PageSection>
   );
 };
