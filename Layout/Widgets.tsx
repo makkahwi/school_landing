@@ -1,6 +1,5 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { landingPage } from "@/utils/constants";
 import { Box, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Link from "next/link";
@@ -28,10 +27,38 @@ const Widgets = () => {
         style={{ color: "inherit", textDecoration: "none" }}
         {...rest}
       >
-        {t(label)}
+        {label}
       </Link>
     </Typography>
   );
+
+  const widgetLinks = [
+    {
+      link: "/about/why-ais",
+      label: t("landingPage.whyAISSection.title"),
+    },
+    {
+      link: "/academics/study-levels",
+      label: t("landingPage.newsSection.levels"),
+    },
+    {
+      link: "/academics/curriculum",
+      label: t("landingPage.newsSection.curriculum"),
+    },
+    {
+      link: "/engage/registration-fees",
+      label: t("landingPage.newsSection.registration"),
+    },
+    {
+      link: "/engage/job-opportunities",
+      label: t("landingPage.newsSection.job"),
+    },
+    {
+      link: "https://students.aqsa.edu.my",
+      label: t("landingPage.newsSection.student"),
+      target: "_blank",
+    },
+  ];
 
   return (
     <Box p={{ md: 5 }}>
@@ -78,8 +105,19 @@ const Widgets = () => {
               width="100%"
               height="100%"
             >
-              {landingPage.widgetLinks
-                .slice(0, landingPage.widgetLinks.length / 3)
+              {widgetLinks.slice(0, widgetLinks.length / 3).map((link, i) => (
+                <LinkComp {...link} key={i} />
+              ))}
+            </Stack>
+
+            <Stack
+              justifyContent="space-evenly"
+              alignItems="center"
+              width="100%"
+              height="100%"
+            >
+              {widgetLinks
+                .slice(widgetLinks.length / 3, (widgetLinks.length / 3) * 2)
                 .map((link, i) => (
                   <LinkComp {...link} key={i} />
                 ))}
@@ -91,27 +129,8 @@ const Widgets = () => {
               width="100%"
               height="100%"
             >
-              {landingPage.widgetLinks
-                .slice(
-                  landingPage.widgetLinks.length / 3,
-                  (landingPage.widgetLinks.length / 3) * 2
-                )
-                .map((link, i) => (
-                  <LinkComp {...link} key={i} />
-                ))}
-            </Stack>
-
-            <Stack
-              justifyContent="space-evenly"
-              alignItems="center"
-              width="100%"
-              height="100%"
-            >
-              {landingPage.widgetLinks
-                .slice(
-                  (landingPage.widgetLinks.length / 3) * 2,
-                  landingPage.widgetLinks.length
-                )
+              {widgetLinks
+                .slice((widgetLinks.length / 3) * 2, widgetLinks.length)
                 .map((link, i) => (
                   <LinkComp {...link} key={i} />
                 ))}
