@@ -366,7 +366,10 @@ const en = {
     CoCurriculum: {
       Title: "Co-Curriculum",
       Activities: {
+        Quran: "Quran Competitions",
+        Sunnah: "Sunnah Competitions",
         Title: "Activities",
+        Visits: "Institutions Visits",
         Leisure: "Leisure Trips",
         Library: "Library Day",
         Sports: "Sports Day",
@@ -377,6 +380,11 @@ const en = {
       Clubs: {
         Title: "Clubs",
         Art: "Art Club",
+        Science: "Science Club",
+        Taekwondo: "Taekwondo Club",
+        Crafts: "Crafts Club",
+        Debating: "Debating Club",
+        Knit: "Knit Club",
         Arabic: "Arabic Club",
         French: "French Club",
         Cooking: "Cooking Club",
@@ -384,7 +392,7 @@ const en = {
         Chess: "Chess Club",
       },
       Description:
-        "Designed to shape students' skills, thrill and psycho-social satisfaction.",
+        "Gaining knowledge is not the solely part of education process we care for implementing. Co-Curriculum programs are designed to shape students’ skills, thrill and psycho-social satisfaction, revive the spirit of competition, achieve behavioral development, develop the collective side, cooperate and team spirit in work and develop ties of friendship among students. Some of these activities are sorted in independent clubs within the school.",
     },
     Curriculum: {
       Title: "Curriculum",

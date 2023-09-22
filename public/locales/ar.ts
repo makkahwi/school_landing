@@ -384,7 +384,7 @@ const ar = {
         Chess: "Chess Club",
       },
       Description:
-        "Designed to shape students' skills, thrill and psycho-social satisfaction.",
+        "Gaining knowledge is not the solely part of education process we care for implementing. Co-Curriculum programs are designed to shape students’ skills, thrill and psycho-social satisfaction, revive the spirit of competition, achieve behavioral development, develop the collective side, cooperate and team spirit in work and develop ties of friendship among students. Some of these activities are sorted in independent clubs within the school.",
     },
     Curriculum: {
       Title: "Curriculum",

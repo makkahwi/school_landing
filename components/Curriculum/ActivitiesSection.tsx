@@ -49,6 +49,18 @@ const ActivitiesSection = () => {
       text: t("Academics.CoCurriculum.Activities.Educational"),
       icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
     },
+    {
+      text: t("Academics.CoCurriculum.Activities.Quran"),
+      icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
+    },
+    {
+      text: t("Academics.CoCurriculum.Activities.Sunnah"),
+      icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
+    },
+    {
+      text: t("Academics.CoCurriculum.Activities.Visits"),
+      icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
+    },
   ];
 
   return (

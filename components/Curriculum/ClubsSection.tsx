@@ -33,6 +33,14 @@ const ClubsSection = () => {
       icon: <GTranslateIcon sx={{ width: size, height: size, color: color }} />,
     },
     {
+      text: t("Academics.CoCurriculum.Clubs.Science"),
+      icon: <GTranslateIcon sx={{ width: size, height: size, color: color }} />,
+    },
+    {
+      text: t("Academics.CoCurriculum.Clubs.Taekwondo"),
+      icon: <GTranslateIcon sx={{ width: size, height: size, color: color }} />,
+    },
+    {
       text: t("Academics.CoCurriculum.Clubs.Cooking"),
       icon: <FastfoodIcon sx={{ width: size, height: size, color: color }} />,
     },
@@ -42,6 +50,18 @@ const ClubsSection = () => {
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Chess"),
+      icon: <PsychologyIcon sx={{ width: size, height: size, color: color }} />,
+    },
+    {
+      text: t("Academics.CoCurriculum.Clubs.Crafts"),
+      icon: <PsychologyIcon sx={{ width: size, height: size, color: color }} />,
+    },
+    {
+      text: t("Academics.CoCurriculum.Clubs.Debating"),
+      icon: <PsychologyIcon sx={{ width: size, height: size, color: color }} />,
+    },
+    {
+      text: t("Academics.CoCurriculum.Clubs.Knit"),
       icon: <PsychologyIcon sx={{ width: size, height: size, color: color }} />,
     },
   ];
