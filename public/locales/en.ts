@@ -16,6 +16,26 @@ const en = {
       languagAR: "Arabic",
     },
   },
+  Landing: {
+    Academic: {
+      Title: "Academic",
+      StudyLevels: {
+        Title: "Study Levels",
+        Description:
+          "We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th.",
+      },
+      Curriculum: {
+        Title: "Curriculum",
+        Description:
+          "We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th.",
+      },
+      CoCurriculum: {
+        Title: "CoCurriculum",
+        Description:
+          "We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th.",
+      },
+    },
+  },
 
   landingPage: {
     welcomeSection: {
@@ -23,11 +43,11 @@ const en = {
       subtitle: "Welcome to",
     },
     whyAISSection: {
-      title: "Why AIS ?",
+      title: "About AIS",
       items: {
         item1: "Best Islamic & Arabic Education",
         item2: "Cambridge Sciences' Curriculum",
-        item3: "Reasonable & Affordable Charges",
+        item3: "Reasonable Charges",
       },
       discription:
         "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018. The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment.",
@@ -537,7 +557,7 @@ const en = {
           "At the same time, AIS do not put away modern sciences’ knowledge. So that, the school administration constructed a special curriculum combines Cambridge’s curriculum for sciences, Islamic and Arabic curriculum. As for Palestinian students, raising them with the love of Palestine planted in their hearts is a top priority, and having Palestinian issue considered in their life goals is raised with Palestine-connected environment.",
       },
       item3: {
-        text: "Reasonable & Affordable Charges",
+        text: "Reasonable Charges",
         longText:
           "Yet still our main competitive advantage is to provide a low-cost and good-level education to those who cannot afford the good-level but expensive schools, and those who do not prefer low-cost but low-level education schools. Now, how we do it? It is our job to find sponsors who could cover part of the school costs, and not keep it all to parents to pay.",
       },
