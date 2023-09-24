@@ -15,7 +15,7 @@ Next.Js & Typescript based
   - Turn Relative Paths To Absolute
   - Turn Es5 => Es6 Exports
 - Add Missed Contents
-  - Website Privacy, Data Protection & Terms & Conditions
+  - Data Protection & Terms & Conditions
 
 ### Mustafa To Do
 

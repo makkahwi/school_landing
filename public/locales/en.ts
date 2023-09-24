@@ -1,4 +1,102 @@
 const en = {
+  WebsitePrivacy: {
+    Title: "Website Privacy",
+    Intro:
+      "AIS is committed to preserving your privacy. Please read the following privacy policy to understand how we use and protect the information obtained from those visiting and using the website www.aqsa.edu.my (the “Website”). This policy is your guide to how we will handle information we learn about you from your visit to our Website.",
+    Point1: {
+      Title:
+        "By using the Website you consent to the collection/retention and use of your personal information in accordance with this policy.",
+      Start:
+        "Information that we collect from you. We collect information about you and providing such information is strictly voluntary:",
+      PointA:
+        "when you provide us with your personal details (such as your name, contact details, e-mail address etc) by registering with us or submitting an enquiry via the Website; and",
+      PointB:
+        "from your usage of the Website and any other information you post on the Website, e-mail or otherwise send to us.",
+      End: "We collect and store only the following information about you: the name of the domain from which you access the Internet, the date and time you access our Website, and the Internet address of the website from which you linked to our Website. This information is only used to fulfill your specific request, unless you give us permission to use it in another manner, for example to add you to one of our e-mailing lists.",
+    },
+    Point2: {
+      Title: "Use of your information",
+      Start: "We use your information for internal record keeping;",
+      PointA:
+        "to enable us to supply you with the services and information which you have requested;",
+      PointB:
+        "to ensure that content from the Website is presented in the most effective manner for you and for your computer;",
+      PointC:
+        "to analyse the information we collect so that we can administer, support and improve and develop the Website;",
+      PointD:
+        "to provide you with information or services that you request from us or which we feel may interest you, where you have consented to be contacted for such purposes;",
+      PointE:
+        "From time to time, we may also use your information to contact you for market research purposes. We may contact you by email, phone, fax or mail;",
+      PointF: " to notify you about changes to our service.",
+      End: "We also use the information we collect to measure the number of visitors to the different sections of our Website, and to help us make our Website more useful to visitors. From time to time your personal information may be transferred to other entities of Al-Aqsa Integrated School worldwide or to 3rd party agents or representatives for the purposes of system maintenance.",
+    },
+    Point3: {
+      Title: "Use of Links",
+      Start:
+        "Throughout our Web pages, we provide links to other servers which may contain information of interest to our browsers. We take no responsibility for, and exercise no control over, the organisations, views, or accuracy of the information contained on other servers. Creating a text link from your website to our Website does not require permission. You should exercise caution and look at the privacy statement applicable to the website in question. Be informed, you are the person best qualified to protect your own privacy. If you have a useful link you’d like us to consider adding to our Website, please send an email to principal@aqsa.edu.my with the subject “Link request.”",
+    },
+    Point4: {
+      Title: "Use of Text and Images",
+      Start:
+        "If you would like to publish information that you find on our Website, please send your request to principal@aqsa.edu.my",
+    },
+    Point5: {
+      Title: "Storage of your information",
+      Start:
+        "Where we have given you (or where you have chosen) a password which enables you to access certain parts of the Website, you are responsible for keeping this password confidential. We ask you not to share your password with anyone.",
+
+      End: "Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to the Website; any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access.",
+    },
+    Point6: {
+      Title: "Disclosure of your information",
+      Start:
+        "Authorized personnel within will be able to access the information you provide to us. We may also disclose your information to other third parties who act for us for the purposes set out in the policy or for purposes approved by you. Please note that countries outside Malaysia may not always have the same strong data protection laws. However, we will always take steps to ensure that your information is used by third parties in accordance to the terms of this Privacy Policy.",
+      End: "Unless required or permitted to do so by law, we will not otherwise share, sell or distribute any of the information you provide to us without your consent.",
+    },
+    Point7: {
+      Title: "IP addresses and cookies",
+      Start:
+        "We may collect information about your computer, including where available your IP address, operating system and browser type. This information is statistical data about users’ browsing actions and patterns, does not identify any individual. It is used to perform improvements to the website, for system administration, and to report aggregate information to third parties.",
+      End: "For the same reasons, we use cookies on this Website. Cookies are information that we transfer to your computer’s hard drive through your web browser. They tell us when you have visited our site and where you have been. They do not identify you personally, just the presence of your browser. Cookies make it easier for you to log on and use the site during future visits. They also enable us to provide you with a more personalised service. Should you wish to do so, your browser’s help section should be able to warn you before accepting cookies and how to filter or disable them, although in the latter case, you may not be able to use certain features on our site.",
+    },
+    Point8: {
+      Title: "Security",
+      Start:
+        "We employ security measures to protect your information from access by unauthorised persons and against unlawful processing, accidental loss, destruction or damage. This site has security measures in place to protect the loss, misuse and alteration of the information under our control. Only authorised employees, agents and contractors (who have agreed to keep information secure and confidential) have access to this information. Please help us keep our records updated by informing us of any changes to your email address and other contact details.",
+    },
+    Point9: {
+      Title: "Online Profile Updates",
+      Start:
+        "If you complete the Profile update form and share your personally identifying information, this information will be used only to provide you with more targeted content. We may use your contact information to send further information about our organisation or to contact you when necessary. We may contact you by email, social media platforms and short message service (SMS). If you change your mind about being contacted in the future by any of these means then you may always opt-out of receiving future mailings; see the “Opt Out” section below.",
+    },
+    Point10: {
+      Title: "Sending us an Email",
+      Start:
+        "You also may decide to send us personally identifying information, for example, in an electronic mail message containing a question or comment, or by filling out a Web form that provides us this information. We use personally identifying information from email primarily to respond to your requests. We may forward your email to other employees who are better able to answer your questions. We may also use your email to contact you in the future about our programmes that may be of interest.",
+      End: "We will not obtain personally identifying information about you when you visit our Website, unless you choose to provide such information to us. Providing such information is strictly voluntary. Except as might be required by law, we do not share any information we receive with any parties outside Al-Aqsa Integrated School.",
+    },
+    Point11: {
+      Title: "Opt-Out or Change Your Contact Information",
+      Start:
+        "You may choose to receive only specific communications or none at all. You may also update your contact information previously provided to us. You cannot remove yourself from our database, but you can prevent unwanted communication. Kindly write to us if you wish to opt-out or change your contact information.",
+    },
+    Point12: {
+      Title: "Changes to our Privacy Policy",
+      Start:
+        "We may amend this policy from time to time. If we make any substantial changes we will notify you by posting a prominent notice on the Website. This web page will always have at the top and date to show when did the most recent updates take place.",
+    },
+    Point13: {
+      Title: "Questions about our policies",
+      Start:
+        "You have the right to ask for a copy of the information held by us in our records in return for which we charge a small fee. If you have any questions about this privacy statement, the practices of this Website, or your dealings with this Website, you can contact us at: principal@aqsa.edu.my",
+    },
+    Point14: {
+      Title: "Governing law",
+      Start:
+        "These Terms and Conditions shall be governed and construed in accordance with the laws of Malaysia, whose courts shall have exclusive jurisdiction, although we retain the right to bring proceedings against you for breach of these conditions in your country of residence or any other relevant country.",
+    },
+  },
+  LastUpdated: "Last Updated @ ",
   News: {
     News: "News",
     Title: "LATEST NEWS & ACTIVITIES",
