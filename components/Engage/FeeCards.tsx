@@ -12,7 +12,8 @@ import Text from "../common/Text";
 
 interface FeeCardsProps {
   templateId: string;
-  isSubStack: boolean;
+  bg?: string;
+  cardBg?: string;
   boxes: {
     title: string;
     items: {
@@ -24,27 +25,21 @@ interface FeeCardsProps {
   currency?: boolean;
 }
 
-const FeeCards = ({
-  boxes,
-  isSubStack,
-  bg,
-  cardBg,
-  currency,
-}: FeeCardsProps) => {
+const FeeCards = ({ boxes, bg, cardBg, currency }: FeeCardsProps) => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
   return (
-    <PageSection bg={bg}>
+    <Row>
       {boxes.map((box, i) => (
-        <PageSectionColumn key={i}>
+        <Column key={i} px={{ xs: 0, md: 2 }}>
           <Text variant="subTitle" center bold>
             {box.title}
           </Text>
 
           <Row>
             {box.items.map((item, y) => (
-              <Column md={6} key={y}>
+              <Column md={6} lg={4} px={{ xs: 0, md: 2 }} key={y}>
                 <Square
                   bgcolor={cardBg}
                   radius={{
@@ -57,7 +52,7 @@ const FeeCards = ({
                   }}
                 >
                   <Grid container alignItems="center">
-                    <Grid item md={12}>
+                    <Grid item xs={12}>
                       <Text
                         variant="cardTitle"
                         center
@@ -68,7 +63,7 @@ const FeeCards = ({
                       </Text>
                     </Grid>
 
-                    <Grid item md={12}>
+                    <Grid item xs={12}>
                       <Text
                         variant="title"
                         bold
@@ -82,7 +77,7 @@ const FeeCards = ({
                       </Text>
                     </Grid>
 
-                    <Grid item md={12} px={1}>
+                    <Grid item xs={12} px={1}>
                       <Text color={bg} center>
                         {item.description}
                       </Text>
@@ -92,9 +87,9 @@ const FeeCards = ({
               </Column>
             ))}
           </Row>
-        </PageSectionColumn>
+        </Column>
       ))}
-    </PageSection>
+    </Row>
   );
 };
 

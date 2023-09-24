@@ -175,7 +175,7 @@ const FeesSection = () => {
         />
       </PageSectionColumn>
 
-      <PageSectionColumn>
+      <PageSectionColumn p={0}>
         <FeeCards
           templateId="structure section"
           isSubStack={false}
