@@ -3,13 +3,7 @@ import Row from "@/components/common/Row";
 import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import {
-  Email,
-  Facebook,
-  Instagram,
-  WhatsApp,
-  YouTube,
-} from "@mui/icons-material";
+import { Email, Facebook, Instagram, WhatsApp, YouTube } from "@mui/icons-material";
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Link from "next/link";
@@ -133,6 +127,7 @@ const Widgets = () => {
                     sx={{
                       height: "auto",
                       width: { xs: "25vw", md: "50%" },
+                      margin: "0 auto",
                     }}
                     variant="square"
                     src="/images/AIS-Light-Blue-En-Logo.png"
@@ -141,7 +136,7 @@ const Widgets = () => {
                 </Column>
 
                 {socialMediaLinks.map(({ icon, link }, i) => (
-                  <Column key={i} xs={2}>
+                  <Column key={i} xs={4} sm={2}>
                     <Button
                       href={link}
                       target="_blank"
