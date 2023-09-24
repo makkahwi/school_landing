@@ -112,6 +112,72 @@ const en = {
         "This Policy may be reviewed and amended from time to time. We will communicate such changes along with the updated Policy on the School website www.aqsa.edu.my, and/or other appropriate communication means as may determined by Aqsa Integrated Enterprise Parents and students are advised to visit the School website on a regular basis to check for any updates and changes on this Notice.",
     },
   },
+  TermsConditions: {
+    Title: "Terms & Conditions",
+    Point1: {
+      Title: "Use of our websites",
+      Start:
+        "The use of AIS website is subject to the terms and conditions set forth below. Please read the following Website Terms and Conditions, which relate to information regarding general use of our websites. By using our websites, you are agreeing to these legal Terms and Conditions whether as a guest or registered user. By using our sites you are indicating you accept these terms of use and that you agree to abide by them. From time to time we may change these Terms and Conditions, and will post revisions on this website. We recommend that you read these Terms and Conditions prior to using our sites and thereafter regularly review any changes. This accessibility statement applies only to the AIS website @ www.aqsa.edu.my and all subdomains. It does not apply to any other site, including any site that is linked from our pages.",
+    },
+    Point2: {
+      Title: "Intellectual Property",
+      PointA:
+        "All trade names, trademarks and other logos on AIS website are proprietary to their respective owners and are protected by applicable trademark and copyright laws. The content, layout, design, data, databases and graphics on this website are protected by Malaysian and other international intellectual property laws and are owned by Al-Aqsa Integrated School or its licensors. Unless expressly permitted in writing in a license agreement, no part of the website may be reproduced, stored in any medium, including but not limited to a retrieval system or transmitted, in any form or by any means (electronic, mechanical, photocopying, recording, broadcasting) nor, shown in public other than websites within Al-Aqsa Integrated School.",
+      PointB:
+        "AIS Website Content includes but is not limited to various write-ups and reports, links to other websites, opinions, text, data, images, photos, graphics, graphs, charts, animations, multimedia and interactive displays on the website.",
+      PointC:
+        "None of AIS Website Content may be copied or otherwise reproduced, repackaged, further transmitted, transferred, disseminated, redistributed or resold, or stored for subsequent use for any such purpose, in whole or in part, in any form or manner or by any means whatsoever, by any person without AIS prior written consent.",
+      PointD:
+        "Nothing contained on AIS Website should be construed as granting any license or right to use any of the names, trademarks and other logos displayed on the Website without the express written permission of AIS.",
+      PointE:
+        "Any material you upload to our sites will be considered non-confidential and non-proprietary (unless otherwise stated on the site or within our privacy policy) and for such content you grant us a transferable, royalty free, worldwide, irrevocable license to use, copy, distribute, edit, amend, disclose, sub license to third parties and create derivative works in whole or party of any such material for any purpose. We may remove, edit or amend any such material at any time without notice to you. To the extent moral rights attach to any material to the fullest extent permitted by law these are waived in our favour. We also have the right to disclose your identity to any third party who is claiming that any material posted or uploaded by you to any of our sites constitutes a violation of their rights, including without limitation, their intellectual property rights, reputational rights or of their right to privacy.",
+    },
+    Point3: {
+      Title: "Disclaimer",
+      PointA:
+        "The website may contain forward-looking statements which are based on AIS’s current expectations, forecasts and assumptions based on management’s good faith expectations and belief concerning future developments. In some cases forward-looking statements may be identified by forward-looking words like “would”, “intend”, “hope”, “will”, “may”, “should”, “expect”, “anticipate”, “believe”, “estimate”, “predict”, “continue”, or similar words. Forward-looking statements involve risks and uncertainties which could cause actual outcomes and results to differ materially from AIS’s expectations, forecasts and assumptions. We caution that these forward-looking statements are not statements of historical facts and are subject to risks and uncertainties not in the control of AIS, including, without limitation, economic, competitive, governmental, regulatory, technological, virus and other factors that may affect AIS’s operations. Unless otherwise required by law, AIS disclaims any intention or obligation to update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise. Although we believe the expectations reflected in forward-looking statements are reasonable we cannot guarantee future results, levels of activity, performance or achievements.",
+      PointB:
+        "AIS Website Content to the fullest extent permitted by law, is provided on an “as is” basis, without any guarantees, conditions or warranties as to accuracy. Due to the number of sources from which AIS Website Content is obtained, and the potential hazards of electronic distribution, there may be delays, omissions or inaccuracies in the AIS Website Content. AIS is not liable for any loss or damage to any person upon reliance to the contents on the website.",
+      PointC:
+        "AIS does not make any guarantee or warranty as to the accuracy or completeness of or results to be obtained from accessing and using AIS Website Content or that this web site or its server are free of computer viruses or other harmful items, nor any material that can be accessed through AIS website.",
+      PointD:
+        "AIS and on behalf of AIS directors, officers and employees disclaim any and all warranties, and exclude liability for any losses and expenses of whatever nature and howsoever arising, including without limitation to lost time, lost money, lost profits or good will, claims of third parties or other losses of any kind or character (including, without limitation, direct, indirect, incidental, consequential, special, exemplary or lost profits) resulting from the use or inability to use the web site or the material, whether based on warranty, contract, tort, or any other legal theory, and whether or not AIS is advised of the possibility of such damages.",
+    },
+    Point4: {
+      Title: "Virus protection",
+      Start:
+        "We make every effort to check and test material at all stages of production. It is always wise for you to run an anti-virus program on all material downloaded from the Internet. We cannot accept any responsibility for any loss, disruption or damage to your data or your computer system which may occur whilst using material derived from this website.",
+    },
+    Point5: {
+      Title: "Photography",
+      Start:
+        "Photographs, videos and such may be taken at our events/courses for use in future AIS material. If there is an image or video of you or your child used anywhere on our website that you wish us to consider removing, please contact us at principal@aqsa.edu.my.",
+    },
+    Point6: {
+      Title: "Prohibited Conducts",
+      PointA:
+        "You must not use our website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website.",
+      PointB:
+        "You must not use our website in any way which is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.",
+      PointC:
+        "You must not use our website for any purposes related to marketing without our express written consent.",
+      PointD:
+        "You must not use our website to copy, publish or send mass mailings or spam.",
+      PointE:
+        "You must not use our website to copy, publish or send material which is illegal or unlawful, or material which could give rise to legal action under Malaysian and other applicable law. All material you copy, publish or send via our website must not be defamatory, obscene, indecent, hateful, discriminatory or inflammatory; such material must not infringe any person’s intellectual property rights or rights of confidence, impinge upon any person’s privacy, or constitute incitement to commit a crime; further, material must not be misleading, deceptive, sexually explicit, threatening, abusive, harassing or menacing.",
+      PointF:
+        "You agree that you shall not directly or indirectly attempt or actually disrupt, impair or interfere with, alter or modify the AIS Website Content;",
+      PointG:
+        "We reserve the right to edit or remove any material posted upon our website.",
+      PointH:
+        "We may take such action as we deem appropriate to deal with the posting of unsuitable material, including suspending or cancelling your account, restricting your access to our website, or commencing legal proceedings against you.",
+    },
+    Point7: {
+      Title: "Legal Disclaimer for Website Content",
+      Start:
+        "Information on this Website is provided for information purposes only. Any information obtained from this Website should be reviewed with an appropriate authority to determine its applicability to your particular needs. Great care has been taken to maintain the accuracy of the information provided on this Website. However, Al-Aqsa Integrated School Sdn. Bhd. and its employees are not responsible for errors or any untoward consequences arising from your use of this information.",
+    },
+  },
   WebsitePrivacy: {
     Title: "Website Privacy",
     Intro:
