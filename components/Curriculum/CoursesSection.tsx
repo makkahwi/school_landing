@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
+import Column from "../common/Column";
+import Row from "../common/Row";
 import Text from "../common/Text";
 
 const CoursesSection = () => {
@@ -35,11 +37,11 @@ const CoursesSection = () => {
       </PageSectionColumn>
 
       {courseSquares.map((item, i) => (
-        <PageSectionColumn md={3} key={i}>
+        <Column md={3} key={i}>
           <Square
             bgcolor={theme.palette.blue.dark}
             radius={{
-              mobile: ["10vw", item.edges],
+              mobile: ["10vw", "1.1.1.1"],
               desktop: ["3vw", item.edges],
             }}
             sx={{
@@ -52,7 +54,7 @@ const CoursesSection = () => {
               {item.text}
             </Text>
           </Square>
-        </PageSectionColumn>
+        </Column>
       ))}
     </PageSection>
   );

@@ -29,7 +29,7 @@ const PageHeader = ({ bg = theme.palette.basic.main, title = "" }) => {
         </Text>
       </PageSectionColumn>
 
-      <PageSectionColumn justify="end" align="start" md={3}>
+      <PageSectionColumn justify="end" align="end" md={3}>
         <Box sx={UpperSquaresGrid}>
           <Square
             bgcolor={secondColor()}
