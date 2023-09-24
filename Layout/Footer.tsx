@@ -1,5 +1,5 @@
-import { FooterContainer } from "@/Layout/styles";
 import useTranslation from "@/hooks/useTranslation";
+import { FooterContainer } from "@/Layout/styles";
 import { Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Container sx={{ padding: 2 }}>
-        <Typography textAlign="center" fontSize={{ xs: "4vw", md: "1vw" }}>
+        <Typography textAlign="center" fontSize={{ xs: "2.5vw", md: "1vw" }}>
           {t("Layout.Footer.CopyRights") + new Date().getFullYear()}
           {" | "}
           {t("Layout.Footer.By")}{" "}

@@ -1,8 +1,14 @@
-import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import AdbIcon from "@mui/icons-material/Adb";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
+import {
+  Collapse,
+  Divider,
+  List,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -74,24 +80,6 @@ function ResponsiveAppBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="dense" style={{ margin: "10px auto" }}>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: theme.palette.basic.light,
-              textDecoration: "none",
-            }}
-          >
-            <img src="/images/AIS-En-Mobile-Logo-1-White.png" width="90%" />
-          </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -122,35 +110,89 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {links.map(({ title, link }, i) => (
-                <MenuItem key={i} onClick={handleCloseNavMenu}>
-                  <Text href={"/" + link} center>
-                    {title}
-                  </Text>
-                </MenuItem>
-              ))}
+              <List
+                sx={{
+                  width: "100%",
+                  maxWidth: 360,
+                  bgcolor: "background.paper",
+                  display: { xs: "block", md: "none" },
+                }}
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+              >
+                {links.map(({ title, link, links }, i) =>
+                  links ? (
+                    <React.Fragment key={i}>
+                      <ListItemButton
+                        onClick={() => {
+                          setSubmenu((current) =>
+                            current === link + "mobile" ? "" : link + "mobile"
+                          );
+                        }}
+                      >
+                        <ListItemText primary={title} />
+                        {submenu === link + "mobile" ? (
+                          <ExpandLess />
+                        ) : (
+                          <ExpandMore />
+                        )}
+                      </ListItemButton>
+
+                      <Collapse
+                        in={submenu === link + "mobile"}
+                        timeout="auto"
+                        unmountOnExit
+                      >
+                        <List component="div" disablePadding>
+                          {links.map(
+                            ({ link: sublink, title: subtitle }, y) => (
+                              <ListItemButton
+                                onClick={() => setSubmenu("")}
+                                href={"/" + link + "/" + sublink}
+                                key={y}
+                              >
+                                <ListItemText primary={subtitle} />
+                              </ListItemButton>
+                            )
+                          )}
+                        </List>
+                      </Collapse>
+
+                      <Divider />
+                    </React.Fragment>
+                  ) : (
+                    <React.Fragment key={i}>
+                      <ListItemButton
+                        onClick={handleCloseNavMenu}
+                        href={"/" + link}
+                      >
+                        <ListItemText primary={title} />
+                      </ListItemButton>
+                      {i !== links?.length && <Divider />}
+                    </React.Fragment>
+                  )
+                )}
+              </List>
             </Menu>
           </Box>
 
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
+              display: "flex",
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: theme.palette.basic.light,
               textDecoration: "none",
+              textAlign: "center",
             }}
           >
-            AIS
+            <img src="/images/AIS-En-Mobile-Logo-1-White.png" width="75%" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -158,7 +200,6 @@ function ResponsiveAppBar() {
               links ? (
                 <React.Fragment key={i}>
                   <Button
-                    key={i}
                     aria-controls={
                       submenu === link ? `${link}-basic-menu` : undefined
                     }

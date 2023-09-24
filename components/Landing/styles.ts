@@ -49,22 +49,6 @@ export const PageFlipComponent = styled(Box)(() => ({
   alighnItems: "center",
 }));
 
-export const LowerGridStyles = {
-  direction: "ltr",
-  margin: { xs: "4rem 0rem", md: 8 },
-  display: "grid",
-  justifyContent: "center",
-  gridTemplateColumns: {
-    xs: "repeat(12, 3vw)",
-    md: "repeat(12, 2vw)",
-  },
-  gridTemplateRows: {
-    xs: "repeat(8, 3vw)",
-    md: "repeat(8, 2vw)",
-  },
-  gap: { xs: 2, md: 4 },
-};
-
 export const NewsArrowStyles = {
   position: "absolute",
   width: { xs: "15vw", md: "5vw" },
