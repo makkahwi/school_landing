@@ -14,7 +14,7 @@ const PageSection = ({
     <Grid
       container
       p={p}
-      px={10}
+      px={5}
       bgcolor={bg}
       sx={{
         width: "100%",

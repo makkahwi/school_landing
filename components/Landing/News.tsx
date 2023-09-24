@@ -1,7 +1,7 @@
-import { latestNews } from "@/components/Community/NewsSection";
 import PageSection from "@/components/common/PageSection";
 import Square from "@/components/common/Square";
 import Text from "@/components/common/Text";
+import { latestNews } from "@/components/Community/NewsSection";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
@@ -12,6 +12,7 @@ import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+
 import {
   NewsAnimation,
   NewsArrowStyles,
@@ -132,7 +133,7 @@ const NewsSection = () => {
               gridColumn: "4 / 14",
             }}
           >
-            <Text color={theme.palette.basic.light} variant="title">
+            <Text color={theme.palette.basic.light} variant="subtitle">
               {t("News.News")}
             </Text>
           </Square>
@@ -182,7 +183,7 @@ const NewsSection = () => {
               "_"
             )}`}
           >
-            <Text variant="subtitle" color={theme.palette.blue.dark}>
+            <Text variant="cardtitle" color={theme.palette.blue.dark}>
               {t(latestNews[currentPhoto].title)}
             </Text>
           </Link>

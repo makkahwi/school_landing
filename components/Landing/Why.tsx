@@ -44,7 +44,7 @@ const AboutSection = () => {
         </Column>
 
         {cards.map((item, i) => (
-          <Column lg={4} md={6} key={i}>
+          <Column sm={6} lg={4} key={i}>
             <CardComp bg={theme.palette.orange.main}>
               <Avatar
                 variant="square"
