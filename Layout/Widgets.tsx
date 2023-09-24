@@ -1,6 +1,16 @@
+import Column from "@/components/common/Column";
+import Row from "@/components/common/Row";
+import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import {
+  Email,
+  Facebook,
+  Instagram,
+  WhatsApp,
+  YouTube,
+} from "@mui/icons-material";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -37,6 +47,17 @@ const Widgets = () => {
       label: t("StudentPortal"),
       target: "_blank",
     },
+  ];
+
+  const socialMediaLinks = [
+    { icon: <Facebook />, link: "https://www.facebook.com/AISM2018/" },
+    { icon: <Instagram />, link: "https://www.instagram.com/alAqsaIntegrated" },
+    { icon: <Email />, link: "mailto:principal@aqsa.edu.my" },
+    {
+      icon: <YouTube />,
+      link: "https://www.youtube.com/channel/UCY-cDzyntwP3AQUvEVbsX-A",
+    },
+    { icon: <WhatsApp />, link: "http://wasap.my/601128884817" },
   ];
 
   return (
@@ -106,15 +127,39 @@ const Widgets = () => {
                 padding: "4rem 2rem",
               }}
             >
-              <Avatar
-                sx={{
-                  height: "auto",
-                  width: { xs: "25vw", md: "50%" },
-                }}
-                variant="square"
-                src="/images/AIS-Light-Blue-En-Logo.png"
-                alt="logo 2"
-              />
+              <Row>
+                <Column>
+                  <Avatar
+                    sx={{
+                      height: "auto",
+                      width: { xs: "25vw", md: "50%" },
+                    }}
+                    variant="square"
+                    src="/images/AIS-Light-Blue-En-Logo.png"
+                    alt="logo 2"
+                  />
+                </Column>
+
+                {socialMediaLinks.map(({ icon, link }, i) => (
+                  <Column key={i} xs={2}>
+                    <Button
+                      href={link}
+                      target="_blank"
+                      variant="text"
+                      sx={{ padding: 0 }}
+                      fullWidth
+                    >
+                      <Text
+                        color={theme.palette.basic.light}
+                        variant="sm"
+                        center
+                      >
+                        {icon}
+                      </Text>
+                    </Button>
+                  </Column>
+                ))}
+              </Row>
             </Square>
           </Stack>
         </Grid>

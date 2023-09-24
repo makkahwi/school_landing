@@ -8,7 +8,6 @@ Next.Js & Typescript based
   - Assign auto color opposites
 - Minor UI Fixes
   - Same equal-height cards
-  - Mobile views
   - New Club & Activity Icons
 - localization fixes
   - Localize To Arabic
@@ -16,7 +15,6 @@ Next.Js & Typescript based
   - Turn Relative Paths To Absolute
   - Turn Es5 => Es6 Exports
 - Add Missed Contents
-  - Social Media Links
   - Website Privacy, Data Protection & Terms & Conditions
 
 ### Mustafa To Do
