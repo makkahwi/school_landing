@@ -32,7 +32,7 @@ const ContactsSection = () => {
               <LocalPhoneIcon
                 sx={{
                   color: theme.palette.brown.main,
-                  width: { xs: "3vw", md: "6vw" },
+                  width: { xs: "8vw", md: "6vw" },
                   height: "auto",
                 }}
               />
@@ -53,7 +53,7 @@ const ContactsSection = () => {
               <EmailIcon
                 sx={{
                   color: theme.palette.brown.main,
-                  width: { xs: "3vw", md: "6vw" },
+                  width: { xs: "8vw", md: "6vw" },
                   height: "auto",
                 }}
               />
@@ -71,7 +71,7 @@ const ContactsSection = () => {
               <PushPinIcon
                 sx={{
                   color: theme.palette.brown.main,
-                  width: { xs: "3vw", md: "6vw" },
+                  width: { xs: "8vw", md: "6vw" },
                   height: "auto",
                 }}
               />

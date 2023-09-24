@@ -70,7 +70,7 @@ const ContactForm = () => {
         </Text>
 
         <form onSubmit={onSubmit}>
-          <Row py={5} px={20}>
+          <Row py={5} px={{ xs: 0, md: 20 }}>
             {formInput.map(({ title, ...rest }, i) => (
               <Column md={12} py={2} key={i}>
                 <TextField
