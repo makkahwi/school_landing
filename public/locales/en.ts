@@ -1,4 +1,117 @@
 const en = {
+  DataProtection: {
+    Title: "Data Protection",
+    Point1: {
+      Title: "About This Privacy Policy and PDPA 2010",
+      Start:
+        "Al-Aqsa Integrated School Malaysia (AIS) (“the School”) is committed to comply with the Malaysian Personal Data Protection Act (PDPA) 2010 in protecting our students’ and parents’ personal information that has been processed by the School. This Privacy Policy informs you about the School’s policy and practices on data privacy matters, before you provide your personal data to the School. The word “You” or any derivation thereof, as used herein refers to owner of the personal data, which include both the student and the parent/legal guardian of the child.",
+    },
+    Point2: {
+      Title: "Source Of Your Personal Data",
+      Start:
+        "Most, if not all, of your personal data was obtained from you directly, either from the following sources or from any other information you provided and this may include:",
+      PointA: "Various type of Application and/or Registration Forms;",
+      PointB: "All other School and/or support services related Request Forms;",
+      PointC: "Previous qualification related documents and/or certificates;",
+      PointD:
+        "from third parties such as previous educational institutions, law enforcement agencies and other government entities;",
+      PointE:
+        "third party service providers and any other future third parties in relation or incidental to the above;",
+      PointF: "personal data which are available in the public domain;",
+      PointG:
+        "personal data which may be collected from cookies through the use of the School’s website.",
+      End: "In some instances, your personal data may have been obtained from external sources",
+    },
+    Point3: {
+      Title: "What Personal Data Do We Process?",
+      Start:
+        "The School needs to collect and process your child’s and your personal data for various academic, educational and administrative purposes. Generally, the personal data that we collect and process, include but is not restricted to:",
+      PointA: "Name, Identification number (NRIC) Or Passport number",
+      PointB: "Address, Contact numbers, Personal email address",
+      PointC: "Photo and images",
+      PointD: "Nationality, Student’s Gender, Date of birth",
+      PointE: "Previous qualification",
+      PointF:
+        "Parents’/guardian’s contact details, Billing-related information, Employment/occupation",
+      End: "If the personal data is necessary to initiate any matter with the School, and you refuse to provide the personal data to the School, then the School will not be able to proceed further with your matter.",
+    },
+    Point4: {
+      Title: "Sensitive Personal Data",
+      Start:
+        " Some of the personal data that we collect and process may include what is defined as ‘sensitive personal data’ under the Act and these include, but not restricted to:",
+      PointA: "Race, religion, health",
+      PointB: "records of misconduct and disciplinary action",
+      PointC: "records of criminal offence, family court orders",
+      End: "This sensitive information shall be treated carefully by the School and will only be used for specific purposes. It will not be released to a third party without your explicit consent unless it is necessary to protect your vital interests.",
+    },
+    Point5: {
+      Title: "How Do We Use Our Personal Data?",
+      Start:
+        "The purpose for which personal data is collected and further processed includes, but not restricted to the following:",
+      PointA: "To process application for admission;",
+      PointB: "To manage and respond to enquiries;",
+      PointC:
+        "To maintain students’ personal details, academic and non-academic records;",
+      PointD:
+        "To facilitate the internships, placement or work experience as well as co-curricular related activities and other school events;",
+      PointE: "To maintain a student/class register;",
+      PointF:
+        "To provide the relevant administrative support, counselling and pastoral services;",
+      PointG:
+        "To manage the use of facilities such as library, laboratories and so on;",
+      PointH: "To administer the graduation and alumni related events;",
+      PointI: "To administer the tuition fee and other payment;",
+      PointJ: "To communicate with students on any important announcements;",
+      PointK:
+        "To collect information for relevant local or international statutory authorities or exam boards;",
+      PointL: "To contact student’s next of kin in case of emergency;",
+      PointM:
+        "To comply with any regulatory, audit or security related requirements;",
+      PointN: "To pursue/collect any sums in arrears by our parents/guardians;",
+      PointO: "To care for the medical needs of students;",
+      PointP:
+        "For all and any other ancillary purposes relating to our provision of service e.g., the supply of computers, iPads, other forms of telecommunications and technology services;",
+      PointQ: "Any other purposes related to the smooth running of the School.",
+    },
+    Point6: {
+      Title: "Provision Of Information",
+      Start:
+        "The provision of all information requested for in the relevant forms of the School is mandatory, unless specified otherwise, in enabling us to process your application/request and any of our services to you.",
+      End: "Should you fail to provide the said information, the School may be unable to process your request and/or provide you with the relevant services.",
+    },
+    Point7: {
+      Title: "Disclosure Of Your Personal Data",
+      Start:
+        "Al-Aqsa Integrated School Malaysia will keep your personal data con dential unless you have given the written consent to such disclosure or it is within the ambit of permitted disclosures under prevailing laws/guidelines. The School may disclose your information to the categories of third parties as listed below (not restricted to):",
+      PointA:
+        "The Ministry of Education, other relevant government departments/agencies, statutory authorities and industry regulators;",
+      PointB: "Malaysian Immigration Department and its appointed agencies;",
+      PointC: "Foreign embassies and their appointed agencies;",
+      PointD: "The student’s sponsors including his/her parents/guardians;",
+      PointE:
+        "Third parties that provide the internships or attachment placements;",
+      PointF: "Professional or accreditation bodies;",
+      PointG: "Examination boards;",
+      PointH:
+        "Third parties appointed by to provide services to the School as auditors, lawyers, contractors, printing companies, travel agencies, training organiser and insurance companies;",
+      PointI: "Other institutions or companies with Al-Aqsa Integrated School.",
+    },
+    Point8: {
+      Title: "Right To Access And Data Subject’s Obligation",
+      Start:
+        "You have the right to access and correct your personal information held by the School under the Act. We will attempt to keep your records complete, accurate and up-to-date. If you have any reason to believe that your records with us are inaccurate, incomplete or not updated, please notify the School in a timely manner. If you wish to request for access to, or to correct data held by the School, or withdraw your consent to the data processing/use of your personal data by us, please forward your request to:",
+      PointA: "(603) 1234 5678 (telephone)",
+      PointB: "principal@aqsa.edu.my (email)",
+      PointC:
+        "AIS reserves the right to charge you an administrative fee for processing any data access request.",
+      End: "Although, we only process your personal data for purposes as stated above, in the event that your personal data is being processed for other purposes (with your consent), you have the right to request us to stop such processing. You may exercise this right by contacting the School through aforementioned. However, if you choose not to provide and/or fail to supply us with such personal data (and/or decide not to give us consent to process your personal data, including explicit consent for sensitive personal data), we will not be able to perform the contract of enrollment or process your application for enrollment with us. Accordingly, if you decide not to provide the mandatory information to us, it may necessarily mean that the Contract of Enrollment may have to be terminated or that an offer of a place of enrollment will not be made. Any request to exercise your rights shall be administered as per the Act. Please be informed that pursuant to the Act, your request may be rejected in certain circumstances.",
+    },
+    Point9: {
+      Title: "Amendments To This Privacy Policy",
+      Start:
+        "This Policy may be reviewed and amended from time to time. We will communicate such changes along with the updated Policy on the School website www.aqsa.edu.my, and/or other appropriate communication means as may determined by Aqsa Integrated Enterprise Parents and students are advised to visit the School website on a regular basis to check for any updates and changes on this Notice.",
+    },
+  },
   WebsitePrivacy: {
     Title: "Website Privacy",
     Intro:
