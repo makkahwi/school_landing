@@ -3,7 +3,13 @@ import Row from "@/components/common/Row";
 import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Email, Facebook, Instagram, WhatsApp, YouTube } from "@mui/icons-material";
+import {
+  Email,
+  Facebook,
+  Instagram,
+  WhatsApp,
+  YouTube,
+} from "@mui/icons-material";
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Link from "next/link";
@@ -40,6 +46,18 @@ const Widgets = () => {
       link: "https://students.aqsa.edu.my",
       label: t("StudentPortal"),
       target: "_blank",
+    },
+    {
+      link: "/website-privacy",
+      label: t("WebsitePrivacy.Title"),
+    },
+    {
+      link: "/data-protection",
+      label: t("DataProtection.Title"),
+    },
+    {
+      link: "/terms-conditions",
+      label: t("TermsConditions.Title"),
     },
   ];
 
