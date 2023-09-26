@@ -150,7 +150,12 @@ function ResponsiveAppBar() {
                             ({ link: sublink, title: subtitle }, y) => (
                               <ListItemButton
                                 onClick={() => setSubmenu("")}
-                                href={link + "/" + sublink}
+                                href={
+                                  (router.locale === "ar" ? "/ar/" : "/") +
+                                  link +
+                                  "/" +
+                                  sublink
+                                }
                                 key={y}
                               >
                                 <ListItemText primary={subtitle} />
@@ -164,7 +169,10 @@ function ResponsiveAppBar() {
                     </React.Fragment>
                   ) : (
                     <React.Fragment key={i}>
-                      <ListItemButton onClick={handleCloseNavMenu} href={link}>
+                      <ListItemButton
+                        onClick={handleCloseNavMenu}
+                        href={(router.locale === "ar" ? "/ar/" : "/") + link}
+                      >
                         <ListItemText primary={title} />
                       </ListItemButton>
                       {i !== links?.length && <Divider />}
@@ -234,7 +242,12 @@ function ResponsiveAppBar() {
                             color: theme.palette.blue.dark,
                             display: "block",
                           }}
-                          href={link + "/" + sublink}
+                          href={
+                            (router.locale === "ar" ? "/ar/" : "/") +
+                            link +
+                            "/" +
+                            sublink
+                          }
                         >
                           {subtitle}
                         </Button>
@@ -251,7 +264,7 @@ function ResponsiveAppBar() {
                     color: theme.palette.basic.light,
                     display: "block",
                   }}
-                  href={link}
+                  href={(router.locale === "ar" ? "/ar/" : "/") + link}
                 >
                   {title}
                 </Button>
