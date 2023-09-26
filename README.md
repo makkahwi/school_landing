@@ -2,11 +2,6 @@
 
 Next.Js & Typescript based
 
-## Publish Priority To Do
-
-- localization fixes
-  - Localize To Arabic
-
 ## To Do
 
 - Fix theme colros
