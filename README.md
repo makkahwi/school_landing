@@ -2,6 +2,11 @@
 
 Next.Js & Typescript based
 
+## Publish Priority To Do
+
+- localization fixes
+  - Localize To Arabic
+
 ## To Do
 
 - Fix theme colros
@@ -9,9 +14,6 @@ Next.Js & Typescript based
 - Minor UI Fixes
   - Same equal-height cards
   - New Club & Activity Icons
-  - HomePage Contents
-- localization fixes
-  - Localize To Arabic
 - Minor Code Fixes
   - Turn Relative Paths To Absolute
   - Turn Es5 => Es6 Exports

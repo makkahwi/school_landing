@@ -482,7 +482,7 @@ const en = {
       Title: "Registration & Fees",
       RegisterNow: "Start The Process Now",
       Description:
-        "We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th.",
+        "As we aim to fit the abilities of Malaysia residents of Arab societies, we believe that we are offering the most reasonable charges among out competitors. Check out the prices below and how to actually join our lovely community.",
       Requirements: {
         Title: "Required Documents",
         Id: {
@@ -566,6 +566,7 @@ const en = {
   },
   Academics: {
     StudyLevels: {
+      CheckOut: "Check Our Study Levels",
       KG: {
         Title: "Kindergarten",
         Description:
@@ -637,10 +638,11 @@ const en = {
       },
       Title: "Study Levels",
       Description:
-        "We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th. We offer all school levels from KG & 1st to 12th.",
+        "At AIS, we consider the school as a dynamic production team. Administrators, teachers, and students are all contributors to this team, and knowledge & ideas are the products. Since students are the ones who benefit most directly from the product, they should be most concerned that the product is of a high quality. But from our side, we offer all school levels from KG & 1st to 12th, with carefully designed fitting curriculum for each level to have the best components & inputs of the education process to lead to the desired outcomes.",
     },
     Title: "Academics",
     CoCurriculum: {
+      CheckOut: "Check Our Co-Curriculum",
       Title: "Co-Curriculum",
       Activities: {
         Quran: "Quran Competitions",
@@ -672,6 +674,7 @@ const en = {
         "Gaining knowledge is not the solely part of education process we care for implementing. Co-Curriculum programs are designed to shape students’ skills, thrill and psycho-social satisfaction, revive the spirit of competition, achieve behavioral development, develop the collective side, cooperate and team spirit in work and develop ties of friendship among students. Some of these activities are sorted in independent clubs within the school.",
     },
     Curriculum: {
+      CheckOut: "Check Our Curriculum",
       Title: "Curriculum",
       Languages: {
         Title: "Languages",

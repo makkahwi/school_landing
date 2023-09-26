@@ -6,23 +6,24 @@ import Column from "../common/Column";
 import PageSection from "../common/PageSection";
 import Row from "../common/Row";
 import Text from "../common/Text";
+import { Button } from "@mui/material";
 
 const AcademicSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const contents = [
+  const buttons = [
     {
-      title: t("Academics.StudyLevels.Title"),
-      desc: t("Academics.StudyLevels.Description"),
+      title: t("Academics.StudyLevels.CheckOut"),
+      link: "/academics/study-levels",
     },
     {
-      title: t("Academics.Curriculum.Title"),
-      desc: t("Academics.Curriculum.Description"),
+      title: t("Academics.Curriculum.CheckOut"),
+      link: "/academics/curriculum",
     },
     {
-      title: t("Academics.CoCurriculum.Title"),
-      desc: t("Academics.CoCurriculum.Description"),
+      title: t("Academics.CoCurriculum.CheckOut"),
+      link: "/academics/co-curriculum",
     },
   ];
 
@@ -30,20 +31,29 @@ const AcademicSection = () => {
     <PageSection py={20}>
       <Row spacing={3}>
         <Column>
-          <Text color={theme.palette.orange.main} variant="title">
+          <Text color={theme.palette.blue.dark} variant="title">
             {t("Academics.Title")}
           </Text>
         </Column>
 
-        {contents.map(({ title, desc }, i) => (
-          <Column lg={4} key={i}>
-            <Text color={theme.palette.blue.dark} variant="cardTitle" bold>
-              {title}
-            </Text>
+        <Column lg={12}>
+          <Text doubleHeight justify>
+            {t("Academics.StudyLevels.Description")}
+          </Text>
+        </Column>
 
-            <Text doubleHeight justify>
-              {desc}
-            </Text>
+        {buttons.map(({ title, link }, i) => (
+          <Column lg={4} key={i}>
+            <Button
+              style={{ backgroundColor: theme.palette.blue.dark }}
+              variant="contained"
+              size="large"
+              sx={{ padding: 3, color: "white" }}
+              href={link}
+              fullWidth
+            >
+              {title}
+            </Button>
           </Column>
         ))}
       </Row>

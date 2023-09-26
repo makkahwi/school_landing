@@ -24,7 +24,13 @@ const RegisterSection = () => {
             {t("Engage.Registration.Description")}
           </Text>
 
-          <Button fullWidth color="error">
+          <Button
+            style={{ backgroundColor: theme.palette.brown.main }}
+            variant="contained"
+            size="large"
+            sx={{ padding: 3, color: "white" }}
+            href="/engage/registration-fees"
+          >
             {t("Engage.Registration.RegisterNow")}
           </Button>
         </Column>
