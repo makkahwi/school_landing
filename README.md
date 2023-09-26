@@ -8,7 +8,6 @@ Next.Js & Typescript based
   - Assign auto color opposites
 - Minor UI Fixes
   - Same equal-height cards
-  - New Club & Activity Icons
 - Minor Code Fixes
   - Turn Relative Paths To Absolute
   - Turn Es5 => Es6 Exports
@@ -17,3 +16,4 @@ Next.Js & Typescript based
 
 - Build Landing Header Slider
 - Fix News Slider (Img Cover Box)
+- Build language-switch functionality

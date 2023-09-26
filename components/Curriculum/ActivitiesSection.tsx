@@ -11,6 +11,13 @@ import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import StaticList from "../common/StaticList";
 import Text from "../common/Text";
+import {
+  AccountBalance,
+  Brightness1,
+  Brightness3,
+  Mosque,
+  Tour,
+} from "@mui/icons-material";
 
 const ActivitiesSection = () => {
   const router = useRouter();
@@ -47,19 +54,19 @@ const ActivitiesSection = () => {
     },
     {
       text: t("Academics.CoCurriculum.Activities.Educational"),
-      icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <Tour sx={{ width: size, height: size, color: color }} />,
     },
     {
       text: t("Academics.CoCurriculum.Activities.Quran"),
-      icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <Mosque sx={{ width: size, height: size, color: color }} />,
     },
     {
       text: t("Academics.CoCurriculum.Activities.Sunnah"),
-      icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <Brightness3 sx={{ width: size, height: size, color: color }} />,
     },
     {
       text: t("Academics.CoCurriculum.Activities.Visits"),
-      icon: <SchoolIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <AccountBalance sx={{ width: size, height: size, color: color }} />,
     },
   ];
 

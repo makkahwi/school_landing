@@ -12,6 +12,14 @@ import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import StaticList from "../common/StaticList";
 import Text from "../common/Text";
+import {
+  Checkroom,
+  Construction,
+  Science,
+  SoupKitchen,
+  SportsMartialArts,
+  Stadium,
+} from "@mui/icons-material";
 
 const ClubsSection = () => {
   const router = useRouter();
@@ -34,15 +42,17 @@ const ClubsSection = () => {
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Science"),
-      icon: <GTranslateIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <Science sx={{ width: size, height: size, color: color }} />,
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Taekwondo"),
-      icon: <GTranslateIcon sx={{ width: size, height: size, color: color }} />,
+      icon: (
+        <SportsMartialArts sx={{ width: size, height: size, color: color }} />
+      ),
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Cooking"),
-      icon: <FastfoodIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <SoupKitchen sx={{ width: size, height: size, color: color }} />,
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Math"),
@@ -54,15 +64,15 @@ const ClubsSection = () => {
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Crafts"),
-      icon: <PsychologyIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <Construction sx={{ width: size, height: size, color: color }} />,
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Debating"),
-      icon: <PsychologyIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <Stadium sx={{ width: size, height: size, color: color }} />,
     },
     {
       text: t("Academics.CoCurriculum.Clubs.Knit"),
-      icon: <PsychologyIcon sx={{ width: size, height: size, color: color }} />,
+      icon: <Checkroom sx={{ width: size, height: size, color: color }} />,
     },
   ];
 
