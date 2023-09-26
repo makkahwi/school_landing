@@ -230,9 +230,9 @@ export default function StudyLevels() {
       image: "/images/Char-2-Color.png",
 
       bgColor: theme.palette.blue.dark,
-      titleColor: theme.palette.orange.main,
-      subTitleColor: theme.palette.orange.main,
-      iconsColor: theme.palette.orange.main,
+      titleColor: theme.palette.basic.light,
+      subTitleColor: theme.palette.basic.light,
+      iconsColor: theme.palette.basic.light,
 
       listElemnts: (size: string, color: string) => [
         {

@@ -34,35 +34,38 @@ function ResponsiveAppBar() {
   const [submenu, setSubmenu] = React.useState<string>("");
 
   const links = [
-    { title: "Home", link: "" },
+    { title: t("Home"), link: "/" },
     {
-      title: "About",
-      link: "about",
+      title: t("About.About"),
+      link: "/about",
       links: [
-        { title: "Why AIS", link: "why-ais" },
-        { title: "AIS Facilities", link: "facilities" },
-        // { title: "AIS Team", link: "ais-team" },
+        { title: t("About.WhyAIS.WhyAIS"), link: "/why-ais" },
+        { title: t("About.Facilities.Title"), link: "/facilities" },
+        // { title: "AIS Team", link: "/ais-team" },
       ],
     },
     {
-      title: "Academics",
-      link: "academics",
+      title: t("Academics.Title"),
+      link: "/academics",
       links: [
-        { title: "Study Levels", link: "study-levels" },
-        { title: "Curriculum", link: "curriculum" },
-        { title: "Co-Curriculum", link: "co-curriculum" },
+        { title: t("Academics.StudyLevels.Title"), link: "/study-levels" },
+        { title: t("Academics.Curriculum.Title"), link: "/curriculum" },
+        { title: t("Academics.CoCurriculum.Title"), link: "/co-curriculum" },
       ],
     },
     {
-      title: "Engage",
-      link: "engage",
+      title: t("Engage.Title"),
+      link: "/engage",
       links: [
-        { title: "Registration & Fees", link: "registration-fees" },
-        { title: "Job Opportunities", link: "job-opportunities" },
+        {
+          title: t("Engage.Registration.Title"),
+          link: "/registration-fees",
+        },
+        { title: t("Engage.Jobs.Title"), link: "/job-opportunities" },
       ],
     },
-    { title: "News", link: "news" },
-    { title: "Contact", link: "contact" },
+    { title: t("News.News"), link: "/news" },
+    { title: t("Contact.Contact"), link: "/contact" },
   ];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {

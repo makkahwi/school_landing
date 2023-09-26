@@ -14,6 +14,6 @@ Next.Js & Typescript based
 
 ### Mustafa To Do
 
+- Fix HomePage News Slider (Img To Cover Box)
 - Build Landing Header Slider
-- Fix News Slider (Img Cover Box)
 - Build language-switch functionality

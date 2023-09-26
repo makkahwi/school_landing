@@ -72,7 +72,9 @@ const FeeCards = ({ boxes, bg, cardBg, currency }: FeeCardsProps) => {
                         color={theme.palette.orange.main}
                       >
                         {currency
-                          ? t("Engage.Fees.Currency") + " " + item.price
+                          ? router.locale == "ar"
+                            ? item.price + " " + t("Engage.Fees.Currency")
+                            : t("Engage.Fees.Currency") + " " + item.price
                           : item.price}
                       </Text>
                     </Grid>
