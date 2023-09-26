@@ -34,38 +34,38 @@ function ResponsiveAppBar() {
   const [submenu, setSubmenu] = React.useState<string>("");
 
   const links = [
-    { title: t("Home"), link: "/" },
+    { title: t("Home"), link: "" },
     {
       title: t("About.About"),
-      link: "/about",
+      link: "about",
       links: [
-        { title: t("About.WhyAIS.WhyAIS"), link: "/why-ais" },
-        { title: t("About.Facilities.Title"), link: "/facilities" },
-        // { title: "AIS Team", link: "/ais-team" },
+        { title: t("About.WhyAIS.WhyAIS"), link: "why-ais" },
+        { title: t("About.Facilities.Title"), link: "facilities" },
+        // { title: "AIS Team", link: "ais-team" },
       ],
     },
     {
       title: t("Academics.Title"),
-      link: "/academics",
+      link: "academics",
       links: [
-        { title: t("Academics.StudyLevels.Title"), link: "/study-levels" },
-        { title: t("Academics.Curriculum.Title"), link: "/curriculum" },
-        { title: t("Academics.CoCurriculum.Title"), link: "/co-curriculum" },
+        { title: t("Academics.StudyLevels.Title"), link: "study-levels" },
+        { title: t("Academics.Curriculum.Title"), link: "curriculum" },
+        { title: t("Academics.CoCurriculum.Title"), link: "co-curriculum" },
       ],
     },
     {
       title: t("Engage.Title"),
-      link: "/engage",
+      link: "engage",
       links: [
         {
           title: t("Engage.Registration.Title"),
-          link: "/registration-fees",
+          link: "registration-fees",
         },
-        { title: t("Engage.Jobs.Title"), link: "/job-opportunities" },
+        { title: t("Engage.Jobs.Title"), link: "job-opportunities" },
       ],
     },
-    { title: t("News.News"), link: "/news" },
-    { title: t("Contact.Contact"), link: "/contact" },
+    { title: t("News.News"), link: "news" },
+    { title: t("Contact.Contact"), link: "contact" },
   ];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -90,7 +90,6 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color={theme.palette.basic.light}
             >
               <MenuIcon />
             </IconButton>
@@ -151,7 +150,7 @@ function ResponsiveAppBar() {
                             ({ link: sublink, title: subtitle }, y) => (
                               <ListItemButton
                                 onClick={() => setSubmenu("")}
-                                href={"/" + link + "/" + sublink}
+                                href={link + "/" + sublink}
                                 key={y}
                               >
                                 <ListItemText primary={subtitle} />
@@ -165,10 +164,7 @@ function ResponsiveAppBar() {
                     </React.Fragment>
                   ) : (
                     <React.Fragment key={i}>
-                      <ListItemButton
-                        onClick={handleCloseNavMenu}
-                        href={"/" + link}
-                      >
+                      <ListItemButton onClick={handleCloseNavMenu} href={link}>
                         <ListItemText primary={title} />
                       </ListItemButton>
                       {i !== links?.length && <Divider />}
@@ -183,7 +179,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href=""
             sx={{
               mr: 2,
               display: "flex",
@@ -238,7 +234,7 @@ function ResponsiveAppBar() {
                             color: theme.palette.blue.dark,
                             display: "block",
                           }}
-                          href={"/" + link + "/" + sublink}
+                          href={link + "/" + sublink}
                         >
                           {subtitle}
                         </Button>
@@ -255,7 +251,7 @@ function ResponsiveAppBar() {
                     color: theme.palette.basic.light,
                     display: "block",
                   }}
-                  href={"/" + link}
+                  href={link}
                 >
                   {title}
                 </Button>
