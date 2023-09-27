@@ -37,35 +37,35 @@ function ResponsiveAppBar() {
     { title: t("Home"), link: "/" },
     {
       title: t("About.About"),
-      link: "about",
+      link: "/about",
       links: [
-        { title: t("About.WhyAIS.WhyAIS"), link: "why-ais" },
-        { title: t("About.Facilities.Title"), link: "facilities" },
-        // { title: "AIS Team", link: "ais-team" },
+        { title: t("About.WhyAIS.WhyAIS"), link: "/why-ais" },
+        { title: t("About.Facilities.Title"), link: "/facilities" },
+        // { title: "AIS Team", link: "/ais-team" },
       ],
     },
     {
       title: t("Academics.Title"),
-      link: "academics",
+      link: "/academics",
       links: [
-        { title: t("Academics.StudyLevels.Title"), link: "study-levels" },
-        { title: t("Academics.Curriculum.Title"), link: "curriculum" },
-        { title: t("Academics.CoCurriculum.Title"), link: "co-curriculum" },
+        { title: t("Academics.StudyLevels.Title"), link: "/study-levels" },
+        { title: t("Academics.Curriculum.Title"), link: "/curriculum" },
+        { title: t("Academics.CoCurriculum.Title"), link: "/co-curriculum" },
       ],
     },
     {
       title: t("Engage.Title"),
-      link: "engage",
+      link: "/engage",
       links: [
         {
           title: t("Engage.Registration.Title"),
-          link: "registration-fees",
+          link: "/registration-fees",
         },
-        { title: t("Engage.Jobs.Title"), link: "job-opportunities" },
+        { title: t("Engage.Jobs.Title"), link: "/job-opportunities" },
       ],
     },
-    { title: t("News.News"), link: "news" },
-    { title: t("Contact.Contact"), link: "contact" },
+    { title: t("News.News"), link: "/news" },
+    { title: t("Contact.Contact"), link: "/contact" },
   ];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -155,7 +155,16 @@ function ResponsiveAppBar() {
                                 href={link + "/" + sublink}
                                 locale={router.locale}
                                 key={y}
-                                onClick={() => setSubmenu("")}
+                                onClick={() => {
+                                  setSubmenu("");
+                                  handleCloseNavMenu();
+                                }}
+                                role="button"
+                                style={{
+                                  textDecoration: "none",
+                                  color: theme.palette.blue.dark,
+                                  display: "block",
+                                }}
                               >
                                 <ListItemButton>
                                   <ListItemText primary={subtitle} />
@@ -175,6 +184,12 @@ function ResponsiveAppBar() {
                         locale={router.locale}
                         key={i}
                         onClick={handleCloseNavMenu}
+                        role="button"
+                        style={{
+                          textDecoration: "none",
+                          color: theme.palette.blue.dark,
+                          display: "block",
+                        }}
                       >
                         <ListItemButton>
                           <ListItemText primary={title} />
@@ -188,13 +203,9 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
+          <Link
+            href="/"
+            style={{
               display: "flex",
               fontFamily: "monospace",
               fontWeight: 700,
@@ -205,7 +216,7 @@ function ResponsiveAppBar() {
             }}
           >
             <img src="/images/AIS-En-Mobile-Logo-1-White.png" width="75%" />
-          </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {links.map(({ title, link, links }, i) =>
@@ -285,9 +296,14 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Link
-              style={{ cursor: "pointer", color: theme.palette.basic.light }}
               href=""
               locale={router.locale === "ar" ? "en" : "ar"}
+              role="button"
+              style={{
+                textDecoration: "none",
+                color: theme.palette.basic.light,
+                display: "block",
+              }}
             >
               {t("OtherLang")}
             </Link>
