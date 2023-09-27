@@ -16,4 +16,3 @@ Next.Js & Typescript based
 
 - Fix HomePage News Slider (Img To Cover Box)
 - Build Landing Header Slider
-- Build language-switch functionality
