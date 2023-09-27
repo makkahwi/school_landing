@@ -279,7 +279,7 @@ const en = {
   LastUpdated: "Last Updated @ ",
   News: {
     News: "News",
-    Title: "LATEST NEWS & ACTIVITIES",
+    Title: "Latest News & Activities",
     LatestNews: {
       News1: {
         Title: "AIS Received Rahmaniya School Delegation",
@@ -739,7 +739,7 @@ const en = {
         "To educate our kids the authentic Islamic heritage, keep them up with the contemporary sciences and enhance the Palestinian-issue value among them. Enable the coming generation to acquire tools of creativity and keys of consciousness, to embark on all fields of life and make their remarkable contribution.",
     },
     Objectives: {
-      Title: "OBJECTIVES",
+      Title: "Objectives",
       MoralCompass: {
         Title: "Moral Compass",
         Description:
@@ -775,7 +775,7 @@ const en = {
       "Al-Aqsa Integrated School Malaysia (AIS) is an international school founded in Kuala Lumpur, Malaysia and launched its first semester on October 2018. The main purpose of founding AIS was to offer education to families around Klang Valley a satisfying education level and good environment.",
     WhyAIS: {
       WhyAIS: "Why AIS",
-      Title: "AIS COMPETITIVE ADVANTAGES",
+      Title: "AIS Competitive Advantages",
       Islamic: {
         Title: "Best Islamic & Arabic Education",
         Description:
@@ -793,7 +793,7 @@ const en = {
       },
     },
     Beginnings: {
-      Title: "AIS BEGINNINGS",
+      Title: "AIS Beginnings",
       Para1:
         "In 2017, most international families around Klang Valley did try to register their children to public schools in Malaysia, but more than 90% of them did not manage to. So they headed to private schools, trying to find an affordable school where their children would have good education at appropriate costs, and they failed to find such schools.",
       Para2:
@@ -804,7 +804,7 @@ const en = {
   },
   Contact: {
     Contact: "Contact",
-    Title: "CONTACT AIS",
+    Title: "Contact AIS",
     FormTitle: "You Could Fill Up this Form",
     FormButton: "Submit now",
     MsgSent: "Your message has been sent. TQ :)",
