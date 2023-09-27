@@ -7,6 +7,7 @@ import {
   Email,
   Facebook,
   Instagram,
+  Phone,
   WhatsApp,
   YouTube,
 } from "@mui/icons-material";
@@ -64,12 +65,13 @@ const Widgets = () => {
   const socialMediaLinks = [
     { icon: <Facebook />, link: "https://www.facebook.com/AISM2018/" },
     { icon: <Instagram />, link: "https://www.instagram.com/alAqsaIntegrated" },
-    { icon: <Email />, link: "mailto:principal@aqsa.edu.my" },
     {
       icon: <YouTube />,
       link: "https://www.youtube.com/channel/UCY-cDzyntwP3AQUvEVbsX-A",
     },
+    { icon: <Email />, link: "mailto:principal@aqsa.edu.my" },
     { icon: <WhatsApp />, link: "http://wasap.my/601128884817" },
+    { icon: <Phone />, link: "tel:+60340316469" },
   ];
 
   return (
@@ -89,7 +91,7 @@ const Widgets = () => {
                 desktop: ["3vw", "1.0.1.1"],
               }}
               sx={{
-                padding: "4rem 2rem",
+                padding: "1rem",
                 height: "100%",
               }}
             >
@@ -136,7 +138,7 @@ const Widgets = () => {
                 desktop: ["3vw", "0.1.1.1"],
               }}
               sx={{
-                padding: "4rem 2rem",
+                padding: "1rem",
               }}
             >
               <Row>
@@ -144,7 +146,7 @@ const Widgets = () => {
                   <Avatar
                     sx={{
                       height: "auto",
-                      width: { xs: "25vw", md: "50%" },
+                      width: { xs: "25vw", md: "75%" },
                       margin: "0 auto",
                     }}
                     variant="square"
@@ -154,7 +156,7 @@ const Widgets = () => {
                 </Column>
 
                 {socialMediaLinks.map(({ icon, link }, i) => (
-                  <Column key={i} xs={4} sm={2}>
+                  <Column xs={4} sm={2} key={i}>
                     <Button
                       href={link}
                       target="_blank"

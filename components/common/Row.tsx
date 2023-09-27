@@ -16,6 +16,7 @@ const Row = ({
         width: "100%",
         alignItems: align,
         justifyContent: justify,
+        justifyItems: justify,
         ...sx,
       }}
       {...rest}
