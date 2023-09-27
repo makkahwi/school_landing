@@ -10,11 +10,11 @@ import { Suspense } from "react";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Suspense fallback={<Loading />}>
-        <Layout>
+      <Layout>
+        <Suspense fallback={<Loading />}>
           <Component {...pageProps} />
-        </Layout>
-      </Suspense>
+        </Suspense>
+      </Layout>
     </ThemeProvider>
   );
 }

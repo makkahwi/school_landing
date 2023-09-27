@@ -153,7 +153,6 @@ function ResponsiveAppBar() {
                             ({ link: sublink, title: subtitle }, y) => (
                               <Link
                                 href={link + "/" + sublink}
-                                locale={router.locale}
                                 key={y}
                                 onClick={() => {
                                   setSubmenu("");
@@ -181,7 +180,6 @@ function ResponsiveAppBar() {
                     <React.Fragment key={i}>
                       <Link
                         href={link}
-                        locale={router.locale}
                         key={i}
                         onClick={handleCloseNavMenu}
                         role="button"
@@ -258,7 +256,6 @@ function ResponsiveAppBar() {
                       <MenuItem onClick={() => setSubmenu("")} key={y}>
                         <Link
                           href={link + "/" + sublink}
-                          locale={router.locale}
                           onClick={() => setSubmenu("")}
                           role="button"
                           style={{
@@ -277,7 +274,6 @@ function ResponsiveAppBar() {
                 <Link
                   key={i}
                   href={link}
-                  locale={router.locale}
                   onClick={handleCloseNavMenu}
                   role="button"
                   style={{
