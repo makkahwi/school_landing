@@ -278,6 +278,7 @@ const en = {
   },
   LastUpdated: "Last Updated @ ",
   News: {
+    ReadMore: "Read More",
     News: "News",
     Title: "Latest News & Activities",
     LatestNews: {

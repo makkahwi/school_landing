@@ -278,6 +278,7 @@ const ar = {
   },
   LastUpdated: "آخر تحديث تم في تاريخ ",
   News: {
+    ReadMore: "أقرأ المزيد",
     News: "الأخبار",
     Title: "آخر الأخبار والأنشطة",
     LatestNews: {

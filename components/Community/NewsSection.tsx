@@ -63,7 +63,7 @@ const NewsSection = () => {
 
           <Link href={`/news/${t(item.title).replaceAll(" ", "_")}`}>
             <Text variant="p" color={theme.palette.blue.dark}>
-              {"Read More"}
+              {t("News.ReadMore")}
             </Text>
           </Link>
         </PageSectionColumn>
