@@ -1,17 +1,18 @@
+import PageSection from "@/components/common/PageSection";
+import Square from "@/components/common/Square";
+import Text from "@/components/common/Text";
+import { latestNews } from "@/components/Community/NewsSection";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { landingPage } from "@/utils/constants";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-import PageSection from "../common/PageSection";
-import Square from "../common/Square";
-import Text from "../common/Text";
 import {
   NewsAnimation,
   NewsArrowStyles,
@@ -27,11 +28,11 @@ const NewsSection = () => {
   const arrowClickHandler = (arrow: string) => {
     if (arrow === "left") {
       setCurrentPhoto((prev) => {
-        return prev === 0 ? landingPage.news.length - 1 : prev - 1;
+        return prev === 0 ? latestNews.length - 1 : prev - 1;
       });
     } else {
       setCurrentPhoto((prev) => {
-        return prev === landingPage.news.length - 1 ? 0 : prev + 1;
+        return prev === latestNews.length - 1 ? 0 : prev + 1;
       });
     }
   };
@@ -63,7 +64,7 @@ const NewsSection = () => {
           borderRadius: { md: "0 5vw 5vw 5vw" },
           animation: `${NewsAnimation} 1.7s both ease`,
         }}
-        src={landingPage.news[currentPhoto].src}
+        src={latestNews[currentPhoto].src}
       />
 
       <IconButton
@@ -132,8 +133,8 @@ const NewsSection = () => {
               gridColumn: "4 / 14",
             }}
           >
-            <Text color={theme.palette.basic.light} variant="title">
-              {t("landingPage.newsSection.news")}
+            <Text color={theme.palette.basic.light} variant="subtitle">
+              {t("News.News")}
             </Text>
           </Square>
 
@@ -176,9 +177,16 @@ const NewsSection = () => {
             alignItems: "center",
           }}
         >
-          <Text variant="subtitle" color={theme.palette.blue.dark}>
-            {t(landingPage.news[currentPhoto].title)}
-          </Text>
+          <Link
+            href={`/news/${t(latestNews[currentPhoto].title).replaceAll(
+              " ",
+              "_"
+            )}`}
+          >
+            <Text variant="cardtitle" color={theme.palette.blue.dark}>
+              {t(latestNews[currentPhoto].title)}
+            </Text>
+          </Link>
         </Box>
       </Stack>
     </PageSection>

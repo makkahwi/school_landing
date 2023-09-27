@@ -1,146 +1,184 @@
+import Column from "@/components/common/Column";
+import Row from "@/components/common/Row";
+import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { landingPage } from "@/utils/constants";
-import { Box, Stack, Typography } from "@mui/material";
+import {
+  Email,
+  Facebook,
+  Instagram,
+  Phone,
+  WhatsApp,
+  YouTube,
+} from "@mui/icons-material";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Square from "../components/common/Square";
-import { LowerGridStyles } from "../components/Landing/styles";
 
 const Widgets = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const LinkComp = ({ label, link, ...rest }) => (
-    <Typography
-      fontSize={{
-        xs: "2.5vw",
-        sm: "2vw",
-        md: "1.5vw",
-      }}
-      color={theme.palette.basic.light}
-      key={`item tagged: ${label}`}
-    >
-      <Link
-        href={link}
-        style={{ color: "inherit", textDecoration: "none" }}
-        {...rest}
-      >
-        {t(label)}
-      </Link>
-    </Typography>
-  );
+  const widgetLinks = [
+    {
+      link: "/about/why-ais",
+      label: t("About.Title"),
+    },
+    {
+      link: "/academics/study-levels",
+      label: t("Academics.StudyLevels.Title"),
+    },
+    {
+      link: "/academics/curriculum",
+      label: t("Academics.Curriculum.Title"),
+    },
+    {
+      link: "/engage/registration-fees",
+      label: t("Engage.Registration.Title"),
+    },
+    {
+      link: "/engage/job-opportunities",
+      label: t("Engage.Jobs.Title"),
+    },
+    {
+      link: "https://students.aqsa.edu.my",
+      label: t("StudentPortal"),
+      target: "_blank",
+    },
+    {
+      link: "/website-privacy",
+      label: t("WebsitePrivacy.Title"),
+    },
+    {
+      link: "/data-protection",
+      label: t("DataProtection.Title"),
+    },
+    {
+      link: "/terms-conditions",
+      label: t("TermsConditions.Title"),
+    },
+  ];
+
+  const socialMediaLinks = [
+    { icon: <Facebook />, link: "https://www.facebook.com/AISM2018/" },
+    { icon: <Instagram />, link: "https://www.instagram.com/alAqsaIntegrated" },
+    {
+      icon: <YouTube />,
+      link: "https://www.youtube.com/channel/UCY-cDzyntwP3AQUvEVbsX-A",
+    },
+    { icon: <Email />, link: "mailto:principal@aqsa.edu.my" },
+    { icon: <WhatsApp />, link: "http://wasap.my/601128884817" },
+    { icon: <Phone />, link: "tel:+60340316469" },
+  ];
 
   return (
     <Box p={{ md: 5 }}>
-      <Stack justifyContent="center">
-        <Box sx={LowerGridStyles}>
-          <Square
-            bgcolor={theme.palette.brown.main}
-            radius={{
-              mobile: ["7vw", "1.1.0.1"],
-              desktop: ["2vw", "1.1.0.1"],
-            }}
-            sx={{
-              gridRow: "1 / 3",
-              gridColumn: "15 / 20",
-            }}
-          />
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["7vw", "1.1.1.0"],
-              desktop: ["2vw", "1.1.1.0"],
-            }}
-            sx={{
-              gridRow: "1 / 3",
-              gridColumn: "20 / 25",
-            }}
-          />
-
-          <Square
-            bgcolor={theme.palette.orange.main}
-            radius={{
-              mobile: ["7vw", "1.0.1.1"],
-              desktop: ["3vw", "1.0.1.1"],
-            }}
-            sx={{
-              gridRow: "3 / 8",
-              gridColumn: "1 / 20",
-            }}
+      <Grid container spacing={5} p={{ md: 5 }}>
+        <Grid item xs={12} md={6} lg={8}>
+          <Stack
+            justifyContent="center"
+            height="100%"
+            px={{ xs: 6, md: 1 }}
+            py={{ xs: 3, md: 1 }}
           >
-            <Stack
-              justifyContent="space-evenly"
-              alignItems="center"
-              width="100%"
-              height="100%"
-            >
-              {landingPage.widgetLinks
-                .slice(0, landingPage.widgetLinks.length / 3)
-                .map((link, i) => (
-                  <LinkComp {...link} key={i} />
-                ))}
-            </Stack>
-
-            <Stack
-              justifyContent="space-evenly"
-              alignItems="center"
-              width="100%"
-              height="100%"
-            >
-              {landingPage.widgetLinks
-                .slice(
-                  landingPage.widgetLinks.length / 3,
-                  (landingPage.widgetLinks.length / 3) * 2
-                )
-                .map((link, i) => (
-                  <LinkComp {...link} key={i} />
-                ))}
-            </Stack>
-
-            <Stack
-              justifyContent="space-evenly"
-              alignItems="center"
-              width="100%"
-              height="100%"
-            >
-              {landingPage.widgetLinks
-                .slice(
-                  (landingPage.widgetLinks.length / 3) * 2,
-                  landingPage.widgetLinks.length
-                )
-                .map((link, i) => (
-                  <LinkComp {...link} key={i} />
-                ))}
-            </Stack>
-          </Square>
-
-          <Square
-            bgcolor={theme.palette.blue.dark}
-            radius={{
-              mobile: ["7vw", "0.1.1.1"],
-              desktop: ["3vw", "0.1.1.1"],
-            }}
-            sx={{
-              gridRow: "3 / 8",
-              gridColumn: "20 / 30",
-            }}
-          >
-            <Avatar
-              sx={{
-                height: "80%",
-                width: "auto",
+            <Square
+              bgcolor={theme.palette.orange.main}
+              radius={{
+                mobile: ["7vw", "1.1.1.1"],
+                desktop: ["3vw", "1.0.1.1"],
               }}
-              variant="square"
-              src="/images/AIS-Light-Blue-En-Logo.png"
-              alt="logo 2"
-            />
-          </Square>
-        </Box>
-      </Stack>
+              sx={{
+                padding: "1rem",
+                height: "100%",
+              }}
+            >
+              <Grid container>
+                {widgetLinks.map(({ label, link, ...rest }, i) => (
+                  <Grid item xs={12} md={6} lg={4} key={i}>
+                    <Typography
+                      fontSize={{
+                        xs: "3.5vw",
+                        sm: "2vw",
+                        md: "1.5vw",
+                      }}
+                      textAlign="center"
+                      my={2}
+                      color={theme.palette.basic.light}
+                      key={`item tagged: ${label}`}
+                    >
+                      <Link
+                        href={link}
+                        style={{ color: "inherit", textDecoration: "none" }}
+                        {...rest}
+                      >
+                        {label}
+                      </Link>
+                    </Typography>
+                  </Grid>
+                ))}
+              </Grid>
+            </Square>
+          </Stack>
+        </Grid>
+
+        <Grid item xs={12} md={6} lg={3}>
+          <Stack
+            justifyContent="center"
+            height="100%"
+            px={{ xs: 6, md: 1 }}
+            py={{ xs: 3, md: 1 }}
+          >
+            <Square
+              bgcolor={theme.palette.blue.dark}
+              radius={{
+                mobile: ["7vw", "1.1.1.1"],
+                desktop: ["3vw", "0.1.1.1"],
+              }}
+              sx={{
+                padding: "1rem",
+              }}
+            >
+              <Row>
+                <Column>
+                  <Avatar
+                    sx={{
+                      height: "auto",
+                      width: { xs: "25vw", md: "75%" },
+                      margin: "0 auto",
+                    }}
+                    variant="square"
+                    src="/images/AIS-Light-Blue-En-Logo.png"
+                    alt="logo 2"
+                  />
+                </Column>
+
+                {socialMediaLinks.map(({ icon, link }, i) => (
+                  <Column xs={4} sm={2} key={i}>
+                    <Button
+                      href={link}
+                      target="_blank"
+                      variant="text"
+                      sx={{ padding: 0 }}
+                      fullWidth
+                    >
+                      <Text
+                        color={theme.palette.basic.light}
+                        variant="sm"
+                        center
+                      >
+                        {icon}
+                      </Text>
+                    </Button>
+                  </Column>
+                ))}
+              </Row>
+            </Square>
+          </Stack>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

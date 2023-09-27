@@ -1,15 +1,14 @@
 import { GridLayoutStyles, SquaresShape } from "@/components/Landing/styles";
+import PageSection from "@/components/common/PageSection";
+import PageSectionColumn from "@/components/common/PageSectionColumn";
+import Square from "@/components/common/Square";
+import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import { Box, Stack } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { useTheme } from "@mui/material/styles";
 import { useRouter } from "next/router";
 import React from "react";
-
-import PageSection from "../common/PageSection";
-import PageSectionColumn from "../common/PageSectionColumn";
-import Square from "../common/Square";
-import Text from "../common/Text";
 
 const WelcomeSection = () => {
   const router = useRouter();
@@ -74,8 +73,8 @@ const WelcomeSection = () => {
             }}
           />
 
-          <Text color={theme.palette.blue.dark} variant="subtitle" center>
-            {t("landingPage.welcomeSection.title")}
+          <Text color={theme.palette.blue.dark} variant="subTitle" center>
+            {t("SchoolName")}
           </Text>
         </Stack>
       </PageSectionColumn>

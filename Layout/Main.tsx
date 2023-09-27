@@ -1,8 +1,5 @@
-import Footer from "@/Layout/Footer";
 import { MainContainer } from "@/Layout/styles";
 import { useRouter } from "next/router";
-
-import Widgets from "./Widgets";
 
 const Main = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
@@ -15,8 +12,6 @@ const Main = ({ children }: { children: React.ReactNode }) => {
       }}
     >
       {children}
-      <Widgets />
-      <Footer />
     </MainContainer>
   );
 };

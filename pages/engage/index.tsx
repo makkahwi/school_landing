@@ -14,17 +14,10 @@ export default function RegistrationAndFees() {
 
   return (
     <Stack>
-      <PageHeader
-        bg={departmentColors.engage}
-        title={t("registrationPage.title")}
-      />
+      <PageHeader bg={departmentColors.engage} title={t("Engage.Title")} />
       <RequirementsSection />
       <FeesSection />
       <DiscountSection />
-      <PageHeader
-        bg={departmentColors.engage}
-        title={t("registrationPage.jobs.title")}
-      />
       <JobsSection />
     </Stack>
   );

@@ -4,30 +4,15 @@ Next.Js & Typescript based
 
 ## To Do
 
-- Add News Post Details Page
-- Re-assaign Sections Theme Color of Header & Contents
-- Turn all click-to-view contents to statics
 - Fix theme colros
   - Assign auto color opposites
-- Link Form UI To Email / Firebase
-- Split Pages
-  - About
-    - Why
-    - Facilites
-    - Staff
-  - Academic
-    - Curriculum
-    - CoCu
-    - Levels
-  - Engage
-    - Fees
-    - Jobs
-  - News
-  - Contact
-- Capitalize Localization Keys
-- Localize To Arabic
+- Minor UI Fixes
+  - Same equal-height cards
+- Minor Code Fixes
+  - Turn Relative Paths To Absolute
+  - Turn Es5 => Es6 Exports
 
 ### Mustafa To Do
 
+- Fix HomePage News Slider (Img To Cover Box)
 - Build Landing Header Slider
-- Fix News Slider (Img Cover Box)

@@ -84,16 +84,16 @@ const LanguagesSection = () => {
 
   const languages = [
     {
-      title: t("curriculumPage.languagesContents.arabic"),
-      content: t("curriculumPage.languagesContents.arabicContent"),
+      title: t("Academics.Curriculum.Languages.Arabic.Title"),
+      content: t("Academics.Curriculum.Languages.Arabic.Description"),
     },
     {
-      title: t("curriculumPage.languagesContents.english"),
-      content: t("curriculumPage.languagesContents.englishContent"),
+      title: t("Academics.Curriculum.Languages.English.Title"),
+      content: t("Academics.Curriculum.Languages.English.Description"),
     },
     {
-      title: t("curriculumPage.languagesContents.malay"),
-      content: t("curriculumPage.languagesContents.malayContent"),
+      title: t("Academics.Curriculum.Languages.Malay.Title"),
+      content: t("Academics.Curriculum.Languages.Malay.Description"),
     },
   ];
 
@@ -120,7 +120,7 @@ const LanguagesSection = () => {
           )}
 
           <Typography sx={TitleStyles}>
-            {t("curriculumPage.languages")}
+            {t("Academics.Curriculum.Languages.Title")}
           </Typography>
         </Box>
       </PageSectionColumn>

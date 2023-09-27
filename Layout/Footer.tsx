@@ -1,5 +1,5 @@
-import { FooterContainer } from "@/Layout/styles";
 import useTranslation from "@/hooks/useTranslation";
+import { FooterContainer } from "@/Layout/styles";
 import { Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
@@ -11,17 +11,17 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Container sx={{ padding: 2 }}>
-        <Typography textAlign="center" fontSize={{ xs: "4vw", md: "1vw" }}>
-          {t("footer.copyRights") + new Date().getFullYear()}
+        <Typography textAlign="center" fontSize={{ xs: "2.5vw", md: "1vw" }}>
+          {t("Layout.Footer.CopyRights") + new Date().getFullYear()}
           {" | "}
-          {t("footer.by")}{" "}
+          {t("Layout.Footer.By")}{" "}
           <a
             href="https://www.semesteer.com/"
             target="_blank"
             rel="noreferrer"
             style={{ color: "inherit" }}
           >
-            {t("footer.developer")}
+            {t("Layout.Footer.Developer")}
           </a>
         </Typography>
       </Container>

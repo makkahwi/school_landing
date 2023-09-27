@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
 import Square from "../../components/common/Square";
+import Column from "../common/Column";
+import Row from "../common/Row";
 import Text from "../common/Text";
 
 const CoursesSection = () => {
@@ -13,15 +15,15 @@ const CoursesSection = () => {
 
   const courseSquares = [
     {
-      text: t("curriculumPage.courseSquares.languages"),
+      text: t("Academics.Curriculum.Languages.Title"),
       edges: "1.0.0.1",
     },
     {
-      text: t("curriculumPage.courseSquares.islamic"),
+      text: t("Academics.Curriculum.Islamic.Islamic"),
       edges: "0.0.0.0",
     },
     {
-      text: t("curriculumPage.courseSquares.modern"),
+      text: t("Academics.Curriculum.Modern.Modern"),
       edges: "0.1.1.0",
     },
   ];
@@ -29,17 +31,17 @@ const CoursesSection = () => {
   return (
     <PageSection>
       <PageSectionColumn>
-        <Text color={theme.palette.orange.main} variant="subtitle">
-          {t("curriculumPage.courses")}
+        <Text color={theme.palette.blue.dark} variant="subtitle">
+          {t("Academics.Curriculum.Description")}
         </Text>
       </PageSectionColumn>
 
       {courseSquares.map((item, i) => (
-        <PageSectionColumn md={3} key={i}>
+        <Column md={3} key={i}>
           <Square
-            bgcolor={theme.palette.orange.main}
+            bgcolor={theme.palette.blue.dark}
             radius={{
-              mobile: ["10vw", item.edges],
+              mobile: ["10vw", "1.1.1.1"],
               desktop: ["3vw", item.edges],
             }}
             sx={{
@@ -52,7 +54,7 @@ const CoursesSection = () => {
               {item.text}
             </Text>
           </Square>
-        </PageSectionColumn>
+        </Column>
       ))}
     </PageSection>
   );

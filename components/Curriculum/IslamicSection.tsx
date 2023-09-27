@@ -29,7 +29,7 @@ const IslamicSection = () => {
         md: "2vw",
       },
       textColor: theme.palette.basic.light,
-      text: "Quran Memorization & Recitation",
+      text: t("Academics.Curriculum.Islamic.Quran"),
     },
     {
       bgColor: theme.palette.brown.main,
@@ -57,7 +57,7 @@ const IslamicSection = () => {
         md: "2vw",
       },
       textColor: theme.palette.brown.main,
-      text: "Islamic Fiqh",
+      text: t("Academics.Curriculum.Islamic.Fiqh"),
     },
     {
       bgColor: theme.palette.basic.main,
@@ -74,7 +74,7 @@ const IslamicSection = () => {
         md: "1vw",
       },
       textColor: theme.palette.brown.main,
-      text: "Islamic Culture Education",
+      text: t("Academics.Curriculum.Islamic.Culture"),
     },
   ];
 
@@ -82,11 +82,11 @@ const IslamicSection = () => {
     <PageSection>
       <PageSectionColumn md={8}>
         <Text color={theme.palette.blue.dark} variant="title" bold>
-          {t("curriculumPage.islamicStudies")}
+          {t("Academics.Curriculum.Islamic.Title")}
         </Text>
 
         <Text justify doubleHeight>
-          {t("curriculumPage.islamicStudiesContent")}
+          {t("Academics.Curriculum.Islamic.Description")}
         </Text>
       </PageSectionColumn>
 

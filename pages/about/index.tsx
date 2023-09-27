@@ -1,6 +1,5 @@
 import AdvantagesSection from "@/components/About/AdvantagesSection";
 import AISBeginning from "@/components/About/AISBeginning";
-import Facilities from "@/components/About/Facilities";
 import VisionMissionObjectives from "@/components/About/VisionMissionObjectives";
 import PageHeader from "@/components/common/PageHeader";
 import useTranslation from "@/hooks/useTranslation";
@@ -14,11 +13,10 @@ export default function AboutAIS() {
 
   return (
     <Stack>
-      <PageHeader bg={departmentColors.about} title={t("aboutPage.title")} />
+      <PageHeader bg={departmentColors.about} title={t("About.title")} />
       <AdvantagesSection />
       <AISBeginning />
       <VisionMissionObjectives />
-      <Facilities />
     </Stack>
   );
 }

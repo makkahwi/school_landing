@@ -24,7 +24,7 @@ export default function NotFoundPage() {
         color={theme.palette.basic.light}
         textAlign="center"
       >
-        {t("global.page500")}
+        {t("Errors.500")}
       </Typography>
     </Box>
   );

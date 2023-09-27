@@ -1,6 +1,5 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { registrationPage } from "@/utils/constants";
 import { Avatar } from "@mui/material";
 import { useRouter } from "next/router";
 
@@ -13,11 +12,54 @@ const DiscountsSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
+  const discountSection = [
+    {
+      title: t("Engage.Discounts.Parent.Title"),
+      items: [
+        {
+          title: t("Engage.Discounts.Parent.Details.Title"),
+          price: t("Engage.Discounts.Parent.Details.Price"),
+          description: t("Engage.Discounts.Parent.Details.Description"),
+        },
+      ],
+    },
+    {
+      title: t("Engage.Discounts.Siblings.Title"),
+      items: [
+        {
+          title: t("Engage.Discounts.Siblings.Sibling1.Title"),
+          price: t("Engage.Discounts.Siblings.Sibling1.Price"),
+          description: t("Engage.Discounts.Siblings.Sibling1.Description"),
+        },
+        {
+          title: t("Engage.Discounts.Siblings.Sibling2.Title"),
+          price: t("Engage.Discounts.Siblings.Sibling2.Price"),
+          description: t("Engage.Discounts.Siblings.Sibling2.Description"),
+        },
+        {
+          title: t("Engage.Discounts.Siblings.Sibling3.Title"),
+          price: t("Engage.Discounts.Siblings.Sibling3.Price"),
+          description: t("Engage.Discounts.Siblings.Sibling3.Description"),
+        },
+      ],
+    },
+    {
+      title: t("Engage.Discounts.AdvancePayment.Title"),
+      items: [
+        {
+          title: t("Engage.Discounts.AdvancePayment.Details.Title"),
+          price: t("Engage.Discounts.AdvancePayment.Details.Price"),
+          description: t("Engage.Discounts.AdvancePayment.Details.Description"),
+        },
+      ],
+    },
+  ];
+
   return (
     <PageSection>
       <PageSectionColumn md={6}>
         <Text color={theme.palette.orange.main} variant="title" center>
-          {t("registrationPage.discounts.title")}
+          {t("Engage.Discounts.Title")}
         </Text>
       </PageSectionColumn>
 
@@ -36,7 +78,7 @@ const DiscountsSection = () => {
       <FeeCards
         templateId="discount section"
         isSubStack={true}
-        boxes={registrationPage.discountSection}
+        boxes={discountSection}
       />
     </PageSection>
   );

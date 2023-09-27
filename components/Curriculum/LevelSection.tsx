@@ -1,12 +1,8 @@
-import useTranslation from "@/hooks/useTranslation";
-import theme from "@/styles/theme";
-import { Avatar, Box, Stack, Typography } from "@mui/material";
-import { useRouter } from "next/router";
-import React from "react";
+import { Avatar, Stack } from "@mui/material";
 
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
-import ScrollableList from "../../components/common/ScrollableList";
+import StaticList from "../common/StaticList";
 import Text from "../common/Text";
 
 interface LevelSectionProps {
@@ -31,9 +27,6 @@ interface LevelSectionProps {
 }
 
 const LevelSection = ({ section }: LevelSectionProps) => {
-  const router = useRouter();
-  const { t } = useTranslation(router);
-
   const {
     title,
     subTitle,
@@ -66,37 +59,17 @@ const LevelSection = ({ section }: LevelSectionProps) => {
           mb={{ xs: 5, md: 0 }}
         >
           <Text color={titleColor} variant="title">
-            {t(title)}
+            {title}
           </Text>
 
           <Text color={subTitleColor} variant="subtitle" justify>
-            {t(subTitle)}
+            {subTitle}
           </Text>
         </Stack>
       </PageSectionColumn>
 
       <PageSectionColumn>
-        <ScrollableList
-          t={t}
-          uniqueId={title}
-          textColor={iconsColor}
-          arrowColor={theme.palette.basic.light}
-          desktop={{
-            width: 0.9,
-            height: "15vw",
-            arrowSize: "8vw",
-            iconSize: 6,
-            marginSize: 3,
-          }}
-          mobile={{
-            width: 0.9,
-            height: "35vw",
-            arrowSize: "10vw",
-            iconSize: 13,
-            marginSize: 9,
-          }}
-          items={listElemnts("100%", iconsColor)}
-        />
+        <StaticList items={listElemnts("50%", iconsColor)} color={iconsColor} />
       </PageSectionColumn>
     </PageSection>
   );

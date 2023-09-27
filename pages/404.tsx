@@ -20,11 +20,11 @@ export default function NotFoundPage() {
       }}
     >
       <Typography
-        fontSize={{ xs: "10vw", md: "7vw" }}
+        fontSize={{ xs: "5vw", md: "3vw" }}
         color={theme.palette.basic.light}
         textAlign="center"
       >
-        {t("global.page404")}
+        {t("Errors.404")}
       </Typography>
     </Box>
   );

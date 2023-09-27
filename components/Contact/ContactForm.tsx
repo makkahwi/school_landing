@@ -1,56 +1,117 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Button, Grid, TextField, Typography } from "@mui/material";
+import { Alert, Button, Snackbar, TextField } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
+import { useState } from "react";
 
-import CardComp from "../common/Card";
+import Column from "../common/Column";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
+import Row from "../common/Row";
 import Text from "../common/Text";
 
 const ContactForm = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
+  const [formValues, setFormValues] = useState({ sent: false });
 
   const formInput = [
-    { title: t(`contactPage.formInput1`), name: "name" },
-    { title: t(`contactPage.formInput2`), name: "email" },
-    { title: t(`contactPage.formInput3`), name: "phone" },
-    { title: t(`contactPage.formInput4`), name: "age" },
-    { title: t(`contactPage.formInput5`), name: "msg", fullWidth: true },
+    { title: t(`Contact.Name`), name: "name", required: true },
+    {
+      title: t(`Contact.Email`),
+      name: "email",
+      type: "email",
+      required: true,
+    },
+    {
+      title: t(`Contact.PhoneNumber`),
+      name: "phone",
+      type: "number",
+      required: true,
+    },
+    { title: t(`Contact.Age`), name: "age", type: "number" },
+    {
+      title: t(`Contact.Msg`),
+      name: "msg",
+      required: true,
+      multiline: true,
+      rows: 3,
+    },
   ];
+
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const url =
+      "https://semesteer-mailing-list-default-rtdb.europe-west1.firebasedatabase.app/ais-landing.json";
+
+    await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    });
+
+    setFormValues({
+      sent: true,
+      ...formInput.reduce(
+        (final, current) => ({ ...final, [current.name]: "" }),
+        {}
+      ),
+    });
+  };
 
   return (
     <PageSection>
       <PageSectionColumn>
-        <CardComp bg={theme.palette.brown.main}>
-          <Text color={theme.palette.basic.light} variant="subtitle" center>
-            {t("contactPage.formTitle")}
-          </Text>
+        <Text color={theme.palette.brown.main} variant="subtitle" center>
+          {t("Contact.FormTitle")}
+        </Text>
 
-          <Grid container justifyContent="center" py={5} px={20}>
-            {formInput.map(({ title, fullWidth }, i) => (
-              <Grid item md={fullWidth ? 12 : 6} p={1} key={i}>
-                <Text color={theme.palette.basic.light} bold>
-                  {title}
-                </Text>
-
+        <form onSubmit={onSubmit}>
+          <Row py={5} px={{ xs: 0, md: 20 }}>
+            {formInput.map(({ title, ...rest }, i) => (
+              <Column md={12} py={2} key={i}>
                 <TextField
-                  variant="outlined"
+                  variant="filled"
+                  label={title}
                   fullWidth
-                  style={{ margin: "10px auto", backgroundColor: "white" }}
+                  value={(formValues as any)[rest.name]}
+                  onChange={(e) =>
+                    setFormValues((current) => ({
+                      ...current,
+                      [e.target.name]: e.target.value,
+                    }))
+                  }
+                  {...rest}
                 />
-              </Grid>
+              </Column>
             ))}
 
-            <Grid item md={12} pt={5}>
-              <Button size="large" fullWidth>
-                {t("contactPage.formButton")}
+            <Column md={12} pt={5}>
+              <Button
+                size="large"
+                fullWidth
+                color="info"
+                variant="contained"
+                type="submit"
+              >
+                {t("Contact.FormButton")}
               </Button>
-            </Grid>
-          </Grid>
-        </CardComp>
+            </Column>
+
+            {formValues.sent ? (
+              <Column md={12} pt={5}>
+                <Alert severity="success" sx={{ width: "100%" }}>
+                  {t("Contact.MsgSent")}
+                </Alert>
+              </Column>
+            ) : (
+              ""
+            )}
+          </Row>
+        </form>
       </PageSectionColumn>
     </PageSection>
   );
