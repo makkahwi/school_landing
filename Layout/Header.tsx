@@ -11,13 +11,13 @@ import {
 } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
 
@@ -34,7 +34,7 @@ function ResponsiveAppBar() {
   const [submenu, setSubmenu] = React.useState<string>("");
 
   const links = [
-    { title: t("Home"), link: "" },
+    { title: t("Home"), link: "/" },
     {
       title: t("About.About"),
       link: "about",
@@ -79,7 +79,10 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="sticky"
-      style={{ backgroundColor: theme.palette.blue.dark }}
+      style={{
+        backgroundColor: theme.palette.blue.dark,
+        direction: router.locale === "ar" ? "rtl" : "ltr",
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="dense" style={{ margin: "10px auto" }}>
@@ -148,18 +151,16 @@ function ResponsiveAppBar() {
                         <List component="div" disablePadding>
                           {links.map(
                             ({ link: sublink, title: subtitle }, y) => (
-                              <ListItemButton
-                                onClick={() => setSubmenu("")}
-                                href={
-                                  (router.locale === "ar" ? "/ar/" : "/") +
-                                  link +
-                                  "/" +
-                                  sublink
-                                }
+                              <Link
+                                href={link + "/" + sublink}
+                                locale={router.locale}
                                 key={y}
+                                onClick={() => setSubmenu("")}
                               >
-                                <ListItemText primary={subtitle} />
-                              </ListItemButton>
+                                <ListItemButton>
+                                  <ListItemText primary={subtitle} />
+                                </ListItemButton>
+                              </Link>
                             )
                           )}
                         </List>
@@ -169,12 +170,16 @@ function ResponsiveAppBar() {
                     </React.Fragment>
                   ) : (
                     <React.Fragment key={i}>
-                      <ListItemButton
+                      <Link
+                        href={link}
+                        locale={router.locale}
+                        key={i}
                         onClick={handleCloseNavMenu}
-                        href={(router.locale === "ar" ? "/ar/" : "/") + link}
                       >
-                        <ListItemText primary={title} />
-                      </ListItemButton>
+                        <ListItemButton>
+                          <ListItemText primary={title} />
+                        </ListItemButton>
+                      </Link>
                       {i !== links?.length && <Divider />}
                     </React.Fragment>
                   )
@@ -206,7 +211,7 @@ function ResponsiveAppBar() {
             {links.map(({ title, link, links }, i) =>
               links ? (
                 <React.Fragment key={i}>
-                  <Button
+                  <div
                     aria-controls={
                       submenu === link ? `${link}-basic-menu` : undefined
                     }
@@ -216,14 +221,18 @@ function ResponsiveAppBar() {
                       setSubmenu((current) => (current === link ? "" : link));
                       setAnchorSubMenu(e.currentTarget);
                     }}
-                    sx={{
-                      my: 2,
+                    style={{
+                      textDecoration: "none",
                       color: theme.palette.basic.light,
                       display: "block",
+                      margin: "2em 0.5em",
+                      cursor: "pointer",
+                      textTransform: "uppercase",
                     }}
+                    role="button"
                   >
                     {title}
-                  </Button>
+                  </div>
 
                   <Menu
                     id={`${link}-basic-menu`}
@@ -236,51 +245,52 @@ function ResponsiveAppBar() {
                   >
                     {links.map(({ link: sublink, title: subtitle }, y) => (
                       <MenuItem onClick={() => setSubmenu("")} key={y}>
-                        <Button
+                        <Link
+                          href={link + "/" + sublink}
+                          locale={router.locale}
                           onClick={() => setSubmenu("")}
-                          sx={{
+                          role="button"
+                          style={{
+                            textDecoration: "none",
                             color: theme.palette.blue.dark,
                             display: "block",
                           }}
-                          href={
-                            (router.locale === "ar" ? "/ar/" : "/") +
-                            link +
-                            "/" +
-                            sublink
-                          }
                         >
                           {subtitle}
-                        </Button>
+                        </Link>
                       </MenuItem>
                     ))}
                   </Menu>
                 </React.Fragment>
               ) : (
-                <Button
+                <Link
                   key={i}
+                  href={link}
+                  locale={router.locale}
                   onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
+                  role="button"
+                  style={{
+                    textDecoration: "none",
                     color: theme.palette.basic.light,
                     display: "block",
+                    margin: "2em 0.5em",
+                    textTransform: "uppercase",
                   }}
-                  href={(router.locale === "ar" ? "/ar/" : "/") + link}
                 >
                   {title}
-                </Button>
+                </Link>
               )
             )}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Typography
-              onClick={() => console.log("lang change")}
-              sx={{ p: 0 }}
-              variant="h6"
-              color={theme.palette.basic.light}
+            <Link
+              style={{ cursor: "pointer", color: theme.palette.basic.light }}
+              href=""
+              locale={router.locale === "ar" ? "en" : "ar"}
             >
               {t("OtherLang")}
-            </Typography>
+            </Link>
           </Box>
         </Toolbar>
       </Container>
