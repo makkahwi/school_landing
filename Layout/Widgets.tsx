@@ -70,8 +70,8 @@ const Widgets = () => {
       link: "https://www.youtube.com/channel/UCY-cDzyntwP3AQUvEVbsX-A",
     },
     { icon: <Email />, link: "mailto:principal@aqsa.edu.my" },
-    { icon: <WhatsApp />, link: "http://wasap.my/601128884817" },
-    { icon: <Phone />, link: "tel:+60340316469" },
+    { icon: <WhatsApp />, link: "http://wasap.my/601157848382" },
+    { icon: <Phone />, link: "tel:+601157848382" },
   ];
 
   return (

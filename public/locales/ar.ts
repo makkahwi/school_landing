@@ -101,7 +101,7 @@ const ar = {
       Title: "Right To Access And Data Subject’s Obligation",
       Start:
         "You have the right to access and correct your personal information held by the School under the Act. We will attempt to keep your records complete, accurate and up-to-date. If you have any reason to believe that your records with us are inaccurate, incomplete or not updated, please notify the School in a timely manner. If you wish to request for access to, or to correct data held by the School, or withdraw your consent to the data processing/use of your personal data by us, please forward your request to:",
-      PointA: "(603) 1234 5678 (telephone)",
+      PointA: "(6011) 57 848382 (telephone)",
       PointB: "principal@aqsa.edu.my (email)",
       PointC:
         "AIS reserves the right to charge you an administrative fee for processing any data access request.",
@@ -812,8 +812,8 @@ const ar = {
       Title: "أو التواصل معنا عبر الوسائل التالية",
       Call: {
         Title: "الاتصال",
-        Description1: "+603-40316469",
-        Description2: "+6011-2888-4817",
+        Description1: "+6011-57-848382",
+        Description2: "+6011-57-848382",
       },
       Email: {
         Title: "البريد الإلكتروني",
