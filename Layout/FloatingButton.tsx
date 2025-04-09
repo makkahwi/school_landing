@@ -5,7 +5,7 @@ const OuterWrapper = styled(Box)(() => ({
   position: "fixed",
   right: 0,
   bottom: 0,
-  margin: 5,
+  padding: 3,
 }));
 
 const FloatingButton = () => {
@@ -14,7 +14,7 @@ const FloatingButton = () => {
       <Button
         size="small"
         style={{ backgroundColor: "#25d366" }}
-        sx={{ padding: 2, color: "white", borderRadius: "100%" }}
+        sx={{ padding: 1, color: "white", borderRadius: "100%" }}
         href="http://wasap.my/601128884817"
         target="_blank"
       >
