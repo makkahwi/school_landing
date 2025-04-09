@@ -18,7 +18,7 @@ const FloatingButton = () => {
         href="http://wasap.my/601128884817"
         target="_blank"
       >
-        <WhatsApp />
+        <WhatsApp sx={{ padding: 0, margin: 0 }} />
       </Button>
     </OuterWrapper>
   );
