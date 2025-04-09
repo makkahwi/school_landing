@@ -13,13 +13,8 @@ const FloatingButton = () => {
     <OuterWrapper>
       <Button
         size="small"
-        color="white"
-        sx={{
-          width: "content-fit",
-          bgcolor: "success",
-        }}
-        margin={3}
-        target="_blank"
+        style={{ backgroundColor: "#25d366" }}
+        sx={{ padding: 3, color: "white" }}
         href="http://wasap.my/601128884817"
       >
         <WhatsApp />
