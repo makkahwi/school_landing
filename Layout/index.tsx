@@ -5,6 +5,7 @@ import Main from "@/Layout/Main";
 import Widgets from "@/Layout/Widgets";
 import React from "react";
 
+import FloatingButton from "./FloatingButton";
 import { LayoutBox } from "./styles";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -13,6 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <HeadElement />
       <Header />
       <Main>{children}</Main>
+      <FloatingButton />
       <Widgets />
       <Footer />
     </LayoutBox>
