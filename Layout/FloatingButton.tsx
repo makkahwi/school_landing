@@ -16,10 +16,9 @@ const FloatingButton = () => {
         color="white"
         sx={{
           width: "content-fit",
-          bgcolor: "#25d366",
-          color: "white",
-          margin: 3,
+          bgcolor: "success",
         }}
+        margin={3}
         target="_blank"
         href="http://wasap.my/601128884817"
       >
