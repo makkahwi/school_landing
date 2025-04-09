@@ -14,7 +14,7 @@ const FloatingButton = () => {
       <Button
         size="small"
         style={{ backgroundColor: "#25d366" }}
-        sx={{ padding: 1, color: "white", borderRadius: "100%" }}
+        sx={{ margin: 2, padding: 1, color: "white", borderRadius: "100%" }}
         href="http://wasap.my/601128884817"
         target="_blank"
       >
