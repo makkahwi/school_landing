@@ -573,9 +573,9 @@ const en = {
       KG: {
         Title: "Kindergarten",
         Description:
-          "Pre-school curriculum, prepare kids aging 5 - 6 years old to primary level.",
+          "Pre-school curriculum, prepare kids age 5 - 6 years old to primary level.",
         Courses: {
-          Course1: "Educating Games",
+          Course1: "Education Games",
           Course2: "Arabic",
           Course3: "English",
           Course4: "Science",
@@ -585,7 +585,7 @@ const en = {
       Levels1To2: {
         Title: "Level 1 & 2",
         Description:
-          "These levels of study are for kids aging 6 - 8 years old, constrain on listed courses.",
+          "These levels of study are for kids age 6 - 8 years old, based on listed courses.",
         Courses: {
           Course1: "Arts",
           Course2: "Arabic",
@@ -788,7 +788,7 @@ const en = {
           "At the same time, AIS do not put away modern sciences’ knowledge. So that, the school administration constructed a special curriculum combines Cambridge’s curriculum for sciences, Islamic and Arabic curriculum. As for Palestinian students, raising them with the love of Palestine planted in their hearts is a top priority, and having Palestinian issue considered in their life goals is raised with Palestine-connected environment.",
       },
       Reasonable: {
-        Title: "Reasonable Charges",
+        Title: "Competitive Fees",
         Description:
           "Yet still our main competitive advantage is to provide a low-cost and good-level education to those who cannot afford the good-level but expensive schools, and those who do not prefer low-cost but low-level education schools. Now, how we do it? It is our job to find sponsors who could cover part of the school costs, and not keep it all to parents to pay.",
       },
