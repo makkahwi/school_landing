@@ -14,12 +14,14 @@ const PageSection = ({
     <Grid
       container
       p={p}
-      px={5}
+      px={{ xs: 2.5, md: 5 }}
       bgcolor={bg}
       sx={{
         width: "100%",
         alignItems: align,
         justifyContent: justify,
+        position: "relative",
+        overflow: "hidden",
         ...sx,
       }}
       {...rest}

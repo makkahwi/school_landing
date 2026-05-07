@@ -6,6 +6,7 @@ import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import Avatar from "@mui/material/Avatar";
+import { Box } from "@mui/material";
 import { useRouter } from "next/router";
 
 const AboutSection = () => {
@@ -13,57 +14,35 @@ const AboutSection = () => {
   const { t } = useTranslation(router);
 
   const cards = [
-    {
-      src: "/images/Islamic.png",
-      alt: "islamic-icon",
-      text: t("About.WhyAIS.Islamic.Title"),
-    },
-    {
-      src: "/images/Cambridge.png",
-      alt: "cambridge-icon",
-      text: t("About.WhyAIS.Cambridge.Title"),
-    },
-    {
-      src: "/images/Cheap.png",
-      alt: "cheap-zone-icon",
-      text: t("About.WhyAIS.Reasonable.Title"),
-    },
+    { src: "/images/Islamic.png", alt: "islamic-icon", text: t("About.WhyAIS.Islamic.Title") },
+    { src: "/images/Cambridge.png", alt: "cambridge-icon", text: t("About.WhyAIS.Cambridge.Title") },
+    { src: "/images/Cheap.png", alt: "cheap-zone-icon", text: t("About.WhyAIS.Reasonable.Title") },
   ];
 
   return (
-    <PageSection py={20} bgcolor="">
+    <PageSection
+      py={10}
+      sx={{
+        background: `linear-gradient(180deg, ${theme.palette.basic.light} 0%, #f7fafc 100%)`,
+      }}
+    >
       <Row spacing={3}>
         <Column>
-          <Text color={theme.palette.orange.main} variant="title">
-            {t("About.Title")}
-          </Text>
-
-          <Text doubleHeight justify>
-            {t("About.Description")}
-          </Text>
+          <Box sx={{ maxWidth: "920px", mx: "auto", textAlign: "center" }}>
+            <Text color={theme.palette.orange.main} variant="title" center>
+              {t("About.Title")}
+            </Text>
+            <Text doubleHeight justify>
+              {t("About.Description")}
+            </Text>
+          </Box>
         </Column>
 
         {cards.map((item, i) => (
-          <Column sm={6} lg={4} key={i}>
+          <Column sm={6} lg={4} key={i} p={2.5}>
             <CardComp bg={theme.palette.orange.main}>
-              <Avatar
-                variant="square"
-                alt={item.alt}
-                src={item.src}
-                sx={{
-                  width: "50%",
-                  height: "auto",
-                  margin: "auto auto",
-                }}
-              />
-
-              <Text
-                variant="cardTitle"
-                center
-                color={theme.palette.basic.light}
-                mt={4}
-                bold
-              >
+              <Avatar variant="square" alt={item.alt} src={item.src} sx={{ width: "50%", height: "auto", margin: "auto auto" }} />
+              <Text variant="cardTitle" center color={theme.palette.basic.light} mt={4} bold>
                 {item.text}
               </Text>
             </CardComp>
