@@ -1,6 +1,5 @@
 import Column from "@/components/common/Column";
 import Row from "@/components/common/Row";
-import Square from "@/components/common/Square";
 import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
@@ -27,73 +26,103 @@ const Widgets = () => {
     { href: "/contact", data: t("Layout.Header.Contact") },
   ];
 
-  const socialMediaLinks = [
-    { icon: <FacebookIcon />, link: "https://www.facebook.com/ArabicInternationalSchoolAmman" },
-    { icon: <InstagramIcon />, link: "https://www.instagram.com/aisamman/" },
-    { icon: <YouTubeIcon />, link: "https://www.youtube.com/channel/UCcWDhM5HG1zk2m_EvXzr1Kg" },
-  ];
-
   const contactInfo = [
     { data: t("Layout.Widgets.Address"), icon: <FmdGoodIcon />, href: "https://goo.gl/maps/hgTQf8j4N9SfZ1Tc6" },
     { data: t("Layout.Widgets.Phone"), icon: <LocalPhoneIcon />, href: "tel:+96264645411" },
     { data: t("Layout.Widgets.Email"), icon: <EmailIcon />, href: "mailto:Info@aisamman.com" },
   ];
 
+  const socialMediaLinks = [
+    { icon: <FacebookIcon />, link: "https://www.facebook.com/ArabicInternationalSchoolAmman" },
+    { icon: <InstagramIcon />, link: "https://www.instagram.com/aisamman/" },
+    { icon: <YouTubeIcon />, link: "https://www.youtube.com/channel/UCcWDhM5HG1zk2m_EvXzr1Kg" },
+  ];
+
   return (
-    <Box sx={{ py: 4, px: { xs: 2, md: 4 }, backgroundColor: theme.palette.blue.dark }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} lg={4}>
-          <Stack height="100%" px={{ xs: 2, md: 1 }} py={{ xs: 1, md: 1 }}>
-            <Square bgcolor={theme.palette.blue.dark} radius={{ mobile: ["3vw", "1.1.1.1"], desktop: ["1.2vw", "1.1.1.1"] }} sx={{ p: "1rem", border: `1px solid ${theme.palette.orange.main}` }}>
-              <Row>
+    <Box sx={{ backgroundColor: theme.palette.blue.dark, px: { xs: 2, md: 5 }, py: { xs: 4, md: 5 } }}>
+      <Box
+        sx={{
+          maxWidth: "1200px",
+          mx: "auto",
+          border: `1px solid ${theme.palette.orange.main}`,
+          borderRadius: "16px",
+          p: { xs: 2, md: 3 },
+        }}
+      >
+        <Grid container spacing={2.5} alignItems="stretch">
+          <Grid item xs={12} lg={4}>
+            <Stack spacing={1.2} sx={{ height: "100%", borderRight: { xs: "none", lg: `1px solid ${theme.palette.orange.main}` }, pr: { xs: 0, lg: 2 } }}>
+              <Text color={theme.palette.orange.main} variant="cardTitle" bold>
+                {t("Layout.Header.Home")}
+              </Text>
+              <Row p={0}>
                 {links.map(({ data, href }, i) => (
-                  <Column xs={6} key={i} p={1}>
+                  <Column xs={6} key={i} p={0.5}>
                     <Link href={href} locale={router.locale} style={{ color: theme.palette.basic.light, textDecoration: "none" }}>
-                      <Text color={theme.palette.basic.light} center>{data}</Text>
+                      <Text color={theme.palette.basic.light} style={{ margin: 0 }}>{data}</Text>
                     </Link>
                   </Column>
                 ))}
               </Row>
-            </Square>
-          </Stack>
-        </Grid>
+            </Stack>
+          </Grid>
 
-        <Grid item xs={12} md={6} lg={5}>
-          <Stack height="100%" px={{ xs: 2, md: 1 }} py={{ xs: 1, md: 1 }}>
-            <Square bgcolor={theme.palette.blue.dark} radius={{ mobile: ["3vw", "1.1.1.1"], desktop: ["1.2vw", "1.1.1.1"] }} sx={{ p: "1rem", border: `1px solid ${theme.palette.orange.main}` }}>
-              <Grid container>
-                {contactInfo.map(({ data, icon, href }, i) => (
-                  <Grid item xs={12} key={i}>
-                    <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined} style={{ color: theme.palette.basic.light, textDecoration: "none", display: "flex", alignItems: "center", gap: "0.6rem", padding: "0.5rem 0" }}>
-                      {icon}
-                      <Text color={theme.palette.basic.light}>{data}</Text>
-                    </a>
-                  </Grid>
-                ))}
-              </Grid>
-            </Square>
-          </Stack>
-        </Grid>
+          <Grid item xs={12} lg={5}>
+            <Stack spacing={1.2} sx={{ height: "100%", borderRight: { xs: "none", lg: `1px solid ${theme.palette.orange.main}` }, px: { xs: 0, lg: 2 } }}>
+              <Text color={theme.palette.orange.main} variant="cardTitle" bold>
+                {t("Layout.Header.Contact")}
+              </Text>
+              {contactInfo.map(({ data, icon, href }, i) => (
+                <a
+                  key={i}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noreferrer" : undefined}
+                  style={{ color: theme.palette.basic.light, textDecoration: "none", display: "flex", alignItems: "center", gap: "0.6rem" }}
+                >
+                  {icon}
+                  <Text color={theme.palette.basic.light} style={{ margin: 0 }}>{data}</Text>
+                </a>
+              ))}
+            </Stack>
+          </Grid>
 
-        <Grid item xs={12} md={12} lg={3}>
-          <Stack justifyContent="center" height="100%" px={{ xs: 2, md: 1 }} py={{ xs: 1, md: 1 }}>
-            <Square bgcolor={theme.palette.blue.dark} radius={{ mobile: ["3vw", "1.1.1.1"], desktop: ["1.2vw", "0.1.1.1"] }} sx={{ p: "1rem", border: `1px solid ${theme.palette.orange.main}` }}>
-              <Row>
-                <Column>
-                  <Avatar sx={{ height: "auto", width: { xs: "15vw", sm: "12vw", md: "9vw", lg: "8vw" }, maxWidth: "120px", margin: "0 auto" }} variant="square" src="/images/AIS-Light-Blue-En-Logo.png" alt="logo 2" />
-                </Column>
+          <Grid item xs={12} lg={3}>
+            <Stack spacing={2} alignItems="center" justifyContent="center" sx={{ height: "100%", pl: { xs: 0, lg: 2 } }}>
+              <Avatar
+                sx={{
+                  height: "auto",
+                  width: { xs: "20vw", sm: "14vw", md: "10vw", lg: "8vw" },
+                  maxWidth: "96px",
+                }}
+                variant="square"
+                src="/images/AIS-Light-Blue-En-Logo.png"
+                alt="logo 2"
+              />
+              <Stack direction="row" spacing={1}>
                 {socialMediaLinks.map(({ icon, link }, i) => (
-                  <Column xs={4} sm={2} key={i}>
-                    <Button href={link} target="_blank" variant="text" sx={{ padding: 0 }} fullWidth>
-                      <Text color={theme.palette.basic.light} variant="sm" center>{icon}</Text>
-                    </Button>
-                  </Column>
+                  <Button
+                    key={i}
+                    href={link}
+                    target="_blank"
+                    variant="outlined"
+                    sx={{
+                      minWidth: "40px",
+                      width: "40px",
+                      height: "40px",
+                      borderColor: theme.palette.orange.main,
+                      color: theme.palette.basic.light,
+                      "&:hover": { borderColor: theme.palette.basic.light, backgroundColor: "rgba(255,255,255,0.08)" },
+                    }}
+                  >
+                    {icon}
+                  </Button>
                 ))}
-              </Row>
-            </Square>
-          </Stack>
+              </Stack>
+            </Stack>
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 };

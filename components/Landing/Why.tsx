@@ -1,4 +1,3 @@
-import CardComp from "@/components/common/Card";
 import Column from "@/components/common/Column";
 import PageSection from "@/components/common/PageSection";
 import Row from "@/components/common/Row";
@@ -6,23 +5,23 @@ import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
 import Avatar from "@mui/material/Avatar";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useRouter } from "next/router";
 
 const AboutSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const cards = [
+  const features = [
     { src: "/images/Islamic.png", alt: "islamic-icon", text: t("About.WhyAIS.Islamic.Title") },
     { src: "/images/Cambridge.png", alt: "cambridge-icon", text: t("About.WhyAIS.Cambridge.Title") },
     { src: "/images/Cheap.png", alt: "cheap-zone-icon", text: t("About.WhyAIS.Reasonable.Title") },
   ];
 
   return (
-    <PageSection bg={theme.palette.basic.light} py={8}>
-      <Row spacing={2.5}>
-        <Column>
+    <PageSection bg={theme.palette.basic.light} py={9}>
+      <Row spacing={3}>
+        <Column lg={12}>
           <Box sx={{ maxWidth: "920px", mx: "auto" }}>
             <Text color={theme.palette.blue.dark} variant="title" center>
               {t("About.Title")}
@@ -33,24 +32,45 @@ const AboutSection = () => {
           </Box>
         </Column>
 
-        {cards.map((item, i) => (
-          <Column sm={6} lg={4} key={i} p={1.5}>
-            <CardComp bg={theme.palette.basic.light}>
-              <Box
+        <Column lg={12} p={1}>
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" },
+              gap: 2,
+              maxWidth: "1100px",
+              mx: "auto",
+            }}
+          >
+            {features.map((item, i) => (
+              <Stack
+                key={i}
+                spacing={2}
+                alignItems="center"
+                justifyContent="center"
                 sx={{
-                  borderTop: `4px solid ${theme.palette.orange.main}`,
-                  borderRadius: "10px",
-                  pt: 2,
+                  minHeight: "230px",
+                  p: { xs: 2.5, md: 3 },
+                  borderRadius: "14px",
+                  border: `1px solid ${theme.palette.basic.main}`,
+                  borderTop: `5px solid ${theme.palette.orange.main}`,
+                  backgroundColor: theme.palette.basic.light,
+                  textAlign: "center",
                 }}
               >
-                <Avatar variant="square" alt={item.alt} src={item.src} sx={{ width: "42%", height: "auto", margin: "0 auto" }} />
-                <Text variant="cardTitle" center color={theme.palette.blue.dark} mt={2.5} bold>
+                <Avatar
+                  variant="square"
+                  alt={item.alt}
+                  src={item.src}
+                  sx={{ width: { xs: "34%", md: "40%" }, height: "auto" }}
+                />
+                <Text variant="cardTitle" color={theme.palette.blue.dark} center bold style={{ margin: 0 }}>
                   {item.text}
                 </Text>
-              </Box>
-            </CardComp>
-          </Column>
-        ))}
+              </Stack>
+            ))}
+          </Box>
+        </Column>
       </Row>
     </PageSection>
   );
