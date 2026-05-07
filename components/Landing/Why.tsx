@@ -20,15 +20,10 @@ const AboutSection = () => {
   ];
 
   return (
-    <PageSection
-      py={10}
-      sx={{
-        background: `linear-gradient(180deg, ${theme.palette.basic.light} 0%, #f7fafc 100%)`,
-      }}
-    >
-      <Row spacing={3}>
+    <PageSection bg={theme.palette.basic.light} py={8}>
+      <Row spacing={2.5}>
         <Column>
-          <Box sx={{ maxWidth: "920px", mx: "auto", textAlign: "center" }}>
+          <Box sx={{ maxWidth: "920px", mx: "auto" }}>
             <Text color={theme.palette.orange.main} variant="title" center>
               {t("About.Title")}
             </Text>
@@ -39,10 +34,10 @@ const AboutSection = () => {
         </Column>
 
         {cards.map((item, i) => (
-          <Column sm={6} lg={4} key={i} p={2.5}>
-            <CardComp bg={theme.palette.orange.main}>
-              <Avatar variant="square" alt={item.alt} src={item.src} sx={{ width: "50%", height: "auto", margin: "auto auto" }} />
-              <Text variant="cardTitle" center color={theme.palette.basic.light} mt={4} bold>
+          <Column sm={6} lg={4} key={i} p={1.5}>
+            <CardComp bg={theme.palette.basic.light}>
+              <Avatar variant="square" alt={item.alt} src={item.src} sx={{ width: "48%", height: "auto", margin: "auto" }} />
+              <Text variant="cardTitle" center color={theme.palette.brown.main} mt={3} bold>
                 {item.text}
               </Text>
             </CardComp>

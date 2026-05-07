@@ -25,36 +25,27 @@ const WelcomeSection = () => {
   ];
 
   return (
-    <PageSection
-      sx={{
-        background: `linear-gradient(140deg, ${theme.palette.basic.light} 0%, ${theme.palette.blue.main} 100%)`,
-        py: { xs: 7, md: 10 },
-      }}
-    >
-      <PageSectionColumn xs={12} lg={6} p={3}>
+    <PageSection bg={theme.palette.basic.light} sx={{ py: { xs: 6, md: 9 } }}>
+      <PageSectionColumn xs={12} lg={6} p={2}>
         <Stack
-          spacing={3}
+          spacing={2.5}
           alignItems={{ xs: "center", lg: "flex-start" }}
-          justifyContent="center"
           sx={{
-            backgroundColor: "rgba(255,255,255,0.82)",
-            border: `1px solid ${theme.palette.blue.light}`,
-            borderRadius: "30px",
-            p: { xs: 3, md: 5 },
-            boxShadow: "0 20px 45px rgba(24,146,206,0.15)",
+            borderLeft: { xs: "none", lg: `5px solid ${theme.palette.orange.main}` },
+            pl: { xs: 0, lg: 3 },
           }}
         >
-          <Avatar alt="Main Logo" src="/images/AIS-Favcion-Logo.png" sx={{ width: { xs: "22vw", sm: "16vw", md: "10vw" }, height: { xs: "22vw", sm: "16vw", md: "10vw" } }} />
+          <Avatar alt="Main Logo" src="/images/AIS-Favcion-Logo.png" sx={{ width: { xs: "20vw", sm: "14vw", md: "8vw" }, height: { xs: "20vw", sm: "14vw", md: "8vw" } }} />
           <Text color={theme.palette.blue.dark} variant="subTitle">
             {t("SchoolName")}
           </Text>
         </Stack>
       </PageSectionColumn>
 
-      <PageSectionColumn md={6} p={3}>
-        <SquaresShape sx={{ width: { xs: "100%", md: "72%" } }}>
+      <PageSectionColumn md={6} p={2}>
+        <SquaresShape sx={{ width: { xs: "100%", md: "68%" } }}>
           <Box sx={GridLayoutStyles}>
-            <Square radius={{ mobile: ["4vw", "1.1.0.1"], desktop: ["2vw", "1.1.0.1"] }} sx={{ gridRow: "1 / 16", gridColumn: "1 / 20", boxShadow: "0 20px 40px rgba(24,146,206,0.25)" }}>
+            <Square radius={{ mobile: ["4vw", "1.1.0.1"], desktop: ["1.6vw", "1.1.0.1"] }} sx={{ gridRow: "1 / 16", gridColumn: "1 / 20" }}>
               <Avatar variant="square" alt="Main Image" src="/images/Photo-9.jpg" sx={{ width: "100%", height: "100%" }} />
             </Square>
             {squares.map((block, i) => (

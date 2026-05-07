@@ -6,26 +6,17 @@ const CardComp = ({ bg = "", children, ...rest }) => {
       {...rest}
       sx={{
         backgroundColor: bg,
-        borderRadius: "24px",
+        borderRadius: "16px",
         textAlign: "center",
-        justifyContent: "center",
-        alignItems: "center",
-        boxShadow: "0 20px 45px rgba(31,36,40,0.14)",
-        border: "1px solid rgba(255,255,255,0.3)",
-        transition: "transform 0.25s ease, box-shadow 0.25s ease",
-        "&:hover": {
-          transform: "translateY(-6px)",
-          boxShadow: "0 24px 48px rgba(31,36,40,0.2)",
-        },
+        border: "1px solid rgba(31,36,40,0.08)",
+        boxShadow: "0 8px 20px rgba(31,36,40,0.08)",
       }}
     >
       <CardContent
         sx={{
           textAlign: "center",
-          justifyContent: "center",
-          alignItems: "center",
-          p: { xs: 3, md: 4 },
-          "&:last-child": { pb: { xs: 3, md: 4 } },
+          p: { xs: 2.5, md: 3 },
+          "&:last-child": { pb: { xs: 2.5, md: 3 } },
         }}
       >
         {children}

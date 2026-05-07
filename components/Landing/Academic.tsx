@@ -19,8 +19,8 @@ const AcademicSection = () => {
   ];
 
   return (
-    <PageSection py={10} sx={{ backgroundColor: theme.palette.blue.main }}>
-      <Row spacing={2}>
+    <PageSection bg={theme.palette.blue.main} py={8}>
+      <Row spacing={2.5}>
         <Column>
           <Text color={theme.palette.blue.dark} variant="title" center>
             {t("Academics.Title")}
@@ -28,7 +28,7 @@ const AcademicSection = () => {
         </Column>
 
         <Column lg={12} p={1}>
-          <Box sx={{ maxWidth: "980px", mx: "auto" }}>
+          <Box sx={{ maxWidth: "960px", mx: "auto" }}>
             <Text doubleHeight justify>
               {t("Academics.StudyLevels.Description")}
             </Text>
@@ -36,19 +36,18 @@ const AcademicSection = () => {
         </Column>
 
         {buttons.map(({ title, link }, i) => (
-          <Column lg={4} md={6} key={i} p={2}>
+          <Column lg={4} md={6} key={i} p={1.5}>
             <Button
               variant="contained"
               size="large"
               href={link}
               fullWidth
               sx={{
-                py: 2.2,
-                borderRadius: "16px",
+                py: 1.8,
+                borderRadius: "12px",
                 backgroundColor: theme.palette.blue.dark,
                 color: theme.palette.basic.light,
                 fontWeight: 700,
-                boxShadow: "0 16px 30px rgba(24,146,206,0.3)",
                 "&:hover": { backgroundColor: theme.palette.brown.main },
               }}
             >

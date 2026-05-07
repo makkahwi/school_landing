@@ -13,14 +13,8 @@ const RegisterSection = () => {
   const { t } = useTranslation(router);
 
   return (
-    <PageSection
-      py={10}
-      bg={theme.palette.orange.main}
-      sx={{
-        background: `linear-gradient(120deg, ${theme.palette.orange.main} 0%, #f0ba07 100%)`,
-      }}
-    >
-      <Row spacing={3}>
+    <PageSection bg={theme.palette.orange.main} py={8}>
+      <Row spacing={2}>
         <Column>
           <Box sx={{ maxWidth: "900px", mx: "auto", textAlign: "center" }}>
             <Text color={theme.palette.basic.light} variant="title" bold center>
@@ -36,10 +30,10 @@ const RegisterSection = () => {
               size="large"
               href="/engage/registration-fees"
               sx={{
-                mt: 2,
-                px: 5,
-                py: 1.8,
-                borderRadius: "999px",
+                mt: 1,
+                px: 4,
+                py: 1.4,
+                borderRadius: "12px",
                 backgroundColor: theme.palette.brown.main,
                 color: theme.palette.basic.light,
                 fontWeight: 700,
