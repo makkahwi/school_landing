@@ -1,7 +1,7 @@
 import useTranslation from "@/hooks/useTranslation";
 import { FooterContainer } from "@/Layout/styles";
-import { Container } from "@mui/material";
-import Typography from "@mui/material/Typography";
+import theme from "@/styles/theme";
+import { Box, Container, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
 const Footer = () => {
@@ -10,20 +10,31 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <Container sx={{ padding: 2 }}>
-        <Typography textAlign="center" fontSize={{ xs: "2.5vw", md: "1vw" }}>
-          {t("Layout.Footer.CopyRights") + new Date().getFullYear()}
-          {" | "}
-          {t("Layout.Footer.By")}{" "}
-          <a
-            href="https://www.semesteer.com/"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "inherit" }}
+      <Container maxWidth="lg" sx={{ px: 2 }}>
+        <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+          <Typography
+            component="p"
+            sx={{
+              m: 0,
+              width: "100%",
+              textAlign: "center",
+              fontSize: { xs: "12px", md: "14px" },
+              color: theme.palette.basic.light,
+            }}
           >
-            {t("Layout.Footer.Developer")}
-          </a>
-        </Typography>
+            {t("Layout.Footer.CopyRights") + new Date().getFullYear()}
+            {" | "}
+            {t("Layout.Footer.By")}{" "}
+            <a
+              href="https://www.semesteer.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: theme.palette.orange.main }}
+            >
+              {t("Layout.Footer.Developer")}
+            </a>
+          </Typography>
+        </Box>
       </Container>
     </FooterContainer>
   );

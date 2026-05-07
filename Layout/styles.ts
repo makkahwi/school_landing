@@ -3,9 +3,7 @@ import { keyframes, styled } from "@mui/material/styles";
 import CSS from "csstype";
 import Avatar from "@mui/material/Avatar";
 import { ReactNode } from "react";
-import theme from "@/styles/theme";
 
-// Interfaces ------------------------------------------
 export interface LinkElementProps {
   data: string | JSX.Element;
   icon: ReactNode;
@@ -15,21 +13,15 @@ export interface LinkElementProps {
   color: string;
 }
 
-// Layout components ------------------------------------------
-
 export const LayoutBox = styled(Stack)(({ theme }) => ({
   width: "100%",
   background: theme.palette.blue.main,
 }));
 
-// Main components ------------------------------------------
-
 export const MainContainer = styled("main")(() => ({
   overflowX: "hidden",
   width: "100%",
 }));
-
-// Header components ------------------------------------------
 
 export const HeaderAnimation = {
   HeaderOpenningDesktop: keyframes`
@@ -61,8 +53,6 @@ export const HeaderButton = styled(Container)(() => ({
   minHeight: "4rem",
 }));
 
-// Navbar components ------------------------------------------
-
 export const NavLinkStyles: CSS.Properties = {
   display: "flex",
   alignItems: "center",
@@ -83,15 +73,12 @@ export const MainLogo = styled(Avatar)(() => ({
   overflow: "hidden",
 }));
 
-// Footer components ------------------------------------------
-
-export const FooterContainer = styled("footer")(() => ({
+export const FooterContainer = styled("footer")(({ theme }) => ({
   width: "100%",
-  height: "auto",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   background: theme.palette.blue.dark,
-  color: "white",
-  padding: "10px 0px",
+  color: theme.palette.basic.light,
+  padding: "14px 0",
 }));

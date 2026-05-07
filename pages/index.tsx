@@ -4,22 +4,16 @@ import RegisterSection from "@/components/Landing/Register";
 import WelcomeSection from "@/components/Landing/Welcome";
 import WhyAISSection from "@/components/Landing/Why";
 import theme from "@/styles/theme";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 
 export default function LandingPage() {
   return (
-    <Stack
-      spacing={{ xs: 2.5, md: 3 }}
-      sx={{
-        backgroundColor: theme.palette.blue.main,
-        py: { xs: 2, md: 3 },
-      }}
-    >
-      <WelcomeSection />
-      <WhyAISSection />
-      <AcademicSection />
-      <RegisterSection />
-      <NewsSection />
+    <Stack sx={{ backgroundColor: theme.palette.blue.main, py: { xs: 3, md: 5 } }}>
+      <Box sx={{ mb: { xs: 3, md: 4 } }}><WelcomeSection /></Box>
+      <Box sx={{ mb: { xs: 3, md: 4 } }}><WhyAISSection /></Box>
+      <Box sx={{ mb: { xs: 3, md: 4 } }}><AcademicSection /></Box>
+      <Box sx={{ mb: { xs: 3, md: 4 } }}><RegisterSection /></Box>
+      <Box><NewsSection /></Box>
     </Stack>
   );
 }
