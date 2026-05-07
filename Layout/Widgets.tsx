@@ -1,122 +1,73 @@
 import Column from "@/components/common/Column";
 import Row from "@/components/common/Row";
+import Square from "@/components/common/Square";
 import Text from "@/components/common/Text";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import {
-  Email,
-  Facebook,
-  Instagram,
-  Phone,
-  WhatsApp,
-  YouTube,
-} from "@mui/icons-material";
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
+import EmailIcon from "@mui/icons-material/Email";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import { Avatar, Box, Button, Grid, Stack } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-import Square from "../components/common/Square";
 
 const Widgets = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const widgetLinks = [
-    {
-      link: "/about/why-ais",
-      label: t("About.Title"),
-    },
-    {
-      link: "/academics/study-levels",
-      label: t("Academics.StudyLevels.Title"),
-    },
-    {
-      link: "/academics/curriculum",
-      label: t("Academics.Curriculum.Title"),
-    },
-    {
-      link: "/engage/registration-fees",
-      label: t("Engage.Registration.Title"),
-    },
-    {
-      link: "/engage/job-opportunities",
-      label: t("Engage.Jobs.Title"),
-    },
-    {
-      link: "https://students.aqsa.edu.my",
-      label: t("StudentPortal"),
-      target: "_blank",
-    },
-    {
-      link: "/website-privacy",
-      label: t("WebsitePrivacy.Title"),
-    },
-    {
-      link: "/data-protection",
-      label: t("DataProtection.Title"),
-    },
-    {
-      link: "/terms-conditions",
-      label: t("TermsConditions.Title"),
-    },
+  const links = [
+    { href: "/", data: t("Layout.Header.Home") },
+    { href: "/about", data: t("Layout.Header.About") },
+    { href: "/academics", data: t("Layout.Header.Academics") },
+    { href: "/engage", data: t("Layout.Header.Engage") },
+    { href: "/news", data: t("Layout.Header.News") },
+    { href: "/contact", data: t("Layout.Header.Contact") },
   ];
 
   const socialMediaLinks = [
-    { icon: <Facebook />, link: "https://www.facebook.com/AISM2018/" },
-    { icon: <Instagram />, link: "https://www.instagram.com/alAqsaIntegrated" },
-    {
-      icon: <YouTube />,
-      link: "https://www.youtube.com/channel/UCY-cDzyntwP3AQUvEVbsX-A",
-    },
-    { icon: <Email />, link: "mailto:principal@aqsa.edu.my" },
-    { icon: <WhatsApp />, link: "http://wasap.my/601157848382" },
-    { icon: <Phone />, link: "tel:+601157848382" },
+    { icon: <FacebookIcon />, link: "https://www.facebook.com/ArabicInternationalSchoolAmman" },
+    { icon: <InstagramIcon />, link: "https://www.instagram.com/aisamman/" },
+    { icon: <YouTubeIcon />, link: "https://www.youtube.com/channel/UCcWDhM5HG1zk2m_EvXzr1Kg" },
+  ];
+
+  const contactInfo = [
+    { data: t("Layout.Widgets.Address"), icon: <FmdGoodIcon />, href: "https://goo.gl/maps/hgTQf8j4N9SfZ1Tc6" },
+    { data: t("Layout.Widgets.Phone"), icon: <LocalPhoneIcon />, href: "tel:+96264645411" },
+    { data: t("Layout.Widgets.Email"), icon: <EmailIcon />, href: "mailto:Info@aisamman.com" },
   ];
 
   return (
-    <Box p={{ md: 5 }}>
-      <Grid container spacing={5} p={{ md: 5 }}>
-        <Grid item xs={12} md={6} lg={8}>
-          <Stack
-            justifyContent="center"
-            height="100%"
-            px={{ xs: 6, md: 1 }}
-            py={{ xs: 3, md: 1 }}
-          >
-            <Square
-              bgcolor={theme.palette.orange.main}
-              radius={{
-                mobile: ["7vw", "1.1.1.1"],
-                desktop: ["3vw", "1.0.1.1"],
-              }}
-              sx={{
-                padding: "1rem",
-                height: "100%",
-              }}
-            >
+    <Box sx={{ py: 4, px: { xs: 2, md: 4 }, backgroundColor: theme.palette.blue.dark }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6} lg={4}>
+          <Stack height="100%" px={{ xs: 2, md: 1 }} py={{ xs: 1, md: 1 }}>
+            <Square bgcolor={theme.palette.blue.dark} radius={{ mobile: ["3vw", "1.1.1.1"], desktop: ["1.2vw", "1.1.1.1"] }} sx={{ p: "1rem", border: `1px solid ${theme.palette.orange.main}` }}>
+              <Row>
+                {links.map(({ data, href }, i) => (
+                  <Column xs={6} key={i} p={1}>
+                    <Link href={href} locale={router.locale} style={{ color: theme.palette.basic.light, textDecoration: "none" }}>
+                      <Text color={theme.palette.basic.light} center>{data}</Text>
+                    </Link>
+                  </Column>
+                ))}
+              </Row>
+            </Square>
+          </Stack>
+        </Grid>
+
+        <Grid item xs={12} md={6} lg={5}>
+          <Stack height="100%" px={{ xs: 2, md: 1 }} py={{ xs: 1, md: 1 }}>
+            <Square bgcolor={theme.palette.blue.dark} radius={{ mobile: ["3vw", "1.1.1.1"], desktop: ["1.2vw", "1.1.1.1"] }} sx={{ p: "1rem", border: `1px solid ${theme.palette.orange.main}` }}>
               <Grid container>
-                {widgetLinks.map(({ label, link, ...rest }, i) => (
-                  <Grid item xs={12} md={6} lg={4} key={i}>
-                    <Typography
-                      fontSize={{
-                        xs: "3.5vw",
-                        sm: "2vw",
-                        md: "1.5vw",
-                      }}
-                      textAlign="center"
-                      my={2}
-                      color={theme.palette.basic.light}
-                      key={`item tagged: ${label}`}
-                    >
-                      <Link
-                        href={link}
-                        style={{ color: "inherit", textDecoration: "none" }}
-                        {...rest}
-                      >
-                        {label}
-                      </Link>
-                    </Typography>
+                {contactInfo.map(({ data, icon, href }, i) => (
+                  <Grid item xs={12} key={i}>
+                    <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined} style={{ color: theme.palette.basic.light, textDecoration: "none", display: "flex", alignItems: "center", gap: "0.6rem", padding: "0.5rem 0" }}>
+                      {icon}
+                      <Text color={theme.palette.basic.light}>{data}</Text>
+                    </a>
                   </Grid>
                 ))}
               </Grid>
@@ -124,53 +75,17 @@ const Widgets = () => {
           </Stack>
         </Grid>
 
-        <Grid item xs={12} md={6} lg={3}>
-          <Stack
-            justifyContent="center"
-            height="100%"
-            px={{ xs: 6, md: 1 }}
-            py={{ xs: 3, md: 1 }}
-          >
-            <Square
-              bgcolor={theme.palette.blue.dark}
-              radius={{
-                mobile: ["7vw", "1.1.1.1"],
-                desktop: ["3vw", "0.1.1.1"],
-              }}
-              sx={{
-                padding: "1rem",
-              }}
-            >
+        <Grid item xs={12} md={12} lg={3}>
+          <Stack justifyContent="center" height="100%" px={{ xs: 2, md: 1 }} py={{ xs: 1, md: 1 }}>
+            <Square bgcolor={theme.palette.blue.dark} radius={{ mobile: ["3vw", "1.1.1.1"], desktop: ["1.2vw", "0.1.1.1"] }} sx={{ p: "1rem", border: `1px solid ${theme.palette.orange.main}` }}>
               <Row>
                 <Column>
-                  <Avatar
-                    sx={{
-                      height: "auto",
-                      width: { xs: "25vw", md: "75%" },
-                      margin: "0 auto",
-                    }}
-                    variant="square"
-                    src="/images/AIS-Light-Blue-En-Logo.png"
-                    alt="logo 2"
-                  />
+                  <Avatar sx={{ height: "auto", width: { xs: "15vw", sm: "12vw", md: "9vw", lg: "8vw" }, maxWidth: "120px", margin: "0 auto" }} variant="square" src="/images/AIS-Light-Blue-En-Logo.png" alt="logo 2" />
                 </Column>
-
                 {socialMediaLinks.map(({ icon, link }, i) => (
                   <Column xs={4} sm={2} key={i}>
-                    <Button
-                      href={link}
-                      target="_blank"
-                      variant="text"
-                      sx={{ padding: 0 }}
-                      fullWidth
-                    >
-                      <Text
-                        color={theme.palette.basic.light}
-                        variant="sm"
-                        center
-                      >
-                        {icon}
-                      </Text>
+                    <Button href={link} target="_blank" variant="text" sx={{ padding: 0 }} fullWidth>
+                      <Text color={theme.palette.basic.light} variant="sm" center>{icon}</Text>
                     </Button>
                   </Column>
                 ))}

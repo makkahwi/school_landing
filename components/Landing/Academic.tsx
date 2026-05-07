@@ -6,7 +6,7 @@ import Column from "../common/Column";
 import PageSection from "../common/PageSection";
 import Row from "../common/Row";
 import Text from "../common/Text";
-import { Button, Box } from "@mui/material";
+import { Button, Box, Stack } from "@mui/material";
 
 const AcademicSection = () => {
   const router = useRouter();
@@ -20,41 +20,56 @@ const AcademicSection = () => {
 
   return (
     <PageSection bg={theme.palette.blue.main} py={8}>
-      <Row spacing={2.5}>
-        <Column>
-          <Text color={theme.palette.blue.dark} variant="title" center>
-            {t("Academics.Title")}
-          </Text>
-        </Column>
-
+      <Row spacing={2}>
         <Column lg={12} p={1}>
-          <Box sx={{ maxWidth: "960px", mx: "auto" }}>
+          <Stack
+            sx={{
+              backgroundColor: theme.palette.basic.light,
+              border: `1px solid ${theme.palette.basic.main}`,
+              borderRadius: "14px",
+              p: { xs: 2.5, md: 4 },
+              maxWidth: "1020px",
+              mx: "auto",
+            }}
+            spacing={2.5}
+          >
+            <Text color={theme.palette.blue.dark} variant="title" center>
+              {t("Academics.Title")}
+            </Text>
+
             <Text doubleHeight justify>
               {t("Academics.StudyLevels.Description")}
             </Text>
-          </Box>
-        </Column>
 
-        {buttons.map(({ title, link }, i) => (
-          <Column lg={4} md={6} key={i} p={1.5}>
-            <Button
-              variant="contained"
-              size="large"
-              href={link}
-              fullWidth
+            <Box
               sx={{
-                py: 1.8,
-                borderRadius: "12px",
-                backgroundColor: theme.palette.blue.dark,
-                color: theme.palette.basic.light,
-                fontWeight: 700,
-                "&:hover": { backgroundColor: theme.palette.brown.main },
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
+                gap: 1.5,
               }}
             >
-              {title}
-            </Button>
-          </Column>
-        ))}
+              {buttons.map(({ title, link }, i) => (
+                <Button
+                  key={i}
+                  variant="contained"
+                  size="large"
+                  href={link}
+                  fullWidth
+                  sx={{
+                    py: 1.5,
+                    borderRadius: "10px",
+                    backgroundColor: theme.palette.blue.dark,
+                    color: theme.palette.basic.light,
+                    fontWeight: 700,
+                    "&:hover": { backgroundColor: theme.palette.orange.main, color: theme.palette.blue.dark },
+                  }}
+                >
+                  {title}
+                </Button>
+              ))}
+            </Box>
+          </Stack>
+        </Column>
       </Row>
     </PageSection>
   );

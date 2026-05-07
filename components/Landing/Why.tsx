@@ -24,7 +24,7 @@ const AboutSection = () => {
       <Row spacing={2.5}>
         <Column>
           <Box sx={{ maxWidth: "920px", mx: "auto" }}>
-            <Text color={theme.palette.orange.main} variant="title" center>
+            <Text color={theme.palette.blue.dark} variant="title" center>
               {t("About.Title")}
             </Text>
             <Text doubleHeight justify>
@@ -36,10 +36,18 @@ const AboutSection = () => {
         {cards.map((item, i) => (
           <Column sm={6} lg={4} key={i} p={1.5}>
             <CardComp bg={theme.palette.basic.light}>
-              <Avatar variant="square" alt={item.alt} src={item.src} sx={{ width: "48%", height: "auto", margin: "auto" }} />
-              <Text variant="cardTitle" center color={theme.palette.brown.main} mt={3} bold>
-                {item.text}
-              </Text>
+              <Box
+                sx={{
+                  borderTop: `4px solid ${theme.palette.orange.main}`,
+                  borderRadius: "10px",
+                  pt: 2,
+                }}
+              >
+                <Avatar variant="square" alt={item.alt} src={item.src} sx={{ width: "42%", height: "auto", margin: "0 auto" }} />
+                <Text variant="cardTitle" center color={theme.palette.blue.dark} mt={2.5} bold>
+                  {item.text}
+                </Text>
+              </Box>
             </CardComp>
           </Column>
         ))}

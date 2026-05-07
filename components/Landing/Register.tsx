@@ -17,11 +17,11 @@ const RegisterSection = () => {
       <Row spacing={2}>
         <Column>
           <Box sx={{ maxWidth: "900px", mx: "auto", textAlign: "center" }}>
-            <Text color={theme.palette.basic.light} variant="title" bold center>
+            <Text color={theme.palette.blue.dark} variant="title" bold center>
               {t("Engage.Registration.Title")}
             </Text>
 
-            <Text color={theme.palette.basic.light} doubleHeight justify>
+            <Text color={theme.palette.blue.dark} doubleHeight justify>
               {t("Engage.Registration.Description")}
             </Text>
 
@@ -33,11 +33,11 @@ const RegisterSection = () => {
                 mt: 1,
                 px: 4,
                 py: 1.4,
-                borderRadius: "12px",
-                backgroundColor: theme.palette.brown.main,
+                borderRadius: "10px",
+                backgroundColor: theme.palette.blue.dark,
                 color: theme.palette.basic.light,
                 fontWeight: 700,
-                "&:hover": { backgroundColor: theme.palette.blue.dark },
+                "&:hover": { backgroundColor: theme.palette.basic.dark },
               }}
             >
               {t("Engage.Registration.RegisterNow")}

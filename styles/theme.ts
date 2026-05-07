@@ -2,42 +2,29 @@ import { createTheme } from "@mui/material";
 
 const theme = createTheme({
   palette: {
-    primary: { main: "#1892ce" },
+    primary: { main: "#1C4B94" },
     blue: {
-      main: "#eff1f3",
-      light: "#7cc1e3",
-      dark: "#1892ce",
+      main: "#f4f7fc",
+      light: "#1C4B94",
+      dark: "#1C4B94",
     },
     basic: {
-      main: "#d3d3d3",
+      main: "#d9dee8",
       light: "#ffffff",
       dark: "#1f2428",
     },
-    orange: { main: "#fec817" },
-    brown: { main: "#4e360c" },
+    orange: { main: "#C7A24A" },
+    brown: { main: "#1C4B94" },
   },
   shape: {
-    borderRadius: 16,
+    borderRadius: 14,
   },
   typography: {
     fontFamily: '"Trebuchet MS", "Verdana", sans-serif',
-    h3: {
-      fontWeight: 800,
-      lineHeight: 1.2,
-      letterSpacing: "-0.01em",
-    },
-    h4: {
-      fontWeight: 700,
-      lineHeight: 1.25,
-    },
-    h5: {
-      fontWeight: 700,
-      lineHeight: 1.3,
-    },
-    h6: {
-      lineHeight: 1.7,
-      fontWeight: 500,
-    },
+    h3: { fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.01em" },
+    h4: { fontWeight: 700, lineHeight: 1.25 },
+    h5: { fontWeight: 700, lineHeight: 1.3 },
+    h6: { lineHeight: 1.7, fontWeight: 500 },
   },
 });
 
