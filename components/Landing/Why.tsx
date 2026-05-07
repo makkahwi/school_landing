@@ -19,7 +19,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <PageSection bg={theme.palette.basic.light} py={9}>
+    <PageSection bg={theme.palette.basic.light} py={8} sx={{ borderRadius: "16px", mx: { xs: 1.5, md: 3 }, border: `1px solid ${theme.palette.basic.main}` }}>
       <Row spacing={3}>
         <Column lg={12}>
           <Box sx={{ maxWidth: "920px", mx: "auto" }}>
@@ -33,15 +33,7 @@ const AboutSection = () => {
         </Column>
 
         <Column lg={12} p={1}>
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" },
-              gap: 2,
-              maxWidth: "1100px",
-              mx: "auto",
-            }}
-          >
+          <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }, gap: 2, maxWidth: "1100px", mx: "auto" }}>
             {features.map((item, i) => (
               <Stack
                 key={i}
@@ -49,22 +41,16 @@ const AboutSection = () => {
                 alignItems="center"
                 justifyContent="center"
                 sx={{
-                  minHeight: "230px",
+                  minHeight: "235px",
                   p: { xs: 2.5, md: 3 },
                   borderRadius: "14px",
-                  border: `1px solid ${theme.palette.basic.main}`,
-                  borderTop: `5px solid ${theme.palette.orange.main}`,
-                  backgroundColor: theme.palette.basic.light,
+                  border: `1px solid ${theme.palette.orange.main}`,
+                  backgroundColor: theme.palette.blue.dark,
                   textAlign: "center",
                 }}
               >
-                <Avatar
-                  variant="square"
-                  alt={item.alt}
-                  src={item.src}
-                  sx={{ width: { xs: "34%", md: "40%" }, height: "auto" }}
-                />
-                <Text variant="cardTitle" color={theme.palette.blue.dark} center bold style={{ margin: 0 }}>
+                <Avatar variant="square" alt={item.alt} src={item.src} sx={{ width: { xs: "36%", md: "42%" }, height: "auto" }} />
+                <Text variant="cardTitle" color={theme.palette.basic.light} center bold style={{ margin: 0 }}>
                   {item.text}
                 </Text>
               </Stack>

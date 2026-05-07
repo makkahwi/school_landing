@@ -40,19 +40,11 @@ const Widgets = () => {
 
   return (
     <Box sx={{ backgroundColor: theme.palette.blue.dark, px: { xs: 2, md: 5 }, py: { xs: 4, md: 5 } }}>
-      <Box
-        sx={{
-          maxWidth: "1200px",
-          mx: "auto",
-          border: `1px solid ${theme.palette.orange.main}`,
-          borderRadius: "16px",
-          p: { xs: 2, md: 3 },
-        }}
-      >
-        <Grid container spacing={2.5} alignItems="stretch">
-          <Grid item xs={12} lg={4}>
-            <Stack spacing={1.2} sx={{ height: "100%", borderRight: { xs: "none", lg: `1px solid ${theme.palette.orange.main}` }, pr: { xs: 0, lg: 2 } }}>
-              <Text color={theme.palette.orange.main} variant="cardTitle" bold>
+      <Box sx={{ maxWidth: "1200px", mx: "auto", backgroundColor: "rgba(255,255,255,0.02)", border: `1px solid ${theme.palette.orange.main}`, borderRadius: "16px", p: { xs: 2.5, md: 3 } }}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6} lg={4}>
+            <Stack spacing={1.3}>
+              <Text color={theme.palette.orange.main} variant="cardTitle" bold style={{ margin: 0 }}>
                 {t("Layout.Header.Home")}
               </Text>
               <Row p={0}>
@@ -67,20 +59,14 @@ const Widgets = () => {
             </Stack>
           </Grid>
 
-          <Grid item xs={12} lg={5}>
-            <Stack spacing={1.2} sx={{ height: "100%", borderRight: { xs: "none", lg: `1px solid ${theme.palette.orange.main}` }, px: { xs: 0, lg: 2 } }}>
-              <Text color={theme.palette.orange.main} variant="cardTitle" bold>
+          <Grid item xs={12} md={6} lg={5}>
+            <Stack spacing={1.3}>
+              <Text color={theme.palette.orange.main} variant="cardTitle" bold style={{ margin: 0 }}>
                 {t("Layout.Header.Contact")}
               </Text>
               {contactInfo.map(({ data, icon, href }, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel={href.startsWith("http") ? "noreferrer" : undefined}
-                  style={{ color: theme.palette.basic.light, textDecoration: "none", display: "flex", alignItems: "center", gap: "0.6rem" }}
-                >
-                  {icon}
+                <a key={i} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined} style={{ color: theme.palette.basic.light, textDecoration: "none", display: "flex", alignItems: "flex-start", gap: "0.6rem" }}>
+                  <Box sx={{ mt: "2px" }}>{icon}</Box>
                   <Text color={theme.palette.basic.light} style={{ margin: 0 }}>{data}</Text>
                 </a>
               ))}
@@ -88,33 +74,11 @@ const Widgets = () => {
           </Grid>
 
           <Grid item xs={12} lg={3}>
-            <Stack spacing={2} alignItems="center" justifyContent="center" sx={{ height: "100%", pl: { xs: 0, lg: 2 } }}>
-              <Avatar
-                sx={{
-                  height: "auto",
-                  width: { xs: "20vw", sm: "14vw", md: "10vw", lg: "8vw" },
-                  maxWidth: "96px",
-                }}
-                variant="square"
-                src="/images/AIS-Light-Blue-En-Logo.png"
-                alt="logo 2"
-              />
+            <Stack spacing={2} alignItems={{ xs: "flex-start", lg: "center" }} justifyContent="center" sx={{ height: "100%" }}>
+              <Avatar sx={{ height: "auto", width: { xs: "18vw", sm: "12vw", md: "9vw", lg: "7vw" }, maxWidth: "86px" }} variant="square" src="/images/AIS-Light-Blue-En-Logo.png" alt="logo 2" />
               <Stack direction="row" spacing={1}>
                 {socialMediaLinks.map(({ icon, link }, i) => (
-                  <Button
-                    key={i}
-                    href={link}
-                    target="_blank"
-                    variant="outlined"
-                    sx={{
-                      minWidth: "40px",
-                      width: "40px",
-                      height: "40px",
-                      borderColor: theme.palette.orange.main,
-                      color: theme.palette.basic.light,
-                      "&:hover": { borderColor: theme.palette.basic.light, backgroundColor: "rgba(255,255,255,0.08)" },
-                    }}
-                  >
+                  <Button key={i} href={link} target="_blank" variant="outlined" sx={{ minWidth: "38px", width: "38px", height: "38px", borderColor: theme.palette.orange.main, color: theme.palette.basic.light, p: 0, "&:hover": { borderColor: theme.palette.basic.light, backgroundColor: "rgba(255,255,255,0.08)" } }}>
                     {icon}
                   </Button>
                 ))}

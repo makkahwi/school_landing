@@ -19,68 +19,44 @@ const AcademicSection = () => {
   ];
 
   return (
-    <PageSection bg={theme.palette.blue.main} py={9}>
-      <Row spacing={2}>
+    <PageSection bg={theme.palette.basic.light} py={8} sx={{ borderRadius: "16px", mx: { xs: 1.5, md: 3 }, border: `1px solid ${theme.palette.basic.main}` }}>
+      <Row spacing={2.5}>
         <Column lg={12}>
-          <Box
-            sx={{
-              maxWidth: "1120px",
-              mx: "auto",
-              backgroundColor: theme.palette.basic.light,
-              border: `1px solid ${theme.palette.basic.main}`,
-              borderRadius: "16px",
-              overflow: "hidden",
-            }}
-          >
-            <Box
-              sx={{
-                backgroundColor: theme.palette.blue.dark,
-                px: { xs: 2.5, md: 4 },
-                py: { xs: 2, md: 2.4 },
-              }}
-            >
-              <Text variant="title" color={theme.palette.basic.light} center style={{ margin: 0 }}>
+          <Stack spacing={2} sx={{ maxWidth: "1050px", mx: "auto" }}>
+            <Box sx={{ borderLeft: `6px solid ${theme.palette.orange.main}`, pl: 2 }}>
+              <Text color={theme.palette.blue.dark} variant="title" style={{ margin: 0 }}>
                 {t("Academics.Title")}
               </Text>
             </Box>
 
-            <Box sx={{ p: { xs: 2.5, md: 4 } }}>
-              <Text doubleHeight justify style={{ marginTop: 0 }}>
+            <Box sx={{ p: { xs: 2, md: 2.5 }, borderRadius: "12px", backgroundColor: theme.palette.blue.main, border: `1px solid ${theme.palette.basic.main}` }}>
+              <Text doubleHeight justify style={{ margin: 0 }}>
                 {t("Academics.StudyLevels.Description")}
               </Text>
-
-              <Stack
-                direction={{ xs: "column", md: "row" }}
-                spacing={1.5}
-                sx={{ mt: 2 }}
-              >
-                {actions.map(({ title, link }, i) => (
-                  <Button
-                    key={i}
-                    href={link}
-                    variant="outlined"
-                    fullWidth
-                    sx={{
-                      py: 1.4,
-                      borderRadius: "10px",
-                      borderWidth: "2px",
-                      borderColor: theme.palette.blue.dark,
-                      color: theme.palette.blue.dark,
-                      fontWeight: 700,
-                      backgroundColor: theme.palette.basic.light,
-                      "&:hover": {
-                        borderColor: theme.palette.orange.main,
-                        backgroundColor: theme.palette.orange.main,
-                        color: theme.palette.blue.dark,
-                      },
-                    }}
-                  >
-                    {title}
-                  </Button>
-                ))}
-              </Stack>
             </Box>
-          </Box>
+
+            <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" }, gap: 1.5 }}>
+              {actions.map(({ title, link }, i) => (
+                <Button
+                  key={i}
+                  href={link}
+                  variant="contained"
+                  fullWidth
+                  sx={{
+                    py: 1.4,
+                    borderRadius: "10px",
+                    textTransform: "none",
+                    fontWeight: 700,
+                    backgroundColor: theme.palette.blue.dark,
+                    color: theme.palette.basic.light,
+                    "&:hover": { backgroundColor: theme.palette.orange.main, color: theme.palette.blue.dark },
+                  }}
+                >
+                  {title}
+                </Button>
+              ))}
+            </Box>
+          </Stack>
         </Column>
       </Row>
     </PageSection>
