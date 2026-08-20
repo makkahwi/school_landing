@@ -1,6 +1,6 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import { ChevronRight, ExpandLess, ExpandMore } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   Button,
@@ -76,6 +76,11 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+  const closeSubMenu = () => {
+    setSubmenu("");
+    setAnchorSubMenu(null);
+  };
+
   return (
     <AppBar
       position="sticky"
@@ -121,6 +126,8 @@ function ResponsiveAppBar() {
                   borderRadius: 2,
                   minWidth: 280,
                   mt: 1,
+                  overflow: "hidden",
+                  border: "1px solid rgba(11,53,88,.12)",
                 },
               }}
             >
@@ -130,6 +137,15 @@ function ResponsiveAppBar() {
                   maxWidth: 360,
                   bgcolor: "background.paper",
                   display: { xs: "block", md: "none" },
+                  py: 1,
+                  "& .MuiListItemButton-root": {
+                    px: 2.2,
+                    py: 1.25,
+                  },
+                  "& .MuiListItemText-primary": {
+                    fontWeight: 750,
+                    color: "primary.dark",
+                  },
                 }}
                 component="nav"
                 aria-labelledby="nested-list-subheader"
@@ -174,7 +190,17 @@ function ResponsiveAppBar() {
                                   display: "block",
                                 }}
                               >
-                                <ListItemButton>
+                                <ListItemButton
+                                  sx={{
+                                    bgcolor: "rgba(11,53,88,.04)",
+                                    borderInlineStart: `3px solid ${theme.palette.orange.main}`,
+                                    "& .MuiListItemText-primary": {
+                                      fontSize: 14,
+                                      fontWeight: 700,
+                                      color: "text.secondary",
+                                    },
+                                  }}
+                                >
                                   <ListItemText primary={subtitle} />
                                 </ListItemButton>
                               </Link>
@@ -223,7 +249,7 @@ function ResponsiveAppBar() {
             <img
               src="/images/AIS-En-Mobile-Logo-1-White.png"
               alt="Al-Aqsa Integrated School"
-              style={{ width: 200, height: "auto", display: "block" }}
+              style={{ width: 104, height: "auto", display: "block" }}
             />
           </Link>
 
@@ -252,39 +278,96 @@ function ResponsiveAppBar() {
                     style={{
                       textDecoration: "none",
                       color: theme.palette.basic.light,
-                      display: "block",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 4,
                       cursor: "pointer",
                       textTransform: "none",
                       fontWeight: 750,
                       fontSize: "0.95rem",
+                      padding: "10px 0",
                     }}
                     role="button"
                   >
                     {title}
+                    <ExpandMore sx={{ fontSize: 18, opacity: 0.75 }} />
                   </div>
 
                   <Menu
                     id={`${link}-basic-menu`}
                     open={submenu === link}
                     anchorEl={anchorSubMenu}
-                    onClose={() => setSubmenu("")}
+                    onClose={closeSubMenu}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: router.locale === "ar" ? "right" : "left",
+                    }}
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: router.locale === "ar" ? "right" : "left",
+                    }}
+                    slotProps={{
+                      paper: {
+                        sx: {
+                          mt: 1.2,
+                          minWidth: 260,
+                          borderRadius: 2,
+                          overflow: "hidden",
+                          border: "1px solid rgba(11,53,88,.12)",
+                          boxShadow: "0 22px 50px rgba(7,29,52,.18)",
+                          bgcolor: "background.paper",
+                        },
+                      },
+                      list: {
+                        sx: { py: 0.8 },
+                      },
+                    }}
                     MenuListProps={{
                       "aria-labelledby": "basic-button",
                     }}
                   >
                     {links.map(({ link: sublink, title: subtitle }, y) => (
-                      <MenuItem onClick={() => setSubmenu("")} key={y}>
+                      <MenuItem
+                        onClick={closeSubMenu}
+                        key={y}
+                        sx={{
+                          px: 1,
+                          py: 0,
+                          mx: 0.8,
+                          my: 0.3,
+                          borderRadius: 1,
+                          "&:hover": {
+                            bgcolor: "rgba(11,53,88,.06)",
+                          },
+                        }}
+                      >
                         <Link
                           href={link + "/" + sublink}
-                          onClick={() => setSubmenu("")}
+                          onClick={closeSubMenu}
                           role="button"
                           style={{
                             textDecoration: "none",
                             color: theme.palette.blue.dark,
-                            display: "block",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: 16,
+                            width: "100%",
+                            padding: "11px 10px",
+                            fontWeight: 750,
                           }}
                         >
-                          {subtitle}
+                          <span>{subtitle}</span>
+                          <ChevronRight
+                            sx={{
+                              fontSize: 18,
+                              color: theme.palette.orange.main,
+                              transform:
+                                router.locale === "ar"
+                                  ? "rotate(180deg)"
+                                  : "none",
+                            }}
+                          />
                         </Link>
                       </MenuItem>
                     ))}
