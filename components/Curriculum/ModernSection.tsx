@@ -1,137 +1,57 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
-import Square from "../../components/common/Square";
-import { ModernScienceGrid } from "../../components/Curriculum/styles";
-import Text from "../common/Text";
 
 const ModernSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
 
-  const squares = [
-    {
-      bgColor: theme.palette.brown.main,
-      radius: {
-        mobile: ["2vw", "1.1.0.1"],
-        desktop: ["1.5vw", "1.1.0.1"],
-      },
-      sx: {
-        gridRow: "1 / 5",
-        gridColumn: "3 / 7",
-      },
-      fontSize: {
-        xs: "2vw",
-        md: "1vw",
-      },
-      textColor: theme.palette.basic.light,
-      text: t("Academics.Curriculum.Modern.Math"),
-    },
-    {
-      bgColor: theme.palette.orange.main,
-      radius: {
-        mobile: ["5vw", "1.0.1.1"],
-        desktop: ["3vw", "1.0.1.1"],
-      },
-      sx: {
-        gridRow: "5 / 11",
-        gridColumn: "1 / 7",
-      },
-      fontSize: {
-        xs: "4.5vw",
-        md: "1.75vw",
-      },
-      textColor: theme.palette.basic.light,
-      text: t("Academics.Curriculum.Modern.Science"),
-    },
-    {
-      bgColor: theme.palette.basic.light,
-      radius: {
-        mobile: ["7vw", "0.1.1.1"],
-        desktop: ["4vw", "0.1.1.1"],
-      },
-      sx: {
-        gridRow: "5 / 16",
-        gridColumn: "7 / 17",
-      },
-      fontSize: {
-        xs: "5vw",
-        md: "2vw",
-      },
-      textColor: theme.palette.brown.main,
-      text: t("Academics.Curriculum.Modern.ComputerScience"),
-    },
-    {
-      bgColor: theme.palette.orange.main,
-      radius: {
-        mobile: ["2vw", "1.1.1.0"],
-        desktop: ["1.5vw", "1.1.1.0"],
-      },
-      sx: {
-        gridRow: "2 / 5",
-        gridColumn: "7 / 10",
-      },
-      fontSize: {
-        xs: "2vw",
-        md: "1vw",
-      },
-      textColor: theme.palette.basic.light,
-      text: t("Academics.Curriculum.Modern.Sports"),
-    },
-    {
-      bgColor: theme.palette.brown.main,
-      radius: {
-        mobile: ["1vw", "1.0.1.1"],
-        desktop: ["1vw", "1.0.1.1"],
-      },
-      sx: {
-        gridRow: "11 / 15",
-        gridColumn: "4 / 7",
-      },
-      fontSize: {
-        xs: "2vw",
-        md: "1vw",
-      },
-      textColor: theme.palette.basic.light,
-      text: t("Academics.Curriculum.Modern.Arts"),
-    },
+  const subjects = [
+    t("Academics.Curriculum.Modern.Math"),
+    t("Academics.Curriculum.Modern.Science"),
+    t("Academics.Curriculum.Modern.ComputerScience"),
+    t("Academics.Curriculum.Modern.Sports"),
+    t("Academics.Curriculum.Modern.Arts"),
   ];
 
   return (
-    <PageSection bg={theme.palette.blue.dark}>
-      <PageSectionColumn md={4}>
-        <Box sx={ModernScienceGrid}>
-          {squares?.map(
-            ({ bgColor, radius, sx, fontSize, textColor, text }, i) => (
-              <Square bgcolor={bgColor} radius={radius} sx={sx} key={i}>
-                {text && (
-                  <Typography
-                    fontSize={fontSize}
-                    fontWeight="bold"
-                    color={textColor}
-                    textAlign="center"
-                  >
-                    {text}
-                  </Typography>
-                )}
-              </Square>
-            )
-          )}
-        </Box>
+    <PageSection bg={theme.palette.blue.dark} sx={{ py: { xs: 7, md: 9 } }}>
+      <PageSectionColumn md={5} align="start" justify="start">
+        <Typography
+          component="h2"
+          sx={{ color: "common.white", fontSize: { xs: 34, md: 48 }, fontWeight: 900, lineHeight: 1.08 }}
+        >
+          {t("Academics.Curriculum.Modern.Title")}
+        </Typography>
+        <Typography sx={{ mt: 2.5, color: "rgba(255,255,255,.78)", lineHeight: 1.85, fontSize: { xs: 16, md: 18 } }}>
+          {t("Academics.Curriculum.Modern.Description")}
+        </Typography>
       </PageSectionColumn>
 
-      <PageSectionColumn md={8}>
-        <Text color={theme.palette.basic.light} variant="title" bold>
-          {t("Academics.Curriculum.Modern.Title")}
-        </Text>
-
-        <Text color={theme.palette.basic.light} justify doubleHeight bold>
-          {t("Academics.Curriculum.Modern.Description")}
-        </Text>
+      <PageSectionColumn md={7}>
+        <Box sx={{ width: "100%", bgcolor: "rgba(255,255,255,.06)", borderTop: `3px solid ${theme.palette.secondary.main}` }}>
+          <Stack divider={<Divider sx={{ borderColor: "rgba(255,255,255,.14)" }} />}>
+            {subjects.map((subject, index) => (
+              <Stack
+                key={subject}
+                direction="row"
+                spacing={2}
+                sx={{ px: { xs: 2.4, md: 3.4 }, py: 2.2, alignItems: "center" }}
+              >
+                <Typography sx={{ color: theme.palette.secondary.main, fontWeight: 900, width: 30 }}>
+                  {String(index + 1).padStart(2, "0")}
+                </Typography>
+                <Typography sx={{ color: "common.white", fontSize: { xs: 18, md: 21 }, fontWeight: 800 }}>
+                  {subject}
+                </Typography>
+              </Stack>
+            ))}
+          </Stack>
+        </Box>
       </PageSectionColumn>
     </PageSection>
   );

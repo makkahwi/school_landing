@@ -1,6 +1,6 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Avatar } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
 import PageSection from "../../components/common/PageSection";
@@ -156,26 +156,17 @@ const FeesSection = () => {
   ];
 
   return (
-    <PageSection bg="">
-      <PageSectionColumn md={6}>
-        <Text color={theme.palette.orange.main} variant="title" center>
+    <PageSection bg="" sx={{ py: { xs: 7, md: 9 } }}>
+      <PageSectionColumn md={4} align="start" justify="start">
+        <Text color={theme.palette.orange.main} variant="title" style={{ marginBottom: 8 }}>
           {t("Engage.Fees.Title")}
         </Text>
+        <Typography sx={{ color: "text.secondary", lineHeight: 1.8, maxWidth: 420 }}>
+          {t("Engage.Registration.Title")}
+        </Typography>
       </PageSectionColumn>
 
-      <PageSectionColumn md={6}>
-        <Avatar
-          src="/images/Char-1-Color.png"
-          variant="square"
-          sx={{
-            width: "30%",
-            height: "auto",
-            margin: "auto auto",
-          }}
-        />
-      </PageSectionColumn>
-
-      <PageSectionColumn p={0}>
+      <PageSectionColumn md={8} p={{ xs: 2, md: 3 }}>
         <FeeCards
           templateId="structure section"
           isSubStack={false}

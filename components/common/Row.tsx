@@ -6,14 +6,22 @@ const Row = ({
   justify = "center",
   align = "center",
   p = 2,
+  px,
+  py,
+  pt,
+  pb,
   ...rest
 }) => {
   return (
     <Grid
       container
-      p={p}
       sx={{
         width: "100%",
+        p,
+        px,
+        py,
+        pt,
+        pb,
         alignItems: align,
         justifyContent: justify,
         justifyItems: justify,

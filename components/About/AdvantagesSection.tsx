@@ -1,10 +1,8 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import Avatar from "@mui/material/Avatar";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
-import { Fragment } from "react";
 
-import CardComp from "../common/Card";
 import PageSection from "../common/PageSection";
 import PageSectionColumn from "../common/PageSectionColumn";
 import Text from "../common/Text";
@@ -35,54 +33,60 @@ const AdvantagesSection = () => {
   ];
 
   return (
-    <PageSection bg={theme.palette.basic.light}>
-      <PageSectionColumn>
-        <Text color={theme.palette.orange.main} variant="title">
+    <PageSection bg={theme.palette.basic.light} sx={{ py: { xs: 7, md: 9 } }}>
+      <PageSectionColumn md={4} align="start" justify="start">
+        <Text color={theme.palette.orange.main} variant="title" style={{ marginBottom: 8 }}>
           {t("About.WhyAIS.Title")}
         </Text>
+        <Typography sx={{ color: "text.secondary", lineHeight: 1.8, maxWidth: 420 }}>
+          {t("About.Description")}
+        </Typography>
       </PageSectionColumn>
 
-      {whyAIScards.map((item, i) => (
-        <Fragment key={i}>
-          <PageSectionColumn md={4}>
-            <CardComp bg={theme.palette.orange.main}>
-              <Avatar
-                variant="square"
-                alt={item.alt}
+      <PageSectionColumn md={8} p={{ xs: 2, md: 3 }}>
+        <Stack
+          divider={<Divider sx={{ borderColor: "rgba(11,53,88,.16)" }} />}
+          sx={{
+            width: "100%",
+            bgcolor: "background.paper",
+            borderTop: `4px solid ${theme.palette.orange.main}`,
+            px: { xs: 2.5, md: 4 },
+          }}
+        >
+          {whyAIScards.map((item, i) => (
+            <Stack
+              key={item.text}
+              direction={{ xs: "column", md: "row" }}
+              spacing={{ xs: 2, md: 4 }}
+              sx={{ py: { xs: 3, md: 4 }, alignItems: "flex-start" }}
+            >
+              <Box
+                component="img"
                 src={item.src}
-                sx={{
-                  width: {
-                    xs: "35vw",
-                    md: "auto",
-                  },
-                  height: {
-                    xs: "35vw",
-                    md: "auto",
-                  },
-                  margin: "auto auto",
-                  maxWidth: { md: "12vw" },
-                }}
+                alt={item.alt}
+                sx={{ width: 58, height: 58, objectFit: "contain", flex: "0 0 auto" }}
               />
-
-              <Text
-                color={theme.palette.basic.light}
-                variant="cardtitle"
-                center
-                bold
-                mt={4}
-              >
-                {item.text}
-              </Text>
-            </CardComp>
-          </PageSectionColumn>
-
-          <PageSectionColumn md={8}>
-            <Text color={theme.palette.blue.dark} justify doubleHeight bold>
-              {item.longText}
-            </Text>
-          </PageSectionColumn>
-        </Fragment>
-      ))}
+              <Box>
+                <Typography
+                  component="h3"
+                  sx={{
+                    color: "primary.dark",
+                    fontSize: { xs: 22, md: 28 },
+                    lineHeight: 1.2,
+                    fontWeight: 850,
+                    mb: 1.2,
+                  }}
+                >
+                  {item.text}
+                </Typography>
+                <Typography sx={{ color: "text.secondary", lineHeight: 1.85 }}>
+                  {item.longText}
+                </Typography>
+              </Box>
+            </Stack>
+          ))}
+        </Stack>
+      </PageSectionColumn>
     </PageSection>
   );
 };

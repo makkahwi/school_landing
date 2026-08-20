@@ -1,14 +1,9 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { Grid, Stack } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
-import PageSection from "../../components/common/PageSection";
-import PageSectionColumn from "../../components/common/PageSectionColumn";
-import Square from "../../components/common/Square";
-import Column from "../common/Column";
 import Row from "../common/Row";
-import Text from "../common/Text";
 
 interface FeeCardsProps {
   templateId: string;
@@ -25,72 +20,89 @@ interface FeeCardsProps {
   currency?: boolean;
 }
 
-const FeeCards = ({ boxes, bg, cardBg, currency }: FeeCardsProps) => {
+const FeeCards = ({ boxes, currency }: FeeCardsProps) => {
   const router = useRouter();
   const { t } = useTranslation(router);
+  const isArabic = router.locale === "ar";
+
+  const formatPrice = (price: string) =>
+    currency
+      ? isArabic
+        ? `${price} ${t("Engage.Fees.Currency")}`
+        : `${t("Engage.Fees.Currency")} ${price}`
+      : price;
 
   return (
-    <Row>
-      {boxes.map((box, i) => (
-        <Column key={i} px={{ xs: 0, md: 2 }}>
-          <Text variant="subTitle" center bold>
-            {box.title}
-          </Text>
-
-          <Row>
-            {box.items.map((item, y) => (
-              <Column md={6} lg={4} px={{ xs: 0, md: 2 }} key={y}>
-                <Square
-                  bgcolor={cardBg}
-                  radius={{
-                    mobile: ["6vw", "1.1.1.1"],
-                    desktop: ["2vw", "1.1.1.1"],
-                  }}
-                  sx={{
-                    width: { xs: "100%", md: "100%" },
-                    padding: 3,
-                  }}
-                >
-                  <Grid container alignItems="center">
-                    <Grid item xs={12}>
-                      <Text
-                        variant="cardTitle"
-                        center
-                        my={3}
-                        style={{ textDecoration: "underline" }}
+    <Row p={0}>
+      <Box sx={{ width: "100%", maxWidth: 1120, mx: "auto" }}>
+        <Stack spacing={4}>
+          {boxes.map((box) => (
+            <Box key={box.title}>
+              <Typography
+                component="h3"
+                sx={{
+                  color: "primary.dark",
+                  fontSize: { xs: 24, md: 32 },
+                  fontWeight: 850,
+                  mb: 2,
+                }}
+              >
+                {box.title}
+              </Typography>
+              <Box
+                sx={{
+                  bgcolor: "background.paper",
+                  borderTop: `3px solid ${theme.palette.orange.main}`,
+                }}
+              >
+                {box.items.map((item, index) => (
+                  <Box key={`${box.title}-${item.title}`}>
+                    <Stack
+                      direction={{ xs: "column", md: "row" }}
+                      spacing={{ xs: 1.2, md: 3 }}
+                      sx={{
+                        px: { xs: 2, md: 3 },
+                        py: { xs: 2.2, md: 2.6 },
+                        alignItems: { xs: "flex-start", md: "center" },
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <Box sx={{ minWidth: 0 }}>
+                        <Typography
+                          sx={{
+                            color: "text.primary",
+                            fontSize: { xs: 17, md: 19 },
+                            fontWeight: 800,
+                            lineHeight: 1.35,
+                          }}
+                        >
+                          {item.title}
+                        </Typography>
+                        {item.description && (
+                          <Typography sx={{ mt: 0.6, color: "text.secondary", lineHeight: 1.65 }}>
+                            {item.description}
+                          </Typography>
+                        )}
+                      </Box>
+                      <Typography
+                        sx={{
+                          color: theme.palette.orange.main,
+                          fontSize: { xs: 20, md: 24 },
+                          fontWeight: 900,
+                          whiteSpace: "nowrap",
+                        }}
                       >
-                        {item.title}
-                      </Text>
-                    </Grid>
-
-                    <Grid item xs={12}>
-                      <Text
-                        variant="title"
-                        bold
-                        center
-                        my={3}
-                        color={theme.palette.orange.main}
-                      >
-                        {currency
-                          ? router.locale == "ar"
-                            ? item.price + " " + t("Engage.Fees.Currency")
-                            : t("Engage.Fees.Currency") + " " + item.price
-                          : item.price}
-                      </Text>
-                    </Grid>
-
-                    <Grid item xs={12} px={1}>
-                      <Text color={bg} center>
-                        {item.description}
-                      </Text>
-                    </Grid>
-                  </Grid>
-                </Square>
-              </Column>
-            ))}
-          </Row>
-        </Column>
-      ))}
+                        {formatPrice(item.price)}
+                      </Typography>
+                    </Stack>
+                    {index < box.items.length - 1 && <Divider />}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          ))}
+        </Stack>
+      </Box>
     </Row>
   );
 };

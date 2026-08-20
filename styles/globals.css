@@ -10,3 +10,17 @@ html,
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FAF7F1;
+    color: #102033;
+    font-family: "Inter", "Noto Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+}

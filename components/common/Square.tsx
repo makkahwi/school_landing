@@ -15,7 +15,9 @@ interface SquareProps {
   bgcolor?: string;
 }
 
-const SquareBox = styled(Box)(({ bgcolor }: BoxProps) => ({
+const SquareBox = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "bgcolor",
+})(({ bgcolor }: BoxProps) => ({
   background: bgcolor || "transparent",
   display: "flex",
   justifyContent: "center",

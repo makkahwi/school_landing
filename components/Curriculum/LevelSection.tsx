@@ -54,9 +54,11 @@ const LevelSection = ({ section }: LevelSectionProps) => {
 
       <PageSectionColumn md={9}>
         <Stack
-          justifyContent="center"
-          alignItems={{ xs: "center", md: "flex-start" }}
-          mb={{ xs: 5, md: 0 }}
+          sx={{
+            justifyContent: "center",
+            alignItems: { xs: "center", md: "flex-start" },
+            mb: { xs: 5, md: 0 },
+          }}
         >
           <Text color={titleColor} variant="title">
             {title}

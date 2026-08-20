@@ -842,6 +842,64 @@ const en = {
       Developer: "Semesteer",
     },
   },
+  LandingNew: {
+    Location: "Kuala Lumpur, Malaysia",
+    HeroTitle: "Al-Aqsa Integrated School",
+    HeroText:
+      "A professional international Islamic school in Kuala Lumpur, combining academic ambition, Quranic values and a caring multicultural environment.",
+    PrimaryCta: "Start Admissions",
+    SecondaryCta: "Visit the Campus",
+    Highlights: [
+      { label: "Cambridge pathway", value: "International curriculum" },
+      { label: "Faith-centred", value: "Quran, adab and Islamic identity" },
+      { label: "KL, Malaysia", value: "Connected urban campus" },
+    ],
+    IntroEyebrow: "Faith, knowledge, leadership",
+    IntroTitle:
+      "Built for families seeking international standards with Islamic roots.",
+    IntroText:
+      "AIS brings together strong academics, personal mentorship and Islamic formation in a calm, internationally minded school environment. The experience is structured for families in Kuala Lumpur who want confident students, clear values and a pathway to further study.",
+    Pillars: [
+      {
+        title: "Islamic Character",
+        text: "Daily school life is shaped around Quran, manners, service and confident Muslim identity.",
+      },
+      {
+        title: "Modern Academics",
+        text: "A balanced programme in sciences, mathematics, technology, languages and humanities.",
+      },
+      {
+        title: "Global Fluency",
+        text: "English, Arabic and multilingual exposure prepare students for Malaysia and the wider world.",
+      },
+      {
+        title: "Whole Child Growth",
+        text: "Clubs, sport, leadership and creative work build discipline, teamwork and self-belief.",
+      },
+    ],
+    Journey: {
+      Eyebrow: "Learning journey",
+      Title:
+        "A coherent school pathway from early learning to secondary readiness.",
+      Items: [
+        "Early Years foundation with care, language and discovery",
+        "Primary learning habits with strong numeracy and literacy",
+        "Lower Secondary confidence across core academic disciplines",
+        "Upper Secondary preparation for international progression",
+      ],
+    },
+    Admissions: {
+      Title:
+        "Admissions are open for families looking for a purposeful Islamic international education in Kuala Lumpur.",
+      Text:
+        "Speak with the admissions team about levels, fees, placement and the right entry point for your child.",
+      PrimaryCta: "Admissions & Fees",
+      SecondaryCta: "Explore Academics",
+    },
+    ClosingTitle:
+      "Rooted in Kuala Lumpur. Connected to the wider Muslim world.",
+    Tags: ["Cambridge", "Quran", "Arabic", "English", "STEM", "Leadership"],
+  },
   Errors: {
     "404": "Ops, Page not found !",
     "500": "Server error .. totaly not your fault",

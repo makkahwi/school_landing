@@ -1,74 +1,57 @@
 import theme from "@/styles/theme";
-import { Box } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
-import { UpperSquaresGrid } from "../Curriculum/styles";
-import PageSection from "./PageSection";
-import PageSectionColumn from "./PageSectionColumn";
-import Square from "./Square";
-import Text from "./Text";
-
-const PageHeader = ({ bg = theme.palette.basic.main, title = "" }) => {
-  const secondColor = () => {
-    switch (bg) {
-      case theme.palette.blue.dark:
-        return theme.palette.basic.light;
-      case theme.palette.brown.main:
-        return theme.palette.orange.main;
-      case theme.palette.orange.main:
-        return theme.palette.brown.main;
-      default:
-        return theme.palette.blue.dark;
-    }
-  };
+const PageHeader = ({ bg = theme.palette.primary.main, title = "" }) => {
+  const isLight =
+    bg === theme.palette.basic.light ||
+    bg === theme.palette.basic.main ||
+    bg === theme.palette.background.default;
+  const titleColor = isLight ? theme.palette.primary.dark : theme.palette.basic.light;
+  const accentColor = isLight ? theme.palette.orange.main : theme.palette.secondary.main;
 
   return (
-    <PageSection bgcolor={bg}>
-      <PageSectionColumn justify="start" align="end" md={9}>
-        <Text variant="title" color={secondColor()}>
+    <Box
+      component="section"
+      sx={{
+        position: "relative",
+        overflow: "hidden",
+        bgcolor: bg,
+        color: titleColor,
+        borderBottom: "1px solid",
+        borderColor: isLight ? "divider" : "rgba(255,255,255,.14)",
+        "&:before": {
+          content: '""',
+          position: "absolute",
+          inset: 0,
+          background: isLight
+            ? "linear-gradient(135deg, rgba(11,53,88,.08), rgba(216,175,82,.16))"
+            : "linear-gradient(135deg, rgba(255,255,255,.08), rgba(216,175,82,.16))",
+        },
+      }}
+    >
+      <Container maxWidth="xl" sx={{ position: "relative", py: { xs: 6, md: 9 } }}>
+        <Box
+          sx={{
+            width: 72,
+            height: 5,
+            bgcolor: accentColor,
+            mb: 2.5,
+          }}
+        />
+        <Typography
+          component="h1"
+          sx={{
+            maxWidth: 980,
+            fontSize: { xs: "36px", md: "58px" },
+            lineHeight: 1.05,
+            fontWeight: 900,
+            letterSpacing: 0,
+          }}
+        >
           {title}
-        </Text>
-      </PageSectionColumn>
-
-      <PageSectionColumn justify="end" align="end" md={3}>
-        <Box sx={UpperSquaresGrid}>
-          <Square
-            bgcolor={secondColor()}
-            radius={{
-              mobile: ["3vw", "1.1.0.1"],
-              desktop: ["1vw", "1.1.0.1"],
-            }}
-            sx={{
-              gridRow: "2 / 3",
-              gridColumn: "1 / 3",
-            }}
-          />
-
-          <Square
-            bgcolor={secondColor()}
-            radius={{
-              mobile: ["4vw", "1.1.1.0"],
-              desktop: ["1.5vw", "1.1.1.0"],
-            }}
-            sx={{
-              gridRow: "1 / 4",
-              gridColumn: "3 / 6",
-            }}
-          />
-
-          <Square
-            bgcolor={secondColor()}
-            radius={{
-              mobile: ["4vw", "0.1.1.1"],
-              desktop: ["1.5vw", "0.1.1.1"],
-            }}
-            sx={{
-              gridRow: "4 / 5",
-              gridColumn: "3 / 5  ",
-            }}
-          />
-        </Box>
-      </PageSectionColumn>
-    </PageSection>
+        </Typography>
+      </Container>
+    </Box>
   );
 };
 

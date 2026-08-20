@@ -26,10 +26,10 @@ function ResponsiveAppBar() {
   const { t } = useTranslation(router);
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
+    null,
   );
   const [anchorSubMenu, setAnchorSubMenu] = React.useState<null | HTMLElement>(
-    null
+    null,
   );
   const [submenu, setSubmenu] = React.useState<string>("");
 
@@ -79,20 +79,24 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="sticky"
-      style={{
-        backgroundColor: theme.palette.blue.dark,
+      elevation={0}
+      sx={{
+        backgroundColor: "rgba(7, 29, 52, 0.96)",
+        borderBottom: "1px solid rgba(255,255,255,.12)",
+        backdropFilter: "blur(14px)",
         direction: router.locale === "ar" ? "rtl" : "ltr",
       }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters variant="dense" style={{ margin: "10px auto" }}>
+        <Toolbar disableGutters sx={{ minHeight: { xs: 74, md: 92 }, gap: 3 }}>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="open navigation"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
+              sx={{ color: theme.palette.basic.light }}
             >
               <MenuIcon />
             </IconButton>
@@ -113,6 +117,11 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
+                "& .MuiPaper-root": {
+                  borderRadius: 2,
+                  minWidth: 280,
+                  mt: 1,
+                },
               }}
             >
               <List
@@ -131,7 +140,7 @@ function ResponsiveAppBar() {
                       <ListItemButton
                         onClick={() => {
                           setSubmenu((current) =>
-                            current === link + "mobile" ? "" : link + "mobile"
+                            current === link + "mobile" ? "" : link + "mobile",
                           );
                         }}
                       >
@@ -169,7 +178,7 @@ function ResponsiveAppBar() {
                                   <ListItemText primary={subtitle} />
                                 </ListItemButton>
                               </Link>
-                            )
+                            ),
                           )}
                         </List>
                       </Collapse>
@@ -195,7 +204,7 @@ function ResponsiveAppBar() {
                       </Link>
                       {i !== links?.length && <Divider />}
                     </React.Fragment>
-                  )
+                  ),
                 )}
               </List>
             </Menu>
@@ -205,18 +214,28 @@ function ResponsiveAppBar() {
             href="/"
             style={{
               display: "flex",
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
+              alignItems: "center",
+              minWidth: 86,
               color: theme.palette.basic.light,
               textDecoration: "none",
-              textAlign: "center",
             }}
           >
-            <img src="/images/AIS-En-Mobile-Logo-1-White.png" width="75%" />
+            <img
+              src="/images/AIS-En-Mobile-Logo-1-White.png"
+              alt="Al-Aqsa Integrated School"
+              style={{ width: 200, height: "auto", display: "block" }}
+            />
           </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 3,
+            }}
+          >
             {links.map(({ title, link, links }, i) =>
               links ? (
                 <React.Fragment key={i}>
@@ -234,9 +253,10 @@ function ResponsiveAppBar() {
                       textDecoration: "none",
                       color: theme.palette.basic.light,
                       display: "block",
-                      margin: "2em 0.5em",
                       cursor: "pointer",
-                      textTransform: "uppercase",
+                      textTransform: "none",
+                      fontWeight: 700,
+                      fontSize: "0.95rem",
                     }}
                     role="button"
                   >
@@ -280,13 +300,14 @@ function ResponsiveAppBar() {
                     textDecoration: "none",
                     color: theme.palette.basic.light,
                     display: "block",
-                    margin: "2em 0.5em",
-                    textTransform: "uppercase",
+                    textTransform: "none",
+                    fontWeight: 700,
+                    fontSize: "0.95rem",
                   }}
                 >
                   {title}
                 </Link>
-              )
+              ),
             )}
           </Box>
 
@@ -297,8 +318,9 @@ function ResponsiveAppBar() {
               role="button"
               style={{
                 textDecoration: "none",
-                color: theme.palette.basic.light,
+                color: theme.palette.secondary.main,
                 display: "block",
+                fontWeight: 800,
               }}
             >
               {t("OtherLang")}

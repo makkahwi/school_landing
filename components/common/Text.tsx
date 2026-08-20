@@ -10,32 +10,48 @@ const Text = ({
   bold = false,
   doubleHeight = false,
   style = {},
+  fontSize,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  my,
+  mb,
+  mt,
   ...rest
 }) => {
   const props = () => {
     switch (variant.toLowerCase()) {
       case "title":
-        return { variant: "h3", fontWeight: "bold", lineHeight: 1.5, mb: 4 };
+        return { variant: "h3", sx: { fontWeight: 850, lineHeight: 1.18, mb: 3 } };
       case "subtitle":
-        return { variant: "h4", fontWeight: "bold", my: 2 };
+        return { variant: "h4", sx: { fontWeight: 800, my: 2, lineHeight: 1.25 } };
       case "cardtitle":
-        return { variant: "h5", fontWeight: "bold", my: 2 };
+        return { variant: "h5", sx: { fontWeight: 800, my: 1.5, lineHeight: 1.28 } };
       case "p":
-        return { variant: "p", my: 4, lineHeight: 1.25 };
+        return { component: "p", sx: { my: 2.5, lineHeight: 1.75 } };
       case "sm":
-        return { variant: "sm", my: 2, lineHeight: 1 };
+        return { component: "p", sx: { my: 1.5, lineHeight: 1.55, fontSize: 14 } };
       default:
-        return { variant: "h6", my: 4 };
+        return { component: "p", sx: { my: 2.5, fontSize: { xs: 16, md: 18 }, lineHeight: 1.7 } };
     }
   };
+  const typographyProps = props();
 
   return (
     <Typography
-      {...props()}
-      textAlign={justify ? "justify" : center ? "center" : "start"}
-      color={color}
-      fontWeight={bold ? "bold" : "regular"}
-      style={{ lineHeight: doubleHeight ? 2 : 1, ...style }}
+      {...typographyProps}
+      sx={{
+        ...typographyProps.sx,
+        color,
+        textAlign: textAlign || (justify ? "justify" : center ? "center" : "start"),
+        fontSize,
+        fontWeight: fontWeight || (bold ? 750 : undefined),
+        lineHeight: lineHeight || (doubleHeight ? 1.9 : undefined),
+        my,
+        mb,
+        mt,
+        ...style,
+      }}
       {...rest}
     >
       {children}

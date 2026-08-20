@@ -15,7 +15,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       <Main>{children}</Main>
       <FloatingButton />
-      <Widgets />
+      {/* <Widgets /> */}
       <Footer />
     </LayoutBox>
   );

@@ -2,21 +2,32 @@ import theme from "@/styles/theme";
 import { Grid } from "@mui/material";
 
 const PageSectionColumn = ({
-  bg = theme.palette.basic.light,
   children,
   sx = {},
   xs = 12,
+  sm,
+  md,
+  lg,
   justify = "center",
   align = "center",
   p = 2,
+  px,
+  py,
+  pt,
+  pb,
   ...rest
 }) => {
   return (
     <Grid
-      item
-      p={p}
-      xs={xs}
+      size={{ xs, sm, md, lg }}
       sx={{
+        p,
+        px,
+        py,
+        pt,
+        pb,
+        display: "flex",
+        flexDirection: "column",
         alignItems: align,
         justifyContent: justify,
         ...sx,
