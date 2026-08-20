@@ -3,6 +3,7 @@ import theme from "@/styles/theme";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
+  Button,
   Collapse,
   Divider,
   List,
@@ -16,7 +17,6 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
@@ -255,7 +255,7 @@ function ResponsiveAppBar() {
                       display: "block",
                       cursor: "pointer",
                       textTransform: "none",
-                      fontWeight: 700,
+                      fontWeight: 750,
                       fontSize: "0.95rem",
                     }}
                     role="button"
@@ -301,7 +301,7 @@ function ResponsiveAppBar() {
                     color: theme.palette.basic.light,
                     display: "block",
                     textTransform: "none",
-                    fontWeight: 700,
+                    fontWeight: 750,
                     fontSize: "0.95rem",
                   }}
                 >
@@ -311,7 +311,28 @@ function ResponsiveAppBar() {
             )}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box
+            sx={{
+              flexGrow: 0,
+              display: "flex",
+              alignItems: "center",
+              gap: { xs: 1.2, md: 2 },
+            }}
+          >
+            <Button
+              component={Link}
+              href="/engage/registration-fees"
+              variant="contained"
+              size="small"
+              sx={{
+                display: { xs: "none", sm: "inline-flex" },
+                px: 2.4,
+                py: 1,
+                whiteSpace: "nowrap",
+              }}
+            >
+              {router.locale === "ar" ? "سجل الآن" : "Apply Now"}
+            </Button>
             <Link
               href=""
               locale={router.locale === "ar" ? "en" : "ar"}
@@ -321,9 +342,13 @@ function ResponsiveAppBar() {
                 color: theme.palette.secondary.main,
                 display: "block",
                 fontWeight: 800,
+                border: "1px solid rgba(216,175,82,.35)",
+                padding: "7px 10px",
+                borderRadius: 6,
+                whiteSpace: "nowrap",
               }}
             >
-              {t("OtherLang")}
+              {router.locale === "ar" ? "English" : "العربية"}
             </Link>
           </Box>
         </Toolbar>

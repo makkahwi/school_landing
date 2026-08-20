@@ -452,7 +452,7 @@ const en = {
         },
       },
       Siblings: {
-        Title: "Resister Siblings Discount",
+        Title: "Register Siblings Discount",
         Sibling1: {
           Title: "First Sibling",
           Price: "5%",
@@ -891,8 +891,7 @@ const en = {
     Admissions: {
       Title:
         "Admissions are open for families looking for a purposeful Islamic international education in Kuala Lumpur.",
-      Text:
-        "Speak with the admissions team about levels, fees, placement and the right entry point for your child.",
+      Text: "Speak with the admissions team about levels, fees, placement and the right entry point for your child.",
       PrimaryCta: "Admissions & Fees",
       SecondaryCta: "Explore Academics",
     },

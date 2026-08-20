@@ -1,8 +1,15 @@
 import useTranslation from "@/hooks/useTranslation";
 import { FooterContainer } from "@/Layout/styles";
 import theme from "@/styles/theme";
-import { Box, Container, Divider, Stack, Typography } from "@mui/material";
-import Link from "next/link";
+import {
+  Box,
+  Container,
+  Divider,
+  Link as MuiLink,
+  Stack,
+  Typography,
+} from "@mui/material";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 const Footer = () => {
@@ -43,7 +50,7 @@ const Footer = () => {
                 component="img"
                 src="/images/AIS-En-Mobile-Logo-1-White.png"
                 alt="Al-Aqsa Integrated School"
-                sx={{ width: 300, flex: "0 0 auto" }}
+                sx={{ width: { xs: 96, md: 300 }, flex: "0 0 auto" }}
               />
               <Box>
                 <Typography
@@ -82,17 +89,20 @@ const Footer = () => {
               }}
             >
               {links.map((link) => (
-                <Link
+                <MuiLink
+                  component={NextLink}
                   href={link.href}
                   key={link.href}
-                  style={{
+                  sx={{
                     color: "rgba(255,255,255,.82)",
                     textDecoration: "none",
                     fontWeight: 750,
+                    transition: "color .2s ease",
+                    "&:hover": { color: theme.palette.secondary.main },
                   }}
                 >
                   {link.label}
-                </Link>
+                </MuiLink>
               ))}
             </Stack>
           </Stack>
@@ -142,18 +152,30 @@ const Footer = () => {
               spacing={2}
               sx={{ alignItems: "center", flexWrap: "wrap" }}
             >
-              <Link
+              <MuiLink
+                component={NextLink}
                 href="/terms-conditions"
-                style={{ color: "inherit", textDecoration: "none" }}
+                sx={{
+                  color: "inherit",
+                  textDecoration: "none",
+                  transition: "color .2s ease",
+                  "&:hover": { color: theme.palette.secondary.main },
+                }}
               >
                 {isArabic ? "الشروط" : "Terms"}
-              </Link>
-              <Link
+              </MuiLink>
+              <MuiLink
+                component={NextLink}
                 href="/website-privacy"
-                style={{ color: "inherit", textDecoration: "none" }}
+                sx={{
+                  color: "inherit",
+                  textDecoration: "none",
+                  transition: "color .2s ease",
+                  "&:hover": { color: theme.palette.secondary.main },
+                }}
               >
                 {isArabic ? "الخصوصية" : "Privacy"}
-              </Link>
+              </MuiLink>
               <Typography component="span" sx={{ fontSize: 13 }}>
                 {t("Layout.Footer.By")}{" "}
                 <a

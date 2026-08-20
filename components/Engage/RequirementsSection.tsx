@@ -1,34 +1,20 @@
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import {
-  Collapse,
-  List,
-  ListItemButton,
-  Stack,
-  Typography,
-} from "@mui/material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
 
-import CardComp from "../../components/common/Card";
 import PageSection from "../../components/common/PageSection";
 import PageSectionColumn from "../../components/common/PageSectionColumn";
-import Text from "../common/Text";
 
 const RequirementsSection = () => {
   const router = useRouter();
   const { t } = useTranslation(router);
-  const [trigger, setTrigger] = useState("0");
 
-  const handleClick = (newTrigger: string) => {
-    newTrigger === trigger ? setTrigger("0") : setTrigger(newTrigger);
-  };
-
-  const requirementsSection = [
+  const sections = [
     {
       title: t("Engage.Registration.Requirements.Title"),
-      lists: [
+      groups: [
         {
           title: t("Engage.Registration.Requirements.Id.Title"),
           items: [
@@ -38,7 +24,6 @@ const RequirementsSection = () => {
             t("Engage.Registration.Requirements.Id.Point4"),
             t("Engage.Registration.Requirements.Id.Point5"),
           ],
-          trigger: "1",
         },
         {
           title: t("Engage.Registration.Requirements.LastSchool.Title"),
@@ -46,7 +31,6 @@ const RequirementsSection = () => {
             t("Engage.Registration.Requirements.LastSchool.Point1"),
             t("Engage.Registration.Requirements.LastSchool.Point2"),
           ],
-          trigger: "2",
         },
         {
           title: t("Engage.Registration.Requirements.Forms.Title"),
@@ -54,98 +38,99 @@ const RequirementsSection = () => {
             t("Engage.Registration.Requirements.Forms.Point1"),
             t("Engage.Registration.Requirements.Forms.Point2"),
           ],
-          trigger: "3",
         },
       ],
     },
     {
       title: t("Engage.Registration.Deadlines.Title"),
-      lists: [
+      groups: [
         {
           title: t("Engage.Registration.Deadlines.Sem1.Title"),
           items: [t("Engage.Registration.Deadlines.Sem1.Description")],
-          trigger: "5",
         },
         {
           title: t("Engage.Registration.Deadlines.Sem2.Title"),
           items: [t("Engage.Registration.Deadlines.Sem2.Description")],
-          trigger: "6",
         },
         {
           title: t("Engage.Registration.Deadlines.Sem3.Title"),
           items: [t("Engage.Registration.Deadlines.Sem3.Description")],
-          trigger: "7",
         },
       ],
     },
   ];
 
   return (
-    <PageSection>
-      {requirementsSection.map((item, i) => (
-        <PageSectionColumn md={6} key={i}>
-          <CardComp bg={theme.palette.orange.main}>
-            <List
-              component="nav"
-              aria-labelledby="nested-list-subheader"
-              sx={{ width: "100%" }}
-              subheader={
-                <Text color={theme.palette.brown.main} variant="cardTitle" bold>
-                  {item.title}
-                </Text>
-              }
+    <PageSection sx={{ py: { xs: 7, md: 9 } }} align="top">
+      {sections.map((section) => (
+        <PageSectionColumn md={6} key={section.title} align="stretch">
+          <Box
+            sx={{
+              height: "100%",
+              bgcolor: "background.paper",
+              borderTop: `4px solid ${theme.palette.orange.main}`,
+              px: { xs: 2.4, md: 3.4 },
+              py: { xs: 3, md: 3.6 },
+            }}
+          >
+            <Typography
+              component="h2"
+              sx={{
+                color: "primary.dark",
+                fontSize: { xs: 26, md: 34 },
+                fontWeight: 900,
+                lineHeight: 1.12,
+                mb: 2.5,
+              }}
             >
-              {item.lists.map((list, i) => (
-                <React.Fragment key={i}>
-                  <ListItemButton
-                    sx={{ width: "100%" }}
-                    onClick={() => handleClick(list.trigger)}
-                    style={{
-                      backgroundColor:
-                        trigger === list.trigger
-                          ? "rgba(0,0,0,0.15)"
-                          : "transparent",
+              {section.title}
+            </Typography>
+
+            <Stack
+              divider={<Divider sx={{ borderColor: "rgba(11,53,88,.14)" }} />}
+            >
+              {section.groups.map((group) => (
+                <Box key={group.title} sx={{ py: 2.2 }}>
+                  <Typography
+                    component="h3"
+                    sx={{
+                      color: theme.palette.orange.main,
+                      fontSize: { xs: 18, md: 21 },
+                      fontWeight: 850,
+                      mb: 1.4,
                     }}
                   >
-                    <Text
-                      variant="cardTitle"
-                      my={2}
-                      me={2}
-                      color={
-                        trigger === list.trigger
-                          ? theme.palette.basic.light
-                          : theme.palette.basic.dark
-                      }
-                    >
-                      {list.title}
-                    </Text>
+                    {group.title}
+                  </Typography>
 
-                    {trigger === list.trigger ? <ExpandLess /> : <ExpandMore />}
-                  </ListItemButton>
-
-                  <Collapse
-                    in={trigger === list.trigger}
-                    timeout="auto"
-                    unmountOnExit
-                    style={{ backgroundColor: "rgba(0,0,0,0.15)" }}
-                  >
-                    {list.items.map((text, y) => (
-                      <Stack spacing={2} my={2} px={4} key={y}>
-                        <Text
-                          variant="cardTitle"
-                          justify
-                          bold
-                          color={theme.palette.basic.light}
+                  <Stack spacing={1.2}>
+                    {group.items.map((item) => (
+                      <Stack
+                        direction="row"
+                        spacing={1.2}
+                        key={item}
+                        sx={{ alignItems: "flex-start" }}
+                      >
+                        <CheckCircleIcon
+                          sx={{
+                            color: "primary.main",
+                            fontSize: 20,
+                            mt: 0.2,
+                            flex: "0 0 auto",
+                          }}
+                        />
+                        <Typography
+                          sx={{ color: "text.secondary", lineHeight: 1.7 }}
                         >
-                          {text}
-                        </Text>
+                          {item}
+                        </Typography>
                       </Stack>
                     ))}
-                  </Collapse>
-                </React.Fragment>
+                  </Stack>
+                </Box>
               ))}
-            </List>
-          </CardComp>
+            </Stack>
+          </Box>
         </PageSectionColumn>
       ))}
     </PageSection>
