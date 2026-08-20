@@ -2,6 +2,11 @@ import PageHeader from "@/components/common/PageHeader";
 import LevelSection from "@/components/Curriculum/LevelSection";
 import useTranslation from "@/hooks/useTranslation";
 import theme from "@/styles/theme";
+import {
+  defaultStudyLevels,
+  StudyLevelSetting,
+} from "@/utils/adminContent";
+import { fetchFirebaseContent } from "@/utils/firebaseContent";
 import { departmentColors } from "@/utils/constants";
 import AppleIcon from "@mui/icons-material/Apple";
 import BalanceIcon from "@mui/icons-material/Balance";
@@ -21,10 +26,34 @@ import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
 import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
 import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
+import { useEffect, useMemo, useState } from "react";
 
 export default function StudyLevels() {
   const router = useRouter();
   const { t } = useTranslation(router);
+  const fallbackStudyLevels = useMemo(() => defaultStudyLevels(t), [t]);
+  const [adminStudyLevels, setAdminStudyLevels] =
+    useState<StudyLevelSetting[]>(fallbackStudyLevels);
+
+  useEffect(() => {
+    const sync = () => {
+      fetchFirebaseContent()
+        .then((stored) =>
+          setAdminStudyLevels(
+            stored.studyLevels?.length
+              ? stored.studyLevels
+              : fallbackStudyLevels,
+          ),
+        )
+        .catch(() => setAdminStudyLevels(fallbackStudyLevels));
+    };
+
+    sync();
+    window.addEventListener("ais-admin-content-updated", sync);
+    return () => {
+      window.removeEventListener("ais-admin-content-updated", sync);
+    };
+  }, [fallbackStudyLevels]);
 
   const levelSections = [
     {
@@ -344,9 +373,29 @@ export default function StudyLevels() {
         title={t("Academics.StudyLevels.Title")}
       />
 
-      {levelSections.map((section, i) => (
-        <LevelSection section={section} key={i} />
-      ))}
+      {adminStudyLevels.map((level, i) => {
+        const section = levelSections[i % levelSections.length];
+        const renderedSection = {
+          ...section,
+          title: level.title || section.title,
+          subTitle: level.description || section.subTitle,
+          listElemnts: (size: string, color: string) =>
+            (level.courses?.length
+              ? level.courses
+              : section.listElemnts(size, color).map((item) => item.text)
+            ).map((text, index) => ({
+              text,
+              icon:
+                section.listElemnts(size, color)[
+                  index % section.listElemnts(size, color).length
+                ]?.icon,
+            })),
+        };
+
+        return (
+          <LevelSection section={renderedSection} key={level.key || i} />
+        );
+      })}
     </Stack>
   );
 }
